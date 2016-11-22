@@ -28,3 +28,17 @@ So far its all header types, mowers, tedders, windrowers, cultivators, seeders, 
 The exhaust smoke is a bit darker on all vehicles and i lowered the fill speed of implement like seeders and so on.
 The Holmer Felix can now load bulk materials and not only beets.
 
+
+Recommended mods:
+
+- DriveControl - https://www.modhoster.com/mods/drivecontrol--2
+- BGA Extension -https://www.modhoster.com/mods/bga-extension
+- GPS - https://www.modhoster.com/mods/gps--2
+- 
+- 
+- 
+- 
+- 
+- 
+- 
+- 
