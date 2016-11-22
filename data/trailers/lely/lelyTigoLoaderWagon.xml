@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="forageWagon">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Tigo XR 75 D</name>
+        <specs>
+            <neededPower>200</neededPower>
+        </specs>
+        <functions>
+            <function>$l10n_function_forageWagon</function>
+        </functions>
+        <image>$data/store/store_lelyTigoLoaderWagon.png</image>
+        <price>112000</price>
+        <dailyUpkeep>90</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>LELY</brand>
+        <category>SWS_loaderWagons</category>
+        <vertexBufferMemoryUsage>2098148</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>289782</indexBufferMemoryUsage>
+        <textureMemoryUsage>10486216</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_forageWagon</typeDesc>
+    <filename>$data/vehicles/trailers/lely/lelyTigoLoaderWagon.i3d</filename>
+
+    <size width="3.5" length="11"/>
+    <powerConsumer ptoRpm="540" neededPtoPower="75"/>
+    <speedLimit value="16" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel tipOcclusionAreaGroupId="1" restLoad="3.2" repr="0>0|0"                     forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_710_50R26_5.xml" isLeft="true"  initialCompression="05" suspTravel="0.2" spring="40" damper="50" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="3.2" repr="0>0|1"                     forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_710_50R26_5.xml" isLeft="false" initialCompression="05" suspTravel="0.2" spring="40" damper="50" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="2.2" repr="0>0|2" driveNode="0>0|2|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_710_50R26_5.xml" isLeft="true"  initialCompression="25" suspTravel="0.2" spring="40" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="40" steeringAxleRotMin="-40" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="2.2" repr="0>0|3" driveNode="0>0|3|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_710_50R26_5.xml" isLeft="false" initialCompression="25" suspTravel="0.2" spring="40" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="40" steeringAxleRotMin="-40" />
+                <wheel rotMin="-10" rotMax="30" tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>0"       driveNode="1>0|0"       forcePointRatio="0.3" radius="0.203" mass="0.01" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" brakeFactor="0" versatileYRot="true" />
+                <wheel rotMin="-10" rotMax="30" tipOcclusionAreaGroupId="3" restLoad="1.9" repr="1>1"       driveNode="1>1|0"       forcePointRatio="0.3" radius="0.203" mass="0.01" initialCompression="60" suspTravel="0.03" spring="40" damper="50" rotationDamping="0.0001" brakeFactor="0" versatileYRot="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <dynamicallyLoadedWheels>
+        <dynamicallyLoadedWheel linkNode="0>5|1|0|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>5|1|1|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="true"/>
+    </dynamicallyLoadedWheels>
+
+    <steeringAxleAngleScale startSpeed="0" endSpeed="90" />
+    <brakeForce>1.5</brakeForce>
+    <maximalAirConsumptionPerFullStop value="0.5" />
+
+    <lights>
+        <low>
+            <light                         decoration="0>2|0|0|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>2|0|0|0|1" decoration="0>2|0|0|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>2|0|0|0|1" decoration="0>2|0|0|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>2|0|0|1|0|1" decoration="0>2|0|0|1|0|0" />
+        <turnLightRight realLight="0>2|0|0|1|1|1" decoration="0>2|0|0|1|1|0" />
+    </turnLights>
+
+    <reverseLights>
+        <reverseLight realLight="0>2|0|0|3|1" decoration="0>2|0|0|3|0" />
+    </reverseLights>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="forageWagon" capacity="44000" />
+    </fillUnits>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>8|0" maxAllowedHeapAngle="40" scrollSpeedDischarge="0 0 0.3" scrollSpeedLoad="0 0 0.08" />
+        </volumes>
+
+        <loadInfos>
+            <loadInfo fillVolumeIndex="1" >
+                <node index="0>8|1|0" width="1.0" length="0.5" />
+                <node index="0>8|1|0" width="1.0" length="0.5" />
+            </loadInfo>
+        </loadInfos>
+
+        <unloadInfos>
+            <unloadInfo fillVolumeIndex="1" > <!-- left -->
+                <node index="0>8|2|0" width="1.0" length="0.5" minHeight="1.9" priority="2" />
+                <node index="0>8|2|1" width="1.0" length="0.5" minHeight="1.9" priority="2" />
+                <node index="0>8|2|2" width="1.0" length="3.6" />
+                <node index="0>8|2|3" width="1.0" length="3.6" />
+            </unloadInfo>
+        </unloadInfos>
+
+        <heights>
+            <height fillVolumeIndex="1" > <!-- left -->
+                <refNode index="0>8|2|0" />
+                <refNode index="0>8|2|1" />
+                <node index="0>9|1" baseScale="1 1 1" transAxis="0 1 0" />
+            </height>
+        </heights>
+    </fillVolumes>
+
+    <workAreas>
+        <workArea startIndex="0>13|0" widthIndex="0>13|1" heightIndex="0>13|2" type="forageWagon" />
+    </workAreas>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>5|2|3" threshold="0.5" />
+    </groundReferenceNodes>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"  pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.55" />
+    <fillSound file="$data/maps/sounds/siloFillSound.wav"          pitchOffset="1.00" volume="1.50" indoorVolumeFactor="0.55" />
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>6|0|0" jointType="trailerLow" attacherHeight="0.6" ptoInputNode="0>11" steeringBarRightNode="0>6|0|3" />
+    </inputAttacherJoints>
+
+    <tipReferencePoints>
+        <tipReferencePoint index="0>10" width="2.5" />
+    </tipReferencePoints>
+
+    <tipAnimations>
+        <tipAnimation speedScale="1" animationName="tipAnimationBack" dischargeStartTime="1.0" dischargeEndTime="14" >
+            <tipEffect>
+                <effectNode effectNode="0>9|1" materialType="unloading" materialTypeId="3" fadeTime="0.5"/>
+                <effectNode effectNode="0>9|2" materialType="smoke"     materialTypeId="1" fadeTime="0.5"/>
+            </tipEffect>
+            <emitterShape node="0>9|0" />
+            <fillVolume>
+                <unloadInfo index="1"/>
+                <height index="1"/>
+            </fillVolume>
+        </tipAnimation>
+    </tipAnimations>
+
+    <fillRootNode index="0>" />
+    <exactFillRootNode index="0>12|0" />
+    <fillAutoAimTargetNode index="0>12|1" startZ="1" endZ="-4.9" invert="false" fillUnitIndex="1" startPercentage="25"/>
+    <fillMassNode index="0>" />
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode type="forageWagon" index="0>3|3" rotSpeed="500" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnRotationNode type="forageWagon" index="0>5|2|3" rotSpeed="-400" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+    </turnedOnRotationNodes>
+
+    <tipRotationNodes>
+        <tipRotationNode type="trailer" index="0>3|0" rotSpeed="1400" rotAxis="1" />
+        <tipRotationNode type="trailer" index="0>3|1" rotSpeed="-1400" rotAxis="1" />
+        <tipRotationNode type="trailer" index="0>3|2" rotSpeed="1400" rotAxis="1" />
+    </tipRotationNodes>
+
+    <tipScrollerNodes>
+        <tipScrollerNode index="0>4|0" shaderParameterName="offsetUV" scrollSpeed="6.75" shaderParameterComponent="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <tipScrollerNode index="0>4|0|0" shaderParameterName="offsetUV" scrollSpeed="0.5" shaderParameterComponent="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+    </tipScrollerNodes>
+
+    <forageWagon turnedOnTipScrollerSpeedFactor="0.1">
+        <fillEffect>
+            <effectNode effectClass="MorphPositionEffect" effectNode="0>15|0" materialType="pickup" materialTypeId="1" delay="0" fadeTime="0.5" speed="0.9" scrollLength="1.5" scrollSpeed="2"/>
+        </fillEffect>
+        <fillParticleSystems>
+            <emitterShape node="0>5|2|5|0" particleType="PICKUP"         emitCountScale="6" worldSpace="false" />
+            <emitterShape node="0>5|2|5|1" particleType="SMOKE"          emitCountScale="1"/>
+            <!--emitterShape node="0>5|2|5|2" particleType="PICKUP_FALLING" emitCountScale="2" worldSpace="false"/>
+            <emitterShape node="0>9|3"     particleType="PICKUP_FALLING" emitCountScale="2" worldSpace="false"/-->
+        </fillParticleSystems>
+        <runningSound file="$data/sounds/forageWagon.wav"  pitchOffset="1.04" volume="1.00" indoorVolumeFactor="0.55" />
+        <alarmSound file="$data/sounds/horn.wav"           pitchOffset="0.91" volume="0.25" indoorVolumeFactor="0.25" outdoorVolumeFactor="0.15" indoorLowpassGain="0.75" outdoorLowpassGain="0.75" />    
+    </forageWagon>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>5|4|0|0" radius="0.091" wheelIndex="4" onlyActiveWhenLowered="true" />
+        <speedRotatingPart index="0>5|2|4"   radius="0.65" refNodeIndex="0" rotateOnlyIfFillLevelIncreased="true" onlyActiveWhenLowered="true"/>
+        <speedRotatingPart index="0>5|1|0|0" wheelIndex="4" />
+        <speedRotatingPart index="0>5|1|1|0" wheelIndex="5" />
+    </speedRotatingParts>
+
+    <movingTools>
+        <!-- drawbar -->
+        <movingTool index="0>6|0" >
+            <controls axis="AXIS_DRAWBAR" invertAxis="false" mouseSpeedFactor="0.6" iconFilename="$dataS2/menu/moveControls/drawbar_rotX.png" />
+            <rotation rotSpeed="20" rotAcceleration="40" rotMax="20" rotMin="-2" rotationAxis="1"/>
+            <inputAttacherJoint value="true" />
+            <dependentPart index="0>6|0|1" />
+        </movingTool>
+
+        <!-- pickUp -->
+        <movingTool index="0>5|0" playSound="true">
+            <componentJoint index="0" />
+        </movingTool>
+
+        <!-- backDoor -->
+        <movingTool index="0>2|0">
+            <dependentPart index="0>2|1" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- drawbar -->
+        <movingPart index="0>6|0|1" referencePoint="0>6|1" referenceFrame="0>6|1" playSound="true">
+            <translatingPart index="0>6|0|1|0" />
+        </movingPart>
+
+        <!-- steering -->
+        <movingPart index="0>6|0|3" referencePoint="0>6|0|3|0|0" localReferencePoint="0>6|0|3|0" referenceFrame="0>6|0|2" >
+            <dependentPart index="0>6|0|3|0" />
+            <dependentPart index="0>6|0|4" />
+            <dependentPart index="0>6|0|5" />
+        </movingPart>
+        <movingPart index="0>6|0|3|0" referencePoint="0>6|0|3|0|0" referenceFrame="0>" />
+        <movingPart index="0>6|0|4" referencePoint="0>6|0|3|1" referenceFrame="0>6|0|3|1" >
+            <translatingPart index="0>6|0|4|0" />
+        </movingPart>
+        <movingPart index="0>6|0|5" referencePoint="0>6|0|3|2" referenceFrame="0>6|0|3|2" >
+            <translatingPart index="0>6|0|5|0" />
+        </movingPart>
+
+        <!-- pickup -->
+        <movingPart index="0>5|1" referencePoint="1>2" referenceFrame="1>2" isActiveDirty="true" >
+            <dependentPart index="0>5|1|0" />
+            <dependentPart index="0>5|1|1" />
+            <dependentPart index="0>5|2" />
+            <dependentPart index="0>5|3" />
+            <dependentPart index="0>5|4" />
+        </movingPart>
+        <movingPart index="0>5|1|0" referenceFrame="1>0" limitedAxis="2" />
+        <movingPart index="0>5|1|1" referenceFrame="1>1" limitedAxis="2" />
+        <movingPart index="0>5|2" localReferencePoint="0>5|2|0" referencePoint="0>5|1|2" referenceFrame="0>5|6">
+            <dependentPart index="0>5|2|0" />
+        </movingPart>
+        <movingPart index="0>5|2|0" referencePoint="0>5|1|2" referenceFrame="0>5|1|2"/>
+        <movingPart index="0>5|3" referencePoint="0>5|2|1" referenceFrame="0>5|2|1">
+            <translatingPart index="0>5|3|0" />
+        </movingPart>
+        <movingPart index="0>5|4" referencePoint="0>5|2|2" localReferencePoint="0>5|4|0" referenceFrame="0>" >
+            <dependentPart index="0>5|4|0" />
+        </movingPart>
+        <movingPart index="0>5|4|0" referencePoint="0>5|2|2" referenceFrame="0>5|5" />
+
+        <!-- backDoor -->
+        <movingPart index="0>2|1" referencePoint="0>2|0|1" referenceFrame="0>2|0|1" playSound="true">
+            <translatingPart index="0>2|1|0" />
+        </movingPart>
+
+        <!-- back wheel steering -->
+        <movingPart index="0>0|4" referencePoint="0>0|2|1" referenceFrame="0>0|2|1" isActiveDirty="true" >
+            <translatingPart index="0>0|4|0" />
+        </movingPart>
+        <movingPart index="0>0|5" referencePoint="0>0|3|1" referenceFrame="0>0|3|1" isActiveDirty="true" >
+            <translatingPart index="0>0|5|0" />
+        </movingPart>
+        <movingPart index="0>0|3|2" referencePoint="0>0|2|2" referenceFrame="0>0|2|2" scaleZ="true" isActiveDirty="true" />
+    </movingParts>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>7|0|0" startTime="0" endTime="0.5" startRot="0 0 0" endRot="0 0 -90" />
+            <part node="0>7|0|0|0|0" startTime="0" endTime="0.5" startTrans="0 0 0" endTrans="0 -1.03 0" />
+            <part node="0>7|1" startTime="0" endTime="0.5" startTrans="0.464 0.990 1.869" endTrans="0.464 -0.039 1.869" />
+        </animation>
+
+        <!-- rotate pickup down/up -->
+        <animation name="rotatePickup">
+            <part node="0>5|0" startTime="0" endTime="1" startRot="-25 0 0" endRot="5 0 0" />
+            <part                startTime="0" endTime="1" componentJointIndex="0" startRotLimit="0 0 0" endRotLimit="20 0 0"/>
+        </animation>
+
+        <!-- backDoor -->
+        <animation name="tipAnimationBack">
+            <part node="0>2|0" startTime="0" endTime="4" startRot="0 0 0" endRot="90 0 0" />
+        </animation>
+    </animations>
+
+    <pickupAnimation name="rotatePickup" lowerSpeed="1.5" liftSpeed="-1" />
+    <support animationName="moveSupport" />
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="2">
+        <component1 centerOfMass="0 0.62 -0.8" solverIterationCount="10" />
+        <component2 centerOfMass="0 0 0" solverIterationCount="10" />
+        <joint component1="0" component2="1" index="0>5|0" rotLimit="0 0 0" transLimit="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+</vehicle>

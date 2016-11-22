@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="fuelTrailer">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>FST 990</name>
+        <functions>
+            <function>$l10n_function_tank</function>
+        </functions>
+        <image>$data/store/store_thunderCreekFST990.png</image>
+        <price>8500</price>
+        <dailyUpkeep>50</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>THUNDERCREEK</brand>
+        <category>SWS_misc</category>
+        <vertexBufferMemoryUsage>384432</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>63456</indexBufferMemoryUsage>
+        <textureMemoryUsage>7733440</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_tipper</typeDesc>
+    <filename>$data/vehicles/trailers/thunderCreek/FST990.i3d</filename>
+
+    <size width="2.5" length="6.5" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel tipOcclusionAreaGroupId="1" restLoad="0.4" repr="0>0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/lizard/280_55R16.xml" isLeft="true"  configIndex="trailer" initialCompression="20" suspTravel="0.2" spring="10" damper="50" hasTireTracks="true" hasParticles="true" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="0.4" repr="0>0|0|1" forcePointRatio="0.2" filename="$data/vehicles/wheels/lizard/280_55R16.xml" isLeft="false" configIndex="trailer" initialCompression="20" suspTravel="0.2" spring="10" damper="50" hasTireTracks="true" hasParticles="true" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="0.6" repr="0>0|0|2" forcePointRatio="0.3" filename="$data/vehicles/wheels/lizard/280_55R16.xml" isLeft="true"  configIndex="trailer" initialCompression="20" suspTravel="0.2" spring="10" damper="50" hasTireTracks="true" hasParticles="true" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="0.6" repr="0>0|0|3" forcePointRatio="0.3" filename="$data/vehicles/wheels/lizard/280_55R16.xml" isLeft="false" configIndex="trailer" initialCompression="20" suspTravel="0.2" spring="10" damper="50" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <rimColorConfigurations useDefaultColors="true" price="100" icon="$dataS2/menu/hud/configurations/config_rimColor.png">
+        <rimColorConfiguration color="0.294 0.294 0.294 1" />
+        <colorNode node="0>0|0" />
+    </rimColorConfigurations>
+
+    <brakeForce>0.2</brakeForce>
+    <maximalAirConsumptionPerFullStop value="0.3" />
+
+    <lights>
+        <low>
+            <light                       decoration="0>0|3|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>0|3|0|1" decoration="0>0|3|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>0|3|0|1" decoration="0>0|3|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>0|3|1|0|1" decoration="0>0|3|1|0|0" />
+        <turnLightRight realLight="0>0|3|1|1|1" decoration="0>0|3|1|1|0" />
+    </turnLights>
+
+    <fillSound file="$data/maps/sounds/siloFillSound.wav"          pitchOffset="1.0" volume="1.5" indoorVolumeFactor="0.75" />
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|1" jointType="trailerLow" attacherHeight="0.4" />
+    </inputAttacherJoints>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="fuel" capacity="3750" />
+    </fillUnits>
+    <fuelFillLitersPerSecond>75</fuelFillLitersPerSecond>
+
+    <fillPlanes rotationDegrees="true">
+        <fillPlane fillUnitIndex="1" fillType="fuel" >
+            <node index="0>0|4" alwaysVisible="true">
+                <key time="0" y="1.618" rotation="0 0 0"/>
+                <key time="1" y="1.618" rotation="-100 0 0"/>
+            </node>
+        </fillPlane>
+    </fillPlanes>
+
+    <fillRootNode index="0>" />
+    <fillMassNode index="0>" />
+
+    <animations>
+        <!-- support -->
+        <animation name="moveSupport">
+            <part node="0>0|2" startTime="0" endTime="0.6" startTrans="0.102 0.344 2.189" endTrans="0.102 -0.05 2.189" />
+        </animation>
+    </animations>
+
+    <gasStationTrigger index="0>0|5" />
+
+    <support animationName="moveSupport" />
+
+    <baseColorConfigurations useDefaultColors="true" price="500" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <baseColorConfiguration color="0.144 0.171 0.198 1.0" />
+        <colorNode node="0>0" />
+    </baseColorConfigurations>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <tipOcclusionAreas>
+        <tipOcclusionArea start="0>0|6|0|0" width="0>0|6|0|1" height="0>0|6|0|2" />
+        <tipOcclusionArea start="0>0|6|1|0" width="0>0|6|1|1" height="0>0|6|1|2" />
+        <tipOcclusionArea start="0>0|6|2|0" width="0>0|6|2|1" height="0>0|6|2|2" />
+    </tipOcclusionAreas>
+
+    <components count="1">
+        <component1 centerOfMass="0 0.6 -0.8" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+</vehicle>

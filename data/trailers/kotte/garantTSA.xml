@@ -1,0 +1,176 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="augerWagon">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>TSA 30000</name>
+        <specs>
+            <neededPower>240</neededPower>
+            <combination>Dolly EA, Kotte FRC</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_tank</function>
+            <function>$l10n_function_semiTrailer</function>
+        </functions>
+        <image>$data/store/store_garantTSA.png</image>
+        <price>45000</price>
+        <dailyUpkeep>30</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KOTTE</brand>
+        <category>SWS_slurryTanks</category>
+        <vertexBufferMemoryUsage>489916</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>79980</indexBufferMemoryUsage>
+        <textureMemoryUsage>14548512</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_manureBarrel</typeDesc>
+    <filename>$data/vehicles/trailers/kotte/garantTSA.i3d</filename>
+
+    <size width="3" length="10"/>
+    <speedLimit value="80" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.0" repr="0>0|0"   forcePointRatio="0.2" filename="$data/vehicles/wheels/lizard/315_80R22_5.xml" isLeft="true"  initialCompression="40" suspTravel="0.1" spring="35" damper="50" hasParticles="true" steeringAxleScale="0.8" steeringAxleRotMax="20" steeringAxleRotMin="-20" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.0" repr="0>0|1"   forcePointRatio="0.2" filename="$data/vehicles/wheels/lizard/315_80R22_5.xml" isLeft="false" initialCompression="40" suspTravel="0.1" spring="35" damper="50" hasParticles="true" steeringAxleScale="0.8" steeringAxleRotMax="20" steeringAxleRotMin="-20" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.1" repr="0>0|2"   forcePointRatio="0.2" filename="$data/vehicles/wheels/lizard/315_80R22_5.xml" isLeft="true"  initialCompression="30" suspTravel="0.1" spring="35" damper="50" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.1" repr="0>0|3|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/lizard/315_80R22_5.xml" isLeft="false" initialCompression="30" suspTravel="0.1" spring="35" damper="50" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.2" repr="0>0|4"   forcePointRatio="0.2" filename="$data/vehicles/wheels/lizard/315_80R22_5.xml" isLeft="true"  initialCompression="20" suspTravel="0.1" spring="35" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-1" steeringAxleRotMax="25" steeringAxleRotMin="-25" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.2" repr="0>0|5"   forcePointRatio="0.2" filename="$data/vehicles/wheels/lizard/315_80R22_5.xml" isLeft="false" initialCompression="20" suspTravel="0.1" spring="35" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-1" steeringAxleRotMax="25" steeringAxleRotMin="-25" />
+            </wheels>
+            <objectChange node="0>0|3|1|0" translationActive="0 0 -0.65" />
+            <objectChange node="0>0|3|1|1" translationActive="0 0 0.65" />
+        </wheelConfiguration>
+        <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="600">
+            <wheels>
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.0" repr="0>0|0"   forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T404_560_45R22_5.xml" isLeft="true"  initialCompression="40" suspTravel="0.15" spring="25" damper="50" hasParticles="true" steeringAxleScale="0.8" steeringAxleRotMax="20" steeringAxleRotMin="-20" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.0" repr="0>0|1"   forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T404_560_45R22_5.xml" isLeft="false" initialCompression="40" suspTravel="0.15" spring="25" damper="50" hasParticles="true" steeringAxleScale="0.8" steeringAxleRotMax="20" steeringAxleRotMin="-20" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.1" repr="0>0|2"   forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T404_560_45R22_5.xml" isLeft="true"  initialCompression="30" suspTravel="0.15" spring="25" damper="50" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.1" repr="0>0|3|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T404_560_45R22_5.xml" isLeft="false" initialCompression="30" suspTravel="0.15" spring="25" damper="50" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.2" repr="0>0|4"   forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T404_560_45R22_5.xml" isLeft="true"  initialCompression="20" suspTravel="0.15" spring="25" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-1" steeringAxleRotMax="25" steeringAxleRotMin="-25" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.2" repr="0>0|5"   forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T404_560_45R22_5.xml" isLeft="false" initialCompression="20" suspTravel="0.15" spring="25" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-1" steeringAxleRotMax="25" steeringAxleRotMin="-25" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <rimColorConfigurations useDefaultColors="true" price="100" icon="$dataS2/menu/hud/configurations/config_rimColor.png">
+        <rimColorConfiguration color="0.294 0.294 0.294 1" />
+        <colorNode node="0>0" />
+    </rimColorConfigurations>
+
+    <brakeForce>1</brakeForce>
+    <maximalAirConsumptionPerFullStop value="0.3" />
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="0>0|3|1|0" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|3|1|1" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>3|2|0"   filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>3|2|1"   filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+    </dynamicallyLoadedParts>
+
+    <lights>
+        <low>
+            <light                     decoration="0>2|1|0"   lightTypes="0 3" />
+            <light                     decoration="0>2|0|0|0" lightTypes="1" />
+        </low>
+        <high>
+            <light realLight="0>2|1|1"   decoration="0>2|1|0"   lightTypes="0 3" />
+            <light realLight="0>2|0|0|1" decoration="0>2|0|0|0" lightTypes="1" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>2|1|1" decoration="0>2|3|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft realLight="0>2|2|0|1" decoration="0>2|2|0|0" />
+        <turnLightRight realLight="0>2|2|1|1" decoration="0>2|2|1|0" />
+    </turnLights>
+
+    <reverseLights>
+        <reverseLight realLight="0>2|4|1" decoration="0>2|4|0" />
+    </reverseLights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>1" jointType="semitrailer" />
+    </inputAttacherJoints>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="slurryTank" capacity="30000" />
+    </fillUnits>
+
+    <supportsFillTriggers value="true" />
+    <allowFillFromAir value="true"/>
+
+    <fillSound file="$data/sounds/garantPump_big.wav" pitchOffset="1.0" volume="0.6" volume3D="0.6" innerRadius="10" radius="40" linkNode="0>12" useOnDischarge="true" useOnCharge="true" />
+    <measurementNodes>
+        <measurementNode index="0>3|1|1" fillUnitIndex="1" />
+    </measurementNodes>
+
+    <overloading capacity="600">
+        <trailerTriggers>
+            <trailerTrigger index="0>5" />
+        </trailerTriggers>
+    </overloading>
+
+    <unloadTrigger index="0>4" />
+    <pipe automaticOverload="false" />
+
+    <tipReferencePoints>
+        <tipReferencePoint index="0>6|0" width="2.5" />
+    </tipReferencePoints>
+
+    <tipAnimations>
+        <tipAnimation speedScale="1" closeSpeedScale="-1.7" animationName="tipAniamtion" dischargeStartTime="0" dischargeEndTime="10" >
+        </tipAnimation>
+    </tipAnimations>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>3|0" startTime="0" duration="1" startTrans="0 0.5 0.792" endTrans="0 -0.05 0.792" />
+            <part node="0>0|3|1" startTime="0"    endTime="0.05" visibility="false" />
+            <part node="0>3|2"   startTime="0"    endTime="0.05" visibility="true" />
+            <part node="0>0|3|1" startTime="0.05" endTime="0.1"  visibility="true" />
+            <part node="0>3|2"   startTime="0.05" endTime="0.1"  visibility="false" />
+        </animation>
+
+        <animation name="tipAniamtion">
+            <part node="0>7" startTime="0" duration="10" startTrans="0 0 0" endTrans="0 1 0" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <baseColorConfigurations useDefaultColors="true" price="1400" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <baseColorConfiguration color="0.037 0.138 0.034 1.0" />
+        <colorNode node="0>3" />
+    </baseColorConfigurations>
+    
+    <designConfigurations>
+        <designConfiguration name="$l10n_configuration_valueWhite" price="0" icon="$dataS2/menu/hud/configurations/config_edition.png">
+            <objectChange node="0>9|0" visibilityActive="true" visibilityInactive="false"/>            
+        </designConfiguration>
+        <designConfiguration name="$l10n_configuration_valueColor" price="0" icon="$dataS2/menu/hud/configurations/config_edition.png">
+            <objectChange node="0>9|1" visibilityActive="true" visibilityInactive="false"/>            
+        </designConfiguration>
+    </designConfigurations>
+
+    <washable dirtDuration="60" washDuration="1" workMultiplier="4" />
+
+    <tipOcclusionAreas>
+        <tipOcclusionArea start="0>8|0" width="0>8|1" height="0>8|2" />
+    </tipOcclusionAreas>
+
+    <components count="1">
+        <component1 centerOfMass="0 0.65 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

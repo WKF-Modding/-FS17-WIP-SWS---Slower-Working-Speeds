@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="augerWagon">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>FRC</name>
+        <specs>
+            <neededPower>50</neededPower>
+            <combination>TSA 30000</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_slurryContainer</function>
+        </functions>
+        <image>$data/store/store_garantFieldContainer.png</image>
+        <price>15000</price>
+        <dailyUpkeep>10</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KOTTE</brand>
+        <category>SWS_slurryTanks</category>
+        <vertexBufferMemoryUsage>521352</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>84624</indexBufferMemoryUsage>
+        <textureMemoryUsage>12583056</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_manureBarrel</typeDesc>
+    <filename>$data/vehicles/trailers/kotte/garantFieldContainer.i3d</filename>
+
+    <size width="2.8" length="11"/>
+    <speedLimit value="40" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel restLoad="2.4" repr="0>0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T404_560_45R22_5.xml" isLeft="true"  initialCompression="30" suspTravel="0.15" spring="80" damper="50" hasTireTracks="true" hasParticles="true" />
+                <wheel restLoad="2.4" repr="0>0|1" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T404_560_45R22_5.xml" isLeft="false" initialCompression="30" suspTravel="0.15" spring="80" damper="50" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <axisColor useBaseColor="true" />
+
+    <rimColorConfigurations useDefaultColors="true" price="100" icon="$dataS2/menu/hud/configurations/config_rimColor.png">
+        <rimColorConfiguration color="0.294 0.294 0.294 1" />
+        <colorNode node="0>0" />
+    </rimColorConfigurations>
+
+    <brakeForce>1.2</brakeForce>
+    <maximalAirConsumptionPerFullStop value="0.3" />
+
+    <lights>
+        <low>
+            <light                     decoration="0>2|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>2|0|1" decoration="0>2|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>2|0|1" decoration="0>2|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft realLight="0>2|1|0|1" decoration="0>2|1|0|0" />
+        <turnLightRight realLight="0>2|1|1|1" decoration="0>2|1|1|0" />
+    </turnLights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>1" jointType="trailer" attacherHeight="0.935" />
+    </inputAttacherJoints>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="slurryTank" capacity="55000" />
+    </fillUnits>
+
+    <allowFillFromAir value="true"/>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>3" maxDelta="0" maxAllowedHeapAngle="0" allSidePlanes="false" />
+        </volumes>
+    </fillVolumes>
+
+    <unloadTrigger index="0>5" />
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.80" volume="1.00" />
+
+    <movingTools>
+        <movingTool index="0>0" wheelIndices="1 2" playSound="true" >
+            <dependentPart index="0>4"/>
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- support -->
+        <movingPart index="0>4" referencePoint="0>0|2" referenceFrame="0>0|2">
+            <translatingPart index="0>4|0" />
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0" startTime="0" duration="1" startRot="0 0 0" endRot="40 0 0" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <baseColorConfigurations useDefaultColors="true" price="1200" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <baseColorConfiguration color="0.0329 0.1390 0.0303 1" />
+        <colorNode node="0>8" />
+    </baseColorConfigurations>
+
+    <washable dirtDuration="60" washDuration="1" workMultiplier="4" />
+
+    <tipOcclusionAreas>
+        <tipOcclusionArea start="0>7|0" width="0>7|1" height="0>7|2" />
+    </tipOcclusionAreas>
+
+    <components count="1">
+        <component1 centerOfMass="0 0 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

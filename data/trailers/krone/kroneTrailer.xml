@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dynamicMountAttacherTrailer">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Trailer</name>
+        <specs>
+            <combination>XDisc 620</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutterTrailer</function>
+        </functions>
+        <image>$data/store/store_kroneTrailer.png</image>
+        <price>3000</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KRONE</brand>
+        <category>SWS_cutterTrailers</category>
+        <vertexBufferMemoryUsage>614448</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>91908</indexBufferMemoryUsage>
+        <textureMemoryUsage>8738288</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutterTrailer</typeDesc>
+    <filename>$data/vehicles/trailers/krone/kroneTrailer.i3d</filename>
+
+    <size width="3.0" length="11" lengthOffset="0.5" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel repr="0>0|0" driveNode="0>0|0|0" restLoad="0.4" filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="true"  initialCompression="20" suspTravel="0.10" spring="17" damper="10" hasTireTracks="true" />
+                <wheel repr="0>0|1"                     restLoad="0.4" filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="false" initialCompression="20" suspTravel="0.10" spring="17" damper="10" hasTireTracks="true" />
+                <wheel repr="1>0|0"                     restLoad="0.5" filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="true"  initialCompression="20" suspTravel="0.10" spring="20" damper="10" hasTireTracks="true" />
+                <wheel repr="1>0|1"                     restLoad="0.5" filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="false" initialCompression="20" suspTravel="0.10" spring="20" damper="10" hasTireTracks="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|1|0"  filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|1|1"  filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>2|0"      filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>2|1"      filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+    </dynamicallyLoadedParts>
+
+    <brakeForce>0.3</brakeForce>
+
+    <lights>
+        <low>
+            <light decoration="0>1|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>1|0|1" decoration="0>1|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>1|0|1" decoration="0>1|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>1|1|0|1" decoration="0>1|1|0|0" />
+        <turnLightRight realLight="0>1|1|1|1" decoration="0>1|1|1|0" />
+    </turnLights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="2>0" jointType="trailer" rootNode="2>" attacherHeight="1.05"/>
+    </inputAttacherJoints>
+
+    <allowFillFromAir value="false" />
+    <allowTipDischarge value="false" />
+
+    <dynamicMountAttacher triggerNode="0>3" rootNode="0>" jointNode="0>" mountType="TYPE_AUTO_ATTACH_XZ" forceAcceleration="30" />
+
+    <movingParts isActiveDirtyTimeOffset="1">
+        <movingPart index="2>1" referencePoint="1>2" referenceFrame="2>" isActiveDirty="true">
+            <translatingPart index="2>1|0" />
+        </movingPart>
+        <movingPart index="2>2" referencePoint="1>3" referenceFrame="2>" isActiveDirty="true" scaleZ="true"/>
+        <movingPart index="0>5" referencePoint="2>3" referenceFrame="0>" isActiveDirty="true" scaleZ="true"/>
+    </movingParts>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="0>0|0|1|0" startTime="0.00" endTime="0.05" visibility="false" />
+            <part node="0>0|0|1|0" startTime="0.05" endTime="0.10" visibility="true" />
+            <part node="0>0|0|1|1" startTime="0.00" endTime="0.05" visibility="false" />
+            <part node="0>0|0|1|1" startTime="0.05" endTime="0.10" visibility="true" />
+
+            <part node="0>2|0" startTime="0.00" endTime="0.05" visibility="true" />
+            <part node="0>2|0" startTime="0.05" endTime="0.10" visibility="false" />
+            <part node="0>2|1" startTime="0.00" endTime="0.05" visibility="true" />
+            <part node="0>2|1" startTime="0.05" endTime="0.10" visibility="false" />
+            <part componentJointIndex="1" startTime="0" endTime="0.1" startRotLimit="80 0 0" endRotLimit="0 0 0"/>
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <tipOcclusionAreas>
+        <tipOcclusionArea start="0>6|0" width="0>6|1" height="0>6|2" />
+    </tipOcclusionAreas>
+
+    <components count="3">
+        <component1 centerOfMass="0 0.45 -5" solverIterationCount="10" />
+        <component2 centerOfMass="0 -0.1 0" solverIterationCount="20" />
+        <component3 centerOfMass="0 0 0" solverIterationCount="10" />
+        <joint component1="0" component2="1" index="0>4" rotLimit="0 100 0" transLimit="0 0 0" />
+        <joint component1="1" component2="2" index="1>1" rotLimit="0 0 0" transLimit="0 0 0" />
+        <collisionPair component1="0" component2="2" enabled="false" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>

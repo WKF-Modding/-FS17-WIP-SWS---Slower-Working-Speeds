@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="sprayer_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>K165</name>
+        <specs>
+            <workingWidth>24.0</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_fertilizer</function>
+        </functions>
+        <image>$data/store/store_bredalK165.png</image>
+        <price>67000</price>
+        <dailyUpkeep>200</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>BREDAL</brand>
+        <category>SWS_fertilizerSpreaders</category>
+        <fieldJob sizeCategory="3" typeCategory="sprayer" />
+        <vertexBufferMemoryUsage>1166920</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>171336</indexBufferMemoryUsage>
+        <textureMemoryUsage>9612184</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_fertilizerSpreader</typeDesc>
+    <filename>$data/vehicles/trailers/bredal/K165.i3d</filename>
+
+    <size width="3.5" length="9" />
+    <powerConsumer ptoRpm="540" neededPtoPower="25"/>
+    <speedLimit value="14" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.8" repr="0>0|0|0"                           forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TwinRadial_750_60R30_5.xml" isLeft="true"  initialCompression="31" suspTravel="0.18" spring="27" damper="50" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.8" repr="0>0|0|1"                           forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TwinRadial_750_60R30_5.xml" isLeft="false" initialCompression="31" suspTravel="0.18" spring="27" damper="50" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.5" repr="0>0|0|2|0" driveNode="0>0|0|2|0|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_750_60R30_5.xml" isLeft="true"  initialCompression="24" suspTravel="0.18" spring="27" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="12" steeringAxleRotMin="-12"/>
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.5" repr="0>0|0|3|0" driveNode="0>0|0|3|0|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_750_60R30_5.xml" isLeft="false" initialCompression="24" suspTravel="0.18" spring="27" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="12" steeringAxleRotMin="-12"/>
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <axisColor>0.7227 0.0000 0.0000 1</axisColor>
+
+    <steeringAxleAngleScale startSpeed="0" endSpeed="90" />
+    <brakeForce>1.7</brakeForce>
+    <maximalAirConsumptionPerFullStop value="0.3" />
+
+    <lights>
+        <low>
+            <light                          decoration="0>0|4|0|0"   lightTypes="0 3"/> <!--BackLights-->
+        </low>
+        <high>
+            <light realLight="0>0|4|0|1"   decoration="0>0|4|0|0"   lightTypes="0 3" /> <!--BackLights-->
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>0|4|0|1" decoration="0>0|4|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>0|4|1|0|1" decoration="0>0|4|1|0|0" />
+        <turnLightRight realLight="0>0|4|1|1|1" decoration="0>0|4|1|1|0" />
+    </turnLights>
+
+    <workAreas>
+        <workArea startIndex="0>0|8|0" widthIndex="0>0|8|1" heightIndex="0>0|8|2" type="sprayer" disableBackwards="false" />
+    </workAreas>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|1" jointType="trailerLow" ptoInputNode="0>0|2" attacherHeight="0.617" />
+    </inputAttacherJoints>
+
+    <fillLitersPerSecond>100</fillLitersPerSecond>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="spreader" capacity="20000" />
+    </fillUnits>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>0|5|0" maxDelta="0.2" />
+        </volumes>
+    </fillVolumes>
+
+    <fillRootNode index="0>" />
+    <exactFillRootNode index="0>0|11" />
+    <fillMassNode index="0>" />
+
+    <sprayUsageScales workingWidth="24.0" scale="1" />
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|6|0" type="sprayer" rotSpeed="900"  turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|6|1" type="sprayer" rotSpeed="-900" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|6|3" type="sprayer" rotAxis="1" rotSpeed="-15" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|6|4" type="sprayer" rotAxis="1" rotSpeed="-40" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|6|5" type="sprayer" rotAxis="1" rotSpeed="-40" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|6|6" type="sprayer" rotAxis="1" rotSpeed="-40" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|6|7" type="sprayer" rotAxis="1" rotSpeed="-15" turnOnFadeTime="1" turnOffFadeTime="2" />
+    </turnedOnRotationNodes>
+
+    <sprayerTurnedOnScrollers>
+        <sprayerTurnedOnScroller index="0>0|6|2" scrollSpeed="-0.05" scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+    </sprayerTurnedOnScrollers>
+
+    <spraySound file="$data/sounds/spreader.wav" pitchOffset="1" volume="1.0" indoorVolumeFactor="0.45" />
+    <fillSound file="$data/maps/sounds/siloFillSound.wav" pitchOffset="1.0" volume="1.0" indoorVolumeFactor="0.45" volume3D="1.0" innerRadius="10" radius="40" linkNode="0>0"/>
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"  pitchOffset="0.8" volume="0.5" indoorVolumeFactor="0.75" />
+
+    <animations>
+        <animation name="toggleCover">
+            <part node="0>0|6|9" startTime="0" endTime="1.5" startRot="0 0 75" endRot="0 0 0" />
+        </animation>
+        <animation name="turnOnAnimation">
+            <part node="0>0|6|8" startTime="0" endTime="0.5" startTrans="0 1.497 -2.813" endTrans="0 1.722 -2.813" />
+        </animation>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|3" startTime="0" endTime="0.2" startTrans="-0.186 0.397 2.887" endTrans="-0.186 0 2.887" />
+        </animation>
+    </animations>
+
+    <movingTools>
+        <movingTool index="0>0|6|9">
+            <dependentPart index="0>0|7|3" />
+        </movingTool>
+        <movingTool index="0>0|6|8">
+            <dependentPart index="0>0|7|2" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>0|7|3" referencePoint="0>0|6|9|0" referenceFrame="0>" playSound="true" >
+            <translatingPart index="0>0|7|3|0" />
+        </movingPart>
+        <movingPart index="0>0|7|2" localReferencePoint="0>0|7|2|0" referencePoint="0>0|6|8|0" referenceFrame="0>" playSound="true" >
+            <dependentPart index="0>0|7|2|0" />
+        </movingPart>
+        <movingPart index="0>0|7|2|0" referencePoint="0>0|6|8|0" referenceFrame="0>0|6|8|0" />
+        <!-- steering -->
+        <movingPart index="0>0|0|2|0|1" referencePoint="0>0|0|3|0|1" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>0|7|0" referencePoint="0>0|0|2|0|2" referenceFrame="0>" isActiveDirty="true" >
+            <translatingPart index="0>0|7|0|0" />
+        </movingPart>
+        <movingPart index="0>0|7|1" referencePoint="0>0|0|3|0|2" referenceFrame="0>" isActiveDirty="true" >
+            <translatingPart index="0>0|7|1|0" />
+        </movingPart>
+    </movingParts>
+
+    <cover animationName="toggleCover" openOnBuy="false"/>
+
+    <ai>
+        <needsLowering value="false" />
+        <areaMarkers leftIndex="0>0|9|0|0" rightIndex="0>0|9|0|1" backIndex="0>0|9|0|2" />
+        <sizeMarkers leftIndex="0>0|9|1|0" rightIndex="0>0|9|1|1" backIndex="0>0|9|1|2" />
+        <toolReverserDirectionNode index="0>0|9|1|2" />
+    </ai>
+
+    <sprayerEffects>
+        <sprayerEffect>
+            <effectNode effectNode="0>0|10|0" delay="0" materialType="spreader" materialTypeId="1" />
+        </sprayerEffect>
+    </sprayerEffects>
+
+    <support animationName="moveSupport" />
+
+    <turnOnVehicle>
+        <turnedAnimation name="turnOnAnimation" turnOnSpeedScale="1" turnOffSpeedScale="-1" />
+    </turnOnVehicle>
+
+    <washable dirtDuration="180" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 1 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

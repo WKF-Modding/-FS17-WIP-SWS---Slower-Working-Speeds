@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle>
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <size width="6" length="14" />
+
+    <storeData>
+        <name>STZ-VP 3</name>
+        <specs>
+            <combination>Dolly EA</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_lowLoader</function>
+        </functions>
+        <image>$data/store/store_goldhoferStzVp3.png</image>
+        <bundleElements>
+            <bundleElement>
+                <xmlFilename>$data/vehicles/trailers/goldhofer/goldhoferStzVp3Front.xml</xmlFilename>
+                <offset>0 0.266 10</offset>
+                <yRotation>0</yRotation>
+            </bundleElement>
+            <bundleElement>
+                <xmlFilename>$data/vehicles/trailers/goldhofer/goldhoferStzVp3Back.xml</xmlFilename>
+                <offset>0 0 2</offset>
+                <yRotation>0</yRotation>
+            </bundleElement>
+        </bundleElements>
+        <attacherInfo>
+            <attach bundleElement0="1" bundleElement1="2" attacherJointIndex="1" inputAttacherJointIndex="1" />
+        </attacherInfo>
+        <brand>GOLDHOFER</brand>
+        <rotation>0</rotation>
+        <category>SWS_lowloaders</category>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+</vehicle>

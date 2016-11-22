@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="waterTrailer">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>AquaTrans 7300 S</name>
+        <functions>
+            <function>$l10n_function_tank</function>
+        </functions>
+        <image>$data/store/store_joskinAquaTrans7300.png</image>
+        <price>9500</price>
+        <dailyUpkeep>10</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>JOSKIN</brand>
+        <category>SWS_animals</category>
+        <vertexBufferMemoryUsage>531856</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>93978</indexBufferMemoryUsage>
+        <textureMemoryUsage>12058792</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_waterTrailer</typeDesc>
+    <filename>$data/vehicles/trailers/joskin/joskinAquaTrans7300.i3d</filename>
+
+    <size width="2.5" length="7"/>
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel rotSpeed="0" restLoad="0.6" repr="0>0|0|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/T404_400_55R22_5.xml" isLeft="true"  initialCompression="15" suspTravel="0.15" spring="23" damper="50" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="0.6" repr="0>0|0|1" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/T404_400_55R22_5.xml" isLeft="false" initialCompression="15" suspTravel="0.15" spring="23" damper="50" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <rimColor>0.9490 0.3838 0.0104 1</rimColor>
+
+    <axisColor>0.0738 0.3993 0.0738 1</axisColor>
+
+    <brakeForce>0.4</brakeForce>
+
+    <lights>
+        <low>
+            <light                       decoration="0>0|2|0|0" lightTypes="0 1 2 3"/> <!--BackLights-->
+        </low>
+        <high>
+            <light realLight="0>0|2|0|1" decoration="0>0|2|0|0" lightTypes="0 1 2 3" /> <!--BackLights-->
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>0|2|0|1" decoration="0>0|2|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>0|2|1|0|1" decoration="0>0|2|1|0|0" />
+        <turnLightRight realLight="0>0|2|1|1|1" decoration="0>0|2|1|1|0" />
+    </turnLights>
+
+    <reverseLights>
+        <reverseLight realLight="0>0|2|3|1" decoration="0>0|2|3|0" />
+    </reverseLights>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="water" capacity="7300" />
+    </fillUnits>
+
+    <tipReferencePoints>
+        <tipReferencePoint index="0>0|5" width="2.5" />
+    </tipReferencePoints>
+
+    <tipAnimations>
+        <tipAnimation speedScale="1" closeSpeedScale="-1.7" animationName="tipAnimationBack" doorAnimationName="tipAnimationBackDoor" dischargeStartTime="0.1" dischargeEndTime="18" name="info_tipSideBack">
+        </tipAnimation>
+    </tipAnimations>
+
+    <fillLitersPerSecond>325</fillLitersPerSecond>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|1" jointType="trailer" attacherHeight="0.4" />
+    </inputAttacherJoints>
+
+    <fillSound file="$data/maps/sounds/refuel.wav" pitchOffset="1.0" volume="1.0" indoorVolumeFactor="0.45" volume3D="1.0" innerRadius="10" radius="40" linkNode="0>0"/>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|3" startTime="0" duration="0.3" startTrans="0.131 0.591 1.505" endTrans="0.131 0.311 1.499" />
+        </animation>
+
+        <animation name="tipAnimationBack">
+            <part node="0>0|6" startTime="0" duration="1" startTrans="0 0 0" endTrans="0 0 1" />
+        </animation>
+    </animations>
+
+    <fillRootNode index="0>" />
+    <!--exactFillRootNode index="0>5|4|0" />
+    <fillAutoAimTargetNode index="0>5|4|1" /-->
+    <fillMassNode index="0>" />
+
+    <support animationName="moveSupport" />
+
+    <waterTrailerFillTrigger index="0>0|4" />
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.55 -1" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

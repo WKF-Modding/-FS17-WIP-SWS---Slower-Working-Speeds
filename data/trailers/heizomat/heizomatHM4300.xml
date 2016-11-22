@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="woodCrusherTrailer">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>HM 4-300</name>
+        <specs>
+            <neededPower>30</neededPower>
+        </specs>
+        <functions>
+            <function>$l10n_function_forestryWoodCrusher</function>
+            <function>$l10n_function_forestryTreeLimit</function>
+        </functions>
+        <rotation>0</rotation>
+        <image>$data/store/store_heizomatHM4300.png</image>
+        <price>28000</price>
+        <dailyUpkeep>50</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <brand>HEIZOMAT</brand>
+        <category>SWS_wood</category>
+        <vertexBufferMemoryUsage>1212144</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>196440</indexBufferMemoryUsage>
+        <textureMemoryUsage>11010480</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_woodCrusher</typeDesc>
+    <filename>$data/vehicles/trailers/heizomat/heizomatHM4300.i3d</filename>
+
+    <size width="2.5" length="3.5" lengthOffset="0.8" />
+
+    <powerConsumer ptoRpm="600" neededPtoPower="22"/>
+
+    <wheels autoRotateBackSpeed="2.0">
+        <wheel restLoad="0.9" repr="0>0|0|0" filename="$data/vehicles/wheels/trelleborg/AW305_260_70R15_3.xml" isLeft="true"  initialCompression="45" suspTravel="0.12" spring="15" damper="10" hasTireTracks="true" hasParticles="true" />
+        <wheel restLoad="0.9" repr="0>0|1"   filename="$data/vehicles/wheels/trelleborg/AW305_260_70R15_3.xml" isLeft="false" initialCompression="45" suspTravel="0.12" spring="15" damper="10" hasTireTracks="true" hasParticles="true" />
+    </wheels>
+
+    <axisColor>0.0385 0.4936 0.0046 1</axisColor>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|1|0" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|1|1" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>1|0"     filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>1|1"     filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+    </dynamicallyLoadedParts>
+
+    <brakeForce>0.5</brakeForce>
+
+    <lights>
+        <low>
+            <light                          decoration="0>5|0|0"   lightTypes="0" />
+        </low>
+        <high>
+            <light                          decoration="0>5|0|0"   lightTypes="0" />
+            <light realLight="0>5|0|1"      decoration="0>5|0|0"   lightTypes="0" />
+        </high>
+        <states>
+            <state lightTypes="0" />
+        </states>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>5|0|1" decoration="0>5|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>5|1|0|1" decoration="0>5|1|0|0" />
+        <turnLightRight realLight="0>5|1|1|1" decoration="0>5|1|1|0" />
+    </turnLights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>2" jointType="trailer" attacherHeight="1.078" ptoAboveAttacher="false" ptoInputNode="0>3" />
+    </inputAttacherJoints>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"  pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.75" />
+
+    <movingTools>
+        <!-- pipe -->
+        <movingTool index="0>6|4" freezingPipeStates="1" >
+            <controls group="pipe" l10nName="label_pipe" axis="AXIS_CRANE_ARM" invertAxis="true" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/pipe_rotY.png" />
+            <rotation rotSpeed="70" rotAcceleration="200" rotationAxis="2" />
+        </movingTool>
+
+        <movingTool index="0>6|4|0|0" freezingPipeStates="1" >
+            <controls group="pipe" l10nName="label_pipe" axis="AXIS_CRANE_ARM2" invertAxis="false" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/pipe_end.png" />
+            <rotation rotSpeed="70" rotAcceleration="200" rotMin="10" rotMax="60" rotationAxis="1" />
+        </movingTool>
+
+        <!-- pipe fold -->
+        <movingTool index="0>6|4|0" playSound="true">
+            <dependentPart index="0>6|4|0|1"/>
+        </movingTool>
+
+        <!-- gate fold -->
+        <movingTool index="0>6|0" playSound="true">
+            <dependentPart index="0>6|2"/>
+            <dependentPart index="0>6|1"/>
+            <dependentPart index="0>6|2|0"/>
+            <dependentPart index="0>6|2|1"/>
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- hydraulic pipe aim trans -->
+        <movingPart index="0>6|4|0|2" referencePoint="0>6|4|0|0|2" referenceFrame="0>6|4|0|0|2" localReferencePoint="0>6|4|0|2|0" localReferenceTranslate="true" isActiveDirty="true" >
+            <dependentPart index="0>6|4|0|2|0"/>
+        </movingPart>
+        <movingPart index="0>6|4|0|2|0" referencePoint="0>6|4|0|0|2" referenceFrame="0>6|4|0|0|2" />
+
+        <!-- pipe aim spring -->
+        <movingPart index="0>6|4|0|3" referencePoint="0>6|4|0|0|3" referenceFrame="0>6|4|0|0|3" isActiveDirty="true" >
+            <translatingPart index="0>6|4|0|3|0"/>
+            <dependentPart index="0>6|4|0|3|1"/>
+        </movingPart>
+        <movingPart index="0>6|4|0|3|1" referencePoint="0>6|4|0|0|3" referenceFrame="0>6|4|0|0|3" scaleZ="true" />
+
+        <!-- hydraulic pipe fold -->
+        <movingPart index="0>6|4|0|1" referencePoint="0>6|4|1" referenceFrame="0>6|4|1">
+            <translatingPart index="0>6|4|0|1|0"/>
+        </movingPart>
+
+        <!-- hydraulic gate -->
+        <movingPart index="0>6|1" referencePoint="0>6|0|0" referenceFrame="0>6|0|0">
+            <translatingPart index="0>6|1|0"/>
+        </movingPart>
+
+        <!-- ropes -->
+        <movingPart index="0>6|2|0" referencePoint="0>6|0|1|0" referenceFrame="0>6|0|1|0" >
+            <translatingPart index="0>6|2|0|1"/>
+            <dependentPart index="0>6|2|0|0"/>
+        </movingPart>
+        <movingPart index="0>6|2|0|0" referencePoint="0>6|0|1|0" referenceFrame="0>6|0|1|0" scaleZ="true" />
+
+        <movingPart index="0>6|2|1" referencePoint="0>6|0|1" referenceFrame="0>6|0|1" limitedAxis="3" >
+            <dependentPart index="0>6|2|1|0"/>
+        </movingPart>
+        <movingPart index="0>6|2|1|0" referencePoint="0>6|0|1" referenceFrame="0>6|0|1" >
+            <translatingPart index="0>6|2|1|0|1"/>
+            <dependentPart index="0>6|2|1|0|0"/>
+        </movingPart>
+        <movingPart index="0>6|2|1|0|0" referencePoint="0>6|0|1" referenceFrame="0>6|0|1" scaleZ="true" />
+    </movingParts>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>4|0"  startTime="0" endTime="0.5" startTrans="0.071 0.822 1.043" endTrans="0.071 0.407 1.043" />
+            <part node="0>4|1"  startTime="0" endTime="0.5" startRot="-720 0 0" endRot="0 0 0" />
+            <part node="0>4|2"  startTime="0" endTime="0.5" startTrans="0.07 0.586 1.043" endTrans="0.07 0.17 1.043" />
+
+            <part node="0>1" startTime="0" endTime="0.05" visibility="true" />
+            <part node="0>1" startTime="0.05" endTime="0.1" visibility="false" />
+            <part node="0>0|0|1" startTime="0" endTime="0.05" visibility="false" />
+            <part node="0>0|0|1" startTime="0.05" endTime="0.1" visibility="true" />
+        </animation>
+
+        <!-- move pillars down/up, open/close gate -->
+        <animation name="folding">
+            <part node="0>6|0"    startTime="0" endTime="2" startRot="0 0 0" endRot="0 0 -90" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <foldingParts startMoveDirection="1" turnOnFoldMaxLimit="0.05" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="folding" speedScale="1" />
+    </foldingParts>
+
+    <pipe numStates="2" unloadingStates="2" raycastNodeIndex="0>6|4|0|0|0" autoAimStates="2" raycastDistance="11" unloadingEffectStopTime="0.75" turnOnAllowedStates="2" >
+        <node index="0>6|4" rotationSpeeds="0 35 0" autoAimYRotation="true" autoAimInvertZ="false" >
+            <state1 rotation="0 -90 0" />
+            <state2 rotation="0 0 0"/>
+        </node>
+        <node index="0>6|4|0" rotationSpeeds="15 0 0">
+            <state1 rotation="65 0 0"/>
+            <state2 rotation="0 0 0"/>
+        </node>
+        <node index="0>6|4|0|0" rotationSpeeds="15 0 0" autoAimXRotation="true">
+            <state1 rotation="33 0 0"/>
+            <state2 rotation="33 0 0"/>
+        </node>
+    </pipe>
+
+    <pipeEffect>
+        <effectNode effectClass="PipeEffect" effectNode="0>6|4|0|0|1" delay="0" materialType="pipe" materialTypeId="1" maxBending="0.01"/>
+    </pipeEffect>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="10" />
+
+    <woodCrusher cutNode="0>6|10" cutSizeY="0.4" cutSizeZ="0.4" moveColDisableCollisionPairs="false" downForceNode="0>6|11" mainDrumRefNode="0>6|12" downForce="0.05" moveMaxForce="9" automaticallyTurnOn="true" >
+        <moveCollision index="0>6|0|2" />
+        <moveCollision index="0>6|6" />
+        <moveCollision index="0>6|7" />
+        <moveTrigger index="0>6|0|3" />
+        <moveTrigger index="0>6|8" />
+    </woodCrusher>
+
+    <woodCrusherStartSound file="$data/vehicles/trailers/jenz/jenzHEM582_start.wav" volume="1" indoorVolumeFactor="0.40" pitchOffset="1" />
+    <woodCrusherIdleSound  file="$data/vehicles/trailers/jenz/jenzHEM582_idle.wav"  volume="1" indoorVolumeFactor="0.40" pitchOffset="1" />
+    <woodCrusherWorkSound  file="$data/vehicles/trailers/jenz/jenzHEM582_work.wav"  volume="1" indoorVolumeFactor="0.40" pitchOffset="1" />
+    <woodCrusherStopSound  file="$data/vehicles/trailers/jenz/jenzHEM582_stop.wav"  volume="1" indoorVolumeFactor="0.60" pitchOffset="1" />
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>6|5" type="woodCrusher" rotSpeed="100"  rotAxis="3" />
+        <turnedOnRotationNode index="0>7|1" type="woodCrusher" rotSpeed="540"  rotAxis="3" />
+        <turnedOnRotationNode index="0>7|2" type="woodCrusher" rotSpeed="1080" rotAxis="3" />
+        <turnedOnRotationNode index="0>7|3" type="woodCrusher" rotSpeed="1080" rotAxis="3" />
+    </turnedOnRotationNodes>
+
+    <turnedOnScrollers>
+        <turnedOnScroller index="0>7|0" type="woodCrusher" shaderParameterName="offsetUV" scrollSpeed="-0.9" shaderParameterComponent="2" />
+        <turnedOnScroller index="0>6|3" type="woodCrusher" shaderParameterName="scrollPosition" scrollSpeed="-0.2" shaderParameterComponent="1" />
+    </turnedOnScrollers>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="woodChips" capacity="0" />
+    </fillUnits>
+    <overloading capacity="0" stopOverloadIfEmpty="false" forceActive="true">
+        <trailerTriggers>
+            <trailerTrigger index="0>6|9" pipeState="2" />
+        </trailerTriggers>
+    </overloading>
+    <allowFillFromAir value="false" />
+
+    <fillVolumes>
+        <dischargeInfos>
+            <dischargeInfo>
+                <node index="0>6|4|0|0|0" width="0.4" length="0.4" />
+            </dischargeInfo>
+        </dischargeInfos>
+    </fillVolumes>
+
+    <tipOcclusionAreas>
+        <tipOcclusionArea start="0>8|0" width="0>8|1" height="0>8|2" />
+    </tipOcclusionAreas>
+
+    <components count="1">
+        <component1 centerOfMass="0.03 0.7 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+</vehicle>

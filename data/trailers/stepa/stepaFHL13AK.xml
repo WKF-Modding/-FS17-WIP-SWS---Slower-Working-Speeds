@@ -1,0 +1,347 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="forwarderTrailer_steerable">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>FHL 13 AK</name>
+        <functions>
+            <function>$l10n_function_forestryTransport</function>
+        </functions>
+        <image>$data/store/store_stepaFHL13AK.png</image>
+        <price>54000</price>
+        <dailyUpkeep>80</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>STEPA</brand>
+        <category>SWS_wood</category>
+        <vertexBufferMemoryUsage>1380904</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>217098</indexBufferMemoryUsage>
+        <textureMemoryUsage>9262576</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_timberTrailer</typeDesc>
+    <filename>$data/vehicles/trailers/stepa/stepaFHL13AK.i3d</filename>
+
+    <size width="3" length="8" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel tipOcclusionAreaGroupId="1" restLoad="0.8" repr="0>0"                   filename="$data/vehicles/wheels/trelleborg/AW309_500_50R17.xml" isLeft="true"  initialCompression="50" suspTravel="0.15" spring="15" damper="30" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="0.8" repr="0>1" driveNode="0>1|0" filename="$data/vehicles/wheels/trelleborg/AW309_500_50R17.xml" isLeft="false" initialCompression="50" suspTravel="0.15" spring="15" damper="30" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="0.8" repr="0>2"                   filename="$data/vehicles/wheels/trelleborg/AW309_500_50R17.xml" isLeft="true"  initialCompression="20" suspTravel="0.15" spring="15" damper="30" hasTireTracks="true" hasParticles="true" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="0.8" repr="0>3"                   filename="$data/vehicles/wheels/trelleborg/AW309_500_50R17.xml" isLeft="false" initialCompression="20" suspTravel="0.15" spring="15" damper="30" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <axisColor>0.7667 0.0161 0.0072 1</axisColor>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="0>1|1|0"  filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>1|1|1"  filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>4|11|0" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>4|11|1" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+    </dynamicallyLoadedParts>
+
+    <brakeForce>0.4</brakeForce>
+
+    <cameras count="2">
+        <camera1 index="0>4|14|0" rotatable="true" rotateNode="0>4|14" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="18" >
+            <!--raycastNode index="0>6"/>
+            <raycastNode index="0>7"/-->
+        </camera1>
+        <camera2 index="0>4|8|4|0" rotatable="false" useWorldXZRotation="false" limit="true" rotMinX="-1.1" rotMaxX="1.1" transMin="0" transMax="0" />
+    </cameras>
+
+    <enterReferenceNode index="0>6"/>
+    <exitPoint index="0>5"/>
+    <characterNode index="0>4|8|2" cameraMinDistance="1.5" filename="$dataS2/character/player/player.xml" spineRotation="180 0 100" >
+        <target ikChain="rightFoot" targetNode="0>4|8|2|0" setDirty="true" />
+        <target ikChain="leftFoot"  targetNode="0>4|8|2|1" setDirty="true" />
+        <target ikChain="rightArm"  targetNode="0>4|8|2|2" setDirty="true" />
+        <target ikChain="leftArm"   targetNode="0>4|8|2|3" setDirty="true" />
+    </characterNode>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.75" volume="0.6" />
+
+    <lights>
+        <low>
+            <light                           decoration="0>4|3|1|0"     lightTypes="0 3" />
+            <light realLight="0>4|8|0|0|4|1" decoration="0>4|8|0|0|4|0" lightTypes="1" />
+        </low>
+        <high>
+            <light realLight="0>4|3|1|1"     decoration="0>4|3|1|0"     lightTypes="0 3" />
+            <light realLight="0>4|8|0|0|4|2" decoration="0>4|8|0|0|4|0" lightTypes="1" />
+        </high>
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+        </states>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>4|3|1|1" decoration="0>4|3|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>4|3|3|0|1" decoration="0>4|3|3|0|0" />
+        <turnLightRight realLight="0>4|3|3|1|1" decoration="0>4|3|3|1|0" />
+    </turnLights>
+
+    <inputAttacherJoints>
+        <!--inputAttacherJoint index="0>4|0|0" jointType="trailerLow" ptoInputNode="0>4|0|5" attacherHeight="0.497" /-->
+        <inputAttacherJoint index="0>4|0|0" jointType="trailer" ptoInputNode="0>4|0|5" attacherHeight="0.65" />
+    </inputAttacherJoints>
+
+    <movingTools>
+        <!-- attacher bar -->
+        <movingTool index="0>4|0" playSound="true" >
+            <controls axis="AXIS_CRANE_TOOL3" invertAxis="false" mouseSpeedFactor="0.7" iconFilename="$dataS2/menu/moveControls/drawbar_rotX.png"/>
+            <rotation rotSpeed="20" rotAcceleration="170" rotMax="40" rotMin="-40" rotationAxis="2" startRot="0" />
+            <inputAttacherJoint value="true" />
+            <dependentPart index="0>4|1" />
+            <dependentPart index="0>4|2" />
+            <dependentPart index="0>4|0|2" />
+        </movingTool>
+
+        <!-- physics -->
+        <!-- main arm -->
+        <movingTool index="0>4|15" delayedIndex="0>4|8" playSound="true" >
+            <controls group="arm" l10nName="label_arm" axis="AXIS_CRANE_ARM" invertAxis="true" mouseSpeedFactor="0.9" iconFilename="$dataS2/menu/moveControls/crane_arm1_rotY.png"/>
+            <rotation rotSpeed="35" rotAcceleration="60" rotMax="160" rotMin="-160" rotationAxis="2" rotSendNumBits="11" />
+            <componentJoint index="0" anchorActor="0" />
+        </movingTool>
+        <!-- second arm -->
+        <movingTool index="0>4|15|0" delayedIndex="0>4|8|0" playSound="true" >
+            <controls group="arm" l10nName="label_arm" axis="AXIS_CRANE_ARM2" invertAxis="false" mouseSpeedFactor="0.9" iconFilename="$dataS2/menu/moveControls/crane_arm1_rotX.png"/>
+            <rotation rotSpeed="25" rotAcceleration="60" rotMax="0" rotMin="-110" rotationAxis="1" rotSendNumBits="10" />
+            <componentJoint index="0" anchorActor="0" />
+        </movingTool>
+        <!-- third arm -->
+        <movingTool index="0>4|15|0|0" delayedIndex="0>4|8|0|0" playSound="true" >
+            <controls group="arm" l10nName="label_arm" axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="1.0" iconFilename="$dataS2/menu/moveControls/crane_arm2_rotX.png"/>
+            <rotation rotSpeed="20" rotAcceleration="170" rotMax="77" rotMin="-69.54" rotationAxis="1" rotSendNumBits="10" />
+            <componentJoint index="0" anchorActor="0" />
+        </movingTool>
+        <!-- fourth arm -->
+        <movingTool index="0>4|15|0|0|0" delayedIndex="0>4|8|0|0|0" playSound="true" >
+            <controls group="arm" l10nName="label_arm" axis="AXIS_CRANE_ARM4" invertAxis="true" mouseSpeedFactor="0.7" iconFilename="$dataS2/menu/moveControls/crane_arm2_trans.png"/>
+            <translation transSpeed="0.7" transAcceleration="1.8" transMax="-0.78" transMin="-2.48" translationAxis="3" />
+            <componentJoint index="0" anchorActor="0" />
+        </movingTool>
+        <movingTool index="0>4|15|0|0|0|0" delayedIndex="0>4|8|0|0|0|0" >
+            <controls group="arm" l10nName="label_arm" axis="AXIS_CRANE_ARM4" invertAxis="true" mouseSpeedFactor="0.7" />
+            <translation transSpeed="0.7" transAcceleration="1.8" transMax="0" transMin="-1.7" translationAxis="3" />
+            <componentJoint index="0" anchorActor="0" />
+        </movingTool>
+
+        <!-- delayed meshes -->
+        <!-- main arm -->
+        <!-- second arm -->
+        <movingTool index="0>4|8|0" >
+            <dependentPart index="0>4|8|1" />
+        </movingTool>
+        <!-- third arm -->
+        <movingTool index="0>4|8|0|0" >
+            <dependentPart index="0>4|8|0|1" />
+        </movingTool>
+        <!-- fourth arm -->
+        <movingTool index="0>4|8|0|0|0" >
+            <dependentPart index="0>4|8|0|0|0|1" />
+        </movingTool>
+        <movingTool index="0>4|8|0|0|0|0" />
+
+        <!-- claw rotation -->
+        <movingTool index="1>2" playSound="true" >
+            <controls group="arm" l10nName="label_arm" axis="AXIS_CRANE_TOOL2" invertAxis="true" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/grab_rotY.png"/>
+            <rotation rotSpeed="-80" rotAcceleration="640" rotationAxis="2" />
+            <componentJoint index="0" anchorActor="1" />
+        </movingTool>
+
+        <!-- left/right claw -->
+        <movingTool index="1>0" playSound="true" >
+            <controls group="arm" l10nName="label_arm" axis="AXIS_CRANE_TOOL" invertAxis="false" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/grab_openClose.png"/>
+            <rotation rotSpeed="80" rotAcceleration="640" rotMax="30" rotMin="-100" rotationAxis="3"  />
+            <componentJoint index="1" anchorActor="0" />
+        </movingTool>
+        <movingTool index="1>1" >
+            <controls group="arm" l10nName="label_arm" axis="AXIS_CRANE_TOOL" invertAxis="false" mouseSpeedFactor="1" />
+            <rotation rotSpeed="-80" rotAcceleration="640" rotMax="100" rotMin="-30" rotationAxis="3"  />
+            <componentJoint index="2" anchorActor="0" />
+        </movingTool>
+
+        <!-- fold support feet -->
+        <movingTool index="0>4|4" >
+            <controls group="supportFeet" l10nName="label_support" axis="AXIS_CRANE_ARM2" invertAxis="false" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/support_arm.png"/>
+            <rotation rotSpeed="-40" rotAcceleration="300" rotMax="0" rotMin="-110" rotationAxis="3"  />
+            <dependentPart index="0>4|6" />
+        </movingTool>
+        <movingTool index="0>4|5" >
+            <controls group="supportFeet" l10nName="label_support" axis="AXIS_CRANE_ARM2" invertAxis="false" mouseSpeedFactor="1" />
+            <rotation rotSpeed="40" rotAcceleration="300" rotMax="110" rotMin="0" rotationAxis="3"  />
+            <dependentPart index="0>4|7" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>4|0|2" referencePoint="0>4|12" referenceFrame="0>" scaleZ="true" />
+        <movingPart index="0>4|1" referencePoint="0>4|0|3" referenceFrame="0>" >
+            <translatingPart index="0>4|1|0" />
+        </movingPart>
+        <movingPart index="0>4|2" referencePoint="0>4|0|4" referenceFrame="0>"  >
+            <translatingPart index="0>4|2|0" />
+        </movingPart>
+
+        <movingPart index="0>4|8|1" referencePoint="0>4|8|0|3" referenceFrame="0>4|8|3" >
+            <translatingPart index="0>4|8|1|0" />
+        </movingPart>
+
+        <movingPart index="0>4|8|0|1" localReferencePoint="0>4|8|0|1|0" referencePoint="0>4|8|0|0|2" referenceFrame="0>4|8|0|0" >
+            <dependentPart index="0>4|8|0|1|0" />
+            <dependentPart index="0>4|8|0|2" />
+        </movingPart>
+        <movingPart index="0>4|8|0|1|0" referencePoint="0>4|8|0|0|2" referenceFrame="0>4|8|0|0|2" />
+        <movingPart index="0>4|8|0|2" referencePoint="0>4|8|0|1|0" referenceFrame="0>4|8|0|4" >
+            <translatingPart index="0>4|8|0|2|0" />
+        </movingPart>
+        <!-- rope -->
+        <movingPart index="0>4|8|0|0|0|1" referencePoint="0>4|8|0|0|1" referenceFrame="0>4|8|0|0|1" scaleZ="true" />
+
+        <!-- claw-arm connection -->
+        <movingPart index="0>4|8|0|0|0|0|1" referencePoint="1>4" referenceFrame="0>4|8|0|0|0|0|2" limitedAxis="1" isActiveDirty="true" >
+            <dependentPart index="0>4|8|0|0|0|0|1|0" />
+        </movingPart>
+        <movingPart index="0>4|8|0|0|0|0|1|0" referencePoint="1>4" referenceFrame="0>4|8|0|0|0|0|1|1" limitedAxis="1" >
+            <dependentPart index="0>4|8|0|0|0|0|1|0|0|0" />
+        </movingPart>
+
+        <!-- visible claw root -->
+        <movingPart index="0>4|8|0|0|0|0|1|0|0|0" referencePoint="1>3" referenceFrame="0>4|8|0|0|0|0|1|0|0" limitedAxis="2" >
+            <dependentPart index="0>4|8|0|0|0|0|1|0|0|0|0" />
+        </movingPart>
+
+        <!-- claws -->
+        <movingPart index="0>4|8|0|0|0|0|1|0|0|0|0" referencePoint="2>4" referenceFrame="2>4" limitedAxis="3" >
+            <dependentPart index="0>4|8|0|0|0|0|1|0|0|0|1"/>
+        </movingPart>
+        <movingPart index="0>4|8|0|0|0|0|1|0|0|0|1" referencePoint="3>4" referenceFrame="3>4" limitedAxis="3" >
+            <dependentPart index="0>4|8|0|0|0|0|1|0|0|0|0|1"/>
+            <dependentPart index="0>4|8|0|0|0|0|1|0|0|0|0|0"/>
+        </movingPart>
+        <!-- claw cylinder arm -->
+        <movingPart index="0>4|8|0|0|0|0|1|0|0|0|0|1" referencePoint="0>4|8|0|0|0|0|1|0|0|0|1|0" referenceFrame="0>4|8|0|0|0|0|1|0|0|0" scaleZ="true" />
+        <!-- claw cylinder -->
+        <movingPart index="0>4|8|0|0|0|0|1|0|0|0|0|0" referencePoint="0>4|8|0|0|0|0|1|0|0|0|1|1" referenceFrame="0>4|8|0|0|0|0|1|0|0|0" >
+            <translatingPart index="0>4|8|0|0|0|0|1|0|0|0|0|0|0" />
+        </movingPart>
+
+        <!-- move support feet down/up -->
+        <movingPart index="0>4|6" referencePoint="0>4|4|0" referenceFrame="0>4|4|0" playSound="true" >
+            <translatingPart index="0>4|6|0" />
+        </movingPart>
+        <movingPart index="0>4|7" referencePoint="0>4|5|0" referenceFrame="0>4|5|0" playSound="true" >
+            <translatingPart index="0>4|7|0" />
+        </movingPart>
+
+        <!-- camera -->
+        <movingPart index="0>4|8|4" referencePoint="0>4|8|0|0|0|0|3" referenceFrame="0>" invertZ="true" isActiveDirty="true" />
+    </movingParts>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>1|1"   startTime="0"    endTime="0.05" visibility="false" />
+            <part node="0>4|11"  startTime="0"    endTime="0.05" visibility="true" />
+            <part node="0>1|1"   startTime="0.05" endTime="0.1"  visibility="true" />
+            <part node="0>4|11"  startTime="0.05" endTime="0.1"  visibility="false" />
+            <part node="0>4|0|1" startTime="0"    endTime="0.3" startTrans="0 -0.015 0.27" endTrans="0 -0.442 0.27" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <foldingParts posDirectionText="action_unfoldSupportFeet" negDirectionText="action_foldSupportFeet" >
+        <foldingPart animationName="movePillars" speedScale="1" />
+    </foldingParts>
+
+    <tensionBelts linkNode="0>7" jointNode="0>" width="0.075" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="-0.26" defaultOffsetSide="0.1" defaultHeight="2" interactionRadius="1.5" >
+        <tensionBelt startNode="0>7|0" endNode="0>7|0|0" offsetLeft="1.0" />
+        <tensionBelt startNode="0>7|1" endNode="0>7|1|0" />
+        <tensionBelt startNode="0>7|2" endNode="0>7|2|0" offsetRight="0.45" />
+    </tensionBelts>
+
+    <designConfigurations>
+        <designConfiguration name="$l10n_configuration_valueWoodTrailer" price="1000">
+            <!-- wood arms -->
+            <objectChange node="0>4|9" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="0>4|3|0" visibilityActive="true" visibilityInactive="false"/>
+            <!-- extend back part -->
+            <objectChange node="0>4|3" translationActive="0 0.734 -2.926" translationInactive="0 0.724 -3.345"/>
+            <!-- wood loading area collisions -->
+            <objectChange node="0>9|0" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|1" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|2" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|3" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|4" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|5" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|6" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|7" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|8" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|9" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|10" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|11" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|12" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|13" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|14" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>9|15" collisionActive="true" collisionInactive="false"/>
+        </designConfiguration>
+        <designConfiguration name="$l10n_configuration_valueBaleTrailer" price="1000" icon="$dataS2/menu/hud/configurations/config_edition.png">
+            <!-- bale adpater for claw -->
+            <objectChange node="0>4|8|0|0|0|0|1|0|0|0|0|2" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="0>4|8|0|0|0|0|1|0|0|0|1|2" visibilityActive="true" visibilityInactive="false"/>
+            <!-- bale adpater -->
+            <objectChange node="0>4|10" visibilityActive="true" visibilityInactive="false"/>
+            <!-- bale platform collisions -->
+            <objectChange node="0>10|0" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>10|1" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>10|2" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="0>10|3" collisionActive="true" collisionInactive="false"/>
+            <!-- claw collisions -->
+            <objectChange node="2>5" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="2>6" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="2>7" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="3>5" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="3>6" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="3>7" collisionActive="true" collisionInactive="false"/>
+            <objectChange node="1>0" movingToolRotMaxActive="30" movingToolRotMinActive="-30"/>
+            <objectChange node="1>1" movingToolRotMaxActive="30" movingToolRotMinActive="-30"/>
+        </designConfiguration>
+    </designConfigurations>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <tipOcclusionAreas>
+        <tipOcclusionArea start="0>11|0" width="0>11|1" height="0>11|2" />
+    </tipOcclusionAreas>
+
+    <components count="4">
+        <component1 centerOfMass="0 0.6 -1" solverIterationCount="20" /> <!-- main -->
+        <component2 centerOfMass="0 0 0" solverIterationCount="15" /> <!-- claw -->
+        <component3 centerOfMass="0 0 0" solverIterationCount="15" /> <!-- claw left -->
+        <component4 centerOfMass="0 0 0" solverIterationCount="15" /> <!-- claw right -->
+
+        <!-- claw base -->
+        <joint component1="0" component2="1" index="0>4|15|0|0|0|0|0" indexActor1="1>2|0" zRotationNode="0>4|15|0|0|0|0|0|0" enableCollision="true" rotLimit="0 70 70" transLimit="0 0 0" rotDriveVelocity="0 0 0" maxRotDriveForce="0.4 0.4 0.4" transLimitSpring="500 500 500" transLimitDamping="2 2 2"  />
+        <!-- left/right claw -->
+        <joint component1="1" component2="2" index="1>0" enableCollision="false" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 300" rotLimitDamping="0 0 30" rotLimitForceLimit="-1 -1 10" />
+        <joint component1="1" component2="3" index="1>1" enableCollision="false" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 300" rotLimitDamping="0 0 30" rotLimitForceLimit="-1 -1 10" />
+
+        <collisionPair component1="2" component2="3" enabled="false" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

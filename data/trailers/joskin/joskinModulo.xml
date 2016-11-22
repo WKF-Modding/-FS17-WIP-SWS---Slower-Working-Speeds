@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="manureBarrel">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Modulo 2</name>
+        <specs>
+            <neededPower>150</neededPower>
+            <workingWidth>12.0</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_slurrySpreader</function>
+        </functions>
+        <image>$data/store/store_joskinModulo.png</image>
+        <price>36000</price>
+        <dailyUpkeep>60</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>JOSKIN</brand>
+        <category>SWS_slurryTanks</category>
+        <fieldJob sizeCategory="2" typeCategory="liquidManureBarrel" />
+        <vertexBufferMemoryUsage>3192384</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>470064</indexBufferMemoryUsage>
+        <textureMemoryUsage>21888552</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_manureBarrel</typeDesc>
+    <filename>$data/vehicles/trailers/joskin/joskinModulo.i3d</filename>
+
+    <size width="3.8" length="10" lengthOffset="0.3"/>
+
+    <powerConsumer ptoRpm="540" neededPtoPower="15"/>
+    <speedLimit value="14" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.4" repr="0>0|0" filename="$data/vehicles/wheels/trelleborg/TwinRadial_650_65R30_5.xml" isLeft="true"  initialCompression="28" suspTravel="0.2" spring="35" damper="70" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.4" repr="0>0|1" filename="$data/vehicles/wheels/trelleborg/TwinRadial_650_65R30_5.xml" isLeft="false" initialCompression="28" suspTravel="0.2" spring="35" damper="70" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="3.6" repr="0>0|2" filename="$data/vehicles/wheels/trelleborg/TwinRadial_650_65R30_5.xml" isLeft="true"  initialCompression="33" suspTravel="0.2" spring="40" damper="70" hasTireTracks="true" hasParticles="true" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="3.6" repr="0>0|3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_650_65R30_5.xml" isLeft="false" initialCompression="33" suspTravel="0.2" spring="40" damper="70" hasTireTracks="true" hasParticles="true" />
+
+                <wheel createTipOcclusionArea="false" restLoad="1.6" repr="1>1" useReprDirection="true" radius="0.21" mass="0.02" initialCompression="50" suspTravel="0.05" spring="10" damper="10" isSynchronized="false" brakeFactor="0"/>
+                <wheel createTipOcclusionArea="false" restLoad="1.6" repr="1>2" useReprDirection="true" radius="0.21" mass="0.02" initialCompression="50" suspTravel="0.05" spring="10" damper="10" isSynchronized="false" brakeFactor="0"/>
+                <wheel createTipOcclusionArea="false" restLoad="1.6" repr="2>1" useReprDirection="true" radius="0.23" mass="0.02" initialCompression="50" suspTravel="0.05" spring="10" damper="10" isSynchronized="false" brakeFactor="0"/>
+                <wheel createTipOcclusionArea="false" restLoad="1.6" repr="2>2" useReprDirection="true" radius="0.23" mass="0.02" initialCompression="50" suspTravel="0.05" spring="10" damper="10" isSynchronized="false" brakeFactor="0"/>
+                <wheel createTipOcclusionArea="false" restLoad="1.6" repr="2>3" useReprDirection="true" radius="0.23" mass="0.02" initialCompression="50" suspTravel="0.05" spring="10" damper="10" isSynchronized="false" brakeFactor="0"/>
+                <wheel createTipOcclusionArea="false" restLoad="1.6" repr="3>1" useReprDirection="true" radius="0.23" mass="0.02" initialCompression="50" suspTravel="0.05" spring="10" damper="10" isSynchronized="false" brakeFactor="0"/>
+                <wheel createTipOcclusionArea="false" restLoad="1.6" repr="3>2" useReprDirection="true" radius="0.23" mass="0.02" initialCompression="50" suspTravel="0.05" spring="10" damper="10" isSynchronized="false" brakeFactor="0"/>
+                <wheel createTipOcclusionArea="false" restLoad="1.6" repr="3>3" useReprDirection="true" radius="0.23" mass="0.02" initialCompression="50" suspTravel="0.05" spring="10" damper="10" isSynchronized="false" brakeFactor="0"/>
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <rimColor>0.9490 0.3838 0.0104 1</rimColor>
+
+    <axisColor>0.0738 0.3993 0.0738 1</axisColor>
+
+    <brakeForce>1.8</brakeForce>
+    <maximalAirConsumptionPerFullStop value="0.4" />
+
+    <lights>
+        <low>
+            <light                       decoration="0>2|1|0" lightTypes="0 3" />
+            <light realLight="0>2|0|0|1" decoration="0>2|0|0|0" lightTypes="1" />
+            <light                       decoration="0>7|0|0|0|0|3|2|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>2|1|1"   decoration="0>2|1|0" lightTypes="0 3" />
+            <light realLight="0>2|0|0|2" decoration="0>2|0|0|0" lightTypes="1" />
+            <light realLight="0>7|0|0|0|0|3|2|0|1" decoration="0>7|0|0|0|0|3|2|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>2|1|1" decoration="0>2|3|0" />
+        <brakeLight realLight="0>7|0|0|0|0|3|2|0|1" decoration="0>7|0|0|0|0|3|2|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>2|2|0|1" decoration="0>2|2|0|0" />
+        <turnLightRight realLight="0>2|2|1|1" decoration="0>2|2|1|0" />
+        <turnLightLeft  realLight="0>7|0|0|0|0|3|2|1|0|1" decoration="0>7|0|0|0|0|3|2|1|0|0" />
+        <turnLightRight realLight="0>7|0|0|0|0|3|2|1|1|1" decoration="0>7|0|0|0|0|3|2|1|1|0" />
+    </turnLights>
+
+    <reverseLights>
+        <reverseLight realLight="0>2|5|1" decoration="0>2|5|0" />
+        <reverseLight realLight="0>7|0|0|0|0|3|2|3|1" decoration="0>7|0|0|0|0|3|2|3|0" />
+    </reverseLights>
+
+    <beaconLights>
+        <beaconLight index="0>2|4|0" speed="0.015" filename="$data/shared/beaconLights/beaconLight02.i3d"/>
+    </beaconLights>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="slurryTank" capacity="15780" />
+    </fillUnits>
+
+    <workAreas>
+        <workArea startIndex="0>5|0" widthIndex="0>5|1" heightIndex="0>5|2" type="sprayer" disableBackwards="false" foldMinLimit="0" foldMaxLimit="0.1" />
+    </workAreas>
+
+    <allowFillFromAir value="false"/>
+    <fillRootNode index="0>" />
+    <fillMassNode index="0>" />
+
+    <spraySound file="$data/sounds/garantPump_small.wav"                   pitchOffset="0.95" volume="0.90" indoorVolumeFactor="0.48" indoorLowpassGain="0.45" />
+    <fillSound file="$data/sounds/garantPump_small.wav"                    pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.40" indoorLowpassGain="0.45" />
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="0.85" volume="1.20" indoorVolumeFactor="0.55" indoorLowpassGain="0.45"  />
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>1" jointType="trailerLow" attacherHeight="0.3" ptoInputNode="0>10"/>
+    </inputAttacherJoints>
+
+    <movingTools>
+        <!-- attacher -->
+        <movingTool index="0>7|0" playSound="true">
+            <dependentPart index="0>7|1" />
+            <dependentPart index="0>7|0|0" />
+            <componentJoint index="0" />
+            <componentJoint index="1" />
+            <componentJoint index="2" />
+        </movingTool>
+
+        <!-- center mount -->
+        <movingTool index="0>7|0|0|0|0" playSound="true">
+            <dependentPart index="0>7|0|0|0|1" />
+            <componentJoint index="0" />
+            <componentJoint index="1" />
+            <componentJoint index="2" />
+        </movingTool>
+
+        <!-- arms -->
+        <!-- arm center -->
+        <movingTool index="0>7|0|0|0|0|8" playSound="true">
+            <componentJoint index="0" />
+            <componentJoint index="1" />
+            <componentJoint index="2" />
+        </movingTool>
+
+        <movingTool index="0>7|0|0" >
+            <dependentPart index="0>7|0|0|1" />
+            <dependentPart index="0>7|0|0|2" />
+        </movingTool>
+
+        <!-- arm left -->
+        <movingTool index="0>7|0|0|0|0|1" playSound="true">
+            <componentJoint index="1" />
+            <dependentPart index="0>7|0|0|0|0|6"/>
+        </movingTool>
+        <movingTool index="0>7|0|0|0|0|1|0|1" playSound="true">
+            <componentJoint index="1" />
+        </movingTool>
+
+        <!-- arms right -->
+        <movingTool index="0>7|0|0|0|0|2" playSound="true">
+            <componentJoint index="2" />
+            <dependentPart index="0>7|0|0|0|0|7"/>
+        </movingTool>
+        <movingTool index="0>7|0|0|0|0|2|0|1" playSound="true">
+            <componentJoint index="2" />
+        </movingTool>
+
+    </movingTools>
+
+    <movingParts>
+        <!-- attacher -->
+        <movingPart index="0>7|1" referencePoint="0>7|0|1" referenceFrame="0>7|0|1" >
+            <translatingPart index="0>7|1|0" />
+        </movingPart>
+        <movingPart index="0>7|0|0|1" referencePoint="0>7|3" referenceFrame="0>7|3" />
+        <movingPart index="0>7|0|0|2" referencePoint="0>7|4" referenceFrame="0>7|4" />
+
+        <!-- center mount -->
+        <movingPart index="0>7|0|0|0|1" referencePoint="0>7|0|0|0|0|0" referenceFrame="0>7|0|0|0|0|0" >
+            <translatingPart index="0>7|0|0|0|1|0" />
+        </movingPart>
+
+        <!-- arms -->
+        <!-- activeDirty parts center -->
+        <movingPart index="0>7|0|0|0|0|3" referencePoint="1>0" referenceFrame="0>7|0|0|0|0|12" isActiveDirty="true" limitedAxis="1" >
+            <dependentPart index="0>7|0|0|0|0|4"/>
+            <dependentPart index="0>7|0|0|0|0|5"/>
+        </movingPart>
+        <movingPart index="0>7|0|0|0|0|4" referencePoint="0>7|0|0|0|0|3|0" referenceFrame="0>7|0|0|0|0|9" >
+            <translatingPart index="0>7|0|0|0|0|4|0" />
+        </movingPart>
+        <movingPart index="0>7|0|0|0|0|5" referencePoint="0>7|0|0|0|0|3|1" referenceFrame="0>7|0|0|0|0|9" >
+            <translatingPart index="0>7|0|0|0|0|5|0" />
+        </movingPart>
+
+        <!-- activeDirty parts left -->
+        <movingPart index="0>7|0|0|0|0|1|0|0" referencePoint="2>0" referenceFrame="0>7|0|0|0|0|1|8" isActiveDirty="true" limitedAxis="1" >
+            <dependentPart index="0>7|0|0|0|0|1|1"/>
+            <dependentPart index="0>7|0|0|0|0|1|2"/>
+        </movingPart>
+        <movingPart index="0>7|0|0|0|0|1|1" referencePoint="0>7|0|0|0|0|1|0|0|0" referenceFrame="0>7|0|0|0|0|1|4" >
+            <translatingPart index="0>7|0|0|0|0|1|1|0" />
+        </movingPart>
+        <movingPart index="0>7|0|0|0|0|1|2" referencePoint="0>7|0|0|0|0|1|0|0|1" referenceFrame="0>7|0|0|0|0|1|4" >
+            <translatingPart index="0>7|0|0|0|0|1|2|0" />
+        </movingPart>
+
+        <!-- activeDirty parts right -->
+        <movingPart index="0>7|0|0|0|0|2|0|0" referencePoint="3>0" referenceFrame="0>7|0|0|0|0|2|8" isActiveDirty="true" limitedAxis="1" >
+            <dependentPart index="0>7|0|0|0|0|2|1"/>
+            <dependentPart index="0>7|0|0|0|0|2|2"/>
+        </movingPart>
+        <movingPart index="0>7|0|0|0|0|2|1" referencePoint="0>7|0|0|0|0|2|0|0|0" referenceFrame="0>7|0|0|0|0|2|4" >
+            <translatingPart index="0>7|0|0|0|0|2|1|0" />
+        </movingPart>
+        <movingPart index="0>7|0|0|0|0|2|2" referencePoint="0>7|0|0|0|0|2|0|0|1" referenceFrame="0>7|0|0|0|0|2|4" >
+            <translatingPart index="0>7|0|0|0|0|2|2|0" />
+        </movingPart>
+
+        <!-- arm center -->
+        <!-- arm left -->
+        <movingPart index="0>7|0|0|0|0|6" referencePoint="0>7|0|0|0|0|1|3" referenceFrame="0>7|0|0|0|0|1|3" >
+            <translatingPart index="0>7|0|0|0|0|6|0" />
+        </movingPart>
+
+        <!-- arm right -->
+        <movingPart index="0>7|0|0|0|0|7" referencePoint="0>7|0|0|0|0|2|3" referenceFrame="0>7|0|0|0|0|2|3" >
+            <translatingPart index="0>7|0|0|0|0|7|0" />
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>4|0" startTime="0.00" endTime="0.30" startRot="90 0 0" endRot="0 0 0" />
+            <part node="0>4|1" startTime="0.00" endTime="0.30" startTrans="0 0.61 3.741" endTrans="0 0.15 3.741" />
+        </animation>
+
+        <!-- folding -->
+        <animation name="folding">
+            <!-- attacher -->
+            <part node="0>7|0"          startTime="3.00" endTime="6.00" startRot="6.718 0 0" endRot="25 0 0" />
+            <part node="0>7|0"          startTime="7.00" endTime="8.00" startRot="25 0 0" endRot="20 0 0" />
+            <part node="0>7|0|0"        startTime="3.00" endTime="6.00" startRot="98.03 0 -180" endRot="116.312 0 -180" />
+            <part node="0>7|0|0"        startTime="7.00" endTime="8.00" startRot="116.312 0 -180" endRot="111.312 0 -180" />
+
+            <!-- center mount -->
+            <part node="0>7|0|0|0|0"    startTime="7.00" endTime="8.00" startTrans="0 -0.450 -0.506" endTrans="0 -0.500 -0.506" />
+            <part node="0>7|0|0|0|0"    startTime="3.00" endTime="6.00" startTrans="0 -0.904 -0.506" endTrans="0 -0.450 -0.506" />
+            <!-- arms -->
+            <part node="0>7|0|0|0|0|1"  startTime="3.00" endTime="7.00" startRot="0 0 0" endRot="0 -87 0" />
+            <part node="0>7|0|0|0|0|2"  startTime="3.00" endTime="7.00" startRot="0 0 0" endRot="0 87 0" />
+            <!-- arms components -->
+            <part node="0>7|0|0|0|0|8"      startTime="2.0" endTime="5.0" startRot="-17 180 0" endRot="-83 180 0" /> <!-- compJoint center -->
+            <part node="0>7|0|0|0|0|1|0|1"  startTime="2.0" endTime="5.0" startRot="71 0 -180" endRot="7 0 -180" />  <!-- compJoint left -->
+            <part node="0>7|0|0|0|0|2|0|1"  startTime="2.0" endTime="5.0" startRot="71 0 -180" endRot="7 0 -180" />  <!-- compJoint right -->
+            <part node="0>7|0|0|0|0|8"      startTime="0.0" endTime="2.0" startRot="57.24 180 0"     endRot="-17 180 0" /> <!-- compJoint center -->
+            <part node="0>7|0|0|0|0|1|0|1"  startTime="0.0" endTime="2.0" startRot="143.179 0 -180"  endRot="71 0 -180" /> <!-- compJoint left -->
+            <part node="0>7|0|0|0|0|2|0|1"  startTime="0.0" endTime="2.0" startRot="143.105 0 -180"  endRot="71 0 -180" /> <!-- compJoint right -->
+            <part componentJointIndex="0"   startTime="0.0" endTime="1.0" startRotMinLimit="-20 0 0" startRotMaxLimit="13 0 0" endRotMinLimit="0 0 0" endRotMaxLimit="0 0 0" />
+            <part componentJointIndex="1"   startTime="0.0" endTime="1.0" startRotMinLimit="-20 0 0" startRotMaxLimit="10 0 0" endRotMinLimit="0 0 0" endRotMaxLimit="0 0 0" />
+            <part componentJointIndex="2"   startTime="0.0" endTime="1.0" startRotMinLimit="-20 0 0" startRotMaxLimit="10 0 0" endRotMinLimit="0 0 0" endRotMaxLimit="0 0 0" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.25" turnOnFoldMaxLimit="0.26" turnOnFoldMinLimit="0" turnOffOnFold="true" turnOnFoldDirection="-1" >
+        <foldingPart animationName="folding" speedScale="1" />
+    </foldingParts>
+
+    <measurementNodes>
+        <measurementNode index="0>3|1" fillUnitIndex="1"/>
+    </measurementNodes>
+
+    <sprayUsageScales workingWidth="12.0" scale="1" />
+
+    <sprayer activateOnLowering="true" />
+
+    <ai>
+        <areaMarkers leftIndex="0>6|0|0" rightIndex="0>6|0|1" backIndex="0>6|0|2" />
+        <sizeMarkers leftIndex="0>6|1|0" rightIndex="0>6|1|1" backIndex="0>6|1|2" />
+        <forceTurnNoBackward value="false" />
+        <toolReverserDirectionNode index="0>6|1|2" />
+    </ai>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <tipOcclusionAreas>
+        <tipOcclusionArea start="0>9|0" width="0>9|1" height="0>9|2" />
+    </tipOcclusionAreas>
+
+    <components count="4">
+        <component1 centerOfMass="0 0.9 0" solverIterationCount="10" />
+        <component2 centerOfMass="0 0 0" solverIterationCount="10" />
+        <component3 centerOfMass="0 0 0" solverIterationCount="10" />
+        <component4 centerOfMass="0 0 0" solverIterationCount="10" />
+
+        <joint component1="0" component2="1" index="0>7|0|0|0|0|8"     maxRotDriveForce="0 0 0" rotDriveRotation="0 - -" rotDriveSpring="5 0 0" rotDriveDamping="5 0 0" breakable="false"/>
+        <joint component1="0" component2="2" index="0>7|0|0|0|0|1|0|1" maxRotDriveForce="0 0 0" rotDriveRotation="0 - -" rotDriveSpring="5 0 0" rotDriveDamping="5 0 0" breakable="false"/>
+        <joint component1="0" component2="3" index="0>7|0|0|0|0|2|0|1" maxRotDriveForce="0 0 0" rotDriveRotation="0 - -" rotDriveSpring="5 0 0" rotDriveDamping="5 0 0" breakable="false"/>
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>

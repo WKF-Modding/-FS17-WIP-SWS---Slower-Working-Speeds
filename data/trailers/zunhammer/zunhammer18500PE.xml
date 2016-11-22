@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="manureBarrel">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>SKE 18.5 PUD</name>
+        <specs>
+            <neededPower>180</neededPower>
+            <workingWidth>14.8</workingWidth>
+            <combination>Zunidisc, Catros</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_slurrySpreader</function>
+        </functions>
+        <image>$data/store/store_zunhammer18500PE.png</image>
+        <price>48000</price>
+        <dailyUpkeep>80</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>ZUNHAMMER</brand>
+        <category>SWS_slurryTanks</category>
+        <fieldJob sizeCategory="2" typeCategory="liquidManureBarrel" />
+        <vertexBufferMemoryUsage>780764</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>124104</indexBufferMemoryUsage>
+        <textureMemoryUsage>9175200</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_manureBarrel</typeDesc>
+    <filename>$data/vehicles/trailers/zunhammer/zunhammer18500PE.i3d</filename>
+
+    <size width="3.8" length="10" />
+
+    <powerConsumer ptoRpm="540" neededPtoPower="30"/>
+    <speedLimit value="12" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.8" repr="0>0|0|0"                       forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TwinRadial_750_60R30_5.xml" isLeft="true"  initialCompression="10" suspTravel="0.22" spring="30" damper="50" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.8" repr="0>0|0|1"                       forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TwinRadial_750_60R30_5.xml" isLeft="false" initialCompression="10" suspTravel="0.22" spring="30" damper="50" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.7" repr="0>0|0|2" driveNode="0>0|0|2|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_750_60R30_5.xml" isLeft="true"  initialCompression="20" suspTravel="0.22" spring="30" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="10" steeringAxleRotMin="-10"/>
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.7" repr="0>0|0|3" driveNode="0>0|0|3|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_750_60R30_5.xml" isLeft="false" initialCompression="20" suspTravel="0.22" spring="30" damper="50" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="10" steeringAxleRotMin="-10"/>
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <axisColor>0.0582 0.3345 0.2388 1</axisColor>
+
+    <steeringAxleAngleScale startSpeed="0" endSpeed="90" />
+    <brakeForce>2</brakeForce>
+    <maximalAirConsumptionPerFullStop value="0.4" />
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|3|2|0" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|3|2|1" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|6|3|0"   filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|6|3|1"   filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+    </dynamicallyLoadedParts>
+
+    <lights>
+        <low>
+            <light                       decoration="0>0|4|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>0|4|0|1" decoration="0>0|4|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>0|4|0|1" decoration="0>0|4|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>0|4|1|0|1" decoration="0>0|4|1|0|0" />
+        <turnLightRight realLight="0>0|4|1|1|1" decoration="0>0|4|1|1|0" />
+    </turnLights>
+
+    <reverseLights>
+        <reverseLight realLight="0>0|4|3|1" decoration="0>0|4|3|0" />
+    </reverseLights>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="slurryTank" capacity="18500" />
+    </fillUnits>
+
+    <fillPlanes rotationDegrees="true">
+        <fillPlane type="liquidManure" fillUnitIndex="1">
+            <node index="0>0|6|2|0" alwaysVisible="true">
+                <key time="0" y="0" rotation="0 0 0"/>
+                <key time="1" y="0" rotation="0 0 -130"/>
+            </node>
+        </fillPlane>
+        <fillPlane type="digestate" fillUnitIndex="1">
+            <node index="0>0|6|2|0" alwaysVisible="true">
+                <key time="0" y="0" rotation="0 0 0"/>
+                <key time="1" y="0" rotation="0 0 -130"/>
+            </node>
+        </fillPlane>
+    </fillPlanes>
+
+    <workAreas>
+        <workArea startIndex="0>0|7|0" widthIndex="0>0|7|1" heightIndex="0>0|7|2" type="sprayer" disableBackwards="false" />
+    </workAreas>
+
+    <allowFillFromAir value="false"/>
+    <fillRootNode index="0>" />
+    <fillMassNode index="0>" />
+
+    <sprayer isTank="true" />
+
+    <sprayUsageScales workingWidth="14.8" scale="1" />
+
+    <manureBarrel toolAttachAnimName="toolAttach" attacherJointIndex="1" />
+
+    <spraySound file="$data/sounds/zunhammerPump.wav"    pitchOffset="0.75" volume="1.10" indoorVolumeFactor="0.45" indoorLowpassGain="0.45" />
+    <fillSound file="$data/sounds/garantPump_small.wav"  pitchOffset="1.00" volume="1.10" indoorVolumeFactor="0.48" indoorLowpassGain="0.45" />
+    <hydraulicSound file="$data/sounds/hydraulicUp.wav"  pitchOffset="0.55" volume="0.85" indoorVolumeFactor="0.65" indoorLowpassGain="0.45" />
+    <attachSound file="$data/sounds/header_attach.wav"   pitchOffset="1.00" volume="0.70" indoorVolumeFactor="0.60" indoorLowpassGain="0.90"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|1" jointType="trailerLow" ptoInputNode="0>0|2" />
+    </inputAttacherJoints>
+
+    <attacherJoints>
+        <attacherJoint index="0>0|5|0|0|0" jointType="implement" rotationNode="0>0|5|0" rotationNode2="0>0|5|0|0" upperRotation="20 0 0" lowerRotation="-25 0 0" upperDistanceToGround="1.03" lowerDistanceToGround="0.31" moveTime="2.5" canTurnOnImplement="false">
+            <bottomArm rotationNode="0>0|5|1" translationNode="0>0|5|1|0" referenceNode="0>0|5|1|0|0" zScale="-1" />
+            <topArm baseNode="0>0|5|2" filename="$data/shared/vehicleParts/upperLink.i3d" zScale="-1" toggleVisibility="true"/>
+            <schema position="0.5 0" rotation="0" invertX="false" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <movingTools>
+        <!-- attacher joint back bottom-->
+        <movingTool index="0>0|5|1">
+            <dependentPart index="0>0|6|0" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>0|6|0" referencePoint="0>0|5|1|0|1" referenceFrame="0>0|5|1|0|1" >
+            <translatingPart index="0>0|6|0|0" />
+        </movingPart>
+        <movingPart index="0>0|6|1" referencePoint="0>0|0|2|2" referenceFrame="0>0|0|2|2" isActiveDirty="true">
+            <translatingPart index="0>0|6|1|0" />
+            <dependentPart index="0>0|0|3|1" />
+        </movingPart>
+        <movingPart index="0>0|0|3|1" referencePoint="0>0|0|2|1" referenceFrame="0>0|0|2|1" />
+    </movingParts>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|0|3|2" startTime="0" endTime="0.05" visibility="false" />
+            <part node="0>0|6|3"   startTime="0" endTime="0.05" visibility="true" />
+            <part node="0>0|0|3|2" startTime="0.05" endTime="0.1" visibility="true" />
+            <part node="0>0|6|3"   startTime="0.05" endTime="0.1" visibility="false" />
+            <part node="0>0|3|0"   startTime="0" endTime="0.5" startTrans="-0.351 0.154 -0.012" endTrans="-0.351 -0.546 -0.012" />
+            <part node="0>0|3|1|0" startTime="0" endTime="0.5" startRot="0 0 90" endRot="0 0 0" />
+        </animation>
+        <animation name="toolAttach">
+            <part node="0>0|9|0" startTime="0"    endTime="0.05" visibility="true" />
+            <part node="0>0|9|0" startTime="0.05" endTime="0.1"  visibility="false" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <sprayerEffects>
+        <sprayerEffect>
+            <effectNode effectNode="0>0|9|1|0" delay="0" materialType="sprayer" materialTypeId="1" />
+        </sprayerEffect>
+    </sprayerEffects>
+
+    <attacherPipe refIndex="0>0|10" />
+
+    <ai>
+        <areaMarkers leftIndex="0>0|8|0|0" rightIndex="0>0|8|0|1" backIndex="0>0|8|0|2" />
+        <sizeMarkers leftIndex="0>0|8|1|0" rightIndex="0>0|8|1|1" backIndex="0>0|8|1|2" />
+        <forceTurnNoBackward value="true" />
+        <toolReverserDirectionNode index="0>0|8|1|2" />
+        <turningRadiusLimiation rotationJointNode="0>0|1" wheelIndices="0 1 2 3" />
+    </ai>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <tipOcclusionAreas>
+        <tipOcclusionArea start="0>0|11|0" width="0>0|11|1" height="0>0|11|2" />
+    </tipOcclusionAreas>
+
+    <components count="1">
+        <component1 centerOfMass="0 0.85 -0.7" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>

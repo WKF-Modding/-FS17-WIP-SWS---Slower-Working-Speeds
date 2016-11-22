@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="trailer">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Bandit 750</name>
+        <functions>
+            <function>$l10n_function_tipper</function>
+        </functions>
+        <image>$data/store/store_krampeBandit750.png</image>
+        <price>51000</price>
+        <dailyUpkeep>25</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KRAMPE</brand>
+        <category>SWS_tippers</category>
+        <vertexBufferMemoryUsage>502160</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>75882</indexBufferMemoryUsage>
+        <textureMemoryUsage>9787128</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_tipper</typeDesc>
+    <filename>$data/vehicles/trailers/krampe/krampeBandit750.i3d</filename>
+
+    <size width="3" length="10.5"/>
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel tipOcclusionAreaGroupId="1" restLoad="1.2" repr="0>0|0" driveNode="0>0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TwinRadial_710_50R26_5.xml" isLeft="true"  initialCompression="15" suspTravel="0.3" spring="30" damper="150" />
+                <wheel tipOcclusionAreaGroupId="2" restLoad="1.2" repr="0>0|1"                     forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TwinRadial_710_50R26_5.xml" isLeft="false" initialCompression="15" suspTravel="0.3" spring="30" damper="150" />
+                <wheel tipOcclusionAreaGroupId="1" restLoad="2.5" repr="0>0|2" driveNode="0>0|2|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_710_50R26_5.xml" isLeft="true"  initialCompression="15" suspTravel="0.3" spring="46" damper="150" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="25" steeringAxleRotMin="-25"/>
+                <wheel tipOcclusionAreaGroupId="2" restLoad="2.5" repr="0>0|3" driveNode="0>0|3|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TwinRadial_710_50R26_5.xml" isLeft="false" initialCompression="15" suspTravel="0.3" spring="46" damper="150" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="25" steeringAxleRotMin="-25"/>
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <axisColor>0.6388 0.0103 0.0103 1</axisColor>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|1|0" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|1|1" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>5|8|0" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>5|8|1" filename="$data/shared/vehicleParts/wheelChock01.i3d" />
+    </dynamicallyLoadedParts>
+
+    <steeringAxleAngleScale startSpeed="0" endSpeed="90" />
+    <brakeForce>1.2</brakeForce>
+    <maximalAirConsumptionPerFullStop value="0.3" />
+
+    <lights>
+        <low>
+            <light                     decoration="0>3|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>3|0|1" decoration="0>3|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>3|0|1" decoration="0>3|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft realLight="0>3|1|0|1" decoration="0>3|1|0|0" />
+        <turnLightRight realLight="0>3|1|1|1" decoration="0>3|1|1|0" />
+    </turnLights>
+
+    <reverseLights>
+        <reverseLight realLight="0>3|3|1" decoration="0>3|3|0" />
+    </reverseLights>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"  pitchOffset="0.8" volume="1.0" indoorVolumeFactor="0.45" />
+    <fillSound file="$data/maps/sounds/siloFillSound.wav"          pitchOffset="1.0" volume="1.5" indoorVolumeFactor="0.75" />
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>1" jointType="trailerLow" attacherHeight="0.525" />
+    </inputAttacherJoints>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="bulk" capacity="40000" />
+    </fillUnits>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>5|5|0" />
+        </volumes>
+
+        <unloadInfos>
+            <unloadInfo> <!-- back -->
+                <node index="0>5|5|1" width="1.0" length="1.7" />
+            </unloadInfo>
+        </unloadInfos>
+
+        <heights>
+            <height fillVolumeIndex="1" >
+                <refNode index="0>5|5|2|0" />
+                <refNode index="0>5|5|2|1" />
+                <node index="0>5|7|0" baseScale="1 1 1"     transAxis="0 1 0" />
+            </height>
+        </heights>
+    </fillVolumes>
+
+    <tipReferencePoints>
+        <tipReferencePoint index="0>6" width="2.5" />
+    </tipReferencePoints>
+
+    <tipAnimations>
+        <tipAnimation speedScale="1" openSpeedScale="0.9" animationName="tipAnimationBack" dischargeStartTime="1" dischargeEndTime="13" >
+            <tipEffect>
+                <effectNode effectNode="0>5|7|0|0" materialType="unloading" materialTypeId="3" delay="0.3" fadeTime="0.5" />
+                <effectNode effectNode="0>5|7|0|1" materialType="smoke"     materialTypeId="1" delay="0.3" fadeTime="0.5" />
+            </tipEffect>
+            <emitterShape node="0>5|7|1|0" />
+            <fillVolume>
+                <unloadInfo index="1"/>
+                <height index="1"/>
+            </fillVolume>
+        </tipAnimation>
+    </tipAnimations>
+
+    <fillRootNode index="0>" />
+    <exactFillRootNode index="0>5|6|0" />
+    <fillAutoAimTargetNode index="0>5|6|1" startZ="2.2" endZ="-4.0" invert="false" fillUnitIndex="1" startPercentage="25"/>
+    <fillMassNode index="0>" />
+
+    <movingTools>
+        <movingTool index="0>5|2" playSound="true">
+            <controls axis="AXIS_DOOR" invertAxis="true" mouseSpeedFactor="0.6" iconFilename="$dataS2/menu/moveControls/topDoor.png" />
+            <rotation rotSpeed="50" rotAcceleration="160" rotMax="100" rotMin="0" rotationAxis="1" />
+            <dependentPart index="0>5|3" />
+        </movingTool>
+
+        <movingTool index="0>5|0" playSound="true">
+            <dependentPart index="0>5|0|0" />
+        </movingTool>
+        <movingTool index="0>5|1" playSound="true">
+            <dependentPart index="0>5|0|0" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>5|3" referencePoint="0>5|2|1" referenceFrame="0>5|2|1">
+            <translatingPart index="0>5|3|0" />
+        </movingPart>
+        <movingPart index="0>5|0|0" referencePoint="0>5|1|0" referenceFrame="0>5|1|0">
+            <translatingPart index="0>5|0|0|0" />
+        </movingPart>
+
+        <movingPart index="0>2|2" referencePoint="0>0|2|2" referenceFrame="0>" scaleZ="true" isActiveDirty="true" />
+        <movingPart index="0>2|3" referencePoint="0>0|3|2" referenceFrame="0>" scaleZ="true" isActiveDirty="true" />
+        <movingPart index="0>2|0" referencePoint="0>0|2|1" referenceFrame="0>" isActiveDirty="true">
+            <translatingPart index="0>2|0|0" />
+        </movingPart>
+        <movingPart index="0>2|1" referencePoint="0>0|3|1" referenceFrame="0>" isActiveDirty="true">
+            <translatingPart index="0>2|1|0" />
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <!-- backtipping -->
+        <animation name="tipAnimationBack">
+            <part node="0>5|1" startTime="0" endTime="0.9" startRot="0 0 0" endRot="-20 0 0" />
+            <part node="0>5|0" startTime="1" endTime="4" startRot="0 0 0" endRot="90 0 0" />
+            <part node="0>5|4|0" startTime="1" endTime="12" startTrans="0 0 0" endTrans="0 0 -7.5" />
+            <part node="0>5|4" startTime="1" endTime="12" shaderParameter="offsetUV" shaderStartValues="0 0 0 0" shaderEndValues="0 2.5 0 0"/>
+        </animation>
+
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|0|1" startTime="0" endTime="0.05" visibility="false" />
+            <part node="0>5|8" startTime="0" endTime="0.05" visibility="true" />
+            <part node="0>0|0|1" startTime="0.05" endTime="0.1" visibility="true" />
+            <part node="0>5|8" startTime="0.05" endTime="0.1" visibility="false" />
+            <part node="0>4" startTime="0" endTime="0.2" startTrans="-0.236 0.819 3.256" endTrans="-0.236 0.275 3.256" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.75 -1" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>
