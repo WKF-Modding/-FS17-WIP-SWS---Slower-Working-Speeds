@@ -31,14 +31,19 @@ The Holmer Felix can now load bulk materials and not only beets.
 
 Recommended mods:
 
+- Automatic unload for round-balers - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=54504&title=fs2017
 - DriveControl - https://www.modhoster.com/mods/drivecontrol--2
-- BGA Extension -https://www.modhoster.com/mods/bga-extension
 - GPS - https://www.modhoster.com/mods/gps--2
-- 
-- 
-- 
-- 
-- 
-- 
-- 
-- 
+- Silo Cleaner - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=54232&title=fs2017
+- QuickCamera - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=54506&title=fs2017
+
+- No Grass Crop Destruction - Update 1.0.2.0 - http://fs-uk.com/mods/view/38203/no-grass-crop-destruction-update-1-0-2-0
+- 4Real Module 02 - Tire Dirt - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=50272&title=fs2017
+- 4Real Module 03 - Ground Response - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=52696&title=fs2017
+
+- Auto turn off turn lights - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=53986&title=fs2017
+- BGA Extension -https://www.modhoster.com/mods/bga-extension
+- Chopped Straw For Harvesters - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=56564&title=fs2017
+- Disable Vehicle Camera Collision - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=50341&title=fs2017
+- Fuel Usage Display - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=56983&title=fs2017
+- LightAddon - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=53564&title=fs2017
