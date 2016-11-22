@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="32">
+    <author>WKF Modding - Randy</author>
+  	<annotation>Inspired by MR and mrLight.</annotation>
+  	<version>0.0.3</version>
+    <title>
+        <de>Slower working speeds</de>
+        <en>Slower working speeds</en>
+    </title>
+    <description>
+        <de>Aiming for adding a bit more realism and joy to FS17. All implement got lower max working speeds and all vehicles now has darker exhaust smoke too.</de>
+        <en>Aiming for adding a bit more realism and joy to FS17. All implement got lower max working speeds and all vehicles now has darker exhaust smoke too.</en>
+    </description>
+    <iconFilename>$data/store/store_fendt900.dds</iconFilename>
+    <multiplayer supported="true"/>
+	
+    <storeItems>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////			Headers				//////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- cutters -->
+	<!-- Capello -->
+        <storeItem xmlFilename="data/cutters/capello/capelloDiamantHS8.xml"/> <!--corn/maize header--> <!-- Capello -->
+        <storeItem xmlFilename="data/cutters/capello/capelloDiamantHS12.xml"/> <!--corn/maize header--> <!-- Capello -->
+        <storeItem xmlFilename="data/cutters/capello/capelloHelianthus5700.xml"/> <!--bulk header--> <!-- Capello -->
+        <storeItem xmlFilename="data/cutters/capello/capelloHelianthus12000.xml"/> <!--bulk header--> <!-- Capello -->
+        <storeItem xmlFilename="data/cutters/capello/capelloQuasarF4.xml"/> <!--corn/maize header--> <!-- Capello -->
+        <storeItem xmlFilename="data/cutters/capello/capelloQuasarHS16.xml"/> <!--corn/maize header--> <!-- Capello -->
+	<!-- Case IH -->
+        <storeItem xmlFilename="data/cutters/caseIH/caseIH1030Cutter.xml"/> <!--bulk header--> <!-- Case IH -->
+        <storeItem xmlFilename="data/cutters/caseIH/caseIH3020Cutter.xml"/> <!--bulk header--> <!-- Case IH -->
+        <storeItem xmlFilename="data/cutters/caseIH/caseIH3162Cutter.xml"/> <!--bulk header--> <!-- Case IH -->
+        <storeItem xmlFilename="data/cutters/caseIH/caseIH3412Corn.xml"/> <!--corn/maize header--> <!-- Case IH -->
+	<!-- Massey Ferguson -->
+        <storeItem xmlFilename="data/cutters/masseyFerguson/MF9250DynaFlex.xml"/> <!--bulk header--> <!-- Massey Ferguson -->
+        <storeItem xmlFilename="data/cutters/masseyFerguson/MF9380Header.xml"/> <!--bulk header--> <!-- Massey Ferguson -->
+        <storeItem xmlFilename="data/cutters/masseyFerguson/MFActivaHeader.xml"/> <!--bulk header--> <!-- Massey Ferguson -->
+	<!-- New Holland -->
+        <storeItem xmlFilename="data/cutters/newHolland/newHolland3162Cutter.xml"/> <!--bulk header--> <!-- New Holland -->
+        <storeItem xmlFilename="data/cutters/newHolland/newHollandHeader18.xml"/> <!--bulk header--> <!-- New Holland -->
+        <storeItem xmlFilename="data/cutters/newHolland/newHollandHeader40.xml"/> <!--bulk header--> <!-- New Holland -->
+        <storeItem xmlFilename="data/cutters/newHolland/newHollandHeader980CF6.xml"/> <!--corn/maize header--> <!-- New Holland -->
+        <storeItem xmlFilename="data/cutters/newHolland/newHollandHeader980CF12.xml"/> <!--corn/maize header--> <!-- New Holland -->
+	<!-- Rostselmash -->
+        <storeItem xmlFilename="data/cutters/rostselmash/rsmPowerStream700.xml"/> <!--bulk header--> <!-- Rostselmash -->
+        <storeItem xmlFilename="data/cutters/rostselmash/rsmPowerStream900.xml"/> <!--bulk header--> <!-- Rostselmash -->
+        <storeItem xmlFilename="data/cutters/rostselmash/rsmPPK81.xml"/> <!--corn/maize header--> <!-- Rostselmash -->
+	<!-- Sampo Rosenlew -->
+        <storeItem xmlFilename="data/cutters/sampoRosenlew/sampoRosenlewC6.xml"/> <!--bulk header--> <!-- Sampo Rosenlew -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- forageHarvesterCutters -->
+	<!-- Capello -->
+        <storeItem xmlFilename="data/cutters/capello/capelloSpartan610.xml"/> <!--forage mower header--> <!-- Capello -->
+	<!-- Kemper -->
+        <storeItem xmlFilename="data/cutters/kemper/kemper390Plus.xml"/> <!--forage header--> <!-- Kemper -->
+	<!-- Krone -->
+        <storeItem xmlFilename="data/cutters/krone/kroneEasyCollect600.xml"/> <!--forage header--> <!-- Krone -->
+        <storeItem xmlFilename="data/cutters/krone/kroneEasyFlow300S.xml"/> <!--forage pick-up--> <!-- Krone -->
+        <storeItem xmlFilename="data/cutters/krone/kroneXDisc620.xml"/> <!--forage mower header--> <!-- Krone -->
+	<!-- New Holland -->
+        <storeItem xmlFilename="data/cutters/newHolland/newHolland130FB.xml"/> <!--forage poplar header--> <!-- New Holland -->
+        <storeItem xmlFilename="data/cutters/newHolland/newHolland390Plus.xml"/> <!--forage header--> <!-- New Holland -->
+        <storeItem xmlFilename="data/cutters/newHolland/newHolland600FDR.xml"/> <!--forage mower header--> <!-- New Holland -->
+        <storeItem xmlFilename="data/cutters/newHolland/newHollandPP273.xml"/> <!--forage pick-up--> <!-- New Holland -->
+	<!-- Rostselmash -->
+        <storeItem xmlFilename="data/cutters/rostselmash/rsm500R.xml"/> <!--forage mower header--> <!-- Rostselmash -->
+        <storeItem xmlFilename="data/cutters/rostselmash/rsmGr6000.xml"/> <!--forage header--> <!-- Rostselmash -->
+        <storeItem xmlFilename="data/cutters/rostselmash/rsmPF307.xml"/> <!--forage pick-up--> <!-- Rostselmash -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- beetHarvesting -->
+	<!-- Holmer -->
+        <storeItem xmlFilename="data/cutters/holmer/holmerHR9.xml"/> <!--sugar header--> <!-- Holmer -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--///////////////////////////////////////////////////			Vehicles				//////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- 
+All vehicles got darker exhaust smoke than the normal vehicles 
+-->
+<!-- tractors -->
+	<!-- Case IH -->
+        <storeItem xmlFilename="data/steerable/caseIH/caseIH1455.xml"/> <!-- Case IH -->
+        <storeItem xmlFilename="data/steerable/caseIH/caseIHMagnum380.xml"/> <!-- Case IH -->
+        <storeItem xmlFilename="data/steerable/caseIH/caseIHOptumCVX.xml"/> <!-- Case IH -->
+        <storeItem xmlFilename="data/steerable/caseIH/caseIHPumaCVX.xml"/> <!-- Case IH -->
+        <storeItem xmlFilename="data/steerable/caseIH/caseIHQuadtrac620.xml"/> <!-- Case IH -->
+	<!-- Challenger -->
+        <storeItem xmlFilename="data/steerable/challenger/challengerMT700E.xml"/> <!-- Challenger -->
+        <storeItem xmlFilename="data/steerable/challenger/challengerMT800E.xml"/> <!-- Challenger -->
+        <storeItem xmlFilename="data/steerable/challenger/challengerMT900E.xml"/> <!-- Challenger -->
+	<!-- Deutz -->
+        <storeItem xmlFilename="data/steerable/deutz/deutzAgroStar661.xml"/> <!-- Deutz -->
+        <storeItem xmlFilename="data/steerable/deutz/deutzFahrSeries7.xml"/> <!-- Deutz -->
+        <storeItem xmlFilename="data/steerable/deutz/deutzFahrSeries9.xml"/> <!-- Deutz -->
+	<!-- Fendt -->
+        <storeItem xmlFilename="data/steerable/fendt/fendt300.xml"/> <!-- Fendt -->
+        <storeItem xmlFilename="data/steerable/fendt/fendt700.xml"/> <!-- Fendt -->
+        <storeItem xmlFilename="data/steerable/fendt/fendt900.xml"/> <!-- Fendt -->
+	<!-- Huerlimann -->
+        <storeItem xmlFilename="data/steerable/huerlimann/huerlimannH488.xml"/> <!-- Huerlimann -->
+        <storeItem xmlFilename="data/steerable/huerlimann/huerlimannXM4Ti.xml"/> <!-- Huerlimann -->
+	<!-- JCB -->
+        <storeItem xmlFilename="data/steerable/jcb/jcbFastrac3000.xml"/> <!-- JCB -->
+        <storeItem xmlFilename="data/steerable/jcb/jcbFastrac8000.xml"/> <!-- JCB -->
+	<!-- Lamborghini -->
+        <storeItem xmlFilename="data/steerable/lamborghini/Mach230VRT.xml"/> <!-- Lamborghini -->
+	<!-- Lindner -->
+        <storeItem xmlFilename="data/steerable/lindner/lintrac90.xml"/> <!-- Lindner -->
+	<!-- Massey Ferguson -->
+        <storeItem xmlFilename="data/steerable/masseyFerguson/MF5600.xml"/> <!-- Massey Ferguson -->
+        <storeItem xmlFilename="data/steerable/masseyFerguson/MF7700.xml"/> <!-- Massey Ferguson -->
+        <storeItem xmlFilename="data/steerable/masseyFerguson/MF8700.xml"/> <!-- Massey Ferguson -->
+	<!-- New Holland -->
+        <storeItem xmlFilename="data/steerable/newHolland/newHolland8340.xml"/> <!-- New Holland -->
+        <storeItem xmlFilename="data/steerable/newHolland/newHollandT5.xml"/> <!-- New Holland -->
+        <storeItem xmlFilename="data/steerable/newHolland/newHollandT6.xml"/> <!-- New Holland -->
+        <storeItem xmlFilename="data/steerable/newHolland/newHollandT7.xml"/> <!-- New Holland -->
+        <storeItem xmlFilename="data/steerable/newHolland/newHollandT8.xml"/> <!-- New Holland -->
+        <storeItem xmlFilename="data/steerable/newHolland/newHollandT9.xml"/> <!-- New Holland -->
+	<!-- Same -->
+        <storeItem xmlFilename="data/steerable/same/sameFortis.xml"/> <!-- Same -->
+	<!-- Steyr -->
+        <storeItem xmlFilename="data/steerable/steyr/steyrMulti.xml"/> <!-- Steyr -->
+        <storeItem xmlFilename="data/steerable/steyr/steyrTerrusCVT.xml"/> <!-- Steyr -->
+	 <!-- Valtra -->
+        <storeItem xmlFilename="data/steerable/valtra/valtraNSeries.xml"/> <!-- Valtra -->
+        <storeItem xmlFilename="data/steerable/valtra/valtraSSeries.xml"/> <!-- Valtra -->
+        <storeItem xmlFilename="data/steerable/valtra/valtraTSeries.xml"/> <!-- Valtra -->
+	 <!-- Zetor -->
+        <storeItem xmlFilename="data/steerable/zetor/zetorForterraHD.xml"/> <!-- Zetor -->
+        <storeItem xmlFilename="data/steerable/zetor/zetorMajor.xml"/> <!-- Zetor -->
+        <storeItem xmlFilename="data/steerable/zetor/zetorProximaPower.xml"/> <!-- Zetor -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- frontLoaders -->
+	<!-- Kramer -->
+        <storeItem xmlFilename="data/steerable/kramer/kramer308T.xml"/> <!-- Kramer -->
+	<!-- JCB -->
+        <storeItem xmlFilename="data/steerable/jcb/jcbTM320s.xml"/> <!-- JCB -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- trucks -->
+	<!-- American Trucks / Lizard -->
+        <storeItem xmlFilename="data/steerable/americanTruck/americanTruckDualAxle.xml"/> <!-- American Trucks / Lizard -->
+        <storeItem xmlFilename="data/steerable/americanTruck/americanTruckOneAxle.xml"/> <!-- American Trucks / Lizard -->
+	<!-- MAN -->
+        <storeItem xmlFilename="data/steerable/man/manTGS18480.xml"/> <!-- MAN -->
+	<!-- Tatra -->
+        <storeItem xmlFilename="data/steerable/tatra/tatraPhoenix.xml"/> <!-- Tatra -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- harvesters -->
+	<!-- Case IH -->
+        <storeItem xmlFilename="data/steerable/caseIH/caseIH130Series.xml"/> <!-- Case IH -->
+        <storeItem xmlFilename="data/steerable/caseIH/caseIH230Series.xml"/> <!-- Case IH -->
+        <storeItem xmlFilename="data/steerable/caseIH/caseIH1660.xml"/> <!-- Case IH -->
+	<!-- Massey Ferguson -->
+        <storeItem xmlFilename="data/steerable/masseyFerguson/MF7347Activa.xml"/> <!-- Massey Ferguson -->
+        <storeItem xmlFilename="data/steerable/masseyFerguson/MF9380Delta.xml"/> <!-- Massey Ferguson -->
+	<!-- New Holland -->
+        <storeItem xmlFilename="data/steerable/newHolland/newHollandCR1090.xml"/> <!-- New Holland -->
+        <storeItem xmlFilename="data/steerable/newHolland/newHollandTC590.xml"/> <!-- New Holland -->
+	<!-- Rostselmash -->
+        <storeItem xmlFilename="data/steerable/rostselmash/rsmAcros595.xml"/> <!-- Rostselmash -->
+        <storeItem xmlFilename="data/steerable/rostselmash/rsmTorum760.xml"/> <!-- Rostselmash -->
+	<!-- Sampo Rosenlew -->
+        <storeItem xmlFilename="data/steerable/sampoRosenlew/sampoRosenlewC6.xml"/> <!-- Sampo Rosenlew -->
+        <storeItem xmlFilename="data/steerable/sampoRosenlew/sampoRosenlewHR46.xml"/> <!-- Sampo Rosenlew -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- forageHarvesters -->
+	<!-- Krone -->
+        <storeItem xmlFilename="data/steerable/krone/kroneBiGX580.xml"/> <!-- Krone -->
+	<!-- New Holland -->		
+        <storeItem xmlFilename="data/steerable/newHolland/newHollandFR850.xml"/> <!-- New Holland -->
+	<!-- Rostselmash -->
+        <storeItem xmlFilename="data/steerable/rostselmash/rsm1403.xml"/> <!-- Rostselmash -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- potatoHarvesting -->
+	<!-- Grimme -->
+        <storeItem xmlFilename="data/steerable/grimme/grimmeTectron415.xml"/> <!-- Grimme -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- beetHarvesting -->
+	<!-- Holmer -->
+        <storeItem xmlFilename="data/steerable/holmer/holmerTerraFelis2.xml"/> <!--selfpropelled bulk beltsystem, not only sugarbeets--> <!-- Holmer -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- sprayer -->
+	<!-- New Holland -->
+        <storeItem xmlFilename="data/steerable/newHolland/SP400F.xml"/> <!-- New Holland -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- wood -->
+	<!-- Ponsse -->
+        <storeItem xmlFilename="data/steerable/ponsse/ponsseBuffalo.xml"/> <!-- Ponsse -->
+        <storeItem xmlFilename="data/steerable/ponsse/ponsseScorpion.xml"/> <!-- Ponsse -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- wheelLoader -->
+	<!-- Liebherr -->
+        <storeItem xmlFilename="data/steerable/liebherr/liebherrL538.xml"/> <!-- Liebherr -->
+	<!-- JCB -->
+        <storeItem xmlFilename="data/steerable/jcb/jcb435s.xml"/> <!-- JCB -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- telehandler -->
+	<!-- Liebherr -->
+        <storeItem xmlFilename="data/steerable/liebherr/liebherrTL432_7.xml"/> <!-- Liebherr -->
+	<!-- Manitou -->
+        <storeItem xmlFilename="data/steerable/manitou/manitouMLT840.xml"/> <!-- Manitou -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- skidsteer -->
+	<!-- JCB -->
+        <storeItem xmlFilename="data/steerable/jcb/jcb260.xml"/> <!-- JCB -->
+        <storeItem xmlFilename="data/steerable/jcb/jcb325T.xml"/> <!-- JCB -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- animals -->
+	<!-- Siloking -->
+        <storeItem xmlFilename="data/steerable/siloking/siloKingSelfLineCompact1612.xml"/> <!-- Siloking -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- cars -->
+	<!-- Lizard -->
+        <storeItem xmlFilename="data/steerable/lizard/lizardPickupRodeo.xml"/><!-- Lizard -->
+        <storeItem xmlFilename="data/steerable/lizard/lizardPickupTT.xml"/> <!-- Lizard -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- belts -->
+	<!-- Holmer -->
+        <storeItem xmlFilename="data/steerable/holmer/holmerTerraDosT4_40.xml"/> <!-- Holmer -->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--////////////////////////////////////////////////////			Equipment				//////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--frontloaders-->
+	<!-- Stoll -->
+        <storeItem xmlFilename="data/tools/stoll/stollFrontLoaderFZ.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollFrontLoaderFZ60.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollToolBaleFork.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollToolBaleGrab.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollToolLogFork.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollToolManureFork.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollToolManureGrabFork.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollToolPalletFork.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollToolRoundBaleFork.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollToolShovel.xml"/>
+        <storeItem xmlFilename="data/tools/stoll/stollToolSilageCutter.xml"/>
+
+<!--forageHarvesters-->
+	<!-- Poettinger -->
+        <storeItem xmlFilename="data/tools/poettinger/poettingerMex5.xml"/> <!--front mounted corn/maize cutter-->
+
+<!--potatoHarvesting-->
+	<!-- Grimme -->
+        <storeItem xmlFilename="data/tools/grimme/grimmeKS75-4.xml"/> <!--potato topper-->
+
+<!--beetHarvesting-->
+	<!-- Grimme -->
+        <storeItem xmlFilename="data/tools/grimme/grimmeFT300.xml"/> <!--sugar topper-->
+
+<!--plows-->
+	<!-- Amazone -->
+        <storeItem xmlFilename="data/tools/amazone/amazoneCayron200.xml"/> <!--plough-->
+	<!-- Kuhn -->
+        <storeItem xmlFilename="data/tools/kuhn/kuhnVariMaster153.xml"/> <!--plough-->
+	<!-- Lemken -->
+		<storeItem xmlFilename="data/tools/lemken/lemkenTitan11.xml"/> <!--plough-->
+	<!-- Salford -->
+        <storeItem xmlFilename="data/tools/salford/salford4204.xml"/> <!--plough-->
+        <storeItem xmlFilename="data/tools/salford/salford8312.xml"/> <!--plough-->
+		
+<!--cultivators-->
+	<!-- Horsch -->
+        <storeItem xmlFilename="data/tools/horsch/horschTerrano4FX.xml"/> <!--cultivator-->
+        <storeItem xmlFilename="data/tools/horsch/horschTerrano5FM.xml"/> <!--cultivator-->
+        <storeItem xmlFilename="data/tools/horsch/horschTiger10LT.xml"/> <!--cultivator-->
+	<!-- Koeckerling -->
+        <storeItem xmlFilename="data/tools/koeckerling/koeckerlingAllrounder.xml"/> <!--cultivator-->
+	<!-- Kuhn -->
+        <storeItem xmlFilename="data/tools/kuhn/kuhnCultimerL300.xml"/> <!--cultivator-->
+	<!-- Kverneland -->
+        <storeItem xmlFilename="data/tools/kverneland/kvernelandQualidisc3m.xml"/> <!--cultivator-->
+	<!-- Lemken -->
+		<storeItem xmlFilename="data/tools/lemken/lemkenHeliodorGigant101200.xml"/> <!--cultivator-->
+	<!-- Vaederstad --> 
+        <storeItem xmlFilename="data/tools/vaderstad/vaderstadCarrierXL825.xml"/> <!--cultivator-->
+	<!-- Vogel Noot -->
+        <storeItem xmlFilename="data/tools/vogelNoot/vogelNootTerraDisc600.xml"/> <!--cultivator-->
+
+<!--sowingMachines-->
+	<!-- Amazone -->
+        <storeItem xmlFilename="data/tools/amazone/amazoneCondor15001.xml"/> <!--seeder with fertilizer-->
+        <storeItem xmlFilename="data/tools/amazone/amazoneED3000.xml"/>	<!--seeder with fertilizer-->
+	<!-- GreatPlains -->
+        <storeItem xmlFilename="data/tools/greatPlains/gp3P1006NT.xml"/> <!--seeder with fertilizer-->
+	<!-- Grimme -->
+        <storeItem xmlFilename="data/tools/grimme/grimmeGL420.xml"/> <!--potato seeder-->
+        <storeItem xmlFilename="data/tools/grimme/grimmeGL860.xml"/> <!--seeder with fertilizer-->
+	<!-- Horsch -->
+        <storeItem xmlFilename="data/tools/horsch/horschMaestro12SW.xml"/> <!--seeder with fertilizer-->
+        <storeItem xmlFilename="data/tools/horsch/horschPronto9DC.xml"/> <!--seeder with fertilizer-->
+	<!-- Kverneland -->
+        <storeItem xmlFilename="data/tools/kverneland/kvernelandAccordDL.xml"/> <!--seeder-->
+        <storeItem xmlFilename="data/tools/kverneland/kvernelandOptimaV.xml"/> <!--seeder with fertilizer-->
+	<!-- Lemken -->
+		<storeItem xmlFilename="data/tools/lemken/lemkenSolitair12.xml"/> <!--seeder-->
+	<!-- Vaederstad --> 
+        <storeItem xmlFilename="data/tools/vaderstad/vaderstadRapid600s.xml"/> <!--seeder-->
+        <storeItem xmlFilename="data/tools/vaderstad/vaderstadTempoF8.xml"/> <!--seeder with fertilizer-->
+		
+<!--sprayers-->
+	<!-- Amazone -->
+        <storeItem xmlFilename="data/tools/amazone/amazoneFT1001.xml"/>	<!--liquid sprayer-->
+        <storeItem xmlFilename="data/tools/amazone/amazoneUF1201.xml"/> <!--liquid sprayer-->
+		
+<!--fertilizerSpreaders-->
+	<!-- Bredal -->
+        <storeItem xmlFilename="data/tools/bredal/F2WS4000.xml"/> <!--solid sprayer-->
+	<!-- Kverneland -->
+        <storeItem xmlFilename="data/tools/kverneland/kvernelandExactaEL.xml"/> <!--solid fertilizer-->
+
+<!--slurryTanks-->
+	<!-- Amazone -->
+        <storeItem xmlFilename="data/tools/amazone/amazoneCatros6002.xml"/> <!--zunhammer cultivator-->
+	<!-- Zunhammer -->
+        <storeItem xmlFilename="data/tools/zunhammer/zunhammerZunidisc.xml"/> <!--zunhammer cultivator-->
+		
+<!--weeders-->
+	<!-- Einboeck -->
+        <storeItem xmlFilename="data/tools/einboeck/einboeckRotation1200.xml"/> <!--weeder-->
+        <storeItem xmlFilename="data/tools/einboeck/pneumaticstar900.xml"/> <!--weeder with seeder-->
+
+<!--mowers-->
+	<!-- Lely -->
+        <storeItem xmlFilename="data/tools/lely/lelySplendimo320FC.xml"/> <!--front mower-->
+        <storeItem xmlFilename="data/tools/lely/lelySplendimo900MC.xml"/> <!--butterfly mower-->
+	<!-- New Holland -->
+		<storeItem xmlFilename="data/tools/newHolland/newHollandDiscbine313.xml"/> <!-- towed mower-->
+	<!-- Poettinger -->
+        <storeItem xmlFilename="data/tools/poettinger/poettingerNovaCat301.xml"/> <!--front mower-->
+        <storeItem xmlFilename="data/tools/poettinger/poettingerNovacat302ED.xml"/> <!--read side mower-->
+        <storeItem xmlFilename="data/tools/poettinger/poettingerNovaCatX8.xml"/> <!--butterfly mower-->
+
+<!--tedders-->
+	<!-- Lely -->
+        <storeItem xmlFilename="data/tools/lely/lelyLotus1250.xml"/> <!--tedder-->
+	<!-- Poettinger -->
+        <storeItem xmlFilename="data/tools/poettinger/poettingerHit1214T.xml"/> <!--tedder-->
+	<!-- Vicon -->
+        <storeItem xmlFilename="data/tools/vicon/viconFanex604.xml"/> <!--tedder-->
+
+<!--windrowers-->
+	<!-- Kuhn -->
+        <storeItem xmlFilename="data/tools/kuhn/kuhnGA9531.xml"/> <!--windrower-->
+	<!-- Lely -->
+        <storeItem xmlFilename="data/tools/lely/lelyHibiscus1515CdProf.xml"/> <!--windrower-->
+	<!-- Poettinger -->
+        <storeItem xmlFilename="data/tools/poettinger/poettingerTop462.xml"/> <!--windrower-->
+
+<!--wood-->
+	<!-- Damcon -->
+        <storeItem xmlFilename="data/tools/damcon/damconPL75.xml"/> <!--tree planter-->
+	<!-- FSI -->
+        <storeItem xmlFilename="data/tools/fsi/fsiST65T.xml"/>
+
+<!--wheelLoaders-->
+	<!-- Lizard -->
+        <storeItem xmlFilename="data/tools/lizard/lizardSilageFork.xml"/>
+	<!-- Magsi -->
+        <storeItem xmlFilename="data/tools/magsi/wheelLoaderFork.xml"/>
+        <storeItem xmlFilename="data/tools/magsi/wheelLoaderLogFork.xml"/>
+        <storeItem xmlFilename="data/tools/magsi/wheelLoaderShovel.xml"/>
+
+<!--teleLoaders-->
+	<!-- Magsi -->
+        <storeItem xmlFilename="data/tools/magsi/telehandlerBaleFork.xml"/>
+        <storeItem xmlFilename="data/tools/magsi/telehandlerBaleGrab.xml"/>
+        <storeItem xmlFilename="data/tools/magsi/telehandlerFork.xml"/>
+        <storeItem xmlFilename="data/tools/magsi/telehandlerLogFork.xml"/>
+        <storeItem xmlFilename="data/tools/magsi/telehandlerManureFork.xml"/>
+        <storeItem xmlFilename="data/tools/magsi/telehandlerShovel.xml"/>
+
+<!--skidSteers-->
+	<!-- DFM -->
+        <storeItem xmlFilename="data/tools/DFM/CFB16.xml"/>
+        <storeItem xmlFilename="data/tools/DFM/RT3000.xml"/>
+        <storeItem xmlFilename="data/tools/DFM/TG84.xml"/>
+        <storeItem xmlFilename="data/tools/DFM/TR3200.xml"/>
+	<!-- JCB -->
+        <storeItem xmlFilename="data/tools/jcb/jcbBaleFork.xml"/>
+        <storeItem xmlFilename="data/tools/jcb/jcbLogFork.xml"/>
+        <storeItem xmlFilename="data/tools/jcb/jcbManureFork.xml"/>
+        <storeItem xmlFilename="data/tools/jcb/jcbPalletFork.xml"/>
+        <storeItem xmlFilename="data/tools/jcb/jcbShovel.xml"/>
+        <storeItem xmlFilename="data/tools/jcb/jcbStumpCutter.xml"/>
+
+<!--leveler-->
+	<!-- Holaras -->
+        <storeItem xmlFilename="data/tools/holaras/holarasMES400.xml"/>
+        <storeItem xmlFilename="data/tools/holaras/holarasMES500.xml"/>
+
+<!--misc-->
+	<!-- Lizard -->
+        <storeItem xmlFilename="data/tools/lizard/lizardR5000.xml"/> <!--roller-->
+
+<!--weights-->
+	<!-- AGCO -->
+        <storeItem xmlFilename="data/tools/agco/agco650.xml"/>
+        <storeItem xmlFilename="data/tools/agco/agco1100.xml"/>
+        <storeItem xmlFilename="data/tools/agco/agco1500.xml"/>
+        <storeItem xmlFilename="data/tools/agco/agco2300.xml"/>
+	<!-- Lizard -->
+        <storeItem xmlFilename="data/tools/lizard/lizardWeight550.xml"/>
+	<!-- Suer -->
+        <storeItem xmlFilename="data/tools/suer/suerSB700.xml"/>
+        <storeItem xmlFilename="data/tools/suer/suerSB1000.xml"/>
+        <storeItem xmlFilename="data/tools/suer/suerSB1600.xml"/>
+        <storeItem xmlFilename="data/tools/suer/suerSB2400.xml"/>
+
+<!--belts-->
+	<!-- Grimme -->
+        <storeItem xmlFilename="data/tools/grimme/grimmeRH2460.xml"/> <!--sugar potato belt system-->
+        <storeItem xmlFilename="data/tools/grimme/grimmeSL8022.xml"/> <!--bulk belt system-->
+        <storeItem xmlFilename="data/tools/grimme/grimmeTC8016.xml"/> <!--bulk belt system-->
+	<!-- Lizard -->
+        <storeItem xmlFilename="data/tools/lizard/lizardBeltSystem.xml"/>
+		
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--///////////////////////////////////////////////////			Trailers				//////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--potatoHarvesting-->
+	<!-- Grimme -->
+        <storeItem xmlFilename="data/trailers/grimme/grimmeSE260.xml"/>
+
+<!--beetHarvesting-->
+	<!-- Grimme -->
+        <storeItem xmlFilename="data/trailers/grimme/grimmeRootster604.xml"/>
+
+<!--tippers-->
+	<!-- Brantner -->
+        <storeItem xmlFilename="data/trailers/brantner/brantnerE8041.xml"/>
+	<!-- Farmtech -->
+        <storeItem xmlFilename="data/trailers/farmtech/farmtechTDK1600.xml"/>
+	<!-- Fliegl -->
+        <storeItem xmlFilename="data/trailers/fliegl/flieglASS2101.xml"/>
+	<!-- Joskin -->
+        <storeItem xmlFilename="data/trailers/joskin/joskinDrakkar8600.xml"/> 
+        <storeItem xmlFilename="data/trailers/joskin/joskinTransSpace8000.xml"/> 
+	<!-- Krampe -->
+        <storeItem xmlFilename="data/trailers/krampe/krampeBandit750.xml"/>
+        <storeItem xmlFilename="data/trailers/krampe/krampeSB3060.xml"/>
+	<!-- Kroeger -->
+        <storeItem xmlFilename="data/trailers/kroeger/kroegerHKD302.xml"/>
+        <storeItem xmlFilename="data/trailers/kroeger/kroegerTAW30.xml"/>
+        <storeItem xmlFilename="data/trailers/kroeger/kroegerTKD302.xml"/>
+	<!-- Krone -->
+        <storeItem xmlFilename="data/trailers/krone/kroneTX560D.xml"/>
+	<!-- Metaltech -->
+        <storeItem xmlFilename="data/trailers/metaltech/db8000.xml"/>
+
+<!--augerWagons-->
+	<!-- Bergmann -->
+        <storeItem xmlFilename="data/trailers/bergmann/bergmannGTW430.xml"/>
+	<!-- Metaltech -->
+        <storeItem xmlFilename="data/trailers/metaltech/pp20.xml"/>
+
+<!--sprayers-->
+	<!-- Caruelle Nicolas -->
+        <storeItem xmlFilename="data/trailers/caruelleNicolas/caruelleNicolasStilla460.xml"/> <!--towed liquid fertilizer-->
+
+<!--fertilizerSpreaders-->
+	<!-- Bredal -->
+        <storeItem xmlFilename="data/trailers/bredal/K165.xml"/> <!--towed solid fertilizer-->
+
+<!--manureSpreaders-->
+	<!-- Farmtech -->
+        <storeItem xmlFilename="data/trailers/farmtech/farmtechSuperfex800.xml"/> <!--manure spreader-->
+	<!-- Joskin -->
+        <storeItem xmlFilename="data/trailers/joskin/joskinTornado3.xml"/> <!--manure spreader-->
+	<!-- Strautmann -->
+        <storeItem xmlFilename="data/trailers/strautmann/strautmannPS3401.xml"/> <!--manure spreader-->
+
+<!--slurryTanks-->
+	<!-- Joskin -->
+        <storeItem xmlFilename="data/trailers/joskin/joskinModulo.xml"/> <!--slurry spreader-->
+	<!-- Kotte -->
+        <storeItem xmlFilename="data/trailers/kotte/garantFieldContainer.xml"/> <!--slurry spreader-->
+        <storeItem xmlFilename="data/trailers/kotte/garantTSA.xml"/>
+        <storeItem xmlFilename="data/trailers/kotte/VE8000.xml"/>
+	<!-- Veenhuis -->
+        <storeItem xmlFilename="data/trailers/veenhuis/premiumIntegral30000.xml"/> <!--slurry spreader-->
+	<!-- Zunhammer -->
+        <storeItem xmlFilename="data/trailers/zunhammer/zunhammer18500PE.xml"/> <!--slurry spreader-->
+
+<!--loaderWagons-->
+	<!-- Bergmann -->
+        <storeItem xmlFilename="data/trailers/bergmann/bergmannRepex34S.xml"/> <!--forage wagon-->
+	<!-- Lely -->
+        <storeItem xmlFilename="data/trailers/lely/lelyTigoLoaderWagon.xml"/> <!--forage wagon-->
+	<!-- Poettinger -->
+        <storeItem xmlFilename="data/trailers/poettinger/poettingerEuroboss330T.xml"/> <!--forage wagon-->
+	<!-- Strautmann -->
+        <storeItem xmlFilename="data/trailers/strautmann/strautmannTeraVitesse5201.xml"/> <!--forage wagon-->
+
+<!--baling-->
+	<!-- Arcusin -->
+        <storeItem xmlFilename="data/trailers/arcusin/arcusinForstack12.xml"/>
+        <storeItem xmlFilename="data/trailers/arcusin/arcusinFSX6372.xml"/>
+	<!-- Fliegl -->
+        <storeItem xmlFilename="data/trailers/fliegl/flieglDPW180.xml"/>
+	<!-- New Holland -->
+        <storeItem xmlFilename="data/trailers/newHolland/newHollandBB1290.xml"/> <!--square baler-->
+        <storeItem xmlFilename="data/trailers/newHolland/newHollandRollBelt150.xml"/> <!--round baler-->
+	<!-- Ursus -->
+        <storeItem xmlFilename="data/trailers/ursus/ursusT127.xml"/>
+        <storeItem xmlFilename="data/trailers/ursus/ursusZ586.xml"/>
+
+<!--wood-->
+	<!-- Fliegl -->
+        <storeItem xmlFilename="data/trailers/fliegl/flieglTimberRunner.xml"/>
+	<!-- Heizomat -->
+        <storeItem xmlFilename="data/trailers/heizomat/heizomatHM4300.xml"/>
+	<!-- Jenz -->
+        <storeItem xmlFilename="data/trailers/jenz/jenzBA725.xml"/>
+        <storeItem xmlFilename="data/trailers/jenz/jenzHEM583.xml"/>
+	<!-- Stepa -->
+        <storeItem xmlFilename="data/trailers/stepa/stepaFHL13AK.xml"/>
+
+<!--animals-->
+	<!-- Joskin -->
+        <storeItem xmlFilename="data/trailers/joskin/joskinAquaTrans7300.xml"/> <!--water trailer-->
+        <storeItem xmlFilename="data/trailers/joskin/joskinBetimaxRDS7500.xml"/>
+	<!-- Kuhn -->
+        <storeItem xmlFilename="data/trailers/kuhn/kuhnPrimor15070.xml"/>
+	<!-- Michieletto -->
+        <storeItem xmlFilename="data/trailers/michieletto/michielettoTrailer.xml"/>
+	<!-- SiloKing -->
+        <storeItem xmlFilename="data/trailers/siloking/siloKingTrailedLineDuo1814.xml"/>
+
+<!--misc-->
+	<!-- ThunderCreek -->
+        <storeItem xmlFilename="data/trailers/thunderCreek/FST990.xml"/>
+
+<!--dollys-->
+	<!-- Fliegl -->
+        <storeItem xmlFilename="data/trailers/fliegl/flieglDolly.xml"/>
+
+<!--lowloaders-->
+	<!-- Fliegl -->
+        <storeItem xmlFilename="data/trailers/fliegl/flieglSemitrailer.xml"/>
+	<!-- Goldhofer -->
+        <storeItem xmlFilename="data/trailers/goldhofer/goldhoferStzVp3.xml"/>
+
+<!--cutterTrailers-->
+	<!-- Holmer -->
+        <storeItem xmlFilename="data/trailers/holmer/holmerTransportTrailer.xml"/>
+	<!-- Krone -->
+        <storeItem xmlFilename="data/trailers/krone/kroneTrailer.xml"/>
+	<!-- Thueringer Agrar -->
+        <storeItem xmlFilename="data/trailers/thueringerAgrar/thueringerAgrarLeguan.xml"/>
+        <storeItem xmlFilename="data/trailers/thueringerAgrar/thueringerAgrarLeguan40.xml"/>
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!--/////////////////////////////////////////////////////			The End				//////////////////////////////////////////////////////////-->
+<!--//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+		<newCategories>   
+			<newCategory name="SWS_tractors" previousCategory="tractors" imageFilename="$data/store/categories/category_tractors.dds" />
+			<newCategory name="SWS_frontLoaders" previousCategory="frontLoaders" imageFilename="$data/store/categories/category_frontLoaders.dds" />
+			<newCategory name="SWS_trucks" previousCategory="trucks" imageFilename="$data/store/categories/category_trucks.dds" />
+			<newCategory name="SWS_harvesters" previousCategory="harvesters" imageFilename="$data/store/categories/category_harvesters.dds" />
+			<newCategory name="SWS_cutters" previousCategory="cutters" imageFilename="$data/store/categories/category_cutters.dds" />
+			<newCategory name="SWS_forageHarvesters" previousCategory="forageHarvesters" imageFilename="$data/store/categories/category_forageHarvester.dds" />
+			<newCategory name="SWS_forageHarvesterCutters" previousCategory="forageHarvesterCutters" imageFilename="$data/store/categories/category_forageHarvesterCutters.dds" />
+			<newCategory name="SWS_potatoHarvesting" previousCategory="potatoHarvesting" imageFilename="$data/store/categories/category_potatoHarvesting.dds" />
+			<newCategory name="SWS_beetHarvesting" previousCategory="beetHarvesting" imageFilename="$data/store/categories/category_beetHarvesting.dds" />
+			<newCategory name="SWS_tippers" previousCategory="tippers" imageFilename="$data/store/categories/category_tippers.dds" />
+			<newCategory name="SWS_augerWagons" previousCategory="augerWagons" imageFilename="$data/store/categories/category_augerWagons.dds" />
+			<newCategory name="SWS_plows" previousCategory="plows" imageFilename="$data/store/categories/category_plows.dds" />
+			<newCategory name="SWS_cultivators" previousCategory="cultivators" imageFilename="$data/store/categories/category_cultivators.dds" />
+			<newCategory name="SWS_sowingMachines" previousCategory="sowingMachines" imageFilename="$data/store/categories/category_sowingMachines.dds" />
+			<newCategory name="SWS_sprayers" previousCategory="sprayers" imageFilename="$data/store/categories/category_sprayers.dds" />
+			<newCategory name="SWS_fertilizerSpreaders" previousCategory="fertilizerSpreaders" imageFilename="$data/store/categories/category_fertilizerSpreaders.dds" />
+			<newCategory name="SWS_manureSpreaders" previousCategory="manureSpreaders" imageFilename="$data/store/categories/category_manureSpreaders.dds" />
+			<newCategory name="SWS_slurryTanks" previousCategory="slurryTanks" imageFilename="$data/store/categories/category_slurryTanks.dds" />
+			<newCategory name="SWS_weeders" previousCategory="weeders" imageFilename="$data/store/categories/category_weeders.dds" />
+			<newCategory name="SWS_mowers" previousCategory="mowers" imageFilename="$data/store/categories/category_mowers.dds" />
+			<newCategory name="SWS_tedders" previousCategory="tedders" imageFilename="$data/store/categories/category_tedders.dds" />
+			<newCategory name="SWS_windrowers" previousCategory="windrowers" imageFilename="$data/store/categories/category_windrowers.dds" />
+			<newCategory name="SWS_loaderWagons" previousCategory="loaderWagons" imageFilename="$data/store/categories/category_loaderWagons.dds" />
+			<newCategory name="SWS_baling" previousCategory="baling" imageFilename="$data/store/categories/category_baling.dds" />
+			<newCategory name="SWS_chainsaws" previousCategory="chainsaws" imageFilename="$data/store/categories/category_chainsaws.dds" />
+			<newCategory name="SWS_wood" previousCategory="wood" imageFilename="$data/store/categories/category_wood.dds" />
+			<newCategory name="SWS_wheelLoaders" previousCategory="wheelLoaders" imageFilename="$data/store/categories/category_wheelLoaders.dds" />
+			<newCategory name="SWS_teleLoaders" previousCategory="teleLoaders" imageFilename="$data/store/categories/category_teleLoaders.dds" />
+			<newCategory name="SWS_skidSteers" previousCategory="skidSteers" imageFilename="$data/store/categories/category_skidSteers.dds" />
+			<newCategory name="SWS_animals" previousCategory="animals" imageFilename="$data/store/categories/category_animals.dds" />
+			<newCategory name="SWS_leveler" previousCategory="leveler" imageFilename="$data/store/categories/category_leveler.dds" />
+			<newCategory name="SWS_misc" previousCategory="misc" imageFilename="$data/store/categories/category_misc.dds" />
+			<newCategory name="SWS_dollys" previousCategory="dollys" imageFilename="$data/store/categories/category_dollys.dds" />
+			<newCategory name="SWS_lowloaders" previousCategory="lowloaders" imageFilename="$data/store/categories/category_lowloaders.dds" />
+			<newCategory name="SWS_cutterTrailers" previousCategory="cutterTrailers" imageFilename="$data/store/categories/category_cutterTrailers.dds" />
+			<newCategory name="SWS_cars" previousCategory="cars" imageFilename="$data/store/categories/category_cars.dds" />
+			<newCategory name="SWS_weights" previousCategory="weights" imageFilename="$data/store/categories/category_weights.dds" />
+			<newCategory name="SWS_pallets" previousCategory="pallets" imageFilename="$data/store/categories/category_pallets.dds" />
+			<newCategory name="SWS_belts" previousCategory="belts" imageFilename="$data/store/categories/category_belts.dds" />
+		</newCategories>
+    </storeItems>
+
+    <l10n>
+		<text name="SWS_tractors"><en>SWS Tractors</en><de>SWS Tractors</de></text>
+		<text name="SWS_frontLoaders"><en>SWS Front Loaders</en><de>SWS Front Loaders</de></text>
+		<text name="SWS_trucks"><en>SWS Trucks</en><de>SWS Trucks</de></text>
+		<text name="SWS_harvesters"><en>SWS Harvesters</en><de>SWS Harvesters</de></text>
+		<text name="SWS_cutters"><en>SWS Headers</en><de>SWS Headers</de></text>
+		<text name="SWS_forageHarvesters"><en>SWS Forage Harvestes</en><de>SWS Forage Harvesters</de></text>
+		<text name="SWS_forageHarvesterCutters"><en>SWS Forage Harvester Headers</en><de>SWS Forage Harvester Headers</de></text>
+		<text name="SWS_potatoHarvesting"><en>SWS Potato Harvesting</en><de>SWS Potato Harvesting</de></text>
+		<text name="SWS_beetHarvesting"><en>SWS Beet Harvesting</en><de>SWS Beet Harvesting</de></text>
+		<text name="SWS_tippers"><en>SWS Tippers</en><de>SWS Tippers</de></text>
+		<text name="SWS_augerWagons"><en>SWS Auger Wagons</en><de>SWS Auger Wagons</de></text>
+		<text name="SWS_plows"><en>SWS Plows</en><de>SWS Plows</de></text>
+		<text name="SWS_cultivators"><en>SWS Cultivators</en><de>SWS Cultivators</de></text>
+		<text name="SWS_sowingMachines"><en>SWS Sowing Machines</en><de>SWS Sowing Machines</de></text>
+		<text name="SWS_sprayers"><en>SWS Sprayers</en><de>SWS Sprayers</de></text>
+		<text name="SWS_fertilizerSpreaders"><en>SWS Fertilizer Spreaders</en><de>SWS Fertilizer Spreaders</de></text>
+		<text name="SWS_manureSpreaders"><en>SWS Manure Spreaders</en><de>SWS Manure Spreaders</de></text>
+		<text name="SWS_slurryTanks"><en>SWS Slurry Tanks</en><de>SWS Slurry Tanks</de></text>
+		<text name="SWS_weeders"><en>SWS Weeders</en><de>SWS Weeders</de></text>
+		<text name="SWS_mowers"><en>SWS Mowers</en><de>SWS Mowers</de></text>
+		<text name="SWS_tedders"><en>SWS Tedders</en><de>SWS Tedders</de></text>
+		<text name="SWS_windrowers"><en>SWS Windrowers</en><de>SWS Windrowers</de></text>
+		<text name="SWS_loaderWagons"><en>SWS Loading Wagons</en><de>SWS Loading Wagons</de></text>
+		<text name="SWS_baling"><en>SWS Baling Technology</en><de>SWS Baling Technology</de></text>
+		<text name="SWS_chainsaws"><en>SWS Chainsaws</en><de>SWS Chainsaws</de></text>
+		<text name="SWS_wood"><en>SWS Forestry Equipment</en><de>SWS Forestry Equipment</de></text>
+		<text name="SWS_wheelLoaders"><en>SWS Wheel Loaders</en><de>SWS Wheel Loaders</de></text>
+		<text name="SWS_teleLoaders"><en>SWS Telehandlers</en><de>SWS Telehandlers</de></text>
+		<text name="SWS_skidSteers"><en>SWS Skid Steer Loaders</en><de>SWS Skid Steer Loaders</de></text>
+		<text name="SWS_animals"><en>SWS Animals</en><de>SWS Animals</de></text>
+		<text name="SWS_leveler"><en>SWS Levelers</en><de>SWS Levelers</de></text>
+		<text name="SWS_misc"><en>SWS Misc</en><de>SWS Misc</de></text>
+		<text name="SWS_dollys"><en>SWS Dollys</en><de>SWS Dollys</de></text>
+		<text name="SWS_lowloaders"><en>SWS Low Loaders</en><de>SWS Low Loaders</de></text>
+		<text name="SWS_cutterTrailers"><en>SWS Header Trailers</en><de>SWS Header Trailers</de></text>
+		<text name="SWS_cars"><en>SWS Cars</en><de>SWS Cars</de></text>
+		<text name="SWS_weights"><en>SWS Weights</en><de>SWS Weights</de></text>
+		<text name="SWS_pallets"><en>SWS Pallets</en><de>SWS Pallets</de></text>
+		<text name="SWS_belts"><en>SWS Belt Systems</en><de>SWS Belt Systems</de></text>
+    </l10n>
+	
+    <extraSourceFiles>	
+		<sourceFile filename="scripts/addStoreCategory.lua" />
+		<sourceFile filename="scripts/FillTypeMassAdjustment.lua" />
+		<sourceFile filename="scripts/PlayerZooming.lua" />
+    </extraSourceFiles>
+</modDesc>
+
+
+<!--
+[u][b]ETA?[/b][/u]
+This is a link for the WIP github [url=https://github.com/WKF-Modding/-FS17-WIP-SWS---Slower-Working-Speeds]https://github.com/WKF-Modding/-FS17-WIP-SWS---Slower-Working-Speeds[/url]
+-->

@@ -1,0 +1,24 @@
+////////
+11/11-16
+Begun working on v0.0.1:
+- All header types, mowers, tedders, windrowers, cultivators, seeders, ploughs, sprayers, slurry and manure trailers, forage wagons and balers are done.
+
+////////
+12/11-16
+Start updating files to patch 1.3
+- All header types, mowers, tedders, windrowers, cultivators, seeders, ploughs, sprayers, slurry and manure trailers, forage wagons and balers are converted to 1.3.
+  Compared all all files to mrLight to get them as close to that mod as possible.
+- Added darker exhaust smoke to all vehicles.
+
+////////
+13/11-16
+- Added all equipment to an "SWS_xxx" category for better store navigation. They are listed after the normal category. They are not listed by price like
+  in the normal category. It will come when i have time to sort it out.
+
+////////
+21/11-16
+- Upped speed by 1 and 2 kmh for a handful of equipment.
+
+////////
+22/11-16
+- Made a github for this - https://github.com/WKF-Modding/-FS17-WIP-SWS---Slower-Working-Speeds
