@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>600R</name>
+        <specs>
+            <workingWidth>6</workingWidth>
+            <combination>RSM 1403</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutterForage</function>
+        </functions>
+        <image>$data/store/store_rsmGr6000.png</image>
+        <price>27000</price>
+        <dailyUpkeep>20</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>ROSTSELMASH</brand>
+        <category>SWS_forageHarvesterCutters</category>
+        <vertexBufferMemoryUsage>1018176</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>158916</indexBufferMemoryUsage>
+        <textureMemoryUsage>8519872</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cornCutter</typeDesc>
+    <filename>$data/vehicles/cutters/rostselmash/rsmGr6000.i3d</filename>
+
+    <size width="4.5" length="3" />
+    <speedLimit value="7" />
+    <powerConsumer ptoRpm="540" neededPtoPower="100"/>
+
+    <workAreas>
+        <workArea startIndex="0>1|13|0" widthIndex="0>1|13|1" heightIndex="0>1|13|2" foldMinLimit="0" foldMaxLimit="0.1" type="cutter" />
+    </workAreas>
+
+    <turnedOnRotationNodes>
+        <!-- right -->
+        <turnedOnRotationNode index="0>1|0|0|1" type="cutter" rotSpeed="-200" rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="3" />
+        <turnedOnRotationNode index="0>1|0|0|0" type="cutter" rotSpeed="200"  rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="3" />
+        <turnedOnRotationNode index="0>1|10|1"  type="cutter" rotSpeed="200"  rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="3" />
+        <!-- left -->
+        <turnedOnRotationNode index="0>1|1|0|1" type="cutter" rotSpeed="200"  rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="3" />
+        <turnedOnRotationNode index="0>1|1|0|0" type="cutter" rotSpeed="-200" rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="3" />
+        <turnedOnRotationNode index="0>1|10|0"  type="cutter" rotSpeed="-200" rotAxis="2" turnOnFadeTime="2" turnOffFadeTime="3" />
+        <!-- drums -->
+        <turnedOnRotationNode index="0>1|11|0" type="cutter" rotSpeed="400"  rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="3" />
+        <turnedOnRotationNode index="0>1|11|1" type="cutter" rotSpeed="400"  rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="3" />
+        <turnedOnRotationNode index="0>1|11|2" type="cutter" rotSpeed="-400" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="3" />
+        <turnedOnRotationNode index="0>1|11|3" type="cutter" rotSpeed="-400" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="3" />
+    </turnedOnRotationNodes>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="cutterHarvester" upperDistanceToGround="1.7" lowerDistanceToGround="1.25" upperRotationOffset="0" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <dynamicMount forceLimitScale="1" />
+
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="0.90" volume="1.10" indoorVolumeFactor="0.75" />
+
+    <movingTools>
+        <movingTool index="0>1|0">
+            <dependentPart index="0>1|2" />
+            <dependentPart index="0>1|4" />
+            <dependentPart index="0>1|0|4|0|0" />
+            <dependentPart index="0>1|6|0|0" />
+            <dependentPart index="0>2|5" />
+        </movingTool>
+        <movingTool index="0>1|1">
+            <dependentPart index="0>1|3" />
+            <dependentPart index="0>1|5" />
+            <dependentPart index="0>1|7|0|0" />
+            <dependentPart index="0>1|1|4|0|0" />
+            <dependentPart index="0>2|2" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>2|5" referenceFrame="0>1|0|5" moveToReferenceFrame="true" />
+        <movingPart index="0>2|2" referenceFrame="0>1|1|5" moveToReferenceFrame="true"/>
+
+        <movingPart index="0>1|2" referencePoint="0>1|0|1" referenceFrame="0>" playSound="true">
+            <translatingPart index="0>1|2|0" />
+        </movingPart>
+        <movingPart index="0>1|4" referencePoint="0>1|0|2" referenceFrame="0>" >
+            <translatingPart index="0>1|4|0" />
+        </movingPart>
+        <movingPart index="0>1|6|0|0" referencePoint="0>1|0|3" referenceFrame="0>1|6|0" >
+            <translatingPart index="0>1|6|0|0|0" />
+        </movingPart>
+        <movingPart index="0>1|0|4|0|0" referencePoint="0>1|8|0" referenceFrame="0>1|0|4|0" >
+            <translatingPart index="0>1|0|4|0|0|0" />
+        </movingPart>
+
+        <movingPart index="0>1|3" referencePoint="0>1|1|1" referenceFrame="0>" playSound="true">
+            <translatingPart index="0>1|3|0" />
+        </movingPart>
+        <movingPart index="0>1|5" referencePoint="0>1|1|2" referenceFrame="0>" >
+            <translatingPart index="0>1|5|0" />
+        </movingPart>
+        <movingPart index="0>1|7|0|0" referencePoint="0>1|1|3" referenceFrame="0>1|7|0" >
+            <translatingPart index="0>1|7|0|0|0" />
+        </movingPart>
+        <movingPart index="0>1|1|4|0|0" referencePoint="0>1|9|0" referenceFrame="0>1|1|4|0" >
+            <translatingPart index="0>1|1|4|0|0|0" />
+        </movingPart>
+    </movingParts>
+
+    <foldingParts startMoveDirection="1" turnOnFoldMaxLimit="0.1" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="fold" speedScale="1" />
+    </foldingParts>
+
+    <animations>
+        <animation name="fold">
+            <part node="0>1|0" startTime="0" endTime="4.5" startRot="0 0 0" endRot="0 0 -90" />
+            <part node="0>1|1" startTime="0" endTime="4.5" startRot="0 0 0" endRot="0 0 90" />
+            <part node="0>2|1" startTime="0" endTime="4.5" startRot="0 0 0" endRot="0 0 13.564" startTrans="1.451 1.135 0.468" endTrans="0.896 1.057 0.622"/>
+            <part node="0>2|4" startTime="0" endTime="4.5" startRot="0 0 0" endRot="0 0 -13.564" startTrans="-1.451 1.135 0.468" endTrans="-0.896 1.057 0.622"/>
+        </animation>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>1|12|0" startTime="0" duration="1" startTrans="0 0.122 0" endTrans="0 0 0" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <ai>
+        <areaMarkers leftIndex="0>1|14|0|0" rightIndex="0>1|14|0|1" backIndex="0>1|14|0|2" />
+        <trafficCollisionTrigger index="0>1|14|1" />
+    </ai>
+
+    <cutter allowsForageGrowhtState="true" fruitTypeCategories="maizeCutter" convertedFillTypeCategories="forageHarvester">
+        <testAreas>
+            <testArea startIndex="0>1|15|1|0" widthIndex="0>1|15|1|0|0" heightIndex="0>1|15|1|0|1" />
+            <testArea startIndex="0>1|15|1|1" widthIndex="0>1|15|1|1|0" heightIndex="0>1|15|1|1|1" />
+            <testArea startIndex="0>1|15|1|2" widthIndex="0>1|15|1|2|0" heightIndex="0>1|15|1|2|1" />
+            <testArea startIndex="0>1|15|1|3" widthIndex="0>1|15|1|3|0" heightIndex="0>1|15|1|3|1" />
+            <testArea startIndex="0>1|15|1|4" widthIndex="0>1|15|1|4|0" heightIndex="0>1|15|1|4|1" />
+            <testArea startIndex="0>1|15|1|5" widthIndex="0>1|15|1|5|0" heightIndex="0>1|15|1|5|1" />
+        </testAreas>
+        <effect>
+            <effectNode linkNode="0>1|15|0|0" speedScale="0.002"  inverted="true" lengthAndRadius="2.5 1.3 2 3"     isThreshing="false" effectType="CENTER" changeSpeedScale="0.01" />
+            <effectNode linkNode="0>1|15|0|1" speedScale="0.0035" inverted="true" lengthAndRadius="1.5 1.9 1.9 1.5" isThreshing="false" effectType="LEFT"  useInterpolation="true" minOffset="3.5" />
+            <effectNode linkNode="0>1|15|0|2" speedScale="0.0035" inverted="true" lengthAndRadius="1.5 2.0 1.9 1.5" isThreshing="false" effectType="RIGHT" useInterpolation="true" minOffset="3.5" useMaxValue="true"/>
+        </effect>
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+    </cutter>
+
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.4 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

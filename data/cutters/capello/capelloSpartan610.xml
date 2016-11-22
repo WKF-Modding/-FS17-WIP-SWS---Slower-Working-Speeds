@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Spartan 610</name>
+        <specs>
+            <workingWidth>6.1</workingWidth>
+            <combination>BiG X 580</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutterForage</function>
+        </functions>
+        <image>$data/store/store_capelloSpartan610.png</image>
+        <price>25000</price>
+        <dailyUpkeep>20</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>CAPELLO</brand>
+        <category>SWS_forageHarvesterCutters</category>
+        <vertexBufferMemoryUsage>796632</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>137778</indexBufferMemoryUsage>
+        <textureMemoryUsage>11185072</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+    <filename>$data/vehicles/cutters/capello/capelloSpartan610.i3d</filename>
+
+    <size width="6.5" length="2.5" />
+    <speedLimit value="8" />
+    <powerConsumer ptoRpm="540" neededPtoPower="100"/>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|3" type="cutter" rotSpeed="800" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+    </turnedOnRotationNodes>
+
+    <workAreas>
+        <workArea startIndex="0>0|4|0" widthIndex="0>0|4|1" heightIndex="0>0|4|2" type="cutter" />
+    </workAreas>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="cutterHarvester" upperDistanceToGround="2.2" lowerDistanceToGround="1.25" ptoInputNode="0>0|1" upperRotationOffset="0" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <animations>
+        <!-- varifeed rape -->
+        <animation name="moveSupport">
+            <part node="0>0|2"     startTime="0" endTime="0.9" startTrans="0 0.115 0" endTrans="0 0 0" />
+        </animation>
+    </animations>
+    <support animationName="moveSupport" />
+
+    <ai>
+        <areaMarkers leftIndex="0>0|5|0|0" rightIndex="0>0|5|0|1" backIndex="0>0|5|0|2" />
+        <trafficCollisionTrigger index="0>0|5|1" />
+    </ai>
+
+    <dynamicMount forceLimitScale="1" />
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.8" volume="0.4" indoorVolumeFactor="0.45"/>
+
+    <cutter allowsForageGrowhtState="true" fruitTypeCategories="directCutter" convertedFillTypeCategories="forageHarvester">
+        <effect>
+            <effectNode linkNode="0>0|6|0|0" speedScale="0.0013" lengthAndRadius="1.7 1 1 1"     effectType="LEFT"  useInterpolation="true" minOffset="3.5" />
+            <effectNode linkNode="0>0|6|0|1" speedScale="0.0013" lengthAndRadius="1.7 1 1 1"     effectType="RIGHT" useInterpolation="true" minOffset="3.5" />
+        </effect>
+        <testAreas>
+            <testArea startIndex="0>0|6|1|0" widthIndex="0>0|6|1|0|0" heightIndex="0>0|6|1|0|1" />
+            <testArea startIndex="0>0|6|1|1" widthIndex="0>0|6|1|1|0" heightIndex="0>0|6|1|1|1" />
+            <testArea startIndex="0>0|6|1|2" widthIndex="0>0|6|1|2|0" heightIndex="0>0|6|1|2|1" />
+            <testArea startIndex="0>0|6|1|3" widthIndex="0>0|6|1|3|0" heightIndex="0>0|6|1|3|1" />
+            <testArea startIndex="0>0|6|1|4" widthIndex="0>0|6|1|4|0" heightIndex="0>0|6|1|4|1" />
+        </testAreas>
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+    </cutter>
+
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

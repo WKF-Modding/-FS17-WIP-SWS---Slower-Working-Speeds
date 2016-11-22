@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Helianthus 5700</name>
+        <specs>
+            <neededPower>190</neededPower>
+            <workingWidth>5.7</workingWidth>
+            <combination>1660,5.90,7347,595</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutter</function>
+        </functions>
+        <image>$data/store/store_capelloHelianthus5700.png</image>
+        <price>33000</price>
+        <dailyUpkeep>50</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>CAPELLO</brand>
+        <category>SWS_cutters</category>
+        <fieldJob sizeCategory="1" typeCategory="cutter" />
+        <vertexBufferMemoryUsage>489760</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>71808</indexBufferMemoryUsage>
+        <textureMemoryUsage>10136464</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+    <filename>$data/vehicles/cutters/capello/capelloHelianthus5700.i3d</filename>
+
+    <size width="7" length="3" lengthOffset="-0.2" />
+    <speedLimit value="7" />
+    <powerConsumer ptoRpm="540" neededPtoPower="50"/>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|2"     type="cutter" rotSpeed="900"  rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|3|0"   type="cutter" rotSpeed="400"  rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+    </turnedOnRotationNodes>
+
+    <workAreas>
+        <workArea startIndex="0>0|4|0" widthIndex="0>0|4|1" heightIndex="0>0|4|2" type="cutter" />
+    </workAreas>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="cutter" ptoInputNode="0>0|1" lowerDistanceToGround="1.4" upperDistanceToGround="2.0" upperRotationOffset="0" lowerRotationOffset="5"/>
+    </inputAttacherJoints>
+
+    <movingTools>
+        <movingTool index="0>0|3" playSound="true">
+            <controls axis="AXIS_CUTTER_REEL2" invertAxis="true" mouseSpeedFactor="0.3" iconFilename="$dataS2/menu/moveControls/reel_trans2.png" />
+            <rotation rotSpeed="20" rotAcceleration="50" rotMax="0" rotMin="-27" startRot="-26"/>
+        </movingTool>
+    </movingTools>
+
+    <ai>
+        <areaMarkers leftIndex="0>0|5|0" rightIndex="0>0|5|1" backIndex="0>0|5|2" />
+        <trafficCollisionTrigger index="0>0|5|3" />
+    </ai>
+
+    <dynamicMount forceLimit="0.04" />
+
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.75" />
+
+    <cutter fruitTypes="sunflower">
+        <effect>
+            <effectNode linkNode="0>0|6|0" speedScale="0.0018" inverted="true" lengthAndRadius="1 3.0 0.85 2.6"   effectType="CENTER" changeSpeedScale="0.01" />
+            <effectNode linkNode="0>0|6|1" speedScale="0.0010" inverted="true" lengthAndRadius="1.75 1 1 1"       effectType="LEFT"  useInterpolation="true" minOffset="3.5" />
+            <effectNode linkNode="0>0|6|2" speedScale="0.0010" inverted="true" lengthAndRadius="1.75 1 1 1"       effectType="RIGHT" useInterpolation="true" minOffset="3.5" useMaxValue="true"/>
+        </effect>
+        <particleSystems>
+            <emitterShape node="0>0|6|3" particleType="CUTTER_CHOPPER" />
+        </particleSystems>
+        <testAreas>
+            <testArea startIndex="0>0|7|0" widthIndex="0>0|7|0|0" heightIndex="0>0|7|0|1" />
+            <testArea startIndex="0>0|7|1" widthIndex="0>0|7|1|0" heightIndex="0>0|7|1|1" />
+            <testArea startIndex="0>0|7|2" widthIndex="0>0|7|2|0" heightIndex="0>0|7|2|1" />
+            <testArea startIndex="0>0|7|3" widthIndex="0>0|7|3|0" heightIndex="0>0|7|3|1" />
+            <testArea startIndex="0>0|7|4" widthIndex="0>0|7|4|0" heightIndex="0>0|7|4|1" />
+            <testArea startIndex="0>0|7|5" widthIndex="0>0|7|5|0" heightIndex="0>0|7|5|1" />
+        </testAreas>
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+    </cutter>
+
+    <washable dirtDuration="60" washDuration="1" workMultiplier="10" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.4 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

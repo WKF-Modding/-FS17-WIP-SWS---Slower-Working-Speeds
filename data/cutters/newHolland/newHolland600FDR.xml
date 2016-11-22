@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>600FDR</name>
+        <specs>
+            <workingWidth>6.0</workingWidth>
+            <combination>FR850</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutterForage</function>
+        </functions>
+        <image>$data/store/store_newHolland600FDR.png</image>
+        <price>26000</price>
+        <dailyUpkeep>20</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>NEWHOLLAND</brand>
+        <category>SWS_forageHarvesterCutters</category>
+        <vertexBufferMemoryUsage>389504</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>54108</indexBufferMemoryUsage>
+        <textureMemoryUsage>9350016</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+    <filename>$data/vehicles/cutters/newHolland/newHolland600FDR.i3d</filename>
+
+    <size width="6.5" length="2.5" />
+    <speedLimit value="8" />
+    <powerConsumer ptoRpm="540" neededPtoPower="100"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="cutterHarvester" lowerDistanceToGround="1.37" upperDistanceToGround="1.7" ptoInputNode="0>0|1" upperRotationOffset="0" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|2"    type="cutter"  rotAxis="1" rotSpeed="1300"   turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|0"  type="cutter"  rotAxis="2" rotSpeed="1300"  turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|1"  type="cutter"  rotAxis="2" rotSpeed="-1300" turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|2"  type="cutter"  rotAxis="2" rotSpeed="1300"  turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|3"  type="cutter"  rotAxis="2" rotSpeed="-1300" turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|4"  type="cutter"  rotAxis="2" rotSpeed="1300"  turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|5"  type="cutter"  rotAxis="2" rotSpeed="-1300" turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|6"  type="cutter"  rotAxis="2" rotSpeed="1300"  turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|7"  type="cutter"  rotAxis="2" rotSpeed="-1300" turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|8"  type="cutter"  rotAxis="2" rotSpeed="1300"  turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|9"  type="cutter"  rotAxis="2" rotSpeed="-1300" turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|10" type="cutter"  rotAxis="2" rotSpeed="1300"  turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|11" type="cutter"  rotAxis="2" rotSpeed="-1300" turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|12" type="cutter"  rotAxis="2" rotSpeed="1300"  turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+        <turnedOnRotationNode index="0>0|3|13" type="cutter"  rotAxis="2" rotSpeed="-1300" turnOnFadeTime="2.5" turnOffFadeTime="4"/>
+    </turnedOnRotationNodes>
+
+    <workAreas>
+        <workArea startIndex="0>0|4|0" widthIndex="0>0|4|1" heightIndex="0>0|4|2" type="cutter" />
+    </workAreas>
+
+    <ai>
+        <areaMarkers leftIndex="0>0|5|0|0" rightIndex="0>0|5|0|1" backIndex="0>0|5|0|2" />
+        <trafficCollisionTrigger index="0>0|5|1" />
+    </ai>
+
+    <dynamicMount forceLimitScale="1" />
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.75" />
+
+    <cutter allowsForageGrowhtState="true" fruitTypeCategories="directCutter" convertedFillTypeCategories="forageHarvester">
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+    </cutter>
+
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

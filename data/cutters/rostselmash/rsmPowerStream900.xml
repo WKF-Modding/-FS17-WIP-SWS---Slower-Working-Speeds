@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Power Stream 900</name>
+        <specs>
+            <workingWidth>9.0</workingWidth>
+            <combination>Torum 760</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutter</function>
+        </functions>
+        <image>$data/store/store_rsmPowerStream900.png</image>
+        <price>43000</price>
+        <dailyUpkeep>60</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>ROSTSELMASH</brand>
+        <category>SWS_cutters</category>
+        <fieldJob sizeCategory="2" typeCategory="cutter" />
+        <vertexBufferMemoryUsage>2117920</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>300072</indexBufferMemoryUsage>
+        <textureMemoryUsage>18350368</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+    <filename>$data/vehicles/cutters/rostselmash/rsmPowerStream900.i3d</filename>
+
+    <size width="10" length="3" lengthOffset="0.8" />
+    <speedLimit value="6" />
+    <powerConsumer ptoRpm="540" neededPtoPower="100"/>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|2"       type="cutter" rotSpeed="800" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|3|0|0|0" type="cutter" rotSpeed="200" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|3|0|0|1" type="cutter" rotSpeed="200" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+    </turnedOnRotationNodes>
+
+    <workAreas>
+        <workArea startIndex="0>0|10|0" widthIndex="0>0|10|1" heightIndex="0>0|10|2" type="cutter" />
+    </workAreas>
+
+    <animations>
+        <animation name="varifeedRape">
+            <part node="0>0|14" startTime="0" endTime="0.01" visibility="false" />
+            <part node="0>0|14" startTime="0.01" endTime="0.02" visibility="true" />
+            <part node="0>0|13" startTime="0" endTime="0.01" visibility="true" />
+            <part node="0>0|13" startTime="0.01" endTime="0.02" visibility="false" />
+        </animation>
+    </animations>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="cutter" upperDistanceToGround="1.95" lowerDistanceToGround="1.35" ptoInputNode="0>0|1" upperRotationOffset="0" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <movingTools>
+        <movingTool index="0>0|3|0|0" playSound="true" >
+            <controls axis="AXIS_CUTTER_REEL" invertAxis="false" mouseSpeedFactor="0.9" iconFilename="$dataS2/menu/moveControls/reel_trans1.png" />
+            <translation transSpeed="0.2" transAcceleration="20" transMax="0.2" transMin="0" translationAxis="3" startTrans="0.2"/>
+            <dependentPart index="0>0|3|1" />
+            <dependentPart index="0>0|8|0" />
+        </movingTool>
+
+        <movingTool index="0>0|3|0" >
+            <controls axis="AXIS_CUTTER_REEL2" invertAxis="true" mouseSpeedFactor="0.9" />
+            <translation transSpeed="0.09" transAcceleration="35" transMax="1.26" transMin="1.05" translationAxis="3" startTrans="1.05"/>
+        </movingTool>
+        <movingTool index="0>0|3" playSound="true" >
+            <controls axis="AXIS_CUTTER_REEL2" invertAxis="true" mouseSpeedFactor="0.9" iconFilename="$dataS2/menu/moveControls/reel_trans2.png" />
+            <rotation rotSpeed="10" rotAcceleration="50" rotMax="20" rotMin="0" startRot="0"/>
+            <dependentPart index="0>0|4" />
+            <dependentPart index="0>0|3|1" />
+            <dependentPart index="0>0|8|0" />
+        </movingTool>
+
+        <movingTool index="0>0|3|0|0|1">
+            <dependentPart index="0>0|3|0|0|0|0" />
+            <dependentPart index="0>0|3|0|0|0|1" />
+            <dependentPart index="0>0|3|0|0|0|2" />
+            <dependentPart index="0>0|3|0|0|0|3" />
+            <dependentPart index="0>0|3|0|0|0|4" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- spikes -->
+        <movingPart index="0>0|3|0|0|0|0" referencePoint="0>0|3|0|0|1|0" referenceFrame="0>0|3|0|0|3" />
+        <movingPart index="0>0|3|0|0|0|1" referencePoint="0>0|3|0|0|1|1" referenceFrame="0>0|3|0|0|3" />
+        <movingPart index="0>0|3|0|0|0|2" referencePoint="0>0|3|0|0|1|2" referenceFrame="0>0|3|0|0|3" />
+        <movingPart index="0>0|3|0|0|0|3" referencePoint="0>0|3|0|0|1|3" referenceFrame="0>0|3|0|0|3" />
+        <movingPart index="0>0|3|0|0|0|4" referencePoint="0>0|3|0|0|1|4" referenceFrame="0>0|3|0|0|3" />
+        <!-- reel hydraulic -->
+        <movingPart index="0>0|4" referencePoint="0>0|3|2" referenceFrame="0>0|6">
+            <translatingPart index="0>0|4|0" />
+        </movingPart>
+
+        <!-- reel mover hydraulic -->
+        <movingPart index="0>0|3|1" referencePoint="0>0|6" localReferencePoint="0>0|3|1|0" referenceFrame="0>0|3|3">
+            <dependentPart index="0>0|3|1|0" />
+            <dependentPart index="0>0|3|1|1" />
+            <dependentPart index="0>0|8|0|0" />
+        </movingPart>
+        <movingPart index="0>0|3|1|0" referencePoint="0>0|6" referenceFrame="0>0|6" scaleZ="true" />
+        <movingPart index="0>0|3|1|1" referencePoint="0>0|3|0|0|2" referenceFrame="0>0|3|0|0|2">
+            <translatingPart index="0>0|3|1|1|0" />
+        </movingPart>
+
+        <movingPart index="0>0|8|0|0" referenceFrame="0>0|3|1|1|1" moveToReferenceFrame="true" />
+        <movingPart index="0>0|8|0" referenceFrame="0>0|3" />
+    </movingParts>
+
+    <ai>
+        <areaMarkers leftIndex="0>0|11|0|0" rightIndex="0>0|11|0|1" backIndex="0>0|11|0|2" />
+        <trafficCollisionTrigger index="0>0|11|1" />
+    </ai>
+
+    <dynamicMount forceLimitScale="1" />
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.75" />
+
+    <cutter fruitTypeCategories="grainHeader">
+        <testAreas>
+            <testArea startIndex="0>0|12|1|0" widthIndex="0>0|12|1|0|0" heightIndex="0>0|12|1|0|1" />
+            <testArea startIndex="0>0|12|1|1" widthIndex="0>0|12|1|1|0" heightIndex="0>0|12|1|1|1" />
+            <testArea startIndex="0>0|12|1|2" widthIndex="0>0|12|1|2|0" heightIndex="0>0|12|1|2|1" />
+            <testArea startIndex="0>0|12|1|3" widthIndex="0>0|12|1|3|0" heightIndex="0>0|12|1|3|1" />
+            <testArea startIndex="0>0|12|1|4" widthIndex="0>0|12|1|4|0" heightIndex="0>0|12|1|4|1" />
+            <testArea startIndex="0>0|12|1|5" widthIndex="0>0|12|1|5|0" heightIndex="0>0|12|1|5|1" />
+            <testArea startIndex="0>0|12|1|6" widthIndex="0>0|12|1|6|0" heightIndex="0>0|12|1|6|1" />
+            <testArea startIndex="0>0|12|1|7" widthIndex="0>0|12|1|7|0" heightIndex="0>0|12|1|7|1" />
+            <testArea startIndex="0>0|12|1|8" widthIndex="0>0|12|1|8|0" heightIndex="0>0|12|1|8|1" />
+            <testArea startIndex="0>0|12|1|9" widthIndex="0>0|12|1|9|0" heightIndex="0>0|12|1|9|1" />
+        </testAreas>
+        <effect>
+            <effectNode linkNode="0>0|12|0|0" speedScale="0.0018" lengthAndRadius="0 0 -0.5 0.25" effectType="CENTER" changeSpeedScale="0.01" />
+            <effectNode linkNode="0>0|12|0|1" speedScale="0.0013" lengthAndRadius="3.1 1 1 1"     effectType="LEFT"  useInterpolation="true" minOffset="5" />
+            <effectNode linkNode="0>0|12|0|2" speedScale="0.0013" lengthAndRadius="3.1 1 1 1"     effectType="RIGHT" useInterpolation="true" minOffset="5" useMaxValue="true" />
+        </effect>
+        <fruitExtraObjects>
+            <fruitExtraObject fruitType="rape"   anim="varifeedRape"/>
+        </fruitExtraObjects>
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+    </cutter>
+
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.4 0.4" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

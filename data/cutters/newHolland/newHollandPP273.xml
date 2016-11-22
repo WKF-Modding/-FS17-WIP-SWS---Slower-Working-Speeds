@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>300FP</name>
+        <specs>
+            <workingWidth>3.0</workingWidth>
+            <combination>FR850</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutterForage</function>
+        </functions>
+        <image>$data/store/store_newHollandPP273.png</image>
+        <price>14000</price>
+        <dailyUpkeep>30</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>NEWHOLLAND</brand>
+        <category>SWS_forageHarvesterCutters</category>
+        <vertexBufferMemoryUsage>759628</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>116580</indexBufferMemoryUsage>
+        <textureMemoryUsage>10485624</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_pickup</typeDesc>
+    <filename>$data/vehicles/cutters/newHolland/newHollandPP273.i3d</filename>
+
+    <size width="3.5" length="2.5" />
+    <speedLimit value="12" />
+    <powerConsumer ptoRpm="540" neededPtoPower="50"/>
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel restLoad="0.5" repr="0>0|2|0|0" driveNode="0>0|2|0|0|0" forcePointRatio="0.23" filename="$data/vehicles/wheels/trelleborg/T510_18x8_50R8.xml" configIndex="axis" isLeft="true"  color="0.9157 0.9157 0.9157 1" initialCompression="45" suspTravel="0.1" spring="10" damper="40" frictionScale="0.5" rotationDamping="0.002" brakeFactor="0" versatileYRot="true" />
+                <wheel restLoad="0.5" repr="0>0|3|0|0" driveNode="0>0|3|0|0|0" forcePointRatio="0.23" filename="$data/vehicles/wheels/trelleborg/T510_18x8_50R8.xml" configIndex="axis" isLeft="false" color="0.9157 0.9157 0.9157 1" initialCompression="45" suspTravel="0.1" spring="10" damper="40" frictionScale="0.5" rotationDamping="0.002" brakeFactor="0" versatileYRot="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <axisColor>0.9157 0.9157 0.9157 1</axisColor>
+
+    <brakeForce>0.2</brakeForce>
+
+    <workAreas>
+        <workArea startIndex="0>0|9|0" widthIndex="0>0|9|1" heightIndex="0>0|9|2" type="cutter" />
+    </workAreas>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|6|0" type="cutter" rotAxis="1" rotSpeed="800"  turnOnFadeTime="2" turnOffFadeTime="2"/>
+        <turnedOnRotationNode index="0>0|6|3" type="cutter" rotAxis="1" rotSpeed="-600" turnOnFadeTime="2" turnOffFadeTime="2"/>
+        <turnedOnRotationNode index="0>0|6|1" type="cutter" rotAxis="1" rotSpeed="400"  turnOnFadeTime="2" turnOffFadeTime="2"/>
+        <turnedOnRotationNode index="0>0|6|2" type="cutter" rotAxis="1" rotSpeed="400"  turnOnFadeTime="2" turnOffFadeTime="2"/>
+    </turnedOnRotationNodes>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="cutterHarvester" upperDistanceToGround="1.8" lowerDistanceToGround="0" ptoInputNode="0>0|1" upperRotationOffset="0" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <dynamicMount forceLimitScale="1" />
+
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="1.00" volume="0.70" indoorVolumeFactor="0.75" />
+
+    <foldingParts startMoveDirection="1" turnOnFoldMaxLimit="0.5" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="folding" speedScale="1.2" />
+    </foldingParts>
+
+    <movingTools>
+        <movingTool index="0>0|2" wheelIndices="1" playSound="true" >
+            <dependentPart index="0>0|4" />
+        </movingTool>
+        <movingTool index="0>0|3" wheelIndices="2" playSound="true" >
+            <dependentPart index="0>0|5" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>0|3|0|0|1" referencePoint="0>0|3|0|1" referenceFrame="0>0|3|0|0|2" scaleZ="true" isActiveDirty="true" />
+        <movingPart index="0>0|2|0|0|1" referencePoint="0>0|2|0|1" referenceFrame="0>0|2|0|0|2" scaleZ="true" isActiveDirty="true" />
+
+        <movingPart index="0>0|4" referencePoint="0>0|2|1" referenceFrame="0>">
+            <translatingPart index="0>0|4|0" />
+        </movingPart>
+        <movingPart index="0>0|5" referencePoint="0>0|3|1" referenceFrame="0>">
+            <translatingPart index="0>0|5|0" />
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <animation name="folding">
+            <part node="0>0|2"   startTime="0" endTime="2" startRot="0 40 0" endRot="0 0 0"/>
+            <part node="0>0|3"   startTime="0" endTime="2" startRot="0 -40 0" endRot="0 0 0"/>
+            <part node="0>0|2|0" startTime="0" endTime="2" startRot="0 -40 0" endRot="0 0 0"/>
+            <part node="0>0|3|0" startTime="0" endTime="2" startRot="0 40 0" endRot="0 0 0"/>
+        </animation>
+
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|8|2" startTime="0"    endTime="1"    startTrans="0 0.818 -0.469" endTrans="0 0.258 -0.469" />
+            <part node="0>0|8|0" startTime="0"    endTime="0.05" visibility="false" />
+            <part node="0>0|8|1" startTime="0"    endTime="0.05" visibility="true" />
+            <part node="0>0|8|0" startTime="0.05" endTime="0.1"  visibility="true" />
+            <part node="0>0|8|1" startTime="0.05" endTime="0.1"  visibility="false" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>0|7" wheelIndex="1" onlyActiveWhenLowered="true" />
+    </speedRotatingParts>
+
+    <cutter fruitTypeCategories="pickup" convertedFillTypeCategories="forageHarvester" useWindrowed="true">
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+        <fillEffect>
+            <effectNode effectClass="MorphPositionEffect" effectNode="0>0|11|0" materialType="pickup" materialTypeId="1" delay="0" fadeTime="0.5" speed="0.9" scrollLength="1.5" scrollSpeed="2"/>
+        </fillEffect>
+        <fillParticleSystems>
+            <emitterShape node="0>0|11|1" particleType="PICKUP"         emitCountScale="6" worldSpace="false" />
+            <emitterShape node="0>0|11|2" particleType="SMOKE"          emitCountScale="1"/>
+            <!--emitterShape node="0>0|11|3" particleType="PICKUP_FALLING" emitCountScale="2" worldSpace="false"/-->
+        </fillParticleSystems>
+    </cutter>
+
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.9 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

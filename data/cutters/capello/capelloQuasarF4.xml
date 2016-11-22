@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Quasar F4</name>
+        <specs>
+            <workingWidth>3.0</workingWidth>
+            <combination>1660 Axial-Flow</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutter</function>
+        </functions>
+        <image>$data/store/store_capelloQuasarF4.png</image>
+        <price>12000</price>
+        <dailyUpkeep>25</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>CAPELLO</brand>
+        <category>SWS_cutters</category>
+        <fieldJob sizeCategory="1" typeCategory="cutter" >
+            <dependency filename="$data/vehicles/steerable/caseIH/caseIH1660.xml" />
+        </fieldJob>
+        <vertexBufferMemoryUsage>485728</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>64968</indexBufferMemoryUsage>
+        <textureMemoryUsage>12058792</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+    <filename>$data/vehicles/cutters/capello/capelloQuasarF4.i3d</filename>
+
+    <size width="3.5" length="3.5" />
+    <speedLimit value="5" />
+    <powerConsumer ptoRpm="540" neededPtoPower="50"/>
+
+    <workAreas>
+        <workArea startIndex="0>0|6|0" widthIndex="0>0|6|1" heightIndex="0>0|6|2" type="cutter" />
+    </workAreas>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="cutter" upperDistanceToGround="1.8" lowerDistanceToGround="1.2" ptoInputNode="0>0|1" pto2InputNode="0>0|9" upperRotationOffset="0" lowerRotationOffset="10" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <dynamicMount forceLimitScale="1" />
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.75" />
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|2"  type="cutter" rotSpeed="600"  rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|3|0" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|3|1" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|3|2" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|3|3" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|0" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|1" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|2" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|3" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|4" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|5" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|6" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|7" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+    </turnedOnRotationNodes>
+
+    <ai>
+        <areaMarkers leftIndex="0>0|7|0|0" rightIndex="0>0|7|0|1" backIndex="0>0|7|0|2" />
+        <trafficCollisionTrigger index="0>0|7|1" />
+    </ai>
+
+    <cutter fruitTypeCategories="maizeHeader">
+        <turnedOnScrollers>
+            <turnedOnScroller index="0>0|5|0" scrollSpeed="3" scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+            <turnedOnScroller index="0>0|5|1" scrollSpeed="3" scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+        </turnedOnScrollers>
+        <testAreas>
+            <testArea startIndex="0>0|8|1|0" widthIndex="0>0|8|1|0|0" heightIndex="0>0|8|1|0|1" />
+            <testArea startIndex="0>0|8|1|1" widthIndex="0>0|8|1|1|0" heightIndex="0>0|8|1|1|1" />
+            <testArea startIndex="0>0|8|1|2" widthIndex="0>0|8|1|2|0" heightIndex="0>0|8|1|2|1" />
+            <testArea startIndex="0>0|8|1|3" widthIndex="0>0|8|1|3|0" heightIndex="0>0|8|1|3|1" />
+        </testAreas>
+        <effect>
+            <effectNode linkNode="0>0|8|0|0" speedScale="0.0018" inverted="true" lengthAndRadius="1 3.8 1 3" effectType="CENTER" changeSpeedScale="0.01" />
+            <effectNode linkNode="0>0|8|0|1" speedScale="0.0012" inverted="true" lengthAndRadius="0.5 1 1 1" effectType="LEFT"  useInterpolation="true" minOffset="2" />
+            <effectNode linkNode="0>0|8|0|2" speedScale="0.0012" inverted="true" lengthAndRadius="0.5 1 1 1" effectType="RIGHT" useInterpolation="true" minOffset="2" useMaxValue="true"/>
+        </effect>
+        <particleSystems>
+            <emitterShape node="0>0|8|0|3" particleType="CUTTER_CHOPPER" />
+        </particleSystems>
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+    </cutter>
+
+    <baseColorConfigurations useDefaultColors="true" price="500" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <baseColorConfiguration color="0.584 0.012 0.026 1.0" />
+        <colorNode node="0>0" />
+    </baseColorConfigurations>
+
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

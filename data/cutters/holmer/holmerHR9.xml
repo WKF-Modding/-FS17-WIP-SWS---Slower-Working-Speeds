@@ -1,0 +1,303 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="defoliater_cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>HR 9</name>
+        <specs>
+            <workingWidth>4.0</workingWidth>
+            <combination>Terra Dos T4-40</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutter</function>
+        </functions>
+        <image>$data/store/store_holmerHR9.png</image>
+        <price>78000</price>
+        <dailyUpkeep>80</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>HOLMER</brand>
+        <category>SWS_beetHarvesting</category>
+        <fieldJob sizeCategory="2" typeCategory="sugarBeetHarvesting" />
+        <vertexBufferMemoryUsage>3300048</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>459858</indexBufferMemoryUsage>
+        <textureMemoryUsage>8388776</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+    <filename>$data/vehicles/cutters/holmer/holmerHR9.i3d</filename>
+
+    <size width="5.05" length="5" lengthOffset="1" />
+    <speedLimit value="7" />
+    <powerConsumer ptoRpm="540" neededPtoPower="150"/>
+
+    <dynamicallyLoadedWheels>
+        <dynamicallyLoadedWheel linkNode="0>4|1|1|2|0|0" filename="$data/vehicles/wheels/trelleborg/T510_3_50R8.xml" isLeft="false" />
+        <dynamicallyLoadedWheel linkNode="0>4|1|1|3|0|0" filename="$data/vehicles/wheels/trelleborg/T510_3_50R8.xml" isLeft="true" />
+    </dynamicallyLoadedWheels>
+
+    <brakeForce>0.2</brakeForce>
+
+    <lights>
+        <low>
+            <light realLights="0>2|1" decoration="0>2|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLights="0>2|2" decoration="0>2|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="cutter" rootNode="0>" lowerDistanceToGround="0.8" upperDistanceToGround="1.1" upperRotationOffset="0" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <workAreas>
+        <workArea startIndex="0>1|0" widthIndex="0>1|0|0" heightIndex="0>1|0|1" foldMinLimit="0" foldMaxLimit="0.1" type="fruitPreparer" />
+        <workArea startIndex="0>1|1" widthIndex="0>1|1|0" heightIndex="0>1|1|1" foldMinLimit="0" foldMaxLimit="0.1" type="cutter" />
+    </workAreas>
+
+    <aiLeftMarker index="0>1|0|0" />
+    <aiRightMarker index="0>1|0" />
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>" threshold="0.4" />
+    </groundReferenceNodes>
+
+    <fruitPreparer fruitType="sugarBeet" useReelStateToTurnOn="true" />
+
+    <foldingParts turnOnFoldDirection="-1" turnOnFoldMaxLimit="0.1" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="folding" speedScale="1" />
+    </foldingParts>
+
+    <animations>
+        <animation name="folding">
+            <!-- defoliatorArm -->
+            <part node="0>4" startTime="0" endTime="3" startRot="0 0 0" endRot="-90 0 0" />
+            <!-- defoliatorArm2 -->
+            <part node="0>4|1" startTime="0" endTime="3" startRot="-24 0 0" endRot="-20 0 0" />
+            <!-- defoliator -->
+            <part node="0>4|1|1" startTime="0" endTime="3" startRot="24 0 0" endRot="-68 0 0" />
+        </animation>
+    </animations>
+
+    <movingTools>
+        <!-- blades -->
+        <movingTool index="0>6|2">
+            <dependentPart index="0>6|1|2"/>
+            <dependentPart index="0>6|1|7"/>
+        </movingTool>
+        <movingTool index="0>6|3">
+            <dependentPart index="0>6|1|3"/>
+            <dependentPart index="0>6|1|8"/>
+        </movingTool>
+        <movingTool index="0>6|4">
+            <dependentPart index="0>6|1|4"/>
+            <dependentPart index="0>6|1|9"/>
+        </movingTool>
+        <movingTool index="0>6|5">
+            <dependentPart index="0>6|1|5"/>
+            <dependentPart index="0>6|1|10"/>
+        </movingTool>
+        <movingTool index="0>6|6">
+            <dependentPart index="0>6|1|6"/>
+            <dependentPart index="0>6|1|11"/>
+        </movingTool>
+
+        <!-- defoliatorArm -->
+        <movingTool index="0>4">
+            <dependentPart index="0>5"/>
+        </movingTool>
+        <!-- defoliatorArm2 -->
+        <movingTool index="0>4|1">
+            <dependentPart index="0>4|2"/>
+            <dependentPart index="0>4|3"/>
+        </movingTool>
+        <!-- defoliator -->
+        <movingTool index="0>4|1|1">
+            <dependentPart index="0>4|2"/>
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- blades left -->
+        <movingPart index="0>6|1|2" localReferencePoint="0>6|1|2|0"  referencePoint="0>6|2|0" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|2|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|2|0" referencePoint="0>6|2|0" referenceFrame="0>6|1|1" playSound="false"  />
+
+        <movingPart index="0>6|1|3" localReferencePoint="0>6|1|3|0"  referencePoint="0>6|3|0" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|3|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|3|0" referencePoint="0>6|3|0" referenceFrame="0>6|1|1" playSound="false" />
+
+        <movingPart index="0>6|1|4" localReferencePoint="0>6|1|4|0"  referencePoint="0>6|4|0" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|4|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|4|0" referencePoint="0>6|4|0" referenceFrame="0>6|1|1" playSound="false" />
+
+        <movingPart index="0>6|1|5" localReferencePoint="0>6|1|5|0"  referencePoint="0>6|5|0" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|5|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|5|0" referencePoint="0>6|5|0" referenceFrame="0>6|1|1" playSound="false" />
+
+        <movingPart index="0>6|1|6" localReferencePoint="0>6|1|6|0"  referencePoint="0>6|6|0" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|6|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|6|0" referencePoint="0>6|6|0" referenceFrame="0>6|1|1" playSound="false" />
+
+        <!-- blades right -->
+        <movingPart index="0>6|1|7" localReferencePoint="0>6|1|7|0"  referencePoint="0>6|2|1" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|7|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|7|0" referencePoint="0>6|2|1" referenceFrame="0>6|1|1" playSound="false" />
+
+        <movingPart index="0>6|1|8" localReferencePoint="0>6|1|8|0"  referencePoint="0>6|3|1" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|8|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|8|0" referencePoint="0>6|3|1" referenceFrame="0>6|1|1" playSound="false" />
+
+        <movingPart index="0>6|1|9" localReferencePoint="0>6|1|9|0"  referencePoint="0>6|4|1" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|9|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|9|0" referencePoint="0>6|4|1" referenceFrame="0>6|1|1" playSound="false" />
+
+        <movingPart index="0>6|1|10" localReferencePoint="0>6|1|10|0"  referencePoint="0>6|5|1" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|10|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|10|0" referencePoint="0>6|5|1" referenceFrame="0>6|1|1" playSound="false" />
+
+        <movingPart index="0>6|1|11" localReferencePoint="0>6|1|11|0"  referencePoint="0>6|6|1" referenceFrame="0>6|1|0" playSound="false" >
+            <dependentPart index="0>6|1|11|0"/>
+        </movingPart>
+        <movingPart index="0>6|1|11|0" referencePoint="0>6|6|1" referenceFrame="0>6|1|1" playSound="false" />
+
+
+        <!-- hydraulicMain -->
+        <movingPart index="0>5" referencePoint="0>4|0" referenceFrame="0>" playSound="true" >
+            <translatingPart index="0>5|0" />
+        </movingPart>
+        <!-- hydraulicFrontBottom -->
+        <movingPart index="0>4|2" referencePoint="0>4|1|1|0" referenceFrame="0>4" >
+            <translatingPart index="0>4|2|0" />
+        </movingPart>
+        <movingPart index="0>4|3" referencePoint="0>4|1|0" referenceFrame="0>4|1|0" >
+            <translatingPart index="0>4|3|0" />
+        </movingPart>
+
+        <!-- joints for skinning -->
+        <movingPart index="0>7|0" referenceFrame="0>4|1|1" moveToReferenceFrame="true" isActiveDirty="true" />
+
+        <movingPart index="0>7|1" referenceFrame="0>6|1|2|0" moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="0>7|2" referenceFrame="0>6|1|3|0" moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="0>7|3" referenceFrame="0>6|1|4|0" moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="0>7|4" referenceFrame="0>6|1|5|0" moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="0>7|5" referenceFrame="0>6|1|6|0" moveToReferenceFrame="true" isActiveDirty="true" />
+
+        <!-- headers -->
+        <movingPart index="0>4|1|1|4|5|0" localReferencePoint="0>4|1|1|4|5|0|0" referencePoint="0>4|1|1|4|0" referenceFrame="0>4|1|1|4|0" isActiveDirty="true" playSound="false" >
+            <dependentPart index="0>4|1|1|4|5|0|0"/>
+            <dependentPart index="0>4|1|1|4|5|1"/>
+        </movingPart>
+        <movingPart index="0>4|1|1|4|5|0|0" referencePoint="0>4|1|1|4|0" referenceFrame="0>4|1|1" playSound="false" />
+        <movingPart index="0>4|1|1|4|5|1" referencePoint="0>4|1|1|4|5|0|0|0" referenceFrame="0>4|1|1|4|0" playSound="false" />
+
+
+        <movingPart index="0>4|1|1|4|6|0" localReferencePoint="0>4|1|1|4|6|0|0" referencePoint="0>4|1|1|4|1" referenceFrame="0>4|1|1|4|0" isActiveDirty="true" >
+            <dependentPart index="0>4|1|1|4|6|0|0"/>
+            <dependentPart index="0>4|1|1|4|6|1"/>
+        </movingPart>
+        <movingPart index="0>4|1|1|4|6|0|0" referencePoint="0>4|1|1|4|1" referenceFrame="0>4|1|1" playSound="false" />
+        <movingPart index="0>4|1|1|4|6|1" referencePoint="0>4|1|1|4|6|0|0|0" referenceFrame="0>4|1|1|4|0" playSound="false" />
+
+
+        <movingPart index="0>4|1|1|4|7|0" localReferencePoint="0>4|1|1|4|7|0|0" referencePoint="0>4|1|1|4|2" referenceFrame="0>4|1|1|4|0" isActiveDirty="true" >
+            <dependentPart index="0>4|1|1|4|7|0|0"/>
+            <dependentPart index="0>4|1|1|4|7|1"/>
+        </movingPart>
+        <movingPart index="0>4|1|1|4|7|0|0" referencePoint="0>4|1|1|4|2" referenceFrame="0>4|1|1" playSound="false" />
+        <movingPart index="0>4|1|1|4|7|1" referencePoint="0>4|1|1|4|7|0|0|0" referenceFrame="0>4|1|1|4|0" playSound="false" />
+
+
+        <movingPart index="0>4|1|1|4|8|0" localReferencePoint="0>4|1|1|4|8|0|0" referencePoint="0>4|1|1|4|3" referenceFrame="0>4|1|1|4|0" isActiveDirty="true" >
+            <dependentPart index="0>4|1|1|4|8|0|0"/>
+            <dependentPart index="0>4|1|1|4|8|1"/>
+        </movingPart>
+        <movingPart index="0>4|1|1|4|8|0|0" referencePoint="0>4|1|1|4|3" referenceFrame="0>4|1|1" playSound="false" />
+        <movingPart index="0>4|1|1|4|8|1" referencePoint="0>4|1|1|4|8|0|0|0" referenceFrame="0>4|1|1|4|0" playSound="false" />
+
+
+        <movingPart index="0>4|1|1|4|9|0" localReferencePoint="0>4|1|1|4|9|0|0" referencePoint="0>4|1|1|4|4" referenceFrame="0>4|1|1|4|0" isActiveDirty="true" >
+            <dependentPart index="0>4|1|1|4|9|0|0"/>
+            <dependentPart index="0>4|1|1|4|9|1"/>
+        </movingPart>
+        <movingPart index="0>4|1|1|4|9|0|0" referencePoint="0>4|1|1|4|4" referenceFrame="0>4|1|1" playSound="false" />
+        <movingPart index="0>4|1|1|4|9|1" referencePoint="0>4|1|1|4|9|0|0|0" referenceFrame="0>4|1|1|4|0" playSound="false" />
+
+    </movingParts>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>6|0" radius="0.38" foldMinLimit="0" foldMaxLimit="0.1" refNodeIndex="0" />
+        <speedRotatingPart index="0>4|1|1|2|0" driveNode="0>4|1|1|2|0|0" radius="0.32" foldMinLimit="0" foldMaxLimit="0.1" versatileYRot="true" minYRot="-80" maxYRot="80" refNodeIndex="0"/>
+        <speedRotatingPart index="0>4|1|1|3|0" driveNode="0>4|1|1|3|0|0" radius="0.32" foldMinLimit="0" foldMaxLimit="0.1" versatileYRot="true" minYRot="-80" maxYRot="80" refNodeIndex="0"/>
+    </speedRotatingParts>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>6|2" type="cutter" rotAxis="1" rotSpeed="1600" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="800" />
+        <turnedOnRotationNode index="0>6|3" type="cutter" rotAxis="1" rotSpeed="1600" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="800" />
+        <turnedOnRotationNode index="0>6|4" type="cutter" rotAxis="1" rotSpeed="1600" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="800" />
+        <turnedOnRotationNode index="0>6|5" type="cutter" rotAxis="1" rotSpeed="1600" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="800" />
+        <turnedOnRotationNode index="0>6|6" type="cutter" rotAxis="1" rotSpeed="1600" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="800" />
+
+        <turnedOnRotationNode index="0>3|0" type="cutter" rotAxis="1" rotSpeed="-800" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>3|1" type="cutter" rotAxis="1" rotSpeed="-800" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>3|2" type="cutter" rotAxis="1" rotSpeed="-800" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>3|3" type="cutter" rotAxis="1" rotSpeed="-800" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>3|4" type="cutter" rotAxis="1" rotSpeed="-800" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>3|5" type="cutter" rotAxis="1" rotSpeed="-800" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>3|6" type="cutter" rotAxis="1" rotSpeed="800"  turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>3|7" type="cutter" rotAxis="1" rotSpeed="-800" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>3|8" type="cutter" rotAxis="1" rotSpeed="-800" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>3|9" type="cutter" rotAxis="1" rotSpeed="200"  turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+        <turnedOnRotationNode index="0>4|1|1|1" type="fruitPreparer" rotAxis="1" rotSpeed="800" turnOnFadeTime="2" turnOffFadeTime="2" turnOnOffVariance="200" />
+    </turnedOnRotationNodes>
+
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="1.00" volume="1.10" indoorVolumeFactor="0.80" />
+
+    <!-- harvesting speed of 13km/h (3.61 m/s) and distance between fruits of 0.45m -->
+    <!-- => 0.45 / 3.61 = 0.1246 s, but the distance in the default maps is much larger ... -->
+    <randomlyMovingParts >
+        <randomlyMovingPart index="0>4|1|1|4|5" rotAxis="1" rotMean="25 0" rotVariance="5 2" rotTimeMean="0.1246 0.1246" rotTimeVariance="0.03 0.03" pauseMean="0.001 0.1246" pauseVariance="0.004 0.01" refNodeIndex="0" moveOnlyIfCutted="true" />
+        <randomlyMovingPart index="0>4|1|1|4|6" rotAxis="1" rotMean="25 0" rotVariance="5 2" rotTimeMean="0.1246 0.1246" rotTimeVariance="0.03 0.03" pauseMean="0.001 0.1246" pauseVariance="0.004 0.01" refNodeIndex="0" moveOnlyIfCutted="true" />
+        <randomlyMovingPart index="0>4|1|1|4|7" rotAxis="1" rotMean="25 0" rotVariance="5 2" rotTimeMean="0.1246 0.1246" rotTimeVariance="0.03 0.03" pauseMean="0.001 0.1246" pauseVariance="0.004 0.01" refNodeIndex="0" moveOnlyIfCutted="true" />
+        <randomlyMovingPart index="0>4|1|1|4|8" rotAxis="1" rotMean="25 0" rotVariance="5 2" rotTimeMean="0.1246 0.1246" rotTimeVariance="0.03 0.03" pauseMean="0.001 0.1246" pauseVariance="0.004 0.01" refNodeIndex="0" moveOnlyIfCutted="true" />
+        <randomlyMovingPart index="0>4|1|1|4|9" rotAxis="1" rotMean="25 0" rotVariance="5 2" rotTimeMean="0.1246 0.1246" rotTimeVariance="0.03 0.03" pauseMean="0.001 0.1246" pauseVariance="0.004 0.01" refNodeIndex="0" moveOnlyIfCutted="true" />
+    </randomlyMovingParts>
+
+    <ai>
+        <areaMarkers leftIndex="0>9|0|0" rightIndex="0>9|0|1" backIndex="0>9|0|2" />
+        <sizeMarkers leftIndex="0>9|1|0" rightIndex="0>9|1|1" backIndex="0>9|1|2" />
+        <trafficCollisionTrigger index="0>9|2" />
+    </ai>
+
+    <cutter fruitTypes="sugarBeet">
+        <threshingParticleSystems>
+            <emitterShape node="0>4|4|0" particleType="PREPARE_FRUIT"   fillType="sugarBeet" />
+            <emitterShape node="0>6|7|0" particleType="SOIL_HARVESTING" fillType="sugarBeet" />
+        </threshingParticleSystems>
+
+        <fillEffect>
+            <effectNode effectClass="MorphPositionEffect" effectNode="0>6|7|1" materialType="belt" delay="0" fadeTime="1" scrollLength="2" scrollSpeed="0.8" />
+        </fillEffect>
+    </cutter>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.5 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

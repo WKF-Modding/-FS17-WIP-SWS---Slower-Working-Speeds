@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Quasar HS 16</name>
+        <specs>
+            <workingWidth>12.0</workingWidth>
+            <combination>9230, CR 10.90</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutter</function>
+        </functions>
+        <image>$data/store/store_capelloQuasarHS16.png</image>
+        <price>52000</price>
+        <dailyUpkeep>100</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>CAPELLO</brand>
+        <category>SWS_cutters</category>
+        <fieldJob sizeCategory="3" typeCategory="cutter" >
+            <dependency filename="$data/vehicles/steerable/caseIH/caseIH230Series.xml" />
+        </fieldJob>
+        <vertexBufferMemoryUsage>1816512</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>243726</indexBufferMemoryUsage>
+        <textureMemoryUsage>12058792</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+    <filename>$data/vehicles/cutters/capello/capelloQuasarHS16.i3d</filename>
+
+    <size width="7" length="4" />
+    <speedLimit value="6" />
+    <powerConsumer ptoRpm="540" neededPtoPower="100"/>
+
+    <workAreas>
+        <workArea startIndex="0>0|11|0" widthIndex="0>0|11|1" heightIndex="0>0|11|2" type="cutter" />
+    </workAreas>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="cutter" upperDistanceToGround="1.8" lowerDistanceToGround="1.4" ptoInputNode="0>0|1" pto2InputNode="0>0|14" upperRotationOffset="0" lowerRotationOffset="5" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <dynamicMount forceLimitScale="1" />
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.75" />
+
+    <foldingParts startMoveDirection="1" turnOnFoldMaxLimit="0.1" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="folding" speedScale="1" />
+    </foldingParts>
+
+    <movingTools>
+        <movingTool index="0>0|6|0" playSound="true" >
+            <dependentPart index="0>0|6|2" />
+        </movingTool>
+        <movingTool index="0>0|6|1" playSound="true" >
+            <dependentPart index="0>0|6|4" />
+        </movingTool>
+        <movingTool index="0>0|7|0" playSound="true" >
+            <dependentPart index="0>0|7|1" />
+        </movingTool>
+        <movingTool index="0>0|8|0" playSound="true" >
+            <dependentPart index="0>0|8|1" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>0|6|2" localReferencePoint="0>0|6|2|0" referencePoint="0>0|6|0|4" referenceFrame="0>0|6|0|5">
+            <dependentPart index="0>0|6|2|0" />
+            <dependentPart index="0>0|6|3" />
+        </movingPart>
+        <movingPart index="0>0|6|2|0" referencePoint="0>0|6|0|4" referenceFrame="0>0|6|0|4" scaleZ="true" />
+        <movingPart index="0>0|6|3" referencePoint="0>0|6|2|1" referenceFrame="0>0|6|2|1">
+            <translatingPart index="0>0|6|3|0" />
+        </movingPart>
+        <movingPart index="0>0|6|4" localReferencePoint="0>0|6|4|0" referencePoint="0>0|6|1|4" referenceFrame="0>0|6|1|5">
+            <dependentPart index="0>0|6|4|0" />
+            <dependentPart index="0>0|6|5" />
+        </movingPart>
+        <movingPart index="0>0|6|4|0" referencePoint="0>0|6|1|4" referenceFrame="0>0|6|1|4" scaleZ="true" />
+        <movingPart index="0>0|6|5" referencePoint="0>0|6|4|1" referenceFrame="0>0|6|4|1">
+            <translatingPart index="0>0|6|5|0" />
+        </movingPart>
+
+        <movingPart index="0>0|7|1" referencePoint="0>0|7|0|0" referenceFrame="0>" scaleZ="true" />
+        <movingPart index="0>0|8|1" referencePoint="0>0|8|0|0" referenceFrame="0>" scaleZ="true" />
+    </movingParts>
+    <animations>
+        <animation name="folding">
+            <part node="0>0|7|0" startTime="0"   endTime="1"   startRot="0 0 0" endRot="0 0 40"/>
+            <part node="0>0|8|0" startTime="0"   endTime="1"   startRot="0 0 0" endRot="0 0 -40"/>
+            <part node="0>0|6|0" startTime="1.4" endTime="8.4" startRot="0 0 0" endRot="0 0 180"/>
+            <part node="0>0|6|1" startTime="1"   endTime="8"   startRot="0 0 0" endRot="0 0 -180"/>
+        </animation>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|2" startTime="0" duration="0.5" startTrans="0.001 0.501 -1.028" endTrans="0.001 0.322 -1.028" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <turnedOnRotationNodes>
+        <!-- main drums -->
+        <turnedOnRotationNode index="0>0|3"       type="cutter" rotSpeed="600"  rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|0"   type="cutter" rotSpeed="600"  rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|0"   type="cutter" rotSpeed="600"  rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|3|0" type="cutter" rotSpeed="600"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|3|0" type="cutter" rotSpeed="-600"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <!-- bottom rotors -->
+        <!-- main -->
+        <turnedOnRotationNode index="0>0|4|0" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|1" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|2" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|3" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|4" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|5" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|6" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|4|7" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <!-- right -->
+        <turnedOnRotationNode index="0>0|6|0|1|0" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|1|1" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|1|2" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|1|3" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <!-- left -->
+        <turnedOnRotationNode index="0>0|6|1|1|0" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|1|1" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|1|2" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|1|3" type="cutter" rotSpeed="800"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <!-- bottom rotors -->
+        <!-- main -->
+        <turnedOnRotationNode index="0>0|5|0" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|1" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|2" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|3" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|4" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|5" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|6" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|7" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|8" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|9" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|10" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|11" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|12" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|13" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|14" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|5|15" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <!-- right -->
+        <turnedOnRotationNode index="0>0|6|0|2|0" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|2|1" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|2|2" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|2|3" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|2|4" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|2|5" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|2|6" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|0|2|7" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <!-- left -->
+        <turnedOnRotationNode index="0>0|6|1|2|0" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|2|1" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|2|2" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|2|3" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|2|4" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|2|5" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|2|6" type="cutter" rotSpeed="-800" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>0|6|1|2|7" type="cutter" rotSpeed="800"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1" />
+    </turnedOnRotationNodes>
+
+    <ai>
+        <areaMarkers leftIndex="0>0|12|0|0" rightIndex="0>0|12|0|1" backIndex="0>0|12|0|2" />
+        <trafficCollisionTrigger index="0>0|12|1" />
+    </ai>
+
+    <cutter fruitTypeCategories="maizeHeader">
+        <turnedOnScrollers>
+            <turnedOnScroller index="0>0|9"     scrollSpeed="3" scrollLength="-1" shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+            <turnedOnScroller index="0>0|10"    scrollSpeed="3" scrollLength="1"  shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+            <turnedOnScroller index="0>0|6|0|6" scrollSpeed="3" scrollLength="-1" shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+            <turnedOnScroller index="0>0|6|0|7" scrollSpeed="3" scrollLength="1"  shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+            <turnedOnScroller index="0>0|6|1|6" scrollSpeed="3" scrollLength="-1" shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+            <turnedOnScroller index="0>0|6|1|7" scrollSpeed="3" scrollLength="1"  shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+        </turnedOnScrollers>
+        <testAreas>
+            <testArea startIndex="0>0|13|1|0" widthIndex="0>0|13|1|0|0" heightIndex="0>0|13|1|0|1" />
+            <testArea startIndex="0>0|13|1|1" widthIndex="0>0|13|1|1|0" heightIndex="0>0|13|1|1|1" />
+            <testArea startIndex="0>0|13|1|2" widthIndex="0>0|13|1|2|0" heightIndex="0>0|13|1|2|1" />
+            <testArea startIndex="0>0|13|1|3" widthIndex="0>0|13|1|3|0" heightIndex="0>0|13|1|3|1" />
+            <testArea startIndex="0>0|13|1|4" widthIndex="0>0|13|1|4|0" heightIndex="0>0|13|1|4|1" />
+            <testArea startIndex="0>0|13|1|5" widthIndex="0>0|13|1|5|0" heightIndex="0>0|13|1|5|1" />
+            <testArea startIndex="0>0|13|1|6" widthIndex="0>0|13|1|6|0" heightIndex="0>0|13|1|6|1" />
+            <testArea startIndex="0>0|13|1|7" widthIndex="0>0|13|1|7|0" heightIndex="0>0|13|1|7|1" />
+            <testArea startIndex="0>0|13|1|8" widthIndex="0>0|13|1|8|0" heightIndex="0>0|13|1|8|1" />
+            <testArea startIndex="0>0|13|1|9" widthIndex="0>0|13|1|9|0" heightIndex="0>0|13|1|9|1" />
+        </testAreas>
+        <effect>
+            <effectNode linkNode="0>0|13|0|0" speedScale="0.00180" inverted="true" lengthAndRadius="1 3.8 0.5 3.5" effectType="CENTER" changeSpeedScale="0.01" />
+            <effectNode linkNode="0>0|13|0|1" speedScale="0.00085" inverted="true" lengthAndRadius="5 1 1 1"   effectType="LEFT"  useInterpolation="true" minOffset="7" />
+            <effectNode linkNode="0>0|13|0|2" speedScale="0.00085" inverted="true" lengthAndRadius="5 1 1 1"   effectType="RIGHT" useInterpolation="true" minOffset="7" useMaxValue="true"/>
+        </effect>
+        <particleSystems>
+            <emitterShape node="0>0|13|0|3" particleType="CUTTER_CHOPPER" />
+        </particleSystems>
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+    </cutter>
+
+    <baseColorConfigurations useDefaultColors="true" price="800" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <baseColorConfiguration color="0.584 0.012 0.026 1.0" />
+        <colorNode node="0>0" />
+    </baseColorConfigurations>
+
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

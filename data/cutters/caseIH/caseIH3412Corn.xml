@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cutter_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>3412 12R</name>
+        <specs>
+            <workingWidth>9.0</workingWidth>
+            <combination>Axial-Flow 7130</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_cutter</function>
+        </functions>
+        <image>$data/store/store_caseIH3412Corn.png</image>
+        <price>41000</price>
+        <dailyUpkeep>80</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>CASEIH</brand>
+        <category>SWS_cutters</category>
+        <fieldJob sizeCategory="2" typeCategory="cutter" />
+        <vertexBufferMemoryUsage>387680</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>54600</indexBufferMemoryUsage>
+        <textureMemoryUsage>2621216</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+    <filename>$data/vehicles/cutters/caseIH/caseIH3412Corn.i3d</filename>
+
+    <size width="11" length="3.5" />
+    <speedLimit value="6" />
+    <powerConsumer ptoRpm="540" neededPtoPower="150"/>
+
+    <workAreas>
+        <workArea startIndex="0>0|3|0" widthIndex="0>0|3|1" heightIndex="0>0|3|2" type="cutter" />
+    </workAreas>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="cutter" upperDistanceToGround="2.2" lowerDistanceToGround="1.3" upperRotationOffset="0" lowerRotationOffset="5" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <dynamicMount forceLimitScale="1" />
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.75" />
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|1" type="cutter" rotAxis="1" rotSpeed="800" turnOnFadeTime="2" turnOffFadeTime="2"/>
+    </turnedOnRotationNodes>
+
+    <ai>
+        <areaMarkers leftIndex="0>0|4|0|0" rightIndex="0>0|4|0|1" backIndex="0>0|4|0|2" />
+        <trafficCollisionTrigger index="0>0|4|1" />
+    </ai>
+
+    <cutter fruitTypeCategories="maizeHeader">
+        <turnedOnScrollers>
+            <turnedOnScroller index="0>0|2|0" scrollSpeed="-3" scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+            <turnedOnScroller index="0>0|2|1" scrollSpeed="-3" scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="1" toggleVisibility="false" turnOnFadeTime="2" turnOffFadeTime="2"/>
+        </turnedOnScrollers>
+        <testAreas>
+            <testArea startIndex="0>0|5|1|0" widthIndex="0>0|5|1|0|0" heightIndex="0>0|5|1|0|1" />
+            <testArea startIndex="0>0|5|1|1" widthIndex="0>0|5|1|1|0" heightIndex="0>0|5|1|1|1" />
+            <testArea startIndex="0>0|5|1|2" widthIndex="0>0|5|1|2|0" heightIndex="0>0|5|1|2|1" />
+            <testArea startIndex="0>0|5|1|3" widthIndex="0>0|5|1|3|0" heightIndex="0>0|5|1|3|1" />
+            <testArea startIndex="0>0|5|1|4" widthIndex="0>0|5|1|4|0" heightIndex="0>0|5|1|4|1" />
+            <testArea startIndex="0>0|5|1|5" widthIndex="0>0|5|1|5|0" heightIndex="0>0|5|1|5|1" />
+            <testArea startIndex="0>0|5|1|6" widthIndex="0>0|5|1|6|0" heightIndex="0>0|5|1|6|1" />
+            <testArea startIndex="0>0|5|1|7" widthIndex="0>0|5|1|7|0" heightIndex="0>0|5|1|7|1" />
+            <testArea startIndex="0>0|5|1|8" widthIndex="0>0|5|1|8|0" heightIndex="0>0|5|1|8|1" />
+        </testAreas>
+        <effect>
+            <effectNode linkNode="0>0|5|0|0" speedScale="0.0018" inverted="true" lengthAndRadius="1 3.8 1 3" effectType="CENTER" changeSpeedScale="0.01" />
+            <effectNode linkNode="0>0|5|0|1" speedScale="0.0012" inverted="true" lengthAndRadius="3 1 1 1"   effectType="LEFT"  useInterpolation="true" minOffset="5" />
+            <effectNode linkNode="0>0|5|0|2" speedScale="0.0012" inverted="true" lengthAndRadius="3 1 1 1"   effectType="RIGHT" useInterpolation="true" minOffset="5" useMaxValue="true"/>
+        </effect>
+        <particleSystems>
+            <emitterShape node="0>0|5|0|3" particleType="CUTTER_CHOPPER" />
+        </particleSystems>
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+    </cutter>
+
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>
