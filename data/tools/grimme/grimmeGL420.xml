@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="sowingMachine">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>GL 420</name>
+        <specs>
+            <neededPower>120</neededPower>
+            <workingWidth>3.0</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_sowingMachine</function>
+        </functions>
+        <image>$data/store/store_grimmeGL420.png</image>
+        <price>21000</price>
+        <dailyUpkeep>50</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>GRIMME</brand>
+        <category>SWS_sowingMachines</category>
+        <fieldJob sizeCategory="1" typeCategory="sowingMachine" />
+        <vertexBufferMemoryUsage>1707656</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>261636</indexBufferMemoryUsage>
+        <textureMemoryUsage>10136464</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_planter</typeDesc>
+    <filename>$data/vehicles/tools/grimme/grimmeGL420.i3d</filename>
+
+    <size width="4" length="4"/>
+    <powerConsumer forceNode="0>" maxForce="40" />
+    <speedLimit value="9" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel restLoad="1.1" repr="0>0|0" forcePointRatio="0.23" filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="true" initialCompression="34" suspTravel="0.1" spring="30" damper="10" maxLatStiffness="1" rotationDamping="0.002" >
+                    <additionalWheel filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="false" offset="-0.754" />
+                </wheel>
+                <wheel restLoad="1.1" repr="0>0|1" forcePointRatio="0.23" filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="false" initialCompression="34" suspTravel="0.1" spring="30" damper="10" maxLatStiffness="1" rotationDamping="0.002" >
+                    <additionalWheel filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="true" offset="-0.754" />
+                </wheel>
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <brakeForce>0.2</brakeForce>
+
+    <lights>
+        <low>
+            <light                       decoration="0>1|3|0|0"   lightTypes="0 3" />
+            <light                       decoration="0>1|4|2|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light                         decoration="0>1|3|0|0"   lightTypes="0 3" />
+            <light realLight="0>1|4|2|0|1" decoration="0>1|4|2|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>1|4|2|0|1" decoration="0>1|4|2|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft realLight="0>1|4|2|1|0|1" decoration="0>1|4|2|1|0|0" />
+        <turnLightRight realLight="0>1|4|2|1|1|1" decoration="0>1|4|2|1|1|0" />
+    </turnLights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>1|0" jointType="implement" topReferenceNode="0>1|1" lowerDistanceToGround="0.68" upperDistanceToGround="1.2" />
+    </inputAttacherJoints>
+
+    <workAreas>
+        <workArea startIndex="0>1|10|0" widthIndex="0>1|10|1" heightIndex="0>1|10|2" refNodeIndex="0" type="sowingMachine" />
+        <workArea startIndex="0>1|5|1" widthIndex="0>1|5|2" heightIndex="0>1|5|3" startIndexTest="0>1|5|4" widthIndexTest="0>1|5|5" heightIndexTest="0>1|5|6" animName="leftArm" type="ridgemarker" needsSetIsTurnedOn="false" />
+        <workArea startIndex="0>1|6|1" widthIndex="0>1|6|2" heightIndex="0>1|6|3" startIndexTest="0>1|6|4" widthIndexTest="0>1|6|5" heightIndexTest="0>1|6|6" animName="rightArm" type="ridgemarker" needsSetIsTurnedOn="false" />
+    </workAreas>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds potato" capacity="2740" />
+    </fillUnits>
+    <fillLitersPerSecond>90</fillLitersPerSecond>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>" threshold="0.05" depthNode="0>"/>
+        <groundReferenceNode index="0>1|5|8" threshold="0" depthNode="0>1|5|8"/>
+        <groundReferenceNode index="0>1|6|8" threshold="0" depthNode="0>1|6|8" />
+        <groundReferenceNode index="0>1|12|1" threshold="0" depthNode="0>1|12|1" />
+    </groundReferenceNodes>
+
+    <groundParticleAnimations>
+        <groundParticleAnimation>
+            <node index="0>1|12|0|0" refNodeIndex="3" materialType="SOIL" maxDepth="-0.01" />
+            <node index="0>1|5|7|0" refNodeIndex="1" materialType="SOIL" maxDepth="-0.01" />
+            <node index="0>1|6|7|0" refNodeIndex="2" materialType="SOIL" maxDepth="-0.01" />
+        </groundParticleAnimation>
+
+        <groundParticle>
+            <node index="0>1|12|0|1" refNodeIndex="0" particleType="SOIL"  />
+            <node index="0>1|12|0|2" refNodeIndex="0" particleType="SOIL_SMOKE"  />
+            <node index="0>1|12|0|3" refNodeIndex="0" particleType="SOIL_CHUNKS" worldSpace="false"/>
+        </groundParticle>
+    </groundParticleAnimations>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>1|4|1|0" />
+        </volumes>
+        <unloadInfos>
+            <unloadInfo>
+                <node index="0>1|4|1|1" width="0.4" length="1.0" />
+            </unloadInfo>
+        </unloadInfos>
+    </fillVolumes>
+
+    <fillRootNode index="0>" />
+    <exactFillRootNode index="0>1|4|1|2" />
+    <fillMassNode index="0>" />
+
+    <sowingSound file="$data/sounds/sowingSound.wav"              pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.55"/>
+    <fillSound file="$data/maps/sounds/siloFillSound.wav"         pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.55" volume3D="1.0" innerRadius="10" radius="40"/>
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.8" volume="1.0" indoorVolumeFactor="0.45"/>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>1|7|1"   wheelIndex="0" onlyActiveWhenLowered="true" />
+        <speedRotatingPart index="0>1|7|3|0|0" wheelIndex="0" onlyActiveWhenLowered="true" />
+        <speedRotatingPart index="0>1|7|2"   wheelIndex="1" onlyActiveWhenLowered="true" />
+        <speedRotatingPart index="0>1|7|4|0|0" wheelIndex="1" onlyActiveWhenLowered="true" />
+        <speedRotatingPart shaderNode="0>1|13" radius="-0.4" />
+    </speedRotatingParts>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>1|7|0" type="sowingMachine" rotSpeed="82" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+    </turnedOnRotationNodes>
+
+    <turnedOnScrollers>
+        <turnedOnScroller index="0>1|9|0" shaderParameterName="scrollPosition" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="0.166" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>1|9|1" shaderParameterName="scrollPosition" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="0.166" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>1|9|2" shaderParameterName="scrollPosition" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="0.166" turnOnFadeTime="1" turnOffFadeTime="1"/>
+    </turnedOnScrollers>
+
+    <ridgeMarkers>
+        <ridgeMarker animName="leftArm" />
+        <ridgeMarker animName="rightArm" />
+    </ridgeMarkers>
+
+    <movingTools>
+        <!-- marker -->
+        <movingTool index="0>1|5" playSound="true">
+            <dependentPart index="0>1|8|1" />
+        </movingTool>
+        <movingTool index="0>1|6" playSound="true">
+            <dependentPart index="0>1|8|2" />
+        </movingTool>
+
+        <!-- tank -->
+        <movingTool index="0>1|4">
+            <dependentPart index="0>1|8|0" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>1|7|3" referencePoint="0>0|0|0" referenceFrame="0>1|7|5" isActiveDirty="true" />
+        <movingPart index="0>1|7|4" referencePoint="0>0|1|0" referenceFrame="0>1|7|6" isActiveDirty="true" />
+
+        <!-- tank -->
+        <movingPart index="0>1|8|0" referencePoint="0>1|4|0" referenceFrame="0>1|4|0" >
+            <translatingPart index="0>1|8|0|0" />
+        </movingPart>
+        <!-- marker -->
+        <movingPart index="0>1|8|1" referencePoint="0>1|5|0" referenceFrame="0>" >
+            <translatingPart index="0>1|8|1|0" />
+        </movingPart>
+        <movingPart index="0>1|8|2" referencePoint="0>1|6|0" referenceFrame="0>" >
+            <translatingPart index="0>1|8|2|0" />
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <!-- marker-->
+        <animation name="leftArm">
+            <part node="0>1|5" startTime="0" endTime="1.5" startRot="0 0 0" endRot="0 0 -115" />
+        </animation>
+        <animation name="rightArm">
+            <part node="0>1|6" startTime="0" endTime="1.5" startRot="0 0 0" endRot="0 0 115" />
+        </animation>
+
+        <animation name="turnOnAnimation">
+            <part node="0>1|4" startTime="0" duration="1.5" startRot="0 0 0" endRot="20 0 0" />
+        </animation>
+
+        <animation name="moveSupport">
+            <part node="0>1|2|0" startTime="0" endTime="0.6" startRot="90 0 0" endRot="0 0 0" />
+            <part node="0>1|2|1" startTime="0" endTime="0.6" startTrans="0 0.7 0" endTrans="0 0 0" />
+        </animation>
+    </animations>
+
+    <seedFruitTypes>potato</seedFruitTypes>
+    <needsActivation value="true" />
+    <support animationName="moveSupport" />
+
+    <turnOnVehicle>
+        <turnedAnimation name="turnOnAnimation" turnOnSpeedScale="1" turnOffSpeedScale="-1" />
+    </turnOnVehicle>
+
+    <ai>
+        <areaMarkers leftIndex="0>1|11|0|0" rightIndex="0>1|11|0|1" backIndex="0>1|11|0|2" />
+    </ai>
+
+    <washable dirtDuration="60" washDuration="1" workMultiplier="20" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.8 0.4" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

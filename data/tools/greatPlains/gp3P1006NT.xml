@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="sowingMachineSprayer">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>3P1006NT</name>
+        <specs>
+            <neededPower>100</neededPower>
+            <workingWidth>3.0</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_sowingMachine</function>
+			<function>$l10n_function_sowingMachineDirect</function>
+        </functions>
+        <image>$data/store/store_gp3P1006NT.png</image>
+        <price>15000</price>
+        <dailyUpkeep>40</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>GREATPLAINS</brand>
+        <category>SWS_sowingMachines</category>
+        <fieldJob sizeCategory="1" typeCategory="sowingMachine" />
+        <vertexBufferMemoryUsage>1466512</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>231972</indexBufferMemoryUsage>
+        <textureMemoryUsage>10835800</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_sowingMachine</typeDesc>
+    <filename>$data/vehicles/tools/greatPlains/gp3P1006NT.i3d</filename>
+    <useDirectPlanting>true</useDirectPlanting>
+    <size width="3.3" length="4"/>
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel rotSpeed="0" restLoad="0.7" repr="0>0"                               forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T510_4_00R8.xml" configIndex="noHub" isLeft="true"  color="0.8913 0.4368 0.0278 1" initialCompression="30" suspTravel="0.1"  spring="23" damper="20" hasTireTracks="true" rotationDamping="0.002"/>
+                <wheel rotSpeed="0" restLoad="0.7" repr="0>1"                               forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T510_4_00R8.xml" configIndex="noHub" isLeft="false" color="0.8913 0.4368 0.0278 1" initialCompression="30" suspTravel="0.1"  spring="23" damper="20" hasTireTracks="true" rotationDamping="0.002"/>
+                <wheel rotSpeed="0" restLoad="0.6" repr="0>7|1|1|0" driveNode="0>7|1|1|0|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM700_260_70R16.xml"                 isLeft="true"  color="0.8913 0.4368 0.0278 1" initialCompression="25" suspTravel="0.05" spring="75" damper="20" hasTireTracks="true" rotationDamping="0.002" versatileYRot="true" forceVersatility="true"/>
+                <wheel rotSpeed="0" restLoad="0.6" repr="0>7|1|2|0" driveNode="0>7|1|2|0|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM700_260_70R16.xml"                 isLeft="false" color="0.8913 0.4368 0.0278 1" initialCompression="25" suspTravel="0.05" spring="75" damper="20" hasTireTracks="true" rotationDamping="0.002" versatileYRot="true" forceVersatility="true"/>
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <brakeForce>0.2</brakeForce>
+    <powerConsumer forceNode="0>" maxForce="11" />
+    <speedLimit value="10" />
+
+    <seedFruitTypeCategories>sowingMachine</seedFruitTypeCategories>
+
+    <fillLitersPerSecond>75</fillLitersPerSecond>
+
+    <sprayUsageScales workingWidth="3" scale="1" />
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="700" />
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="500" />
+    </fillUnits>
+
+    <sowingMachine fillUnitIndex="1" unloadInfoIndex="1" loadInfoIndex="1" />
+    <sprayer fillUnitIndex="2" unloadInfoIndex="2" loadInfoIndex="2" />
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>13|0" maxDelta="0.0" />
+            <volume index="0>14|0" maxDelta="0.0" />
+        </volumes>
+
+        <unloadInfos>
+            <unloadInfo>
+                <node index="0>13|1" width="1.4" length="0.1" />
+            </unloadInfo>
+            <unloadInfo>
+                <node index="0>14|1" width="1.4" length="0.1" />
+            </unloadInfo>
+        </unloadInfos>
+        <loadInfos>
+            <loadInfo>
+                <node index="0>13|2" width="1.4" length="0.1" />
+            </loadInfo>
+            <loadInfo>
+                <node index="0>14|2" width="1.4" length="0.1" />
+            </loadInfo>
+        </loadInfos>
+    </fillVolumes>
+
+    <fillRootNode index="0>" />
+    <exactFillRootNode index="0>14|3" />
+    <fillMassNode index="0>" />
+
+    <workAreas>
+        <workArea startIndex="0>3|0" widthIndex="0>3|1" heightIndex="0>3|2" refNodeIndex="0" type="sowingMachine" />
+        <workArea startIndex="0>3|0" widthIndex="0>3|1" heightIndex="0>3|2" refNodeIndex="0" type="sprayer" />
+    </workAreas>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>3|3" threshold="0.25" depthNode="0>12|1"/>
+    </groundReferenceNodes>
+
+    <groundParticleAnimations>
+        <groundParticleAnimation>
+            <node index="0>12|0|0" refNodeIndex="0" materialType="SOIL" maxDepth="-0.01" />
+        </groundParticleAnimation>
+
+        <groundParticle>
+            <node index="0>12|0|1" refNodeIndex="0" particleType="SOIL"  />
+            <node index="0>12|0|2" refNodeIndex="0" particleType="SOIL_SMOKE"  />
+            <node index="0>12|0|3" refNodeIndex="0" particleType="SOIL_CHUNKS" worldSpace="false"/>
+        </groundParticle>
+    </groundParticleAnimations>
+
+    <needsActivation value="true" />
+
+    <sowingSound file="$data/sounds/sowingSound.wav"      pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.45"/>
+    <airBlowerSound file="$data/sounds/airBlowerLoop.wav" pitchOffset="1.20" volume="1.00" indoorVolumeFactor="0.45"/>
+    <fillSound file="$data/maps/sounds/siloFillSound.wav" pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.45" volume3D="1.0" innerRadius="10" radius="40" linkNode="0>0"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>2" jointType="implement" lowerDistanceToGround="0.52" upperDistanceToGround="0.8" allowsJointRotLimitMovement="false" allowsLowering="true" />
+    </inputAttacherJoints>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>6|0" radius="0.164" refNodeIndex="0" />
+        <speedRotatingPart index="0>6|1" radius="0.164" refNodeIndex="0" />
+        <speedRotatingPart index="0>6|3" radius="0.208" refNodeIndex="0" />
+        <speedRotatingPart index="0>6|4" radius="0.208" refNodeIndex="0" />
+        <speedRotatingPart shaderNode="0>6|2" radius="0.172" refNodeIndex="0" useRotation="true" />
+
+        <speedRotatingPart index="0>5|0" radius="0.270" refNodeIndex="0" useRotation="false" />
+        <speedRotatingPart shaderNode="0>5|1" radius="-0.16" refNodeIndex="0" useRotation="false" />
+        <speedRotatingPart shaderNode="0>5|2" radius="-0.185" refNodeIndex="0" useRotation="false" />
+        <speedRotatingPart shaderNode="0>5|3" radius="-0.201" refNodeIndex="0" useRotation="false" />
+        <speedRotatingPart shaderNode="0>5|4" radius="-0.210" refNodeIndex="0" useRotation="false" />
+    </speedRotatingParts>
+
+    <ai>
+        <needsLowering value="true" />
+        <areaMarkers leftIndex="0>4|0|0" rightIndex="0>4|0|1" backIndex="0>4|0|2" />
+        <sizeMarkers leftIndex="0>4|1|0" rightIndex="0>4|1|1" backIndex="0>4|1|2" />
+        <trafficCollisionTrigger index="0>4|2" />
+        <forceTurnNoBackward value="true"/>
+        <turningRadiusLimiation radius="6" />
+    </ai>
+
+    <movingTools>
+        <movingTool index="0>7" playSound="true" >
+            <dependentPart index="0>7|1" />
+        </movingTool>
+
+        <movingTool index="0>7|1" wheelIndices="3 4" />
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>7|1" referencePoint="0>10" localReferencePoint="0>7|1|0" referenceFrame="0>10" >
+            <dependentPart index="0>7|1|0" />
+        </movingPart>
+        <movingPart index="0>7|1|0" referencePoint="0>10" referenceFrame="0>" >
+            <dependentPart index="0>8" />
+        </movingPart>
+
+        <movingPart index="0>8" referencePoint="0>7|0" referenceFrame="0>9">
+            <translatingPart index="0>8|0" />
+        </movingPart>
+    </movingParts>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.8" volume="0.6" />
+
+    <animations>
+        <animation name="lowerAnimation">
+            <part node="0>7" startTime="0" duration="1.5" startRot="155 0 180" endRot="174 0 180" />
+        </animation>
+
+        <animation name="moveSupport">
+            <part node="0>15" startTime="0" duration="0.5" startTrans="0 0.335 0.322" endTrans="0 0.135 0.322" />
+        </animation>
+
+        <animation name="toggleCover">
+            <part node="0>16|0" startTime="0" duration="1.0" startRot="100 0 0" endRot="0 0 0" />
+            <part node="0>16|1" startTime="0" duration="1.0" startRot="100 0 0" endRot="0 0 0" />
+        </animation>
+    </animations>
+
+    <lowerAnimation name="lowerAnimation" speed="-1" />
+    <support animationName="moveSupport" />
+    <cover animationName="toggleCover" openOnBuy="false"/>
+
+    <washable dirtDuration="60" washDuration="1" workMultiplier="20" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.7 0.3" solverIterationCount="20" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

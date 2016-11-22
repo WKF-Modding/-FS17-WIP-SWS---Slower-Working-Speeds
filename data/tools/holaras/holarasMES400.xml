@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="leveler">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>MES 400</name>
+        <functions>
+            <function>$l10n_function_leveler</function>
+        </functions>
+        <image>$data/store/store_holarasMES400.png</image>
+        <price>6800</price>
+        <dailyUpkeep>10</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>HOLARAS</brand>
+        <category>SWS_leveler</category>
+        <vertexBufferMemoryUsage>236580</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>35772</indexBufferMemoryUsage>
+        <textureMemoryUsage>9175256</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_leveler</typeDesc>
+    <filename>$data/vehicles/tools/holaras/holarasMES400.i3d</filename>
+
+    <size width="3.2" length="1.5" lengthOffset="-0.45"/>
+
+    <inputAttacherJointConfigurations>
+        <inputAttacherJointConfiguration name="$l10n_configuration_inputAttacher3Point" price="0">
+            <inputAttacherJoint index="0>0|0|1" topReferenceNode="0>0|0|2" jointType="implement" isControllable="true" lowerRotLimitScale="0 0 0" lowerDistanceToGround="0.52" upperRotLimitScale="0 0 0" lowerTransLimitScale="0 0 0" upperTransLimitScale="0 0 0" upperDistanceToGround="2" upperRotationOffset="0" />
+            <objectChange node="0>4" visibilityActive="true"  visibilityInactive="false"/>
+        </inputAttacherJointConfiguration>
+        <inputAttacherJointConfiguration name="$l10n_configuration_inputAttacherWheelLoader" price="0">
+            <inputAttacherJoint index="0>0|0|0" jointType="wheelLoader" />
+            <objectChange node="0>3" visibilityActive="true"  visibilityInactive="false"/>
+        </inputAttacherJointConfiguration>
+    </inputAttacherJointConfigurations>
+
+    <attacherJointControl>
+        <control1 controlAxis="AXIS_HYDRAULICATTACHER1" invertControlAxis="true" mouseSpeedFactor="0.3" controlAxisIcon="$dataS2/menu/moveControls/implement_attacher.png" />
+        <control2 controlAxis="AXIS_HYDRAULICATTACHER2" invertControlAxis="true" mouseSpeedFactor="0.3" controlAxisIcon="$dataS2/menu/moveControls/implement_attacher.png" />
+    </attacherJointControl>
+    
+    <movingTools>
+        <movingTool index="0>0|1">
+            <dependentPart index="0>0|3|0" />
+        </movingTool>
+        <movingTool index="0>0|2">
+            <dependentPart index="0>0|3|1" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>0|3|0" referencePoint="0>0|1|0" referenceFrame="0>" playSound="true">
+            <translatingPart index="0>0|3|0|0" />
+        </movingPart>
+        <movingPart index="0>0|3|1" referencePoint="0>0|2|0" referenceFrame="0>" playSound="true">
+            <translatingPart index="0>0|3|1|0" />
+        </movingPart>
+    </movingParts>
+
+    <foldingParts startMoveDirection="1" >
+        <foldingPart animationName="folding" speedScale="1" />
+    </foldingParts>
+
+    <animations>
+        <animation name="folding">
+            <part node="0>0|1" startTime="0.0" endTime="3.0" startRot="0 20 0" endRot="0 125 0" />
+            <part node="0>0|2" startTime="0.0" endTime="3.0" startRot="0 -20 0" endRot="0 -125 0" />
+        </animation>
+    </animations>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.80" volume="0.65" indoorVolumeFactor="0.45" />
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="bulk windrow" capacity="6000" />
+    </fillUnits>
+
+    <leveler pickUpDirection="1" fillUnitIndex="1" >
+        <levelerNode index="0>0|4" width="2.9" minDropWidth="1.0" maxDropWidth="2.4" minDropHeight="0.02" maxDropHeight="1.167" minDropDirOffset="0.6" maxDropDirOffset="0.6" />
+    </leveler>
+
+    <levelerEffects>
+        <effectNode effectNode="0>0|5|0" materialType="leveler" materialTypeId="1" fadeTime="0.5" speed="-1" maxHeight="1.167" />
+    </levelerEffects>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.3 -0.3" solverIterationCount="20" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

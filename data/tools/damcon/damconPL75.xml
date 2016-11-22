@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="treePlanter">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>PL-75</name>
+        <specs>
+            <neededPower>100</neededPower>
+        </specs>
+        <functions>
+            <function>$l10n_function_forestryPlanter</function>
+        </functions>
+        <image>$data/store/store_damconPL75.png</image>
+        <price>26000</price>
+        <dailyUpkeep>10</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>DAMCON</brand>
+        <category>SWS_wood</category>
+        <vertexBufferMemoryUsage>577680</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>116826</indexBufferMemoryUsage>
+        <textureMemoryUsage>9437552</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_treePlanter</typeDesc>
+    <filename>$data/vehicles/tools/damcon/damconPL75.i3d</filename>
+
+    <size width="2.5" length="5" />
+    <speedLimit value="4" />
+    <powerConsumer ptoRpm="540" neededPtoPower="65" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel restLoad="0.5" repr="0>3|1|0|0" forcePointRatio="0.23" initialCompression="25" radius="0.29" mass="0.02" suspTravel="0.1" spring="15" damper="10" rotationDamping="0.002" />
+                <wheel restLoad="0.5" repr="0>3|1|0|1" forcePointRatio="0.23" initialCompression="25" radius="0.29" mass="0.02" suspTravel="0.1" spring="15" damper="10" rotationDamping="0.002" />
+                <wheel restLoad="0.3" repr="0>3|1|1|0" forcePointRatio="0.23" initialCompression="25" radius="0.29" mass="0.02" suspTravel="0.1" spring="10" damper="10" rotationDamping="0.002" />
+                <wheel restLoad="0.3" repr="0>3|1|2|0" forcePointRatio="0.23" initialCompression="25" radius="0.29" mass="0.02" suspTravel="0.1" spring="10" damper="10" rotationDamping="0.002" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <brakeForce>0.1</brakeForce>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="implement" topReferenceNode="0>1" lowerDistanceToGround="0.45" upperDistanceToGround="1.15" allowsLowering="true" ptoInputNode="0>2" />
+    </inputAttacherJoints>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>3|2" threshold="0.1" depthNode="0>3|6|1" />
+    </groundReferenceNodes>
+
+    <!-- ToDo ?
+    <workAreas>
+        <workArea startIndex="0>3|4|0" widthIndex="0>3|4|1" heightIndex="0>3|4|2" refNodeIndex="0" type="treePlanter" chargeValue="1" />
+    </workAreas>
+    -->
+
+    <groundManipulationSpeedThreshold value="1"/>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>3|0" type="treePlanter" rotAxis="1" rotSpeed="800" turnOnFadeTime="1" turnOffFadeTime="2" />
+    </turnedOnRotationNodes>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_pieces" fillTypes="treeSaplings poplar" capacity="1" />
+    </fillUnits>
+    <!--treeTypes treeTypes="treeFir" /-->
+
+    <treePlanterSound file="$data/sounds/cultivatorSound.wav"     pitchOffset="1.0" volume="1.0" indoorVolumeFactor="0.65"  />
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.5" volume="1.0" indoorVolumeFactor="0.45" />
+
+    <groundParticleAnimations>
+        <groundParticleAnimation>
+            <node index="0>3|6|0|0" refNodeIndex="0" materialType="SOIL" maxDepth="-0.01" />
+        </groundParticleAnimation>
+
+        <groundParticle>
+            <node index="0>3|6|0|1" refNodeIndex="0" particleType="SOIL"  />
+            <node index="0>3|6|0|2" refNodeIndex="0" particleType="SOIL_SMOKE"  />
+        </groundParticle>
+    </groundParticleAnimations>
+
+    <treePlanter node="0>3|2" minDistance="10" refNodeIndex="0" saplingPalletGrabNode="0>3|3" saplingPalletMountNode="0>3|3"/>
+
+    <movingTools>
+        <movingTool index="0>3|1" wheelIndices="1 2 3 4" />
+    </movingTools>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="0>3|1" startTime="0" duration="0.6" startTrans="0 0.525 0.723" endTrans="0 0.155 0.723" />
+        </animation>
+    </animations>
+
+    <ai>
+        <areaMarkers leftIndex="0>3|5|0|0" rightIndex="0>3|5|0|1" backIndex="0>3|5|0|2" />
+        <sizeMarkers leftIndex="0>3|5|1|0" rightIndex="0>3|5|1|1" backIndex="0>3|5|1|2" />
+        <trafficCollisionTrigger index="0>3|5|2" />
+        <needsLowering value="true"/>
+    </ai>
+
+    <support animationName="moveSupport" />
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="20" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.5 0.5" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>

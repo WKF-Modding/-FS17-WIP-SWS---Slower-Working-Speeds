@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="shovel_dynamicMountAttacher">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>$l10n_shopItem_skidSteerManureFork</name>
+        <specs>
+            <combination>325T</combination>
+        </specs>
+        <image>$data/store/store_jcbManureFork.png</image>
+        <price>1800</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>JCB</brand>
+        <category>SWS_skidSteers</category>
+        <vertexBufferMemoryUsage>120520</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>18360</indexBufferMemoryUsage>
+        <textureMemoryUsage>8389080</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_skidSteerTool</typeDesc>
+    <filename>$data/vehicles/tools/jcb/jcbManureFork.i3d</filename>
+
+    <size width="3" length="2"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="skidSteer" />
+    </inputAttacherJoints>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="fork" capacity="1700" />
+    </fillUnits>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>1|0" maxAllowedHeapAngle="10" />
+        </volumes>
+        <dischargeInfos>
+            <dischargeInfo fillVolumeIndex="1" >
+                <node index="0>5" width="1.3" length="0.3" />
+            </dischargeInfo>
+        </dischargeInfos>
+        <loadInfos>
+            <loadInfo fillVolumeIndex="1" >
+                <node index="0>8" width="1.3" length="0.2" />
+            </loadInfo>
+        </loadInfos>
+        <unloadInfos>
+            <unloadInfo fillVolumeIndex="1" >
+                <node index="0>9" width="1.3" length="0.2" />
+            </unloadInfo>
+        </unloadInfos>
+    </fillVolumes>
+
+    <shovelTipTrigger index="0>3" />
+
+    <shovel tipReferenceNode="0>2" emptyStartAngle="105" emptyFullAngle="140" openNode="0>10" openRotation="-30" openDirection="-1" pickUpNode="0>12" pickUpWidth="1.2" pickUpLength="0.2" pickUpYOffset="-0.05" />
+
+    <emptyParticleSystems>
+        <emitterShape node="0>6"/>
+    </emptyParticleSystems>
+
+    <dynamicMountAttacher index="0>">
+        <mountCollisionMask index="0>13" collisionMask="134225920" />
+        <mountCollisionMask index="1>1" collisionMask="134225920" />
+    </dynamicMountAttacher>
+
+    <movingTools>
+        <!-- mainForkMechanic -->
+        <movingTool index="0>10" playSound="true" >
+            <controls axis="AXIS_FRONTLOADER_TOOL2" invertAxis="false" mouseSpeedFactor="0.3" iconFilename="$dataS2/menu/moveControls/tool_openClose.png" />
+            <componentJoint index="0" />
+            <rotation rotationAxis="1" rotSpeed="100" rotAcceleration="250" rotMax="0" rotMin="-80"/>
+            <!-- cylinder hinge -->
+            <dependentPart index="1>0|0" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="1>0|0" referencePoint="0>11" referenceFrame="1>0" >
+            <translatingPart index="1>0|0|0" />
+        </movingPart>
+    </movingParts>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.85" volume="0.6" indoorVolumeFactor="0.85" />
+
+    <washable dirtDuration="30" washDuration="1" workMultiplier="20" />
+
+    <components count="2">
+        <component1 centerOfMass="0 0 -0.2" solverIterationCount="10" />
+        <component2 solverIterationCount="10" />
+        <joint component1="0" component2="1" index="0>10" rotLimit="0 0 0" transLimit="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+</vehicle>

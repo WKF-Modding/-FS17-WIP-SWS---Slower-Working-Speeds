@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="attachableCombine">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>MEX 5</name>
+        <specs>
+            <workingWidth>2.2</workingWidth>
+            <neededPower>150</neededPower>
+            <fillTypes>chaff</fillTypes>
+        </specs>
+        <functions>
+            <function>$l10n_function_combine</function>
+        </functions>
+        <image>$data/store/store_poettingerMex5.png</image>
+        <price>38000</price>
+        <dailyUpkeep>20</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>POETTINGER</brand>
+        <category>SWS_forageHarvesters</category>
+        <vertexBufferMemoryUsage>1140232</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>174546</indexBufferMemoryUsage>
+        <textureMemoryUsage>8825696</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cutter</typeDesc>
+    <filename>$data/vehicles/tools/poettinger/poettingerMex5.i3d</filename>
+
+    <size width="3" length="4" />
+    <speedLimit value="8" />
+    <powerConsumer ptoRpm="600" neededPtoPower="70"/>
+
+    <workAreas>
+        <workArea startIndex="0>3|0" widthIndex="0>3|1" heightIndex="0>3|2" foldMinLimit="0" foldMaxLimit="0.1" type="cutter" />
+    </workAreas>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" topReferenceNode="0>1" jointType="implement" upperDistanceToGround="1" lowerDistanceToGround="0.45" lowerRotLimitScale="0 0 0" ptoInputNode="0>2" />
+    </inputAttacherJoints>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="forageHarvester" capacity="0" />
+    </fillUnits>
+
+    <fillVolumes>
+        <dischargeInfos>
+            <dischargeInfo>
+                <node index="0>7|0|0|0|0|1" width="0.4" length="0.4" />
+            </dischargeInfo>
+        </dischargeInfos>
+    </fillVolumes>
+
+    <overloading stopOverloadIfEmpty="false" capacity="0">
+        <trailerTriggers>
+            <trailerTrigger index="0>6" pipeState="2" />
+        </trailerTriggers>
+    </overloading>
+
+    <allowFillFromAir value="false" />
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="1" />
+    <threshingStartSound file="$data/vehicles/tools/poettinger/poettingerMex5_start.wav" pitchOffset="1.000"   indoorVolumeFactor="0.65"  />
+    <threshingSound file="$data/vehicles/tools/poettinger/poettingerMex5_work.wav"       pitchOffset="1.0275"  indoorVolumeFactor="0.65" radius="50" innerRadius="25" cuttingPitchOffset="1.0" />
+    <threshingStopSound file="$data/vehicles/tools/poettinger/poettingerMex5_stop.wav"   pitchOffset="1.0275"  indoorVolumeFactor="0.65"/>
+
+    <pipe numStates="2" unloadingStates="2" turnOnAllowedStates="2" raycastNodeIndex="0>7|0|0|0|0|1" raycastDistance="18" autoAimStates="2" unloadingEffectStopTime="0.75" effectExtraDistanceOnTrailer="-1">
+        <node index="0>7|0" rotationSpeeds="0 35 0" autoAimYRotation="true" autoAimInvertZ="false">
+            <state1 rotation="0 0 0" />
+            <state2 rotation="0 0 0"/>
+        </node>
+        <node index="0>7|0|0" rotationSpeeds="25 0 0">
+            <state1 rotation="40 0 0"/>
+            <state2 rotation="0 0 0"/>
+        </node>
+        <node index="0>7|0|0|0|0" rotationSpeeds="80 0 0" autoAimXRotation="true">
+            <state1 rotation="0 0 0"/>
+            <state2 rotation="0 0 0"/>
+        </node>
+    </pipe>
+
+    <pipeEffect>
+        <effectNode                          effectNode="0>7|0|0|5"     delay="0"   materialType="unloading" materialTypeId="3"  />
+        <effectNode effectClass="PipeEffect" effectNode="0>7|0|0|0|0|3" delay="0"   materialType="pipe"      materialTypeId="1" maxBending="0.07" shapeScaleSpread="1.09 1 1 0"/>
+    </pipeEffect>
+
+    <fillVolumeDischargeInfo index="0>7|0|0|0|0|2" width="0.4" length="0.4" />
+    <combine allowThreshingDuringRain="true" />
+
+    <movingTools>
+        <!-- pipe -->
+        <movingTool index="0>7|0|0">
+            <dependentPart index="0>7|0|1" />
+            <dependentPart index="0>7|0|2" />
+        </movingTool>
+        <!-- pipe end -->
+        <movingTool index="0>7|0|0|0|0">
+            <dependentPart index="0>7|0|0|1" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- pipe cylinder -->
+        <movingPart index="0>7|0|1" referencePoint="0>7|0|0|2" referenceFrame="0>7|0|0|2" playSound="true" >
+            <translatingPart index="0>7|0|1|0" />
+        </movingPart>
+        <movingPart index="0>7|0|2" referencePoint="0>7|0|0|3" referenceFrame="0>7|0|0|3">
+            <translatingPart index="0>7|0|2|0" />
+        </movingPart>
+
+        <movingPart index="0>7|0|0|1" referencePoint="0>7|0|0|0|0|0" referenceFrame="0>7|0|0" scaleZ="true" />
+    </movingParts>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>7|1|0"   type="combine" rotSpeed="400"  rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnRotationNode index="0>7|1|1"   type="combine" rotSpeed="-400" rotAxis="2" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnRotationNode index="0>7|1|2|0" type="combine" rotSpeed="1000" rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnRotationNode index="0>7|1|3|0" type="combine" rotSpeed="-1000"  rotAxis="3" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnRotationNode index="0>7|1|4"   type="combine" rotSpeed="-400" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnRotationNode index="0>7|1|5"   type="combine" rotSpeed="400"  rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnRotationNode index="0>7|1|6"   type="combine" rotSpeed="400"  rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnRotationNode index="0>7|1|7"   type="combine" rotSpeed="-400" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+    </turnedOnRotationNodes>
+
+    <ai>
+        <areaMarkers leftIndex="0>3|3" rightIndex="0>3|4" backIndex="0>3|5" />
+    </ai>
+
+    <!-- Cutter fruit type -->
+    <cutter allowsForageGrowhtState="true" fruitTypeCategories="maizeCutter" convertedFillTypeCategories="forageHarvester">
+        <testAreas>
+            <testArea startIndex="0>4|0" widthIndex="0>4|0|0" heightIndex="0>4|0|1" />
+            <testArea startIndex="0>4|1" widthIndex="0>4|1|0" heightIndex="0>4|1|1" />
+            <testArea startIndex="0>4|2" widthIndex="0>4|2|0" heightIndex="0>4|2|1" />
+        </testAreas>
+        <effect>
+            <effectNode linkNode="0>5|0" speedScale="0.0018" inverted="true" lengthAndRadius="2.5 1.3 2 3" isThreshing="false" effectType="CENTER" changeSpeedScale="0.01" />
+            <effectNode linkNode="0>5|1" speedScale="0.003"  inverted="true" lengthAndRadius="0 1 1 1"     isThreshing="false" effectType="LEFT"  useInterpolation="true" minOffset="1" />
+            <effectNode linkNode="0>5|2" speedScale="0.003"  inverted="true" lengthAndRadius="0 1 1 1"     isThreshing="false" effectType="RIGHT" useInterpolation="true" minOffset="1" useMaxValue="true"/>
+        </effect>
+        <threshingParticleSystems>
+            <threshingParticleSystem node="0>" file="$data/particleSystems/shared/threshingCutterParticles.i3d" />
+        </threshingParticleSystems>
+    </cutter>
+
+    <washable dirtDuration="50" washDuration="1" workMultiplier="2"/>
+
+    <components count="1">
+        <component1 centerOfMass="0 0.3 -0.75" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>

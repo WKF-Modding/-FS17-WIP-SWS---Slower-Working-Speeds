@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="roller">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>R 5000</name>
+        <specs>
+            <neededPower>40</neededPower>
+            <workingWidth>3.0</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_roller</function>
+        </functions>
+        <image>$data/store/store_lizardR5000.png</image>
+        <price>4900</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>LIZARD</brand>
+        <category>SWS_misc</category>
+        <vertexBufferMemoryUsage>65120</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>10632</indexBufferMemoryUsage>
+        <textureMemoryUsage>2796320</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_roller</typeDesc>
+    <filename>$data/vehicles/tools/lizard/lizardR5000.i3d</filename>
+
+    <size width="3.5" length="2"/>
+    <speedLimit value="12" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel driveMode="0" restLoad="1.0" repr="0>0|0" radius="0.468" initialCompression="30" suspTravel="0.05" spring="60" damper="20" mass="0.1" raycastOffsets="-1 1" rotationDamping="0.002" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <brakeForce>0.3</brakeForce>
+
+    <workAreas>
+        <workArea startIndex="0>0|4|0" widthIndex="0>0|4|1" heightIndex="0>0|4|2" refNodeIndex="0" type="roller" disableBackwards="false"/>
+    </workAreas>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>" threshold="0.3" chargeValue="1" />
+    </groundReferenceNodes>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|1" topReferenceNode="0>0|2" jointType="implement" lowerDistanceToGround="0.63" upperDistanceToGround="1.2"  />
+    </inputAttacherJoints>
+
+    <animations>
+        <!-- move support arm down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|3" startTime="0" endTime="0.2" startTrans="0 0.28 0" endTrans="0 0 0"/>
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <baseColorConfigurations useDefaultColors="true" price="500" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <baseColorConfiguration color="0.8 0.55 0.055 1" />
+        <colorNode node="0>0" />
+    </baseColorConfigurations>
+
+    <washable dirtDuration="30" washDuration="1" workMultiplier="20" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.6 0" solverIterationCount="15" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+</vehicle>

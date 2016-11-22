@@ -1,0 +1,395 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="plough">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Titan 11</name>
+        <specs>
+            <neededPower>240</neededPower>
+            <workingWidth>4.9</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_plough</function>
+        </functions>
+        <image>$data/store/store_lemkenTitan11.png</image>
+        <price>59000</price>
+        <dailyUpkeep>50</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>LEMKEN</brand>
+        <category>SWS_plows</category>
+        <fieldJob sizeCategory="2" typeCategory="plough" />
+        <vertexBufferMemoryUsage>2191872</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>337818</indexBufferMemoryUsage>
+        <textureMemoryUsage>13107592</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_plough</typeDesc>
+    <filename>$data/vehicles/tools/lemken/lemkenTitan11.i3d</filename>
+
+    <size width="5" length="14" widthOffset="1"/>
+
+    <speedLimit value="12" />
+
+    <wheels>
+        <wheel restLoad="1.9" repr="0>0|0|0|0|0|0|1|0|0" driveNode="0>0|0|0|0|0|0|1|0|0|0" linkNode="0>0|0|0|0|0|0|1|0|0|0|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TH400_400_70R20.xml" isLeft="false"  color="0.7969 0.0180 0.0151 1" configIndex="n6v1" useReprDirection="true" initialCompression="50" suspTravel="0.15" spring="25" damper="10" hasTireTracks="true" />
+        <wheel restLoad="1.9" repr="0>0|0|0|0|0|0|1|0|1" driveNode="0>0|0|0|0|0|0|1|0|1|0" linkNode="0>0|0|0|0|0|0|1|0|1|0|0" forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TH400_400_70R20.xml" isLeft="true" color="0.7969 0.0180 0.0151 1" configIndex="n6v1" useReprDirection="true" initialCompression="50" suspTravel="0.15" spring="25" damper="10" hasTireTracks="true" />
+    </wheels>
+
+    <dynamicallyLoadedWheels>
+        <dynamicallyLoadedWheel linkNode="0>0|0|0|3|0|0|0|0"                     filename="$data/vehicles/wheels/trelleborg/AW305_360_65R16.xml" isLeft="false" color="0.7969 0.0180 0.0151 1" />
+        <dynamicallyLoadedWheel linkNode="0>0|0|0|0|0|0|0|0|0|0|0|0|1|2|0|0|0|0" filename="$data/vehicles/wheels/trelleborg/AW305_260_70R16.xml" isLeft="true"  color="0.7969 0.0180 0.0151 1" />
+    </dynamicallyLoadedWheels>
+
+    <axisColor>0.0000 0.2348 0.7969 1</axisColor>
+
+    <workAreas>
+        <workArea startIndex="0>0|0|0|1|1|2"                     widthIndex="0>0|0|0|1|1|3"                     heightIndex="0>0|0|0|1|0|1"                     refNodeIndex="0" type="plough" />
+        <workArea startIndex="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|1" widthIndex="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|2" heightIndex="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|1" refNodeIndex="1" type="plough" />
+    </workAreas>
+
+    <lights>
+        <low>
+            <light realLight="0>0|0|0|0|0|0|1|2|0|0|1" decoration="0>0|0|0|0|0|0|1|2|0|0|0" lightTypes="1"/> <!--WorklightBack-->
+        </low>
+        <high>
+            <light realLight="0>0|0|0|0|0|0|1|2|0|0|2" decoration="0>0|0|0|0|0|0|1|2|0|0|0" lightTypes="1" /> <!--WorklightBack -->
+        </high>
+        <states>
+            <state lightTypes="1" />
+        </states>
+    </lights>
+
+    <beaconLights>
+        <beaconLight index="0>0|0|0|0|0|0|1|2|0|1" speed="0.014" filename="$data/shared/beaconLights/beaconLight02.i3d" />
+    </beaconLights>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>0|0|0|1|3"                     threshold="0.95" />
+        <groundReferenceNode index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2" threshold="0.95" />
+        <groundReferenceNode index="0>0|0|0|5|0"                     threshold="0.05" depthNode="0>0|0|0|5|0"/>
+        <groundReferenceNode index="0>0|0|0|5|1"                     threshold="0.05" depthNode="0>0|0|0|5|1"/>
+        <groundReferenceNode index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|3|0" threshold="0.05" depthNode="0>0|0|0|0|0|0|0|0|0|0|0|0|1|3|0"/>
+        <groundReferenceNode index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|3|1" threshold="0.05" depthNode="0>0|0|0|0|0|0|0|0|0|0|0|0|1|3|1"/>
+    </groundReferenceNodes>
+
+    <ploughDirectionNode index="0>0|0|0|0|0|0|1" />
+
+    <powerConsumer neededPtoPower="0" forceNode="0>" maxForce="240" />
+
+    <ploughTurnSound file="$data/sounds/ploughTurnSound.wav"      pitchOffset="0.75" volume="1.00" indoorVolumeFactor="0.95" />
+    <ploughSound file="$data/sounds/ploughSound.wav"              pitchOffset="1.00" volume="0.85" indoorVolumeFactor="0.45"/>
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.85" volume="0.55" indoorVolumeFactor="0.20" indoorLowpassGain="0.65" />
+
+    <groundParticleAnimations>
+        <groundParticleAnimation>
+            <node index="0>0|0|0|1|0|2|0" materialType="SOIL" refNodeIndex="2"/>
+            <node index="0>0|0|0|1|0|2|1" materialType="SOIL" refNodeIndex="3"/>
+            <node index="0>0|0|0|1|1|4|0" materialType="SOIL" refNodeIndex="2"/>
+            <node index="0>0|0|0|1|1|4|1" materialType="SOIL" refNodeIndex="3"/>
+            <node index="0>0|0|0|1|2|0|0" materialType="SOIL" refNodeIndex="2"/>
+            <node index="0>0|0|0|1|2|0|1" materialType="SOIL" refNodeIndex="3"/>
+            <node index="0>0|0|0|1|3|0|0" materialType="SOIL" refNodeIndex="2"/>
+            <node index="0>0|0|0|1|3|0|1" materialType="SOIL" refNodeIndex="3"/>
+            <node index="0>0|0|0|1|4|0|0" materialType="SOIL" refNodeIndex="2"/>
+            <node index="0>0|0|0|1|4|0|1" materialType="SOIL" refNodeIndex="3"/>
+            <node index="0>0|0|0|1|5|0|0" materialType="SOIL" refNodeIndex="2"/>
+            <node index="0>0|0|0|1|5|0|1" materialType="SOIL" refNodeIndex="3"/>
+
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|3|0" materialType="SOIL" refNodeIndex="4"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|3|1" materialType="SOIL" refNodeIndex="5"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|2|0" materialType="SOIL" refNodeIndex="4"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|2|1" materialType="SOIL" refNodeIndex="5"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2|0|0" materialType="SOIL" refNodeIndex="4"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2|0|1" materialType="SOIL" refNodeIndex="5"/>
+        </groundParticleAnimation>
+
+        <groundParticle>
+            <node index="0>0|0|0|1|0|2|2" particleType="SOIL" refNodeIndex="2" />
+            <node index="0>0|0|0|1|0|2|3" particleType="SOIL" refNodeIndex="3" />
+            <node index="0>0|0|0|1|1|4|2" particleType="SOIL" refNodeIndex="2" />
+            <node index="0>0|0|0|1|1|4|3" particleType="SOIL" refNodeIndex="3" />
+            <node index="0>0|0|0|1|2|0|2" particleType="SOIL" refNodeIndex="2" />
+            <node index="0>0|0|0|1|2|0|3" particleType="SOIL" refNodeIndex="3" />
+            <node index="0>0|0|0|1|3|0|2" particleType="SOIL" refNodeIndex="2" />
+            <node index="0>0|0|0|1|3|0|3" particleType="SOIL" refNodeIndex="3" />
+            <node index="0>0|0|0|1|4|0|2" particleType="SOIL" refNodeIndex="2" />
+            <node index="0>0|0|0|1|4|0|3" particleType="SOIL" refNodeIndex="3" />
+            <node index="0>0|0|0|1|5|0|2" particleType="SOIL" refNodeIndex="2" />
+            <node index="0>0|0|0|1|5|0|3" particleType="SOIL" refNodeIndex="3" />
+
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|3|2" particleType="SOIL" refNodeIndex="4" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|3|3" particleType="SOIL" refNodeIndex="5" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|2|2" particleType="SOIL" refNodeIndex="4" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|2|3" particleType="SOIL" refNodeIndex="5" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2|0|2" particleType="SOIL" refNodeIndex="4" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2|0|3" particleType="SOIL" refNodeIndex="5" />
+
+            <node index="0>0|0|0|1|0|2|4" particleType="SOIL_SMOKE" refNodeIndex="2" />
+            <node index="0>0|0|0|1|0|2|5" particleType="SOIL_SMOKE" refNodeIndex="3" />
+            <node index="0>0|0|0|1|1|4|4" particleType="SOIL_SMOKE" refNodeIndex="2" />
+            <node index="0>0|0|0|1|1|4|5" particleType="SOIL_SMOKE" refNodeIndex="3" />
+            <node index="0>0|0|0|1|2|0|4" particleType="SOIL_SMOKE" refNodeIndex="2" />
+            <node index="0>0|0|0|1|2|0|5" particleType="SOIL_SMOKE" refNodeIndex="3" />
+            <node index="0>0|0|0|1|3|0|4" particleType="SOIL_SMOKE" refNodeIndex="2" />
+            <node index="0>0|0|0|1|3|0|5" particleType="SOIL_SMOKE" refNodeIndex="3" />
+            <node index="0>0|0|0|1|4|0|4" particleType="SOIL_SMOKE" refNodeIndex="2" />
+            <node index="0>0|0|0|1|4|0|5" particleType="SOIL_SMOKE" refNodeIndex="3" />
+            <node index="0>0|0|0|1|5|0|4" particleType="SOIL_SMOKE" refNodeIndex="2" />
+            <node index="0>0|0|0|1|5|0|5" particleType="SOIL_SMOKE" refNodeIndex="3" />
+
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|3|4" particleType="SOIL_SMOKE" refNodeIndex="4" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|3|5" particleType="SOIL_SMOKE" refNodeIndex="5" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|2|4" particleType="SOIL_SMOKE" refNodeIndex="4" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|2|5" particleType="SOIL_SMOKE" refNodeIndex="5" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2|0|4" particleType="SOIL_SMOKE" refNodeIndex="4" />
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2|0|5" particleType="SOIL_SMOKE" refNodeIndex="5" />
+
+            <node index="0>0|0|0|1|0|2|6" particleType="SOIL_CHUNKS" refNodeIndex="2" worldSpace="false"/>
+            <node index="0>0|0|0|1|0|2|7" particleType="SOIL_CHUNKS" refNodeIndex="3" worldSpace="false"/>
+            <node index="0>0|0|0|1|1|4|6" particleType="SOIL_CHUNKS" refNodeIndex="2" worldSpace="false"/>
+            <node index="0>0|0|0|1|1|4|7" particleType="SOIL_CHUNKS" refNodeIndex="3" worldSpace="false"/>
+            <node index="0>0|0|0|1|2|0|6" particleType="SOIL_CHUNKS" refNodeIndex="2" worldSpace="false"/>
+            <node index="0>0|0|0|1|2|0|7" particleType="SOIL_CHUNKS" refNodeIndex="3" worldSpace="false"/>
+            <node index="0>0|0|0|1|3|0|6" particleType="SOIL_CHUNKS" refNodeIndex="2" worldSpace="false"/>
+            <node index="0>0|0|0|1|3|0|7" particleType="SOIL_CHUNKS" refNodeIndex="3" worldSpace="false"/>
+            <node index="0>0|0|0|1|4|0|6" particleType="SOIL_CHUNKS" refNodeIndex="2" worldSpace="false"/>
+            <node index="0>0|0|0|1|4|0|7" particleType="SOIL_CHUNKS" refNodeIndex="3" worldSpace="false"/>
+            <node index="0>0|0|0|1|5|0|6" particleType="SOIL_CHUNKS" refNodeIndex="2" worldSpace="false"/>
+            <node index="0>0|0|0|1|5|0|7" particleType="SOIL_CHUNKS" refNodeIndex="3" worldSpace="false"/>
+
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|3|6" particleType="SOIL_CHUNKS" refNodeIndex="4" worldSpace="false"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|3|7" particleType="SOIL_CHUNKS" refNodeIndex="5" worldSpace="false"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|2|6" particleType="SOIL_CHUNKS" refNodeIndex="4" worldSpace="false"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|2|7" particleType="SOIL_CHUNKS" refNodeIndex="5" worldSpace="false"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2|0|6" particleType="SOIL_CHUNKS" refNodeIndex="4" worldSpace="false"/>
+            <node index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2|0|7" particleType="SOIL_CHUNKS" refNodeIndex="5" worldSpace="false"/>
+        </groundParticle>
+    </groundParticleAnimations>
+
+    <rotateLeftToMax value="true"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="1>0|0" rootNode="1>" jointType="implement" topReferenceNode="1>0|1" lowerDistanceToGround="0.7" upperDistanceToGround="1.2" lowerTransLimitScale="0 1 0" lowerRotLimitScale="0 0 1" upperRotLimitScale="0 0 1"/>
+    </inputAttacherJoints>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>0|0|0|3|0|0|0|0"                   radius="0.437" invertDirectionOnRotation="true" turnAnimLimit="0.05" refNodeIndex="0" />
+        <speedRotatingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|2|0|0|0|0" radius="0.388" invertDirectionOnRotation="true" turnAnimLimit="0.05" refNodeIndex="1" />
+    </speedRotatingParts>
+
+    <foldingParts startMoveDirection="1" turnOnFoldDirection="-1"  >
+        <foldingPart animationName="foldPlough" speedScale="1" />
+    </foldingParts>
+
+    <animations>
+        <!-- move wheel down/up -->
+        <animation name="rotatePlough">
+            <part node="0>0|0"                             startTime="0" endTime="4" startRot="0 0 0"   endRot="-5 0 0" />
+            <part node="0>0|0|0"                           startTime="0" endTime="4" startRot="0 0 90"  endRot="0 0 0" />
+            <part node="0>0|0|1"                           startTime="0" endTime="4" startRot="0 0 105" endRot="0 0 0" />
+            <part node="0>0|0|0|2|0"                       startTime="0" endTime="4" startRot="0 0 -90" endRot="0 0 0" />
+            <part node="0>0|0|0|0|0|0"                     startTime="0" endTime="4" startRot="0 0 -90" endRot="0 0 0" />
+            <part node="0>0|0|0|3|0|0"                     startTime="0" endTime="4" startRot="-25 0 0" endRot="0 0 0" />
+            <part node="0>0|0|0|0|0|0|0|0|0|0|0|0"         startTime="0" endTime="4" startRot="0 0 90"  endRot="0 0 0" />
+            <part node="0>0|0|0|0|0|0|0|0|0|0|0|0|1|2|0|0" startTime="0" endTime="4" startRot="0 0 0"  endRot="0 0 -43.65" />
+
+            <part node="0>0|0"                             startTime="4.2" endTime="8.2" startRot="-5 0 0"     endRot="0 0 0" />
+            <part node="0>0|0|0"                           startTime="4.2" endTime="8.2" startRot="0 0 0"      endRot="0 0 -90" />
+            <part node="0>0|0|2"                           startTime="4.2" endTime="8.2" startRot="0 0 0"      endRot="0 0 -105" />
+            <part node="0>0|0|0|2|0"                       startTime="4.2" endTime="8.2" startRot="0 0 0"      endRot="0 0 90" />
+            <part node="0>0|0|0|0|0|0"                     startTime="4.2" endTime="8.2" startRot="0 0 0"      endRot="0 0 90" />
+            <part node="0>0|0|0|3|0|0"                     startTime="4.2" endTime="8.2" startRot="0 0 0"      endRot="25 0 0" />
+            <part node="0>0|0|0|0|0|0|0|0|0|0|0|0"         startTime="4.2" endTime="8.2" startRot="0 0 0"      endRot="0 0 -90" />
+            <part node="0>0|0|0|0|0|0|0|0|0|0|0|0|1|2|0|0" startTime="4.2" endTime="8.2" startRot="0 0 -43.65" endRot="0 0 -87.3" />
+
+            <part node="0>0|0|0|0|0|0|3|0"                 startTime="0"   endTime="8.2" startTrans="-1.274 0 0" endTrans="1.274 0 0" />
+        </animation>
+
+        <animation name="foldPlough">
+            <part node="0>0|0"                     startTime="0" endTime="4" startRot="0 0 0"   endRot="-5 0 0" />
+            <part node="0>0|0|0"                   startTime="0" endTime="4" startRot="0 0 90"  endRot="0 0 0" />
+            <part node="0>0|0|1"                   startTime="0" endTime="4" startRot="0 0 105" endRot="0 0 0" />
+            <part node="0>0|0|0|2|0"               startTime="0" endTime="4" startRot="0 0 -90" endRot="0 0 0" />
+            <part node="0>0|0|0|0|0|0"             startTime="0" endTime="4" startRot="0 0 -90" endRot="0 0 0" />
+            <part node="0>0|0|0|3|0|0"             startTime="0" endTime="4" startRot="-25 0 0" endRot="0 0 0" />
+            <part node="0>0|0|0|0|0|0|0|0|0|0|0|0" startTime="0" endTime="4" startRot="0 0 90"  endRot="0 0 0" />
+            <part node="0>0|0|0|0|0|0|0"           startTime="0" endTime="4" startRot="0 0 0"   endRot="20 0 0" />
+        </animation>
+
+        <animation name="lowerAnimation">
+            <part node="0>0|0|0|0|0|0|1"   direction="1" startTime="0.75" endTime="1.5" startRot="-0 0 0" endRot="20 0 0" />
+            <part node="0>0|0|0|0|0|0|1|0" direction="1" startTime="0.75" endTime="1.5" startRot="0 0 0" endRot="-20 0 0" />
+            <part node="0>0|0|0|0|0|0|0|0" direction="1" startTime="0.75" endTime="1.5" startRot="-20 0 0" endRot="-42 0 0" />
+
+            <part node="0>0|0|0|0|0|0|1"   direction="-1" startTime="0" endTime="0.75" startRot="-0 0 0" endRot="20 0 0" />
+            <part node="0>0|0|0|0|0|0|1|0" direction="-1" startTime="0" endTime="0.75" startRot="0 0 0" endRot="-20 0 0" />
+            <part node="0>0|0|0|0|0|0|0|0" direction="-1" startTime="0" endTime="0.75" startRot="-20 0 0" endRot="-42 0 0" />
+        </animation>
+
+        <animation name="workingWidth">
+            <part node="0>0|0|0|0"                   startTime="0" endTime="1" startRot="-7 0 0" endRot="7 0 0" />
+            <part node="0>0|0|0|0|0|0|0|0|0|0|0|0|1" startTime="0" endTime="1" startRot="7 0 0"  endRot="-7 0 0" />
+            <part node="0>0|0|0|0|0|0|3|0|0"         startTime="0" endTime="1" startTrans="1.8 0 5.15"  endTrans="2.6 0 5.15" />
+            <part node="0>0|0|0|0|0|0|3|0|1"         startTime="0" endTime="1" startTrans="-1.8 0 5.15" endTrans="-2.6 0 5.15" />
+        </animation>
+
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|0|0|0|0|0|0|0|0|0|0|0|1|4|0" startTime="0" endTime="0.5" startTrans="0 0 0" endTrans="-0.53 0 0" />
+            <part node="0>0|0|0|0|0|0|0|0|0|0|0|0|1|4|1" startTime="0" endTime="0.5" startTrans="0 0 0" endTrans="0.53 0 0" />
+            <part node="0>0|0|0|6|0" startTime="0" endTime="0.5" startTrans="0 0 0" endTrans="-0.53 0 0" />
+            <part node="0>0|0|0|6|1" startTime="0" endTime="0.5" startTrans="0 0 0" endTrans="0.53 0 0" />
+
+            <part node="0>0|3|1|1" startTime="0" endTime="0.5" startRot="-125 0 0" endRot="0 0 0" />
+            <part node="0>0|3|1|2" startTime="0" endTime="0.5" startRot="125 0 0" endRot="0 0 0" />
+            <part node="0>0|3|0" startTime="0" endTime="0.5" startRot="90 0 0" endRot="-5 0 0" />
+
+            <part componentJointIndex="0" startTime="0" endTime="0.5" startRotLimit="0 90 0" endRotLimit="0 0 0" />
+        </animation>
+    </animations>
+
+    <movingTools>
+        <!-- working width -->
+        <movingTool index="0>0|0|0|0" wheelIndices="1 2" playSound="true">
+            <controls axis="AXIS_WHEEL_BASE" invertAxis="false" mouseSpeedFactor="0.3" iconFilename="$dataS2/menu/moveControls/workingWidth.png" />
+            <animation animSpeed="1" animAcceleration="1" animName="workingWidth" animStartTime="0.5" />
+            <dependentPart index="0>0|0|0|1|0" />
+        </movingTool>
+        <movingTool index="0>0|0|0|0|0|0|0|0|0|0|0|0|1">
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0" />
+        </movingTool>
+        <!-- stablizer arm -->
+        <movingTool index="0>0|0|0|2|0" wheelIndices="1 2">
+            <dependentPart index="0>0|0|0|2|0|0" />
+        </movingTool>
+        <!-- axis rot  -->
+        <movingTool index="0>0|0|0|0|0|0" wheelIndices="1 2" playSound="true">
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0" />
+        </movingTool>
+        <!-- lower -->
+        <movingTool index="0>0|0|0|0|0|0|1" wheelIndices="1 2" playSound="true">
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0" />
+            <dependentPart index="0>0|0|0|0|0|0|2|1" />
+            <dependentPart index="0>0|0|0|0|0|0|1|2" />
+        </movingTool>
+        <movingTool index="0>0|0|0|0|0|0|0|0">
+            <dependentPart index="0>0|0|0|0|0|0|2|0" />
+        </movingTool>
+        <!-- folding -->
+        <movingTool index="0>0|0|1" playSound="true">
+            <dependentPart index="0>0|0|0|4|0" />
+            <dependentPart index="0>0|0|0|4|1" />
+        </movingTool>
+        <movingTool index="0>0|0|2">
+            <dependentPart index="0>0|0|0|4|0" />
+            <dependentPart index="0>0|0|0|4|1" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- front shares -->
+        <movingPart index="0>0|0|0|1|0" localReferencePoint="0>0|0|0|1|0|0" referencePoint="0>0|0|0|0|2" referenceFrame="0>0|0|0|1">
+            <dependentPart index="0>0|0|0|1|0|0" />
+            <dependentPart index="0>0|0|0|1|1" />
+            <dependentPart index="0>0|0|0|0|1" />
+        </movingPart>
+        <movingPart index="0>0|0|0|1|0|0" referencePoint="0>0|0|0|0|2" referenceFrame="0>0|0|0|0|2" />
+        <movingPart index="0>0|0|0|1|1" localReferencePoint="0>0|0|0|1|1|0" referencePoint="0>0|0|0|1|0|0" referenceFrame="0>0|0|0|1">
+            <dependentPart index="0>0|0|0|1|1|0" />
+            <dependentPart index="0>0|0|0|1|2" />
+            <dependentPart index="0>0|0|0|1|3" />
+            <dependentPart index="0>0|0|0|1|4" />
+            <dependentPart index="0>0|0|0|1|5" />
+            <dependentPart index="0>0|0|0|3|0" />
+        </movingPart>
+        <movingPart index="0>0|0|0|1|1|0" referencePoint="0>0|0|0|1|0|0" referenceFrame="0>0|0|0|1|0|0" />
+        <movingPart index="0>0|0|0|1|2" referencePoint="0>0|0|0|1|1|0|0" referenceFrame="0>0|0|0|1|1|0|0" />
+        <movingPart index="0>0|0|0|1|3" referencePoint="0>0|0|0|1|1|0|1" referenceFrame="0>0|0|0|1|1|0|1" />
+        <movingPart index="0>0|0|0|1|4" referencePoint="0>0|0|0|1|1|0|2" referenceFrame="0>0|0|0|1|1|0|2" />
+        <movingPart index="0>0|0|0|1|5" referencePoint="0>0|0|0|1|1|0|3" referenceFrame="0>0|0|0|1|1|0|3" />
+        <movingPart index="0>0|0|0|3|0" referenceFrame="0>0|0|0|1|1|1" />
+        <movingPart index="0>0|0|0|0|1" referencePoint="0>0|0|0|1|6" referenceFrame="0>0|0|0|1|6" >
+            <translatingPart index="0>0|0|0|0|1|0" />
+        </movingPart>
+        <!-- back shares -->
+        <movingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0" localReferencePoint="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0" referencePoint="0>0|0|0|0|0|0|0|0|0|0|0|0|2" referenceFrame="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0">
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0" />
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1" />
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|3" />
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|2" />
+        </movingPart>
+        <movingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0" referencePoint="0>0|0|0|0|0|0|0|0|0|0|0|0|2" referenceFrame="0>0|0|0|0|0|0|0|0|0|0|0|0|2" />
+        <movingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1" localReferencePoint="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|0" referencePoint="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0" referenceFrame="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0">
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|0" />
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2" />
+        </movingPart>
+        <movingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|0" referencePoint="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0" referenceFrame="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|0|0" />
+        <movingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|2" referencePoint="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|0|0" referenceFrame="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1|0|0" />
+        <movingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|1|2" referenceFrame="0>0|0|0|0|0|0|0|0|0|0|0|0|1|0|1" />
+        <movingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|3" referencePoint="0>0|0|0|0|0|0|0|0|0|0|0|0|1|1" referenceFrame="0>0|0|0|0|0|0|0|0|0|0|0|0|1|1" >
+            <translatingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|3|0" />
+        </movingPart>
+
+        <!-- stabilizer -->
+        <movingPart index="0>0|0|0|2|0|0" referencePoint="0>0|1" referenceFrame="0>" limitedAxis="1" >
+            <dependentPart index="0>0|0|0|2|0|0|0" />
+        </movingPart>
+        <movingPart index="0>0|0|0|2|0|0|0" referencePoint="0>0|1" referenceFrame="0>">
+            <translatingPart index="0>0|0|0|2|0|0|0|0" />
+        </movingPart>
+
+        <!-- back arm -->
+        <movingPart index="0>0|0|0|0|0|0|0|0|0" localReferencePoint="0>0|0|0|0|0|0|0|0|0|0" referencePoint="0>0|0|0|0|0|1" referenceFrame="0>0|0|0|0|0|0">
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0|0" />
+            <dependentPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|0" />
+        </movingPart>
+        <movingPart index="0>0|0|0|0|0|0|0|0|0|0" referencePoint="0>0|0|0|0|0|1" referenceFrame="0>0|0|0|0|0|0" />
+        <movingPart index="0>0|0|0|0|0|0|0|0|0|0|0|0|0" referenceFrame="0>0|0|0|0|0|2" limitedAxis="2" />
+
+        <movingPart index="0>0|0|0|0|0|0|2|0" referencePoint="0>0|0|0|0|0|0|0|0|1" referenceFrame="0>0|0|0|0|0|0">
+            <translatingPart index="0>0|0|0|0|0|0|2|0|0" />
+        </movingPart>
+
+        <!-- axis -->
+        <movingPart index="0>0|0|0|0|0|0|1|2" referencePoint="0>0|0|0|0|0|0|2|2" referenceFrame="0>0|0|0|0|0|0|2|2" />
+        <movingPart index="0>0|0|0|0|0|0|2|1" referencePoint="0>0|0|0|0|0|0|1|1" referenceFrame="0>0|0|0|0|0|0|1|1">
+            <translatingPart index="0>0|0|0|0|0|0|2|1|0" />
+        </movingPart>
+        <!-- folding hydraulic -->
+        <movingPart index="0>0|0|0|4|0" referencePoint="0>0|0|1|0" referenceFrame="0>0|0|0|4">
+            <translatingPart index="0>0|0|0|4|0|0" />
+            <translatingPart index="0>0|0|0|4|0|0|0" />
+        </movingPart>
+        <movingPart index="0>0|0|0|4|1" referencePoint="0>0|0|2|0" referenceFrame="0>0|0|0|4">
+            <translatingPart index="0>0|0|0|4|1|0" />
+            <translatingPart index="0>0|0|0|4|1|0|0" />
+        </movingPart>
+    </movingParts>
+
+    <support animationName="moveSupport" />
+    <lowerAnimation name="lowerAnimation" />
+
+    <rotationPart turnAnimationName="rotatePlough" limitFoldRotationMax="true" foldRotationMinLimit="0" foldRotationMaxLimit="0" rotationFoldMinLimit="0" rotationFoldMaxLimit="0" foldMinLimit="0" foldMaxLimit="0.1" rotationAllowedIfLowered="false"/>
+    <washable dirtDuration="30" washDuration="1" workMultiplier="20" />
+
+    <ai>
+        <needsLowering value="true" />
+        <areaMarkers leftIndex="0>0|0|0|0|0|0|3|0|0" rightIndex="0>0|0|0|0|0|0|3|0|1" backIndex="0>0|0|0|0|0|0|3|0|2" />
+        <sizeMarkers leftIndex="0>0|0|0|0|0|0|3|0|0" rightIndex="0>0|0|0|0|0|0|3|0|1" backIndex="0>0|0|0|0|0|0|3|0|2" />
+        <trafficCollisionTrigger index="0>0|0|0|0|0|0|3|1" />
+        <forceTurnNoBackward value="true"/>
+        <!-- <toolReverserDirectionNode index="0>0|0|0|0|0|0|3|0|2" />  -->
+        <turningRadiusLimiation rotationJointNode="0>0|2" wheelIndices="0 1" />
+    </ai>
+
+    <components count="2">
+        <component1 solverIterationCount="10" />
+        <component2 solverIterationCount="10" />
+        <joint component1="0" component2="1" index="0>0|2" rotLimit="0 90 0" transLimit="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+</vehicle>

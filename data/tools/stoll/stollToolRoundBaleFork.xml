@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dynamicMountAttacherImplement">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>$l10n_shopItem_frontloaderRoundBaleFork</name>
+        <specs>
+            <combination>FZ 30 / FZ 60</combination>
+        </specs>
+        <image>$data/store/store_stollToolRoundBaleFork.png</image>
+        <price>1100</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>STOLL</brand>
+        <category>SWS_frontLoaders</category>
+        <vertexBufferMemoryUsage>41168</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>5580</indexBufferMemoryUsage>
+        <textureMemoryUsage>14155944</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_frontloaderTool</typeDesc>
+    <filename>$data/vehicles/tools/stoll/stollToolRoundBaleFork.i3d</filename>
+
+    <size width="2.5" length="2"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="frontloader" />
+    </inputAttacherJoints>
+
+    <dynamicMountAttacher index="0>" />
+
+    <movingTools>
+        <!-- Left Arm -->
+        <movingTool index="0>2" delayedIndex="0>1|0" playSound="true" >
+            <controls mouseSpeedFactor="0.5" axis="AXIS_FRONTLOADER_TOOL2" invertAxis="false"  iconFilename="$dataS2/menu/moveControls/grab_openClose.png" />
+            <rotation rotationAxis="3" rotSpeed="70" rotAcceleration="250" rotMax="0" rotMin="-40" />
+            <dependentPart index="0>1|1|0" />
+        </movingTool>
+        <!-- Right Arm -->
+        <movingTool index="0>3" delayedIndex="0>1|1">
+            <controls mouseSpeedFactor="0.5" axis="AXIS_FRONTLOADER_TOOL2" invertAxis="true"  />
+            <rotation rotationAxis="3" rotSpeed="70" rotAcceleration="250" rotMax="40" rotMin="0" />
+            <dependentPart index="0>1|1|0" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>1|1|0" referencePoint="0>1|0|0" referenceFrame="0>" >
+            <translatingPart index="0>1|1|0|0" />
+        </movingPart>
+    </movingParts>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.9" volume="0.65" indoorVolumeFactor="0.55" />
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <baseColorConfigurations useDefaultColors="true" price="100" defaultColorIndex="8" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <colorNode node="0>" recursive="true" />
+    </baseColorConfigurations>
+
+    <components count="1">
+        <component1 centerOfMass="0 0 0.4" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

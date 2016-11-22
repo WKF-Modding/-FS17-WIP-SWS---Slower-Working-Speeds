@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="conveyorTrailerHireable">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>SL 80-22 Quantum</name>
+        <specs>
+            <neededPower>30</neededPower>
+        </specs>
+        <functions>
+            <function>$l10n_function_beltSystem</function>
+        </functions>
+        <image>$data/store/store_grimmeSL8022.png</image>
+        <price>12000</price>
+        <dailyUpkeep>10</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>GRIMME</brand>
+        <category>SWS_belts</category>
+        <vertexBufferMemoryUsage>879952</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>151116</indexBufferMemoryUsage>
+        <textureMemoryUsage>13456976</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_belt</typeDesc>
+    <filename>$data/vehicles/tools/grimme/grimmeSL8022.i3d</filename>
+
+    <size width="3.5" length="12.0" />
+
+    <showOnMap>true</showOnMap>
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel rotSpeed="1" restLoad="0.8" repr="0>0|0"     driveNode="0>0|0|0"   useReprDirection="true" radius="0.225" width="0.3"                 initialCompression="32" suspTravel="0.04" spring="42" damper="2" mass="0.3" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="0.3" repr="0>0|1|2"   driveNode="0>0|1|0"   useReprDirection="true" radius="0.471" width="0.3" xOffset="0.05"  initialCompression="40" suspTravel="0.08" spring="3"  damper="2" mass="0.2" tireTrackAtlasIndex="4" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="0.3" repr="0>0|2|3|0" driveNode="0>0|2|0|0" useReprDirection="true" radius="0.471" width="0.3" xOffset="-0.05" initialCompression="40" suspTravel="0.08" spring="3"  damper="2" mass="0.2" tireTrackAtlasIndex="4" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <ackermannSteeringConfigurations>
+        <ackermannSteering rotSpeed="65" rotMax="80" rotCenterWheel1="2" rotCenterWheel2="3" rotCenterNode="0>0|3"/>
+    </ackermannSteeringConfigurations>
+
+    <brakeForce>0.1</brakeForce>
+
+    <differentials>
+        <differential torqueRatio="0.5" maxSpeedRatio="3.0" wheelIndex1="1" wheelIndex2="2" /> <!-- front left-right -->
+    </differentials>
+
+    <ai>
+        <conveyorBelt minAngle="5" maxAngle="50" stepSize="5" speed="1" centerWheelIndex="1" backWheelIndex="2"/>
+        <didNotMoveTimeout deactivated="true"/>
+    </ai>
+
+    <cruiseControl minSpeed="0.01"/>
+
+    <motorConfigurations>
+        <motorConfiguration name="default" hp="5" price="0">
+            <motor torqueScale="0.445" minRpm="1000" maxRpm="2200" minSpeed="0.01" maxForwardSpeed="5" maxBackwardSpeed="5" brakeForce="1" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.0012" minForwardGearRatio="145" maxForwardGearRatio="150" minBackwardGearRatio="145" maxBackwardGearRatio="150">
+                <torque normRpm="0.45" torque="0.9"/>
+                <torque normRpm="0.5"  torque="0.97"/>
+                <torque normRpm="0.59" torque="1"/>
+                <torque normRpm="0.72" torque="1"/>
+                <torque normRpm="0.86" torque="0.88"/>
+                <torque normRpm="1"    torque="0.72"/>
+            </motor>
+        </motorConfiguration>
+    </motorConfigurations>
+
+    <cameras count="1">
+        <camera1 index="0>5|0" rotatable="true" rotateNode="0>5" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="30" >
+            <raycastNode index="0>8" />
+            <raycastNode index="0>3|0|5" />
+            <raycastNode index="0>3|0|0|2" />
+        </camera1>
+    </cameras>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>1" jointType="implement" needsToolbar="true" needsLowering="false" allowsLowering="false" lowerDistanceToGround="0.632" upperDistanceToGround="0.632" lowerRotLimitScale="1 7 2" upperRotLimitScale="1 7 2" upperTransLimitScale="0 1 0"/>
+    </inputAttacherJoints>
+
+    <attacherJoints>
+        <attacherJoint index="0>2|0" jointType="conveyor" lowerRotLimit="50 120 120" allowsLowering="false" >
+            <schema position="0.5 0" rotation="0" invertX="false" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <enterReferenceNode index="0>6" />
+    <exitPoint index="0>6" />
+
+    <steerableNeedsAttacherVehicle>false</steerableNeedsAttacherVehicle>
+    <forceSelectionOnEnter>true</forceSelectionOnEnter>
+
+    <fuelUsage>0</fuelUsage>
+
+    <fillRootNode index="0>" />
+    <fillMassNode updateFillLevelMass="false" />
+    <exactFillRootNode index="0>4" />
+    <fillAutoAimTargetNode index="0>4|0" />
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="bulk" capacity="1200" showOnHud="false" showInShop="false"/>
+    </fillUnits>
+
+    <fillSound                   file="$data/maps/sounds/siloFillSound.wav"                       pitchOffset="1.00" volume="0.70" indoorVolumeFactor="0.55" indoorLowpassGain="0.75"/>
+
+    <overloading capacity="175" stopOverloadIfEmpty="false" forceActive="true">
+        <trailerTriggers>
+            <trailerTrigger index="0>7" />
+        </trailerTriggers>
+    </overloading>
+
+    <pipe numStates="1" unloadingStates="1" raycastNodeIndex="0>3|0|0|0|0" raycastDistance="12" automaticOverload="true" delayEffectIndex="3" effectExtraDistanceOnTrailer="-1"/>
+
+    <conveyorBelt>
+        <offset movingToolNode="0>3|0|0">
+            <effect index="3" inverted="false" minOffset="0" maxOffset="4.4" />
+        </offset>
+    </conveyorBelt>
+
+    <conveyorBeltEffect>
+        <effectNode effectClass="ConveyorBeltEffect" effectNode="0>3|5|0|0"       materialType="belt"  delay="0"    fadeTime="0.5" speed="0.7" scrollLength="1"  scrollSpeed="0.8" />
+        <effectNode effectClass="ConveyorBeltEffect" effectNode="0>3|0|1|0|0"     materialType="belt"  delay="0.5"  fadeTime="5"   speed="0.7" scrollLength="10" scrollSpeed="0.8" />
+        <effectNode effectClass="ConveyorBeltEffect" effectNode="0>3|0|0|1|0|2"   materialType="belt"  delay="5.5"  fadeTime="5"   speed="0.7" scrollLength="10" scrollSpeed="0.8" />
+    </conveyorBeltEffect>
+
+    <conveyorBeltScrollers>
+        <conveyorBeltScroller index="0>3|0|1"   scrollSpeed="-0.3"  scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.1" turnOffFadeTime="0.1"/>
+        <conveyorBeltScroller index="0>3|0|0|1" scrollSpeed="-0.3"  scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.1" turnOffFadeTime="0.1"/>
+        <conveyorBeltScroller index="0>3|5"     scrollSpeed="-0.5"  scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.1" turnOffFadeTime="0.1"/>
+    </conveyorBeltScrollers>
+
+    <pipeEffect>
+        <effectNode effectClass="PipeEffect"          effectNode="0>3|0|0|1|0|0|0" materialType="pipe"  delay="0" maxBending="1"  positionUpdateNodes="0>3|0|0|1|0|0|1" shapeScaleSpread="1 1 0 0" materialTypeId="1"/>
+        <effectNode                                   effectNode="0>3|0|0|1|0|0|1" materialType="smoke" delay="0" materialTypeId="1" alignToWorldY="true"/>
+    </pipeEffect>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>3|7" type="conveyorBelt" rotSpeed="500" rotAxis="1" />
+        <turnedOnRotationNode index="0>3|8" type="conveyorBelt" rotSpeed="500" rotAxis="1" />
+    </turnedOnRotationNodes>
+
+    <movingTools>
+        <!-- mouse controls for arms -->
+        <movingTool index="0>3|0" >
+            <controls axis="AXIS_CRANE_ARM2" invertAxis="false" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/crane_arm1_rotX.png" />
+            <rotation rotSpeed="3" rotAcceleration="20" rotMax="20" rotMin="0" rotationAxis="1" />
+            <dependentPart index="0>3|1"/>
+            <dependentPart index="0>3|2"/>
+            <dependentPart index="0>3|3"/>
+        </movingTool>
+        <movingTool index="0>3|0|0" wheelIndices="3">
+            <controls axis="AXIS_CRANE_ARM4" invertAxis="true" mouseSpeedFactor="1.5" iconFilename="$dataS2/menu/moveControls/crane_arm2_trans.png" />
+            <translation transSpeed="0.7" transAcceleration="20" transMax="-5.934" transMin="-14.934" translationAxis="3" />
+        </movingTool>
+
+        <movingTool index="0>0|1" wheelIndices="2" />
+        <movingTool index="0>0|2|3" wheelIndices="3" />
+    </movingTools>
+
+    <movingParts>
+        <!-- raycats node -->
+        <movingPart index="0>3|0|0|0" referenceFrame="0>3|4" alignToWorldY="true" isActiveDirty="true" />
+        <!-- arm1 cylinders -->
+        <movingPart index="0>3|1" referencePoint="0>3|0|2" referenceFrame="0>3|0|2" >
+            <translatingPart index="0>3|1|0"/>
+        </movingPart>
+        <movingPart index="0>3|2" referencePoint="0>3|0|3" referenceFrame="0>3|0|3" >
+            <translatingPart index="0>3|2|0"/>
+        </movingPart>
+        <!-- axis cylinder -->
+        <movingPart index="0>0|2|1" referencePoint="0>0|1|1" referenceFrame="0>0|1|1" invertZ="true" isActiveDirty="true" >
+            <translatingPart index="0>0|2|1|0"/>
+        </movingPart>
+        <!-- protector -->
+        <movingPart index="0>3|3" referencePoint="0>3|0|4" referenceFrame="0>3|0|4"/>
+    </movingParts>
+
+    <animations>
+        <animation name="folding">
+            <part node="0>0|1" startTime="0" endTime="3" startRot="0 0 0" endRot="0 77 0" />
+            <part node="0>0|2" startTime="0" endTime="3" startRot="0 0 0" endRot="0 -77 0" />
+            <part node="0>0|2|3" startTime="0" endTime="3" startRot="0 0 0" endRot="0 180 0" />
+            <part node="0>0|2|0" startTime="0" endTime="0.0001" startRot="0 0 0" endRot="0 180 0" />
+            <part node="0>0|2|0|0|0" startTime="0" endTime="0.0001" startRot="0 0 0" endRot="0 180 0" />
+        </animation>
+    </animations>
+
+    <foldingParts startMoveDirection="-1" turnOnFoldDirection="1" >
+        <foldingPart animationName="folding" speedScale="1" />
+    </foldingParts>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.65 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>

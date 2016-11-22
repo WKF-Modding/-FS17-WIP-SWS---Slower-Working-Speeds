@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="plough">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>VARI-MASTER 153</name>
+        <specs>
+            <neededPower>120</neededPower>
+            <workingWidth>2.0</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_plough</function>
+        </functions>
+        <image>$data/store/store_kuhnVariMaster153.png</image>
+        <price>15000</price>
+        <dailyUpkeep>10</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KUHN</brand>
+        <category>SWS_plows</category>
+        <fieldJob sizeCategory="1" typeCategory="plough" />
+        <vertexBufferMemoryUsage>530784</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>91734</indexBufferMemoryUsage>
+        <textureMemoryUsage>9437344</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_plough</typeDesc>
+    <filename>$data/vehicles/tools/kuhn/kuhnVariMaster153.i3d</filename>
+
+    <size width="3" length="5" widthOffset="-0.3" lengthOffset="-2.2"/>
+    <speedLimit value="9" />
+    <powerConsumer neededPtoPower="0" forceNode="0>" maxForce="41" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel restLoad="0.7" repr="0>0|2|0|0|1|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/AW305_260_70R15_3.xml" isLeft="false" useReprDirection="true" initialCompression="30" suspTravel="0.05" spring="40" damper="50" rotationDamping="0.002" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+    <brakeForce>0.3</brakeForce>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="implement" topReferenceNode="0>0|1" lowerDistanceToGround="0.5" upperRotationOffset="12" upperDistanceToGround="1.3"/>
+    </inputAttacherJoints>
+
+    <workAreas>
+        <workArea startIndex="0>0|2|0|0|4|0" widthIndex="0>0|2|0|0|4|1" heightIndex="0>0|2|0|0|4|2" refNodeIndex="0" type="plough" />
+    </workAreas>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>0|2|0|0" threshold="1" />
+        <groundReferenceNode index="0>0|2|0|0|6|1" threshold="0.2" depthNode="0>0|2|0|0|6|1"/>
+        <groundReferenceNode index="0>0|2|0|0|6|3" threshold="0.2" depthNode="0>0|2|0|0|6|3"/>
+    </groundReferenceNodes>
+
+    <ploughTurnSound file="$data/sounds/ploughTurnSound.wav"    pitchOffset="0.95" volume="0.75" indoorVolumeFactor="0.95" />
+    <ploughSound file="$data/sounds/ploughSound.wav"            pitchOffset="0.85" volume="0.58" indoorVolumeFactor="0.65" />
+
+    <groundParticleAnimations>
+        <groundParticleAnimation>
+            <node index="0>0|2|0|0|6|0|0" materialType="SOIL" refNodeIndex="1"/>
+            <node index="0>0|2|0|0|6|2|0" materialType="SOIL" refNodeIndex="2"/>
+        </groundParticleAnimation>
+
+        <groundParticle>
+            <node index="0>0|2|0|0|6|0|1" particleType="SOIL_SMOKE" refNodeIndex="1" />
+            <node index="0>0|2|0|0|6|0|2" particleType="SOIL" refNodeIndex="1" />
+            <node index="0>0|2|0|0|6|0|3" particleType="SOIL_CHUNKS" refNodeIndex="1" worldSpace="false"/>
+            <node index="0>0|2|0|0|6|2|1" particleType="SOIL_SMOKE" refNodeIndex="2" />
+            <node index="0>0|2|0|0|6|2|2" particleType="SOIL" refNodeIndex="2" />
+            <node index="0>0|2|0|0|6|2|3" particleType="SOIL_CHUNKS" refNodeIndex="2" worldSpace="false"/>
+        </groundParticle>
+    </groundParticleAnimations>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>0|2|0|0|2|0" radius="0.2384" invertDirectionOnRotation="true" turnAnimLimit="0.05" turnAnimLimitSide="-1" refNodeIndex="0" />
+        <speedRotatingPart index="0>0|2|0|0|2|0" radius="0.2384" invertDirectionOnRotation="true" turnAnimLimit="0.05" turnAnimLimitSide="1"  refNodeIndex="0" />
+        <speedRotatingPart index="0>0|2|0|0|1|0|3" radius="0.35" invertDirectionOnRotation="true" turnAnimLimit="0.05" turnAnimLimitSide="1"  refNodeIndex="0" />
+        <speedRotatingPart index="0>0|2|0|0|1|0|3" radius="0.35" invertDirectionOnRotation="true" turnAnimLimit="0.05" turnAnimLimitSide="-1" refNodeIndex="0" />
+    </speedRotatingParts>
+
+    <movingTools>
+        <movingTool index="0>0|2" wheelIndices="1">
+            <dependentPart index="0>0|3" />
+        </movingTool>
+        <movingTool index="0>0|2|0|0|1|0|0" wheelIndices="1" />
+        <movingTool index="0>0|2|0|0|1|0" wheelIndices="1" >
+            <dependentPart index="0>0|2|0|0|1|1" />
+        </movingTool>
+
+        <movingTool index="0>0|2|0|0" wheelIndices="1">
+            <dependentPart index="0>0|2|2" />
+            <dependentPart index="0>0|2|3" />
+            <dependentPart index="0>0|2|4" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>0|3" referencePoint="0>0|2|1" referenceFrame="0>0|4" >
+            <translatingPart index="0>0|3|0" />
+        </movingPart>
+        <movingPart index="0>0|2|0|0|1|1" referencePoint="0>0|2|0|0|1|0|1" referenceFrame="0>0|2|0|0|1" >
+            <translatingPart index="0>0|2|0|0|1|1|0" />
+        </movingPart>
+
+        <movingPart index="0>0|2|2" localReferencePoint="0>0|2|2|0" referencePoint="0>0|2|0|0|0" referenceFrame="0>0|2|5" >
+            <dependentPart index="0>0|2|2|0" />
+        </movingPart>
+        <movingPart index="0>0|2|2|0" referencePoint="0>0|2|0|0|0" referenceFrame="0>0|2|0|0|0" scaleZ="true" />
+        <movingPart index="0>0|2|3" referencePoint="0>0|2|0|0|0" referenceFrame="0>0|2|0|0|0" >
+            <translatingPart index="0>0|2|3|0" />
+        </movingPart>
+        <movingPart index="0>0|2|4" referencePoint="0>0|2|0|0|0" referenceFrame="0>0|2|0|0|0" >
+            <translatingPart index="0>0|2|4|0" />
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <!-- move wheel down/up -->
+        <animation name="rotatePlough">
+            <part node="0>0|2|0|0|1|0"   startTime="0" endTime="0.4" startRot="0 0 0" endRot="-27.5 0 0" />
+            <part node="0>0|2|0|0|1|0|0" startTime="0" endTime="0.4" startRot="0 0 0" endRot="27.5 0 0" />
+            <part node="0>0|2|0|0" startTime="0" endTime="0.5" startRot="0 0 0" endRot="0 12.5 0" />
+
+            <!-- plough rot -->
+            <part node="0>0|2"     startTime="0.5" endTime="2.5" startRot="0 0 0" endRot="0 0 -90" />
+            <part node="0>0|2"     startTime="2.5" endTime="4.5" startRot="0 0 -90" endRot="0 0 -180" />
+
+            <part node="0>0|2|0|0|3" startTime="4" endTime="4" startRot="0 170.26799 0" endRot="0 -170.26799 180" />
+
+            <!-- wheel rot -->
+            <part node="0>0|2|0|0|1|0"   direction="1"  startTime="3.0" endTime="4.0" startRot="-27.5 0 0" endRot="91.5 0 0" />
+            <part node="0>0|2|0|0|1|0|0" direction="1"  startTime="3.0" endTime="4.0" startRot="27.5 0 0" endRot="91.5 0 0" />
+            <part node="0>0|2|0|0|1|0"   direction="-1" startTime="0.5" endTime="3.0" startRot="-27.5 0 0" endRot="91.5 0 0" />
+            <part node="0>0|2|0|0|1|0|0" direction="-1" startTime="0.5" endTime="3.0" startRot="27.5 0 0" endRot="91.5 0 0" />
+            <part node="0>0|2|0|0|1|0|2"                startTime="3.0" endTime="4.0" startRot="0 0 0"     endRot="32 0 0" />
+
+            <part node="0>0|2|0|0|1|3" direction="1"  startTime="2.0" endTime="3.0" startRot="7.35 0 0" endRot="27.9 0 0" />
+            <part node="0>0|2|0|0|1|3" direction="-1" startTime="0.5" endTime="1.5" startRot="7.35 0 0" endRot="27.9 0 0" />
+
+            <!-- ready -->
+            <part node="0>0|2|0|0|1|2" direction="1"  startTime="4.0" endTime="4.5" startRot="-27.9 0 0" endRot="-7.35 0 0" />
+            <part node="0>0|2|0|0|1|2" direction="-1" startTime="1.5" endTime="2.0" startRot="-27.9 0 0" endRot="-7.35 0 0" />
+
+            <part node="0>0|2|0|0"     startTime="4.5" endTime="5.0" startRot="0 12.5 0" endRot="0 0 0" />
+            <part node="0>0|2|0|0|1|0" startTime="4.5" endTime="5.0" startRot="91.5 0 0" endRot="64 0 0" />
+            <part node="0>0|2|0|0|1|0|0" startTime="4.5" endTime="5.0" startRot="91.5 0 0" endRot="117.5 0 0" />
+        </animation>
+
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|2|0|0|3|0" startTime="0" endTime="0.3" startRot="0 0 0" endRot="90 0 0" />
+            <part node="0>0|2|0|0|7|0" startTime="0" endTime="0.3" startTrans="0 0 0" endTrans="0 -0.5 0" />
+            <part node="0>0|2|0|0|7|1" startTime="0" endTime="0.3" startTrans="0 0 0" endTrans="0 0.5 0" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+    <rotationPart turnAnimationName="rotatePlough" />
+
+    <ai>
+        <areaMarkers leftIndex="0>0|2|0|0|5|0|0" rightIndex="0>0|2|0|0|5|0|1" backIndex="0>0|2|0|0|5|0|2" />
+    </ai>
+
+    <washable dirtDuration="30" washDuration="1" workMultiplier="20" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.6 -1.35" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+</vehicle>

@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="windrower">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>GA 9531</name>
+        <specs>
+            <workingWidth>9.3</workingWidth>
+            <neededPower>75</neededPower>
+        </specs>
+        <functions>
+            <function>$l10n_function_windrower</function>
+        </functions>
+        <image>$data/store/store_kuhnGA9531.png</image>
+        <price>28000</price>
+        <dailyUpkeep>40</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KUHN</brand>
+        <category>SWS_windrowers</category>
+        <vertexBufferMemoryUsage>1112744</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>161352</indexBufferMemoryUsage>
+        <textureMemoryUsage>9087864</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_windrower</typeDesc>
+    <filename>$data/vehicles/tools/kuhn/kuhnGA9531.i3d</filename>
+
+    <size width="3.5" length="7" />
+
+    <powerConsumer ptoRpm="450" neededPtoPower="40"/>
+    <speedLimit value="14" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel restLoad="0.8" repr="0>0|0" driveNode="0>0|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="true"  initialCompression="40" suspTravel="0.2" spring="10" damper="20" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="40" steeringAxleRotMin="-40" steeringNode="0>10|5|0" steeringNodeMinTransX="0.16" steeringNodeMaxTransX="-0.16" />
+                <wheel restLoad="0.8" repr="0>1|0" driveNode="0>1|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/AW305_300_80R15_3.xml" isLeft="false" initialCompression="40" suspTravel="0.2" spring="10" damper="20" hasTireTracks="true" hasParticles="true" steeringAxleScale="-0.7" steeringAxleRotMax="40" steeringAxleRotMin="-40" steeringNode="0>10|4" steeringNodeMinRotY="24" steeringNodeMaxRotY="-24" />
+                <wheel restLoad="0.1" repr="2>2" forcePointRatio="0.2" mass="0.01" radius="0.21" initialCompression="10" suspTravel="0.1" spring="10" damper="20" maxLongStiffness="0.01" maxLatStiffness="0.01" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="2>3" forcePointRatio="0.2" mass="0.01" radius="0.21" initialCompression="10" suspTravel="0.1" spring="10" damper="20" maxLongStiffness="0.01" maxLatStiffness="0.01" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="2>4" forcePointRatio="0.2" mass="0.01" radius="0.21" initialCompression="10" suspTravel="0.1" spring="10" damper="20" maxLongStiffness="0.01" maxLatStiffness="0.01" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="3>2" forcePointRatio="0.2" mass="0.01" radius="0.21" initialCompression="10" suspTravel="0.1" spring="10" damper="20" maxLongStiffness="0.01" maxLatStiffness="0.01" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="3>3" forcePointRatio="0.2" mass="0.01" radius="0.21" initialCompression="10" suspTravel="0.1" spring="10" damper="20" maxLongStiffness="0.01" maxLatStiffness="0.01" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="3>4" forcePointRatio="0.2" mass="0.01" radius="0.21" initialCompression="10" suspTravel="0.1" spring="10" damper="20" maxLongStiffness="0.01" maxLatStiffness="0.01" isSynchronized="false" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <axisColor>0.5860 0.0114 0.0094 1</axisColor>
+
+    <dynamicallyLoadedWheels>
+        <dynamicallyLoadedWheel linkNode="0>8|0|0|0|0|2|0|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="true"/>
+        <dynamicallyLoadedWheel linkNode="0>8|0|0|0|0|2|0|1" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>8|0|0|0|0|2|1|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="true"/>
+        <dynamicallyLoadedWheel linkNode="0>8|0|0|0|0|2|1|1" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>8|0|0|0|0|2|2|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>8|0|0|0|0|2|2|1" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="true"/>
+
+        <dynamicallyLoadedWheel linkNode="0>9|0|0|0|0|2|0|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>9|0|0|0|0|2|0|1" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="true"/>
+        <dynamicallyLoadedWheel linkNode="0>9|0|0|0|0|2|1|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>9|0|0|0|0|2|1|1" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="true"/>
+        <dynamicallyLoadedWheel linkNode="0>9|0|0|0|0|2|2|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="true"/>
+        <dynamicallyLoadedWheel linkNode="0>9|0|0|0|0|2|2|1" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" axisColor="0.294 0.294 0.294 1" isLeft="false"/>
+    </dynamicallyLoadedWheels>
+
+    <steeringAxleAngleScale startSpeed="5" endSpeed="30" backwards="true" />
+    <brakeForce>0.6</brakeForce>
+
+    <lights>
+        <low>
+            <light                       decoration="0>5|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>5|0|1" decoration="0>5|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>5|0|1" decoration="0>5|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft realLight="0>5|1|0|1" decoration="0>5|1|0|0" />
+        <turnLightRight realLight="0>5|1|1|1" decoration="0>5|1|1|0" />
+    </turnLights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint rootNode="1>" index="1>0|0" jointType="implement" lowerTransLimitScale="0 0 0" lowerDistanceToGround="0.66" upperDistanceToGround="0.66" ptoInputNode="0>3" isDefaultLowered="true" needsLowering="false" allowsLowering="false" />
+    </inputAttacherJoints>
+
+    <workAreas>
+        <workArea startIndex="0>8|0|0|0|0|4|0" widthIndex="0>8|0|0|0|0|4|1" heightIndex="0>8|0|0|0|0|4|2" refNodeIndex="0" type="windrower" dropAreaIndex="0" />
+        <workArea startIndex="0>9|0|0|0|0|4|0" widthIndex="0>9|0|0|0|0|4|1" heightIndex="0>9|0|0|0|0|4|2" refNodeIndex="1" type="windrower" dropAreaIndex="1" />
+        <workArea startIndex="0>11|0" widthIndex="0>11|1" heightIndex="0>11|2" type="windrowerDrop" />
+        <workArea startIndex="0>11|0" widthIndex="0>11|1" heightIndex="0>11|2" type="windrowerDrop" />
+    </workAreas>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="2>1" threshold="0.35" />
+        <groundReferenceNode index="3>1" threshold="0.35" />
+    </groundReferenceNodes>
+
+    <windrowerParticleSystems fillTypeCategories="windrow">
+        <emitterShape node="0>8|0|0|0|0|5" particleType="WINDROWER" workAreaIndex="0" />
+        <emitterShape node="0>9|0|0|0|0|5" particleType="WINDROWER" workAreaIndex="1" />
+    </windrowerParticleSystems>
+
+    <windrowerSound file="$data/sounds/tedder.wav"                pitchOffset="1.00" volume="0.70" indoorVolumeFactor="0.65"/>
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.80" volume="1.00" indoorVolumeFactor="0.45"/>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>8|0|0|0|0|0" type="windrower" rotSpeed="-350" rotAxis="2" />
+        <turnedOnRotationNode index="0>9|0|0|0|0|0" type="windrower" rotSpeed="350"  rotAxis="2" />
+    </turnedOnRotationNodes>
+
+    <windrowers>
+        <windrower index="0>8|0|0|0|0|0" moveUpRange="15 90" moveDownRange="180 265" dir="-1" spikeMaxRotZ="75" >
+            <spike index="0>8|0|0|0|0|0|0|0" />
+            <spike index="0>8|0|0|0|0|0|1|0" />
+            <spike index="0>8|0|0|0|0|0|2|0" />
+            <spike index="0>8|0|0|0|0|0|3|0" />
+            <spike index="0>8|0|0|0|0|0|4|0" />
+            <spike index="0>8|0|0|0|0|0|5|0" />
+            <spike index="0>8|0|0|0|0|0|6|0" />
+            <spike index="0>8|0|0|0|0|0|7|0" />
+            <spike index="0>8|0|0|0|0|0|8|0" />
+            <spike index="0>8|0|0|0|0|0|9|0" />
+            <spike index="0>8|0|0|0|0|0|10|0" />
+            <spike index="0>8|0|0|0|0|0|11|0" />
+            <spike index="0>8|0|0|0|0|0|12|0" />
+            <spike index="0>8|0|0|0|0|0|13|0" />
+            <spike index="0>8|0|0|0|0|0|14|0" />
+        </windrower>
+        <windrower index="0>9|0|0|0|0|0" moveUpRange="15 90" moveDownRange="180 265" dir="1" spikeMaxRotZ="75" >
+            <spike index="0>9|0|0|0|0|0|0|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|1|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|2|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|3|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|4|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|5|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|6|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|7|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|8|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|9|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|10|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|11|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|12|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|13|0" dir="-1" />
+            <spike index="0>9|0|0|0|0|0|14|0" dir="-1" />
+        </windrower>
+    </windrowers>
+
+    <movingTools>
+        <movingTool index="0>4|0">
+            <dependentPart index="0>10|5|0|0" />
+            <dependentPart index="0>10|5|0|1" />
+            <dependentPart index="0>10|4|0" />
+            <dependentPart index="0>10|4|1" />
+        </movingTool>
+        <movingTool index="0>6" playSound="true">
+            <componentJoint index="1" anchorActor="0" />
+        </movingTool>
+        <movingTool index="0>6|0" playSound="true">
+            <componentJoint index="1" anchorActor="0" />
+        </movingTool>
+        <movingTool index="0>7" playSound="true">
+            <componentJoint index="2" anchorActor="0" />
+        </movingTool>
+        <movingTool index="0>7|0" playSound="true">
+            <componentJoint index="2" anchorActor="0" />
+        </movingTool>
+
+        <movingTool index="0>8|0|0" playSound="true" >
+            <dependentPart index="0>8|0|0|1" />
+            <dependentPart index="0>8|1" />
+        </movingTool>
+        <movingTool index="0>9|0|0" playSound="true" >
+            <dependentPart index="0>9|0|0|1" />
+            <dependentPart index="0>9|1" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>8" referencePoint="2>0" referenceFrame="2>0" isActiveDirty="true" limitedAxis="3">
+            <dependentPart index="0>10|0" />
+            <dependentPart index="0>10|6" />
+        </movingPart>
+        <movingPart index="0>10|0" referencePoint="0>8|2" referenceFrame="0>8|2">
+            <translatingPart index="0>10|0|0" />
+        </movingPart>
+        <movingPart index="0>10|6" referencePoint="0>8|0|0|0|0|3" referenceFrame="0>8|0|0|0|0|3">
+            <translatingPart index="0>10|6|0" />
+        </movingPart>
+
+        <movingPart index="0>8|0|0|1" referencePoint="0>8|3" referenceFrame="0>8|3">
+            <translatingPart index="0>8|0|0|1|0" />
+        </movingPart>
+        <movingPart index="0>8|1" localReferencePoint="0>8|1|0" referencePoint="0>8|0|0|3" referenceFrame="0>8|4">
+            <dependentPart index="0>8|1|0" />
+        </movingPart>
+        <movingPart index="0>8|1|0" referencePoint="0>8|0|0|3" referenceFrame="0>8|0|0|3" />
+
+        <movingPart index="0>9" referencePoint="3>0" referenceFrame="3>0" isActiveDirty="true" limitedAxis="3">
+            <dependentPart index="0>10|1" />
+            <dependentPart index="0>10|7" />
+        </movingPart>
+        <movingPart index="0>10|1" referencePoint="0>9|2" referenceFrame="0>9|2">
+            <translatingPart index="0>10|1|0" />
+        </movingPart>
+        <movingPart index="0>10|7" referencePoint="0>9|0|0|0|0|3" referenceFrame="0>9|0|0|0|0|3">
+            <translatingPart index="0>10|7|0" />
+        </movingPart>
+
+        <movingPart index="0>9|0|0|1" referencePoint="0>9|3" referenceFrame="0>9|3">
+            <translatingPart index="0>9|0|0|1|0" />
+        </movingPart>
+        <movingPart index="0>9|1" localReferencePoint="0>9|1|0" referencePoint="0>9|0|0|3" referenceFrame="0>9|4">
+            <dependentPart index="0>9|1|0" />
+        </movingPart>
+        <movingPart index="0>9|1|0" referencePoint="0>9|0|0|3" referenceFrame="0>9|0|0|3" />
+
+        <movingPart index="0>10|5|0|0" referencePoint="0>10|4|2" referenceFrame="0>" isActiveDirty="true" scaleZ="true"/>
+        <movingPart index="0>10|5|0|1" referencePoint="1>0|1" referenceFrame="0>" isActiveDirty="true" scaleZ="true"/>
+        <movingPart index="0>10|4|0" referencePoint="0>0|0|1" referenceFrame="0>" isActiveDirty="true" scaleZ="true"/>
+        <movingPart index="0>10|4|1" referencePoint="0>1|0|1" referenceFrame="0>" isActiveDirty="true" scaleZ="true"/>
+    </movingParts>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>4|0" startTime="0" duration="0.3" startRot="110 0 0" endRot="0 0 0" />
+            <part node="0>4|1" startTime="0" duration="0.3" startTrans="0 0 -0.1" endTrans="0 -0.283 -0.1" />
+            <part componentJointIndex="0" startTime="0" duration="0.2" endRotLimit="0 0 0" />
+        </animation>
+
+        <animation name="folding">
+            <part componentJointIndex="1" startTime="0" endTime="1" endTransLimit="0 0 0" endRotLimit="0 0 0" />
+            <part componentJointIndex="2" startTime="0" endTime="1" endTransLimit="0 0 0" endRotLimit="0 0 0" />
+            <part node="0>6" startTime="0" endTime="1" startRot="0 0 0" endRot="0 0 15" />
+            <part node="0>7" startTime="0" endTime="1" startRot="0 0 0" endRot="0 0 -15" />
+
+            <part node="0>6" startTime="1" endTime="8" startRot="0 0 15" endRot="0 0 95" />
+            <part node="0>7" startTime="1" endTime="8" startRot="0 0 -15" endRot="0 0 -95" />
+
+            <part node="0>8|0|0" startTime="1" endTime="8.5" startTrans="0 0 2.219" endTrans="0 0 1.046" />
+            <part node="0>9|0|0" startTime="1" endTime="8.5" startTrans="0 0 2.219" endTrans="0 0 1.046" />
+            <part node="0>6|0"   startTime="1" endTime="8" startTrans="2.219 0 0" endTrans="1.046 0 0" />
+            <part node="0>7|0"   startTime="1" endTime="8" startTrans="-2.219 0 0" endTrans="-1.046 0 0" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.125" turnOnFoldMaxLimit="0.4" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="folding" speedScale="1.0" />
+    </foldingParts>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>8|0|0|0|0|2|0"  radius="0.196" foldMinLimit="0" foldMaxLimit="0.1"/>
+        <speedRotatingPart index="0>8|0|0|0|0|2|1"  radius="0.196" foldMinLimit="0" foldMaxLimit="0.1"/>
+        <speedRotatingPart index="0>8|0|0|0|0|2|2"  radius="0.196" foldMinLimit="0" foldMaxLimit="0.1"/>
+        <speedRotatingPart index="0>9|0|0|0|0|2|0"  radius="0.196" foldMinLimit="0" foldMaxLimit="0.1"/>
+        <speedRotatingPart index="0>9|0|0|0|0|2|1"  radius="0.196" foldMinLimit="0" foldMaxLimit="0.1"/>
+        <speedRotatingPart index="0>9|0|0|0|0|2|2"  radius="0.196" foldMinLimit="0" foldMaxLimit="0.1"/>
+    </speedRotatingParts>
+
+    <ai>
+        <needsLowering value="true" />
+        <areaMarkers leftIndex="0>12|0|0" rightIndex="0>12|0|1" backIndex="0>12|0|2" />
+        <sizeMarkers leftIndex="0>12|1|0" rightIndex="0>12|1|1" backIndex="0>12|1|2" />
+        <trafficCollisionTrigger index="0>12|2" />
+        <forceTurnNoBackward value="true" />
+        <toolReverserDirectionNode index="0>12|1|2" />
+        <turningRadiusLimiation rotationJointNode="0>2" wheelIndices="0 1" />
+    </ai>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="4">
+        <component1 centerOfMass="0 0.6 -1" solverIterationCount="10" />
+        <component2 centerOfMass="0 0 0" solverIterationCount="10" />
+        <component3 centerOfMass="0 -0.2 -0.2" solverIterationCount="10" />
+        <component4 centerOfMass="0 -0.2 -0.2" solverIterationCount="10" />
+        <joint component1="0" component2="1" index="0>2" rotLimit="0 70 0" transLimit="0 0 0" />
+        <joint component1="0" component2="2" index="0>6|0|0" rotLimit="0 0 9"  transLimit="0 0.4 0" />
+        <joint component1="0" component2="3" index="0>7|0|0" rotLimit="0 0 9"  transLimit="0 0.4 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

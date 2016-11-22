@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="implement">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>650</name>
+        <functions>
+            <function>$l10n_function_weight</function>
+        </functions>
+        <rotation>0</rotation>
+        <image>$data/store/store_agco650.png</image>
+        <price>550</price>
+        <dailyUpkeep>0</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <brand>AGCO</brand>
+        <category>SWS_weights</category>
+        <fieldJob sizeCategory="1" typeCategory="weight" />
+        <vertexBufferMemoryUsage>31648</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>5220</indexBufferMemoryUsage>
+        <textureMemoryUsage>3495384</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_weight</typeDesc>
+    <filename>$data/vehicles/tools/agco/agco650.i3d</filename>
+
+    <size width="1.5" length="1" />
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="implement" topReferenceNode="0>1" lowerRotLimitScale="0 0 0" upperRotationOffset="3" lowerRotationOffset="0" lowerDistanceToGround="0" upperDistanceToGround="1.5" needsLowering="false"/>
+    </inputAttacherJoints>
+
+    <attacherJoints>
+        <attacherJoint index="0>2" jointType="trailer" lowerRotLimit="10 80 80" upperRotRotationOffset="0" allowsJointLimitMovement="false" >
+            <schema position="0.5 0" rotation="0" invertX="false" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <attachSound file="$data/sounds/header_attach.wav" pitchOffset="1.50" volume="1.00" indoorVolumeFactor="0.35" indoorLowpassGain="0.75" />
+
+    <baseColorConfigurations useDefaultColors="true" defaultColorIndex="6" price="100" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <colorNode node="0>3" />
+    </baseColorConfigurations>
+
+    <washable dirtDuration="50" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.1 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>

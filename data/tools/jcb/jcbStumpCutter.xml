@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="stumpCutter">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>$l10n_shopItem_skidSteerStumpCutter</name>
+        <specs>
+            <combination>325T</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_stumpCutter</function>
+        </functions>
+        <image>$data/store/store_jcbStumpCutter.png</image>
+        <price>4500</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>JCB</brand>
+        <category>SWS_skidSteers</category>
+        <vertexBufferMemoryUsage>107928</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>14904</indexBufferMemoryUsage>
+        <textureMemoryUsage>8913040</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_stumpCutter</typeDesc>
+    <filename>$data/vehicles/tools/jcb/jcbStumpCutter.i3d</filename>
+
+    <size width="2.5" length="5" lengthOffset="2.5"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="skidSteer" />
+    </inputAttacherJoints>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.8" volume="0.7" />
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>1|0|0|0" type="stumpCutter" rotSpeed="750" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1"/>
+    </turnedOnRotationNodes>
+
+    <movingTools>
+        <!-- arm y rot -->
+        <movingTool index="0>1|0" playSound="true" >
+            <controls axis="AXIS_FRONTLOADER_TOOL2" invertAxis="true" mouseSpeedFactor="0.3" iconFilename="$dataS2/menu/moveControls/tool_openClose.png" />
+            <rotation rotSpeed="15" rotAcceleration="100" rotMax="40" rotMin="0" rotationAxis="2"/>
+            <dependentPart index="0>1|1" />
+            <dependentPart index="0>1|2|0" />
+        </movingTool>
+        <!-- arm x rot -->
+        <movingTool index="0>1|0|0" playSound="true" >
+            <controls axis="AXIS_FRONTLOADER_ARM2" invertAxis="false" mouseSpeedFactor="0.3" iconFilename="$dataS2/menu/moveControls/tool_openClose.png" />
+            <rotation rotSpeed="20" rotAcceleration="170" rotMax="30" rotMin="-15" rotationAxis="1"/>
+            <dependentPart index="0>1|0|1" />
+            <dependentPart index="0>1|2|0|0" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- hydraulic y -->
+        <movingPart index="0>1|1" referencePoint="0>1|0|2" referenceFrame="0>1|0|2" >
+            <translatingPart index="0>1|1|0" />
+        </movingPart>
+        <!-- hydraulic x -->
+        <movingPart index="0>1|0|1" referencePoint="0>1|0|0|2" referenceFrame="0>1|0|0|2" >
+            <translatingPart index="0>1|0|1|0" />
+            <dependentPart index="0>1|2|0|1" />
+        </movingPart>
+
+        <movingPart index="0>1|0|0|1" referenceFrame="0>1|0|0|4" isActiveDirty="true" alignToWorldY="true" />
+        <movingPart index="0>1|2|0"   referenceFrame="0>1|0" />
+        <movingPart index="0>1|2|0|0" referenceFrame="0>1|0|0" />
+        <movingPart index="0>1|2|0|1" referenceFrame="0>1|0|1" />
+    </movingParts>
+
+    <stumpCutter cutNode="0>1|0|0|1|0" cutSizeY="1.4" cutSizeZ="1.7">
+        <emitterShape node="0>1|0|0|3|0" particleType="CRUSHER_WOOD" emitCountScale="10"/>
+        <emitterShape node="0>1|0|0|3|1" particleType="CRUSHER_DUST" emitCountScale="2"/>
+    </stumpCutter>
+
+    <stumpCutterStartSound file="$data/vehicles/tools/fsi/fsiST65T_start.wav" volume="0.6" indoorVolumeFactor="0.45" pitchOffset="1" />
+    <stumpCutterIdleSound  file="$data/vehicles/tools/fsi/fsiST65T_idle.wav"  volume="0.6" indoorVolumeFactor="0.45" pitchOffset="1" />
+    <stumpCutterWorkSound  file="$data/vehicles/tools/fsi/fsiST65T_work.wav"  volume="0.6" indoorVolumeFactor="0.45" pitchOffset="1" />
+    <stumpCutterStopSound  file="$data/vehicles/tools/fsi/fsiST65T_stop.wav"  volume="0.6" indoorVolumeFactor="0.45" pitchOffset="1" />
+
+    <support animationName="moveSupport" />
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="10" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

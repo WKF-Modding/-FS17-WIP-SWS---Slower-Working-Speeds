@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="attachableFrontloader">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>FZ 30</name>
+        <specs>
+            <combination>Steyr Multi 4115</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_frontloader</function>
+        </functions>
+        <image>$data/store/store_stollFrontLoaderFZ.png</image>
+        <price>5400</price>
+        <dailyUpkeep>20</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>STOLL</brand>
+        <category>SWS_frontLoaders</category>
+        <vertexBufferMemoryUsage>286620</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>46170</indexBufferMemoryUsage>
+        <textureMemoryUsage>5767336</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_frontloader</typeDesc>
+    <filename>$data/vehicles/tools/stoll/stollFrontLoaderFZ.i3d</filename>
+
+    <size width="3" length="5" />
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" hardAttach="true" jointType="attachableFrontloader" />
+    </inputAttacherJoints>
+
+    <attacherJoints>
+        <attacherJoint jointType="frontloader" index="0>3|0|0|0" indexVisual="0>1|1|0|2" allowsJointLimitMovement="false" allowsLowering="false" rotLimitSpring="7500 7500 7500" rotLimitDamping="5 5 5" transLimitSpring="7500 7500 7500" transLimitDamping="5 5 5" >
+            <schema position="0.5 0" rotation="0" invertX="false" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.80" volume="0.65" indoorVolumeFactor="1.00" indoorLowpassGain="0.75" />
+    <attachSound file="$data/sounds/attach.wav"                   pitchOffset="0.65" volume="0.50" indoorVolumeFactor="0.40" indoorLowpassGain="0.70" />
+    <movingTools>
+        <!-- physics -->
+        <movingTool index="0>3" delayedIndex="0>1">
+            <controls axis="AXIS_FRONTLOADER_ARM" invertAxis="true" mouseSpeedFactor="1.0" iconFilename="$dataS2/menu/moveControls/frontloader_arm.png" />
+            <attacherJoint jointIndices="0" />
+            <rotation rotSpeed="25" rotAcceleration="200" rotMax="0" rotMin="-100" startRot="-5" detachingRotMinLimit="-10" />
+            <dependentPart index="0>3|0" />
+            <dependentMovingTool index="0>3|0|0" minRotLimits="-55 -65" maxRotLimits="100 50" />
+        </movingTool>
+        <movingTool index="0>3|0|0" delayedIndex="0>1|1|0">
+            <controls axis="AXIS_FRONTLOADER_TOOL" invertAxis="true" mouseSpeedFactor="0.6" iconFilename="$dataS2/menu/moveControls/frontloader_tool.png" />
+            <attacherJoint jointIndices="0" />
+            <rotation rotSpeed="50" rotAcceleration="300" rotMax="100" rotMin="-65" startRot="-65" syncMaxRotLimits="true" />
+        </movingTool>
+
+        <movingTool index="0>1">
+            <dependentPart index="0>1|0" />
+            <dependentPart index="0>1|1" />
+        </movingTool>
+
+        <movingTool index="0>1|1|0">
+            <dependentPart index="0>1|2" />
+        </movingTool>
+
+        <movingTool index="0>1|4|0" >
+            <dependentPart index="0>1|4|1|0" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- main cylinder -->
+        <movingPart index="0>1|0" referencePoint="0>0|1" referenceFrame="0>1" playSound="true">
+            <translatingPart index="0>1|0|0" />
+            <dependentPart index="0>1|0|1" />
+            <dependentPart index="0>1|3" />
+        </movingPart>
+        <movingPart index="0>1|0|1" referencePoint="0>1|5" referenceFrame="0>1|5" scaleZ="true" />
+
+        <movingPart index="0>1|3" localReferencePoint="0>1|3|0" referencePoint="0>0|2" referenceFrame="0>1|8" >
+            <dependentPart index="0>1|3|0" />
+            <dependentPart index="0>1|3|1" />
+        </movingPart>
+        <movingPart index="0>1|3|0" referencePoint="0>0|2" referenceFrame="0>1" />
+
+        <movingPart index="0>1|2" localReferencePoint="0>1|2|0" referencePoint="0>1|1|0|0" referenceFrame="0>1|1|0|1" >
+            <dependentPart index="0>1|2|0" />
+            <dependentPart index="0>1|3|1" />
+        </movingPart>
+        <movingPart index="0>1|2|0" referencePoint="0>1|1|0|0" referenceFrame="0>1|2|2" />
+
+        <!-- tool cylinder -->
+        <movingPart index="0>1|3|1" referencePoint="0>1|2|1" referenceFrame="0>1|8" playSound="true">
+            <translatingPart index="0>1|3|1|0" />
+            <dependentPart index="0>1|3|2" />
+            <dependentPart index="0>1|10|0" />
+        </movingPart>
+        <!-- angle display -->
+        <movingPart index="0>1|3|2" referencePoint="0>1|2|3" referenceFrame="0>1|12">
+            <translatingPart index="0>1|3|2|0" />
+        </movingPart>
+
+
+        <movingPart index="0>3|0" referenceFrame="0>2">
+            <attacherJoint jointIndices="0" />
+        </movingPart>
+        <movingPart index="0>1|1" referenceFrame="0>0">
+            <attacherJoint jointIndices="0" />
+            <dependentPart index="0>1|2" />
+        </movingPart>
+
+        <!-- joints -->
+        <movingPart index="0>1|10|0" referencePoint="0>1|3|1|2" referenceFrame="0>1|3|1|1" moveToReferenceFrame="true" />
+        <!-- support -->
+        <movingPart index="0>1|4|1|0" referencePoint="0>1|4|0|0" referenceFrame="0>1|4|2" scaleZ="true" />
+    </movingParts>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="0>3|1"   startTime="0" endTime="1" startRot="70 0 0" endRot="0 0 0" />
+            <part node="0>1|4|0" startTime="0" endTime="1" startRot="0 0 0"  endRot="-70 0 0" />
+            <part node="0>1|4|1" startTime="0" endTime="1" startRot="0 0 0"  endRot="-88 0 0" />
+        </animation>
+    </animations>
+    <support animationName="moveSupport" />
+
+    <baseColorConfigurations useDefaultColors="true" price="200" defaultColorIndex="8" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <colorNode node="0>1" />
+    </baseColorConfigurations>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.2 0.9" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="mower_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Splendimo 900 MC</name>
+        <specs>
+            <neededPower>170</neededPower>
+            <workingWidth>9.0</workingWidth>
+            <combination>Splendimo 320 FC</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_mower</function>
+        </functions>
+        <image>$data/store/store_lelySplendimo900MC.png</image>
+        <price>49000</price>
+        <dailyUpkeep>70</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>LELY</brand>
+        <category>SWS_mowers</category>
+        <vertexBufferMemoryUsage>1978144</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>296112</indexBufferMemoryUsage>
+        <textureMemoryUsage>10485968</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_mower</typeDesc>
+    <filename>$data/vehicles/tools/lely/lelySplendimo900MC.i3d</filename>
+
+    <size width="3.5" length="2.5" />
+    <powerConsumer ptoRpm="540" neededPtoPower="70"/>
+    <speedLimit value="16" />
+
+    <lights>
+        <low>
+            <light decoration="0>3|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light decoration="0>3|0|0" lightTypes="0 3" />
+            <light realLight="0>3|0|1" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>3|0|1" decoration="0>3|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>3|1|0|1" decoration="0>3|1|0|0" />
+        <turnLightRight realLight="0>3|1|1|1" decoration="0>3|1|1|0" />
+    </turnLights>
+
+    <workAreas>
+        <workArea startIndex="0>7|0|0|3|0|0" widthIndex="0>7|0|0|3|0|1" heightIndex="0>7|0|0|3|0|2" dropWindrow="true" dropArea="0" refNodeIndex="0" type="mower" disableBackwards="false" />
+        <workArea startIndex="0>8|0|0|3|0|0" widthIndex="0>8|0|0|3|0|1" heightIndex="0>8|0|0|3|0|2" dropWindrow="true" dropArea="1" refNodeIndex="1" type="mower" disableBackwards="false" />
+        <workArea startIndex="0>7|0|0|3|1|0" widthIndex="0>7|0|0|3|1|1" heightIndex="0>7|0|0|3|1|2" type="mowerDrop" disableBackwards="false" />
+        <workArea startIndex="0>8|0|0|3|1|0" widthIndex="0>8|0|0|3|1|1" heightIndex="0>8|0|0|3|1|2" type="mowerDrop" disableBackwards="false" />
+    </workAreas>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>7|0|0|3|2" threshold="0.4" />
+        <groundReferenceNode index="0>8|0|0|3|2" threshold="0.4" />
+    </groundReferenceNodes>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="implement" topReferenceNode="0>1" lowerDistanceToGround="0.9" upperDistanceToGround="0.9" upperRotationOffset="1" lowerRotLimitScale="0 0 0" ptoInputNode="0>4|0" />
+    </inputAttacherJoints>
+
+     <mowerStartSound file="$data/sounds/mower_start.wav"                   pitchOffset="1.00" volume="0.95" indoorVolumeFactor="0.50"  />
+     <mowerSound file="$data/sounds/mower_work.wav"                         pitchOffset="1.20" volume="1.00" indoorVolumeFactor="0.50"  cuttingPitchOffset="1.05" />
+     <mowerStopSound file="$data/sounds/mower_stop.wav"                     pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.50"/>
+     <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="0.76" volume="1.10" indoorVolumeFactor="0.50" />
+
+
+    <turnedOnRotationNodes>
+        <!-- cutters -->
+        <turnedOnRotationNode index="0>7|0|0|0|0" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>7|0|0|0|1" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>7|0|0|0|2" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>7|0|0|0|3" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>7|0|0|0|4" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>7|0|0|0|5" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>7|0|0|0|6" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>7|0|0|0|7" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>8|0|0|0|0" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>8|0|0|0|1" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>8|0|0|0|2" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>8|0|0|0|3" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>8|0|0|0|4" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>8|0|0|0|5" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>8|0|0|0|6" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>8|0|0|0|7" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <!-- drum -->
+        <turnedOnRotationNode index="0>7|0|0|0|8" type="mower" rotSpeed="-2000"  rotAxis="1" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>8|0|0|0|8" type="mower" rotSpeed="-2000"  rotAxis="1" turnOnFadeTime="3" turnOffFadeTime="3"/>
+    </turnedOnRotationNodes>
+
+    <movingTools>
+        <movingTool index="0>5|0" playSound="true">
+            <componentJoint index="0"/>
+        </movingTool>
+        <movingTool index="0>6|0" playSound="true">
+            <componentJoint index="1"/>
+        </movingTool>
+    </movingTools>
+
+    <movingParts isActiveDirtyTimeOffset="3">
+        <movingPart index="0>7|0" referencePoint="1>0" referenceFrame="1>0" isActiveDirty="true" limitedAxis="1" >
+            <dependentPart index="0>7|0|0" />
+            <dependentPart index="0>9" />
+            <dependentPart index="0>4|1" />
+        </movingPart>
+        <movingPart index="0>7|0|0" referencePoint="1>1" referenceFrame="1>1" limitedAxis="1" />
+
+        <movingPart index="0>9" referencePoint="0>7|0|1" referenceFrame="0>" >
+            <translatingPart index="0>9|0" />
+        </movingPart>
+
+        <movingPart index="0>4|1" referencePoint="0>7|0|0|1" referenceFrame="0>7|0|0|1" >
+            <translatingPart index="0>4|1|0" />
+        </movingPart>
+
+        <movingPart index="0>8|0" referencePoint="2>0" referenceFrame="2>0" isActiveDirty="true" >
+            <dependentPart index="0>8|0|0" />
+            <dependentPart index="0>10" />
+            <dependentPart index="0>4|2" />
+        </movingPart>
+        <movingPart index="0>8|0|0" referencePoint="2>1" referenceFrame="2>1" />
+        <movingPart index="0>10" referencePoint="0>8|0|1" referenceFrame="0>" >
+            <translatingPart index="0>10|0" />
+        </movingPart>
+        <movingPart index="0>4|2" referencePoint="0>8|0|0|1" referenceFrame="0>8|0|0|1" >
+            <translatingPart index="0>4|2|0" />
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="0>2|0" startTime="0" endTime="0.5" startTrans="0 0.722 0.038" endTrans="0 0.483 0.038" />
+            <part node="0>2|1" startTime="0" endTime="0.5" startTrans="0 0.597 0.014" endTrans="0 0.349 0.014" />
+        </animation>
+
+        <animation name="foldingLeft">
+            <part componentJointIndex="0" startTime="0" endTime="1" startTransLimit="0 0.6 0" endTransLimit="0 0 0" />
+            <part componentJointIndex="0" startTime="0" endTime="1" startRotLimit="0 0 10" endRotLimit="0 0 0" />
+            <part node="0>5"              startTime="0" endTime="8.0" startRot="0 0 5.637" endRot="0 0 110" />
+            <part node="0>5|0"            startTime="0" endTime="8.0" startRot="0 0 -5.637" endRot="0 0 -11" />
+        </animation>
+        <animation name="foldingRight">
+            <part componentJointIndex="1" startTime="0" endTime="1" startTransLimit="0 0.6 0" endTransLimit="0 0 0" />
+            <part componentJointIndex="1" startTime="0" endTime="1" startRotLimit="0 0 10" endRotLimit="0 0 0" />
+            <part node="0>6"              startTime="0" endTime="8.0" startRot="0 0 -5.637" endRot="0 0 -110" />
+            <part node="0>6|0"            startTime="0" endTime="8.0" startRot="0 0 5.637" endRot="0 0 11" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.125" turnOnFoldMaxLimit="0.13" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="foldingLeft" speedScale="1.3" />
+        <foldingPart animationName="foldingRight" speedScale="1.3" />
+    </foldingParts>
+
+    <mowerEffects>
+        <mowerEffect mowerCutArea="0">
+            <effectNode effectNode="0>7|0|0|2|0" materialType="mower"   materialTypeId="1" delay="0" />
+        </mowerEffect>
+        <mowerEffect mowerCutArea="1">
+            <effectNode effectNode="0>8|0|0|2|0" materialType="mower"   materialTypeId="1" delay="0" />
+        </mowerEffect>
+    </mowerEffects>
+
+    <ai>
+        <needsLowering value="true" />
+        <areaMarkers leftIndex="0>11|0|0" rightIndex="0>11|0|1" backIndex="0>11|0|2" />
+        <sizeMarkers leftIndex="0>11|1|0" rightIndex="0>11|1|1" backIndex="0>11|1|2" />
+        <trafficCollisionTrigger index="0>11|2" />
+    </ai>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="3">
+        <component1 centerOfMass="0 1.2 0" solverIterationCount="10" />
+        <component2 centerOfMass="0 0 0" solverIterationCount="10" />
+        <component3 centerOfMass="0 0 0" solverIterationCount="10" />
+        <joint component1="0" component2="1" index="0>5|0" rotLimit="0 0 0" transLimit="0 0 0" />
+        <joint component1="0" component2="2" index="0>6|0" rotLimit="0 0 0" transLimit="0 0 0" />
+        <collisionPair component1="1" component2="2" enabled="false" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

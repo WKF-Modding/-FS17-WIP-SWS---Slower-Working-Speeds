@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="shovel">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>$l10n_shopItem_frontloaderShovel</name>
+        <specs>
+            <combination>FZ 30 / FZ 60</combination>
+        </specs>
+        <image>$data/store/store_stollToolShovel.png</image>
+        <price>1400</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>STOLL</brand>
+        <category>SWS_frontLoaders</category>
+        <vertexBufferMemoryUsage>58704</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>12372</indexBufferMemoryUsage>
+        <textureMemoryUsage>14155944</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_frontloaderTool</typeDesc>
+    <filename>$data/vehicles/tools/stoll/stollToolShovel.i3d</filename>
+
+    <size width="2.5" length="2"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="frontloader" />
+    </inputAttacherJoints>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="bulk windrow" capacity="1860" />
+    </fillUnits>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>1|0|0" allSidePlanes="false" maxAllowedHeapAngle="60" />
+        </volumes>
+        <dischargeInfos>
+            <dischargeInfo>
+                <node index="0>1|0|1" width="1.2" length="0.2" />
+            </dischargeInfo>
+        </dischargeInfos>
+        <loadInfos>
+            <loadInfo>
+                <node index="0>1|0|2" width="1.1" length="0.1" />
+            </loadInfo>
+        </loadInfos>
+        <unloadInfos>
+            <unloadInfo>
+                <node index="0>1|0|3" width="1.1" length="0.1" />
+            </unloadInfo>
+        </unloadInfos>
+    </fillVolumes>
+
+    <shovelTipTrigger index="0>2" />
+
+    <shovel tipReferenceNode="0>1|1" emptyStartAngle="105" emptyFullAngle="140" emptySpeed="1400" pickUpNode="0>1|4" pickUpWidth="1.2" pickUpLength="0.2" pickUpYOffset="-0.05"/>
+
+    <shovelEmptyEffect rotationNode="0>1|3" >
+        <effectNode effectNode="0>1|3|0" materialType="unloading" materialTypeId="3" fadeTime="0.5" />
+        <effectNode effectNode="0>1|3|1" materialType="smoke"     materialTypeId="1" fadeTime="0.5" />
+    </shovelEmptyEffect>
+    <emptyParticleSystems>
+        <emitterShape node="0>1|2" />
+    </emptyParticleSystems>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <baseColorConfigurations useDefaultColors="true" price="100" defaultColorIndex="8" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <colorNode node="0>" recursive="true" />
+    </baseColorConfigurations>
+
+    <components count="1">
+        <component1 centerOfMass="0 0.08 -0.03" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

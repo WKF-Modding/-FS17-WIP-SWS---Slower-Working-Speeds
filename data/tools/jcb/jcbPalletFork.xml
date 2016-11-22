@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dynamicMountAttacherImplement">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>$l10n_shopItem_skidSteerPalletFork</name>
+        <specs>
+            <combination>325T</combination>
+        </specs>
+        <image>$data/store/store_jcbPalletFork.png</image>
+        <price>700</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>JCB</brand>
+        <category>SWS_skidSteers</category>
+        <vertexBufferMemoryUsage>45552</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>6348</indexBufferMemoryUsage>
+        <textureMemoryUsage>9610752</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_skidSteerTool</typeDesc>
+    <filename>$data/vehicles/tools/jcb/jcbPalletFork.i3d</filename>
+
+    <size width="2" length="2"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="skidSteer" />
+    </inputAttacherJoints>
+
+    <dynamicMountAttacher index="0>">
+        <mountCollisionMask index="0>2" collisionMask="134225920" />
+        <mountCollisionMask index="0>3" collisionMask="134225920" />
+    </dynamicMountAttacher>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0 -0.4" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>>
+
+</vehicle>

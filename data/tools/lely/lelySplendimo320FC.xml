@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="mower_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Splendimo 320 FC</name>
+        <specs>
+            <neededPower>90</neededPower>
+            <workingWidth>3.2</workingWidth>
+            <combination>Splendimo 900 MC</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_mower</function>
+        </functions>
+        <image>$data/store/store_lelySplendimo320FC.png</image>
+        <price>12000</price>
+        <dailyUpkeep>20</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>LELY</brand>
+        <category>SWS_mowers</category>
+        <vertexBufferMemoryUsage>1204680</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>188772</indexBufferMemoryUsage>
+        <textureMemoryUsage>10485904</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_mower</typeDesc>
+    <filename>$data/vehicles/tools/lely/lelySplendimo320FC.i3d</filename>
+
+    <size width="4.5" length="2.5" />
+    <powerConsumer ptoRpm="540" neededPtoPower="35"/>
+    <speedLimit value="16" />
+
+    <workAreas>
+        <workArea startIndex="0>1|0|0" widthIndex="0>1|0|1" heightIndex="0>1|0|2" dropWindrow="true" dropArea="0" refNodeIndex="0" type="mower" disableBackwards="false" />
+        <workArea startIndex="0>1|1|0" widthIndex="0>1|1|1" heightIndex="0>1|1|2" type="mowerDrop" disableBackwards="false" />
+    </workAreas>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>0|3|0|3" threshold="0.5" />
+    </groundReferenceNodes>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|0" jointType="implement" topReferenceNode="0>0|1" lowerDistanceToGround="0.7" upperDistanceToGround="0.7" upperRotationOffset="6" lowerRotLimitScale="0 0 0" ptoInputNode="0>0|3|0|4" />
+    </inputAttacherJoints>
+
+     <mowerStartSound file="$data/sounds/mower_start2.wav"         pitchOffset="1.10" volume="0.90" indoorVolumeFactor="0.40"  />
+     <mowerSound file="$data/sounds/mower_work.wav"                pitchOffset="1.34" volume="0.90" indoorVolumeFactor="0.40"  cuttingPitchOffset="1.20" />
+     <mowerStopSound file="$data/sounds/mower_stop.wav"            pitchOffset="1.15" volume="0.85" indoorVolumeFactor="0.40"/>
+     <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.80" volume="1.00" indoorVolumeFactor="0.45" />
+
+    <turnedOnRotationNodes>
+        <!-- cutters -->
+        <turnedOnRotationNode index="0>0|3|0|0|0" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>0|3|0|0|1" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>0|3|0|0|2" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>0|3|0|0|3" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>0|3|0|0|4" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>0|3|0|0|5" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>0|3|0|0|6" type="mower" rotSpeed="-3000" rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <turnedOnRotationNode index="0>0|3|0|0|7" type="mower" rotSpeed="3000"  rotAxis="2" turnOnFadeTime="3" turnOffFadeTime="3"/>
+        <!-- drum -->
+        <turnedOnRotationNode index="0>0|3|0|0|8" type="mower" rotSpeed="-2000"  rotAxis="1" turnOnFadeTime="3" turnOffFadeTime="3"/>
+    </turnedOnRotationNodes>
+
+    <foldingParts startMoveDirection="1" turnOnFoldMaxLimit="0.1" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="folding" speedScale="1" />
+    </foldingParts>
+
+    <movingTools>
+        <movingTool index="0>2|0" playSound="true">
+            <componentJoint index="0" />
+            <dependentPart index="0>0|2" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts isActiveDirtyTimeOffset="3">
+        <movingPart index="0>0|2" referencePoint="1>0" referenceFrame="1>0" isActiveDirty="true">
+            <dependentPart index="0>0|3" />
+        </movingPart>
+
+        <movingPart index="0>0|3" referencePoint="0>0|2|0" referenceFrame="0>" localReferencePoint="0>0|3|0" >
+            <dependentPart index="0>0|3|0" />
+        </movingPart>
+        <movingPart index="0>0|3|0" referencePoint="0>0|2|0" referenceFrame="0>" >
+            <dependentPart index="0>0|5" />
+            <dependentPart index="0>0|6" />
+           <!--  <dependentPart index="0>0|7" /> -->
+        </movingPart>
+
+        <movingPart index="0>0|5" referencePoint="0>0|3|0|1" referenceFrame="0>" >
+            <dependentPart index="0>0|5|0" />
+            <translatingPart index="0>0|5|1" />
+        </movingPart>
+        <movingPart index="0>0|5|0" referencePoint="0>0|3|0|1" referenceFrame="0>" scaleZ="true" />
+
+        <movingPart index="0>0|6" referencePoint="0>0|3|0|2" referenceFrame="0>" >
+            <translatingPart index="0>0|6|0" />
+        </movingPart>
+
+        <!-- <movingPart index="0>0|7" referencePoint="0>0|3|0|5" referenceFrame="0>" scaleZ="true" /> -->
+    </movingParts>
+
+    <animations>
+        <animation name="lowerAnimation">
+            <!--part node="0>0|2" startTime="0" endTime="1" startRot="35 0 0" endRot="0 0 0" /-->
+            <part componentJointIndex="0" startTime="0" endTime="1" startTransLimit="0 0 0" endTransLimit="0 0.7 0" />
+            <part node="0>2|0" startTime="0" endTime="1" startTrans="0 0.4 0" endTrans="0 0 0" />
+        </animation>
+
+        <animation name="moveSupport">
+            <!--part node="0>2" startTime="0" endTime="0.5" startTrans="-0.003 1.184 0.227" endTrans="-0.003 0.443 0.227" /-->
+            <part componentJointIndex="0" direction="1"  startTime="0" endTime="1" endTransLimit="0 0 0" />
+            <part componentJointIndex="0" direction="-1" startTime="0" endTime="1" startTransLimit="0 0 0" />
+
+            <part direction="1" node="0>2|0"  startTime="0" endTime="1" endTrans="0 0 0" />
+            <part direction="-1" node="0>2|0" startTime="0" endTime="1" startTrans="0 0.4 0" />
+        </animation>
+
+        <animation name="folding">
+            <part node="0>0|3|0|8|0" startTime="0" endTime="0.9" startRot="0 0 0" endRot="0 0 90"/>
+            <part node="0>0|3|0|8|1" startTime="0.1" endTime="1" startRot="0 0 0" endRot="0 0 -90"/>
+
+            <part node="0>0|3|0|8|1|1"      startTime="0.1" endTime="1" startTrans="-0.494 -0.53 -0.208"   endTrans="-0.09 -0.219 -0.235" />
+            <part node="0>0|3|0|8|1|1"      startTime="0.1" endTime="1" startRot="0 0 0"                   endRot="-5 0 17" />
+
+            <part node="0>0|3|0|8|0|1"      startTime="0" endTime="0.9" startTrans="0.327 -0.53 -0.276"   endTrans="-0.034 -0.188 -0.306" />
+            <part node="0>0|3|0|8|0|1"      startTime="0" endTime="0.9" startRot="0 0 0"                   endRot="-5 0 -17" />
+        </animation>
+    </animations>
+
+    <lowerAnimation name="lowerAnimation" speed="1" directionOnDetach="1" />
+    <support animationName="moveSupport" />
+
+    <mowerEffects>
+        <mowerEffect mowerCutArea="0">
+            <effectNode effectNode="0>0|3|0|7|0" materialType="mower"   materialTypeId="1" delay="0" />
+        </mowerEffect>
+    </mowerEffects>
+
+    <ai>
+        <needsLowering value="true" />
+        <areaMarkers leftIndex="0>1|2|0" rightIndex="0>1|2|1" backIndex="0>1|2|2" />
+        <asizeMarkers leftIndex="0>1|2|0" rightIndex="0>1|2|1" backIndex="0>1|2|2" />
+    </ai>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="2">
+        <component1 centerOfMass="0 1.2 0" solverIterationCount="10" />
+        <component2 centerOfMass="0 0 0" solverIterationCount="10" />
+        <joint component1="0" component2="1" index="0>2|0" rotLimit="0 0 0" transLimit="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

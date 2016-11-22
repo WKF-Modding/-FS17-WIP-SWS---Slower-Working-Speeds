@@ -1,0 +1,428 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="sowingMachineSprayer">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>GL 860 Compacta</name>
+        <specs>
+            <neededPower>170</neededPower>
+            <workingWidth>6.0</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_sowingMachine</function>
+        </functions>
+        <image>$data/store/store_grimmeGL860.png</image>
+        <price>58000</price>
+        <dailyUpkeep>140</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>GRIMME</brand>
+        <category>SWS_sowingMachines</category>
+        <fieldJob sizeCategory="2" typeCategory="sowingMachine" />
+        <vertexBufferMemoryUsage>4602324</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>1256742</indexBufferMemoryUsage>
+        <textureMemoryUsage>17476672</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_planter</typeDesc>
+    <filename>$data/vehicles/tools/grimme/grimmeGL860.i3d</filename>
+
+    <size width="6.5" length="6.5"/>
+    <powerConsumer forceNode="0>" maxForce="85" />
+    <speedLimit value="8" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel restLoad="1.8" repr="0>5|1" forcePointRatio="0.23" filename="$data/vehicles/wheels/trelleborg/TM600_320_85R20.xml" isLeft="true"  configIndex="n8v6" initialCompression="50" suspTravel="0.1" spring="35" damper="30" rotationDamping="0.002" />
+                <wheel restLoad="1.8" repr="0>5|3" forcePointRatio="0.23" filename="$data/vehicles/wheels/trelleborg/TM600_320_85R20.xml" isLeft="false" configIndex="n8v6" initialCompression="50" suspTravel="0.1" spring="35" damper="30" rotationDamping="0.002" />
+
+                <wheel restLoad="1.3" repr="0>9|0"  forcePointRatio="0.23" filename="$data/vehicles/wheels/trelleborg/T510_15x6_00R6.xml" isLeft="false" initialCompression="1" suspTravel="0.01" spring="150" damper="30" rotationDamping="0.002" />
+                <wheel restLoad="1.3" repr="0>10|0" forcePointRatio="0.23" filename="$data/vehicles/wheels/trelleborg/T510_15x6_00R6.xml" isLeft="true"  initialCompression="1" suspTravel="0.01" spring="150" damper="30" rotationDamping="0.002" />
+
+                <wheel restLoad="0.4" repr="0>7|0" forcePointRatio="0.23" mass="0.01" radius="0.29" isLeft="true"  initialCompression="50" suspTravel="0.01" spring="30" damper="10" rotationDamping="0.002" isSynchronized="false" />
+                <wheel restLoad="0.4" repr="0>7|1" forcePointRatio="0.23" mass="0.01" radius="0.29" isLeft="false" initialCompression="50" suspTravel="0.01" spring="30" damper="10" rotationDamping="0.002" isSynchronized="false" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <dynamicallyLoadedWheels>
+        <dynamicallyLoadedWheel linkNode="0>5|2"   filename="$data/vehicles/wheels/trelleborg/TM600_320_85R20.xml" isLeft="false" configIndex="n8v6" />
+        <dynamicallyLoadedWheel linkNode="0>5|4"   filename="$data/vehicles/wheels/trelleborg/TM600_320_85R20.xml" isLeft="true"  configIndex="n8v6" />
+        <dynamicallyLoadedWheel linkNode="0>0|0|0" filename="$data/vehicles/wheels/trelleborg/T510_15x6_00R6.xml"  isLeft="false" />
+        <dynamicallyLoadedWheel linkNode="0>0|0|2" filename="$data/vehicles/wheels/trelleborg/T510_15x6_00R6.xml"  isLeft="false" />
+        <dynamicallyLoadedWheel linkNode="0>0|0|1" filename="$data/vehicles/wheels/trelleborg/T510_15x6_00R6.xml"  isLeft="true" />
+        <dynamicallyLoadedWheel linkNode="0>0|0|3" filename="$data/vehicles/wheels/trelleborg/T510_15x6_00R6.xml"  isLeft="true" />
+    </dynamicallyLoadedWheels>
+
+    <brakeForce>0.2</brakeForce>
+
+    <lights>
+        <low>
+            <light decoration="0>3|0|0|0" lightTypes="0 3" />
+            <light decoration="0>9|1|0"   lightTypes="0 3" />
+            <light decoration="0>10|1|0"  lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>3|0|0|1" decoration="0>3|0|0|0" lightTypes="0 3" />
+            <light                       decoration="0>9|1|0"   lightTypes="0 3" />
+            <light                       decoration="0>10|1|0"  lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>3|0|0|1" decoration="0>3|0|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>3|0|1|0|1" decoration="0>3|0|1|0|0" />
+        <turnLightRight realLight="0>3|0|1|1|1" decoration="0>3|0|1|1|0" />
+    </turnLights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>1|0|0" jointType="trailerLow" attacherHeight="0.6" />
+    </inputAttacherJoints>
+
+    <workAreas>
+        <workArea startIndex="0>16|0" widthIndex="0>16|1" heightIndex="0>16|2" refNodeIndex="0" type="sowingMachine" />
+        <workArea startIndex="0>16|0" widthIndex="0>16|1" heightIndex="0>16|2" refNodeIndex="0" type="sprayer" />
+        <workArea startIndex="0>9|3|0|1|0" widthIndex="0>9|3|0|1|1" heightIndex="0>9|3|0|1|2" startIndexTest="0>9|3|0|2|0" widthIndexTest="0>9|3|0|2|1" heightIndexTest="0>9|3|0|2|2" animName="leftArm" type="ridgemarker" needsSetIsTurnedOn="false" />
+        <workArea startIndex="0>10|3|0|1|0" widthIndex="0>10|3|0|1|1" heightIndex="0>10|3|0|1|2" startIndexTest="0>10|3|0|2|0" widthIndexTest="0>10|3|0|2|1" heightIndexTest="0>10|3|0|2|2" animName="rightArm" type="ridgemarker" needsSetIsTurnedOn="false" />
+    </workAreas>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>16|3" threshold="0.4" depthNode="0>16|4"/>
+        <groundReferenceNode index="0>9|3|0|3" threshold="0" depthNode="0>9|3|0|3"/>
+        <groundReferenceNode index="0>10|3|0|3" threshold="0" depthNode="0>10|3|0|3"/>
+    </groundReferenceNodes>
+
+    <groundParticleAnimations>
+        <groundParticleAnimation>
+            <node index="0>18|0|0" refNodeIndex="0" materialType="SOIL" maxDepth="-0.025" />
+            <node index="0>9|3|0|4|0" refNodeIndex="1" materialType="SOIL" maxDepth="-0.025" />
+            <node index="0>10|3|0|4|0" refNodeIndex="2" materialType="SOIL" maxDepth="-0.025" />
+        </groundParticleAnimation>
+
+        <groundParticle>
+            <node index="0>18|0|1" refNodeIndex="0" particleType="SOIL"  />
+            <node index="0>18|0|2" refNodeIndex="0" particleType="SOIL_SMOKE"  />
+            <node index="0>18|0|3" refNodeIndex="0" particleType="SOIL_CHUNKS" worldSpace="false" />
+        </groundParticle>
+    </groundParticleAnimations>
+
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds potato" capacity="8220" />
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="liquidFertilizer" capacity="800" />
+    </fillUnits>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>3|2|0" />
+        </volumes>
+
+        <unloadInfos>
+            <unloadInfo fillVolumeIndex="1" >
+                <node index="0>3|2|1" width="1.5" length="1.0" />
+            </unloadInfo>
+        </unloadInfos>
+
+        <loadInfos>
+            <loadInfo fillVolumeIndex="1" >
+                <node index="0>3|2|2" width="1.5" length="1.0" />
+            </loadInfo>
+        </loadInfos>
+    </fillVolumes>
+
+    <fillRootNode index="0>" />
+    <exactFillRootNode index="0>3|5" />
+    <fillMassNode index="0>" />
+
+    <seedFruitTypes>potato</seedFruitTypes>
+
+    <fillLitersPerSecond>90</fillLitersPerSecond>
+
+    <sprayUsageScales workingWidth="6.0" scale="1" />
+
+    <sprayer fillUnitIndex="2" unloadInfoIndex="1" loadInfoIndex="1" />
+
+    <needsActivation value="true" />
+    <airBlowerSound file="$data/sounds/airBlowerLoop.wav"                 pitchOffset="1.00" volume="1.20" indoorVolumeFactor="0.45"/>
+    <sowingSound file="$data/sounds/sowingSound.wav"                      pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.55"/>
+    <fillSound file="$data/maps/sounds/siloFillSound.wav"                 pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.55" volume3D="1.0" innerRadius="10" radius="40"/>
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"         pitchOffset="0.8" volume="1.0" indoorVolumeFactor="0.45"/>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>0|0|0" onlyActiveWhenLowered="true" />
+        <speedRotatingPart index="0>0|0|1" onlyActiveWhenLowered="true" />
+        <speedRotatingPart index="0>0|0|2" onlyActiveWhenLowered="true" />
+        <speedRotatingPart index="0>0|0|3" onlyActiveWhenLowered="true" />
+        <!-- ridgeMarker discs -->
+        <speedRotatingPart index="0>9|3|0|5|0" radius="0.181" refNodeIndex="1" />
+        <speedRotatingPart index="0>10|3|0|5|0" radius="0.181" refNodeIndex="2" />
+        <!-- big discs middle -->
+        <speedRotatingPart index="0>0|1|0|0" radius="-0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>0|1|1|0" radius="0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>0|1|2|0" radius="-0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>0|1|3|0" radius="0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>0|1|4|0" radius="-0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>0|1|5|0" radius="0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>0|1|6|0" radius="-0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>0|1|7|0" radius="0.246" refNodeIndex="0" />
+        <!-- big discs left -->
+        <speedRotatingPart index="0>9|6|0|0" radius="-0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>9|6|1|0" radius="0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>9|6|2|0" radius="-0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>9|6|3|0" radius="0.246" refNodeIndex="0" />
+        <!-- big discs right -->
+        <speedRotatingPart index="0>10|6|0|0" radius="-0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>10|6|1|0" radius="0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>10|6|2|0" radius="-0.246" refNodeIndex="0" />
+        <speedRotatingPart index="0>10|6|3|0" radius="0.246" refNodeIndex="0" />
+        <!-- rotors -->
+        <speedRotatingPart index="0>7|9" radius="0.29" refNodeIndex="0" />
+        <speedRotatingPart index="0>7|3|1" radius="0.29" refNodeIndex="0" />
+        <speedRotatingPart index="0>7|4|1" radius="0.29" refNodeIndex="0" />
+        <!-- wheels -->
+        <speedRotatingPart index="0>5|2" wheelIndex="0" />
+        <speedRotatingPart index="0>5|4" wheelIndex="1" />
+        <speedRotatingPart index="0>0|0|0" wheelIndex="2" />
+        <speedRotatingPart index="0>0|0|1" wheelIndex="2" />
+        <speedRotatingPart index="0>0|0|2" wheelIndex="3" />
+        <speedRotatingPart index="0>0|0|3" wheelIndex="3" />
+    </speedRotatingParts>
+
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|6" type="sowingMachine" rotSpeed="55" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>9|10" type="sowingMachine" rotSpeed="55" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>10|10" type="sowingMachine" rotSpeed="55" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+
+        <turnedOnRotationNode index="0>0|7" type="sowingMachine" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>9|11" type="sowingMachine" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+        <turnedOnRotationNode index="0>10|11" type="sowingMachine" rotSpeed="100" rotAxis="1" turnOnFadeTime="1" turnOffFadeTime="1" />
+    </turnedOnRotationNodes>
+
+    <turnedOnScrollers>
+        <turnedOnScroller index="0>0|5" shaderParameterName="offsetUV" scrollSpeed="-0.25" shaderParameterComponent="1" scrollLength="3.169" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>9|9" shaderParameterName="offsetUV" scrollSpeed="-0.25" shaderParameterComponent="1" scrollLength="3.169" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>10|9" shaderParameterName="offsetUV" scrollSpeed="-0.25" shaderParameterComponent="1" scrollLength="3.169" turnOnFadeTime="1" turnOffFadeTime="1"/>
+
+        <turnedOnScroller index="0>0|3" shaderParameterName="offsetUV" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="6.732" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>0|4" shaderParameterName="offsetUV" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="6.732" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>9|7" shaderParameterName="offsetUV" scrollSpeed="-0.25" shaderParameterComponent="1" scrollLength="7.286" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>10|7" shaderParameterName="offsetUV" scrollSpeed="-0.25" shaderParameterComponent="1" scrollLength="7.286" turnOnFadeTime="1" turnOffFadeTime="1"/>
+
+        <turnedOnScroller index="0>9|8" shaderParameterName="scrollPosition" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="0.166" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>9|8|0" shaderParameterName="scrollPosition" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="0.166" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>0|2" shaderParameterName="scrollPosition" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="0.166" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>0|2|0" shaderParameterName="scrollPosition" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="0.166" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>10|8" shaderParameterName="scrollPosition" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="0.166" turnOnFadeTime="1" turnOffFadeTime="1"/>
+        <turnedOnScroller index="0>10|8|0" shaderParameterName="scrollPosition" scrollSpeed="0.25" shaderParameterComponent="1" scrollLength="0.166" turnOnFadeTime="1" turnOffFadeTime="1"/>
+    </turnedOnScrollers>
+
+    <movingTools>
+        <!-- drawbar -->
+        <movingTool index="0>1">
+            <inputAttacherJoint value="true"/>
+            <dependentPart index="0>1|1"/>
+        </movingTool>
+        <movingTool index="0>1|0" playSound="true">
+            <inputAttacherJoint value="true"/>
+        </movingTool>
+
+        <!-- axis -->
+        <movingTool index="0>5" wheelIndices="1 2" playSound="true">
+            <dependentPart index="0>6"/>
+        </movingTool>
+
+        <!-- bunker -->
+        <movingTool index="0>3" playSound="true">
+            <dependentPart index="0>4"/>
+        </movingTool>
+
+        <!-- finishing middle -->
+        <movingTool index="0>7" wheelIndices="3 4" playSound="true">
+            <dependentPart index="0>8"/>
+        </movingTool>
+
+        <!-- frame left/right -->
+        <movingTool index="0>9" playSound="true" >
+            <dependentPart index="0>9|2"/>
+        </movingTool>
+        <movingTool index="0>10" playSound="true" >
+            <dependentPart index="0>10|2"/>
+        </movingTool>
+
+        <!-- finishing left/right -->
+        <movingTool index="0>7|3" playSound="true">
+            <dependentPart index="0>7|5"/>
+        </movingTool>
+        <movingTool index="0>7|4" playSound="true" >
+            <dependentPart index="0>7|6"/>
+        </movingTool>
+
+        <!-- ridge marker left/right -->
+        <movingTool index="0>9|3" playSound="true" >
+            <dependentPart index="0>9|3|0"/>
+        </movingTool>
+        <movingTool index="0>10|3" playSound="true" >
+            <dependentPart index="0>10|3|0"/>
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- drawbar -->
+        <movingPart index="0>1|1" referencePoint="0>2" referenceFrame="0>2" >
+            <translatingPart index="0>1|1|0" />
+        </movingPart>
+
+        <!-- axis -->
+        <movingPart index="0>6" referencePoint="0>5|0" referenceFrame="0>5|0" >
+            <translatingPart index="0>6|0" />
+        </movingPart>
+
+        <!-- bunker -->
+        <movingPart index="0>4" referencePoint="0>3|1" referenceFrame="0>3|1" >
+            <translatingPart index="0>4|0" />
+        </movingPart>
+
+        <!-- finishing middle -->
+        <movingPart index="0>8" referencePoint="0>7|2" referenceFrame="0>7|2" >
+            <translatingPart index="0>8|0" />
+        </movingPart>
+
+        <!-- frame left/right -->
+        <movingPart index="0>9|2" referencePoint="0>11" localReferencePoint="0>9|2|0" referenceFrame="0>13|0" >
+            <dependentPart index="0>9|2|0" />
+            <dependentPart index="0>14" />
+        </movingPart>
+        <movingPart index="0>9|2|0" referencePoint="0>11" referenceFrame="0>13|1" />
+        <movingPart index="0>14" referencePoint="0>9|2|1" referenceFrame="0>9|2|1" >
+            <translatingPart index="0>14|0" />
+        </movingPart>
+        <movingPart index="0>10|2" referencePoint="0>12" localReferencePoint="0>10|2|0" referenceFrame="0>13|2" >
+            <dependentPart index="0>10|2|0" />
+            <dependentPart index="0>15" />
+        </movingPart>
+        <movingPart index="0>10|2|0" referencePoint="0>12" referenceFrame="0>13|3" />
+        <movingPart index="0>15" referencePoint="0>10|2|1" referenceFrame="0>10|2|1" >
+            <translatingPart index="0>15|0" />
+        </movingPart>
+
+        <!-- finishing left/right -->
+        <movingPart index="0>7|5" referencePoint="0>7|3|0" localReferencePoint="0>7|5|0" referenceFrame="0>13|4" >
+            <dependentPart index="0>7|5|0" />
+            <dependentPart index="0>7|7" />
+        </movingPart>
+        <movingPart index="0>7|5|0" referencePoint="0>7|3|0" referenceFrame="0>" />
+        <movingPart index="0>7|7" referencePoint="0>7|5|1" referenceFrame="0>" >
+            <translatingPart index="0>7|7|0" />
+        </movingPart>
+        <movingPart index="0>7|6" referencePoint="0>7|4|0" localReferencePoint="0>7|6|0" referenceFrame="0>13|5" >
+            <dependentPart index="0>7|6|0" />
+            <dependentPart index="0>7|8" />
+        </movingPart>
+        <movingPart index="0>7|6|0" referencePoint="0>7|4|0" referenceFrame="0>" />
+        <movingPart index="0>7|8" referencePoint="0>7|6|1" referenceFrame="0>" >
+            <translatingPart index="0>7|8|0" />
+        </movingPart>
+
+        <!-- ridge marker left/right -->
+        <movingPart index="0>9|3|0" referencePoint="0>9|4" localReferencePoint="0>9|3|0|0" referenceFrame="0>9|3" >
+            <dependentPart index="0>9|3|0|0" />
+            <dependentPart index="0>9|5" />
+        </movingPart>
+        <movingPart index="0>9|3|0|0" referencePoint="0>9|4" referenceFrame="0>9|3|2" />
+        <movingPart index="0>9|5" referencePoint="0>9|3|1" referenceFrame="0>9|3|3" >
+            <translatingPart index="0>9|5|0" />
+        </movingPart>
+        <movingPart index="0>10|3|0" referencePoint="0>10|4" localReferencePoint="0>10|3|0|0" referenceFrame="0>10|3" >
+            <dependentPart index="0>10|3|0|0" />
+            <dependentPart index="0>10|5" />
+        </movingPart>
+        <movingPart index="0>10|3|0|0" referencePoint="0>10|4" referenceFrame="0>10|3|2" />
+        <movingPart index="0>10|5" referencePoint="0>10|3|1" referenceFrame="0>10|3|3" >
+            <translatingPart index="0>10|5|0" />
+        </movingPart>
+
+    </movingParts>
+
+    <animations>
+        <!-- folding, from work to transport -->
+        <animation name="folding">
+            <!-- drawbar -->
+            <part node="0>1" startTime="0" endTime="1.5" startRot="0 0 0" endRot="10 0 0" />
+            <!-- axis -->
+            <part node="0>5" startTime="0" endTime="1.5" startRot="5 0 0" endRot="-20 0 0" />
+
+            <!-- groundRef nodes -->
+            <part node="0>16|3" startTime="0.0" endTime="1.0" startTrans="0 0.322 0.405" endTrans="0 0.722 0.405" />
+
+            <!-- drawbar -->
+            <part node="0>1|0" startTime="1.0" endTime="2.0" startTrans="-0.001 0.03 1.717" endTrans="-0.001 0.03 2.717" />
+            <!-- bunker -->
+            <part node="0>3" startTime="1.0" endTime="3.0" startRot="0 0 0" endRot="70 0 0" />
+            <!-- finishing middle -->
+            <part node="0>7" startTime="1.0" endTime="3.0" startRot="5.54 0 0" endRot="10 0 0" />
+
+            <!-- frameLeft/Right -->
+            <part node="0>9"  startTime="2.0" endTime="5.0" startRot="0 0 0" endRot="0 -170 0" />
+            <part node="0>10" startTime="2.0" endTime="5.0" startRot="0 0 0" endRot="0 170 0" />
+            <!-- finishing right -->
+            <part node="0>7|4" startTime="2.0" endTime="5.0" startRot="0 0 0" endRot="0 0 -180" />
+            <!-- finishing left -->
+            <part node="0>7|3" startTime="3.0" endTime="6.0" startRot="0 0 0" endRot="0 0 180" />
+
+            <!-- drawbar -->
+            <!--part node="0>1|0" startTime="5.0" endTime="6.0" startTrans="-0.005 0.03 2.217" endTrans="-0.05 0.03 1.717" /-->
+            <!-- bunker -->
+            <part node="0>3" startTime="6.0" endTime="7.5" startRot="70 0 0" endRot="33 0 0" />
+        </animation>
+
+        <!-- ridge markers -->
+        <animation name="leftArm">
+            <part node="0>9|3" startTime="0" endTime="2" startRot="0 0 0" endRot="0 0 -100" />
+        </animation>
+        <animation name="rightArm">
+            <part node="0>10|3" startTime="0" endTime="2" startRot="0 0 0" endRot="0 0 100" />
+        </animation>
+
+        <animation name="moveSupport">
+            <part node="0>1|2" startTime="0" endTime="0.6" startRot="0 0 0" endRot="-54 0 0" />
+            <part node="0>1|4" startTime="0" endTime="0.6" startTrans="0 -0.179 0.780" endTrans="0 -0.668 1.051" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <foldingParts startAnimTime="1" turnOnFoldDirection="-1" foldMiddleAnimTime="0.125" turnOnFoldMaxLimit="0.126" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="folding" speedScale="0.5" />
+    </foldingParts>
+
+    <ridgeMarkers foldMinLimit="0" foldMaxLimit="0.13">
+        <ridgeMarker animName="leftArm" />
+        <ridgeMarker animName="rightArm" />
+    </ridgeMarkers>
+
+    <ai>
+        <areaMarkers leftIndex="0>17|0|0" rightIndex="0>17|0|1" backIndex="0>17|0|2" />
+        <sizeMarkers leftIndex="0>17|1|0" rightIndex="0>17|1|1" backIndex="0>17|1|2" />
+        <trafficCollisionTrigger index="0>17|2" />
+        <needsLowering value="true"/>
+        <forceTurnNoBackward value="true" />
+        <toolReverserDirectionNode index="0>17|1|2" />
+        <turningRadiusLimiation rotationJointNode="0>1|0|0" wheelIndices="0 1" />
+    </ai>
+
+    <washable dirtDuration="60" washDuration="1" workMultiplier="20" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.8 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

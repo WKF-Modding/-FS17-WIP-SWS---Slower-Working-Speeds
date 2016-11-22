@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="tedder">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>HIT 12.14 T</name>
+        <specs>
+            <workingWidth>13</workingWidth>
+            <neededPower>75</neededPower>
+        </specs>
+        <functions>
+            <function>$l10n_function_tedder</function>
+        </functions>
+        <image>$data/store/store_poettingerHit1214T.png</image>
+        <price>27000</price>
+        <dailyUpkeep>50</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>POETTINGER</brand>
+        <category>SWS_tedders</category>
+        <vertexBufferMemoryUsage>1482888</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>209748</indexBufferMemoryUsage>
+        <textureMemoryUsage>9961680</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_tedder</typeDesc>
+    <filename>$data/vehicles/tools/poettinger/poettingerHit1214T.i3d</filename>
+
+    <size width="3.5" length="6.5" />
+
+    <powerConsumer ptoRpm="540" neededPtoPower="35"/>
+    <speedLimit value="15" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel restLoad="0.9" repr="0>0|0|0" driveNode="0>0|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/AW305_380_55R17.xml" isLeft="true"  initialCompression="40" suspTravel="0.1" spring="20" damper="20" hasTireTracks="true" hasParticles="true" />
+                <wheel restLoad="0.9" repr="0>0|0|1"                       forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/AW305_380_55R17.xml" isLeft="false" initialCompression="40" suspTravel="0.1" spring="20" damper="20" hasTireTracks="true" hasParticles="true" />
+
+                <wheel restLoad="0.1" repr="1>0|0" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="1>0|1" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="2>0|0" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="2>0|1" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="3>0|0" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="3>0|1" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="4>0|0" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="4>0|1" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="5>0|0" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+                <wheel restLoad="0.1" repr="5>0|1" forcePointRatio="0.2" mass="0.01" radius="0.1" initialCompression="20" suspTravel="0.1" spring="10" damper="20" maxLatStiffness="0.01" brakeFactor="0" isSynchronized="false" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <dynamicallyLoadedWheels>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|2|0"     filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|2|1"     filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="true"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|0|1|0"   filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="true"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|0|1|1"   filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|0|1|2"   filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="true"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|0|0|0|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|0|0|0|1" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="true"/>
+
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|1|1|0"   filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|1|1|1"   filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="true"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|1|1|2"   filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|1|0|0|0" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="false"/>
+        <dynamicallyLoadedWheel linkNode="0>0|5|1|0|1|0|0|1" filename="$data/vehicles/wheels/trelleborg/T510_16x6_50R8.xml" isLeft="true"/>
+    </dynamicallyLoadedWheels>
+
+    <brakeForce>0.5</brakeForce>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="0>0|8|0"     filename="$data/shared/vehicleParts/wheelChock02.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|8|1"     filename="$data/shared/vehicleParts/wheelChock02.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|0|1|0" filename="$data/shared/vehicleParts/wheelChock02.i3d" />
+        <dynamicallyLoadedPart node="0" linkNode="0>0|0|0|1|1" filename="$data/shared/vehicleParts/wheelChock02.i3d" />
+    </dynamicallyLoadedParts>
+
+    <lights>
+        <low>
+            <light                       decoration="0>0|4|0|0" lightTypes="0 3" />
+        </low>
+        <high>
+            <light realLight="0>0|4|0|1" decoration="0>0|4|0|0" lightTypes="0 3" />
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>0|4|0|1" decoration="0>0|4|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>0|4|1|0|1" decoration="0>0|4|1|0|0" />
+        <turnLightRight realLight="0>0|4|1|1|1" decoration="0>0|4|1|1|0" />
+    </turnLights>
+
+    <reverseLights>
+        <reverseLight realLight="0>0|4|3|1" decoration="0>0|4|3|0" />
+    </reverseLights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0|1" jointType="trailer" ptoInputNode="0>0|2" attacherHeight="0.96" ptoAboveAttacher="false"/>
+    </inputAttacherJoints>
+
+    <workAreas>
+        <workArea startIndex="0>0|5|1|0|5|0|0"   widthIndex="0>0|5|1|0|5|0|1"   heightIndex="0>0|5|1|0|5|0|2"   type="tedder" foldMinLimit="0" foldMaxLimit="0.12" particleSystemIndex="0" dropAreaIndex="0" refNodeIndex="0" />
+        <workArea startIndex="0>0|5|1|0|5|1|0"   widthIndex="0>0|5|1|0|5|1|1"   heightIndex="0>0|5|1|0|5|1|2"   type="tedder" foldMinLimit="0" foldMaxLimit="0.12" particleSystemIndex="1" dropAreaIndex="1" refNodeIndex="0" />
+        <workArea startIndex="0>0|5|1|0|0|4|0"   widthIndex="0>0|5|1|0|0|4|1"   heightIndex="0>0|5|1|0|0|4|2"   type="tedder" foldMinLimit="0" foldMaxLimit="0.12" particleSystemIndex="2" dropAreaIndex="2" refNodeIndex="1" />
+        <workArea startIndex="0>0|5|1|0|0|0|3|0" widthIndex="0>0|5|1|0|0|0|3|1" heightIndex="0>0|5|1|0|0|0|3|2" type="tedder" foldMinLimit="0" foldMaxLimit="0.12" particleSystemIndex="3" dropAreaIndex="3" refNodeIndex="2" />
+        <workArea startIndex="0>0|5|1|0|1|4|0"   widthIndex="0>0|5|1|0|1|4|1"   heightIndex="0>0|5|1|0|1|4|2"   type="tedder" foldMinLimit="0" foldMaxLimit="0.12" particleSystemIndex="4" dropAreaIndex="4" refNodeIndex="3" />
+        <workArea startIndex="0>0|5|1|0|1|0|3|0" widthIndex="0>0|5|1|0|1|0|3|1" heightIndex="0>0|5|1|0|1|0|3|2" type="tedder" foldMinLimit="0" foldMaxLimit="0.12" particleSystemIndex="5" dropAreaIndex="5" refNodeIndex="4" />
+
+        <workArea startIndex="0>0|5|1|0|5|0|3"   widthIndex="0>0|5|1|0|5|0|4"   heightIndex="0>0|5|1|0|5|0|5"   type="tedderDrop" />
+        <workArea startIndex="0>0|5|1|0|5|1|3"   widthIndex="0>0|5|1|0|5|1|4"   heightIndex="0>0|5|1|0|5|1|5"   type="tedderDrop" />
+        <workArea startIndex="0>0|5|1|0|0|4|3"   widthIndex="0>0|5|1|0|0|4|4"   heightIndex="0>0|5|1|0|0|4|5"   type="tedderDrop" />
+        <workArea startIndex="0>0|5|1|0|0|0|3|3" widthIndex="0>0|5|1|0|0|0|3|4" heightIndex="0>0|5|1|0|0|0|3|5" type="tedderDrop" />
+        <workArea startIndex="0>0|5|1|0|1|4|3"   widthIndex="0>0|5|1|0|1|4|4"   heightIndex="0>0|5|1|0|1|4|5"   type="tedderDrop" />
+        <workArea startIndex="0>0|5|1|0|1|0|3|3" widthIndex="0>0|5|1|0|1|0|3|4" heightIndex="0>0|5|1|0|1|0|3|5" type="tedderDrop" />
+    </workAreas>
+
+    <tedderParticleSystems>
+        <emitterShape node="0>0|5|1|0|6|0"     particleType="TEDDER" />
+        <emitterShape node="0>0|5|1|0|6|1"     particleType="TEDDER" />
+        <emitterShape node="0>0|5|1|0|0|5|0"   particleType="TEDDER" />
+        <emitterShape node="0>0|5|1|0|0|0|4|0" particleType="TEDDER" />
+        <emitterShape node="0>0|5|1|0|1|5|0"   particleType="TEDDER" />
+        <emitterShape node="0>0|5|1|0|1|0|4|0" particleType="TEDDER" />
+    </tedderParticleSystems>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>0|5|1|0|5|2"     threshold="0.7" />
+        <groundReferenceNode index="0>0|5|1|0|0|4|6"   threshold="0.7" />
+        <groundReferenceNode index="0>0|5|1|0|0|0|3|6" threshold="0.7" />
+        <groundReferenceNode index="0>0|5|1|0|1|4|6"   threshold="0.7" />
+        <groundReferenceNode index="0>0|5|1|0|1|0|3|6" threshold="0.7" />
+    </groundReferenceNodes>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>0|5|1|0|2|0"     radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|2|1"     radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|0|1|0"   radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|0|1|1"   radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|0|1|2"   radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|0|0|0|0" radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|0|0|0|1" radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|1|1|0"   radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|1|1|1"   radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|1|1|2"   radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|1|0|0|0" radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+        <speedRotatingPart index="0>0|5|1|0|1|0|0|1" radius="0.208" foldMinLimit="0" foldMaxLimit="0.02" />
+    </speedRotatingParts>
+
+    <tedderSound file="$data/sounds/tedder.wav" pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.55" />
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"  pitchOffset="0.8" volume="1.0" indoorVolumeFactor="0.45" />
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>0|5|1|0|0|0|1|0" type="tedder" rotSpeed="-600" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|0|0|1|1" type="tedder" rotSpeed="600"  turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|0|2|0"   type="tedder" rotSpeed="-600" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|0|2|1"   type="tedder" rotSpeed="600"  turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|0|2|2"   type="tedder" rotSpeed="-600" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|3|0"     type="tedder" rotSpeed="600"  turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|3|1"     type="tedder" rotSpeed="-600" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|1|2|0"   type="tedder" rotSpeed="600"  turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|1|2|1"   type="tedder" rotSpeed="-600" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|1|2|2"   type="tedder" rotSpeed="600"  turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|1|0|1|0" type="tedder" rotSpeed="-600" turnOnFadeTime="1" turnOffFadeTime="2" />
+        <turnedOnRotationNode index="0>0|5|1|0|1|0|1|1" type="tedder" rotSpeed="600"  turnOnFadeTime="1" turnOffFadeTime="2" />
+    </turnedOnRotationNodes>
+
+    <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.1428" turnOnFoldMaxLimit="0.35" turnOnFoldMinLimit="0" turnOffOnFold="true" >
+        <foldingPart animationName="folding" speedScale="1.0" />
+    </foldingParts>
+
+    <movingTools>
+        <movingTool index="0>0|5" playSound="true">
+            <componentJoint index="0" />
+        </movingTool>
+        <movingTool index="1>1" playSound="true">
+            <componentJoint index="1" />
+        </movingTool>
+        <movingTool index="2>1" playSound="true">
+            <componentJoint index="2" />
+        </movingTool>
+        <movingTool index="1>2" playSound="true">
+            <componentJoint index="3" />
+        </movingTool>
+        <movingTool index="4>1" playSound="true">
+            <componentJoint index="4" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- back arm rot -->
+        <movingPart index="0>0|5|1" referencePoint="1>3" referenceFrame="1>3" isActiveDirty="true" limitedAxis="1">
+            <dependentPart index="0>0|7|0" />
+            <dependentPart index="0>0|5|3" />
+            <dependentPart index="0>0|5|1|0|4|4" />
+        </movingPart>
+        <movingPart index="0>0|5|3" referencePoint="0>0|5|1|0|4|5" referenceFrame="0>">
+            <dependentPart index="0>0|5|3|0" />
+        </movingPart>
+        <movingPart index="0>0|5|3|0" referencePoint="0>0|5|1|0|4|5" referenceFrame="0>" scaleZ="true" />
+        <movingPart index="0>0|5|1|0|4|4" referencePoint="0>0|7|1" referenceFrame="0>" scaleZ="true" />
+        <movingPart index="0>0|7|0" referencePoint="0>0|5|2" referenceFrame="0>">
+            <dependentPart index="0>0|5|2" />
+        </movingPart>
+        <movingPart index="0>0|5|2" referencePoint="0>0|7|0" referenceFrame="0>" >
+            <translatingPart index="0>0|5|2|0"/>
+        </movingPart>
+
+        <!-- arm left -->
+        <movingPart index="0>0|5|1|0|0" referencePoint="2>2" referenceFrame="2>2" isActiveDirty="true" limitedAxis="3">
+            <dependentPart index="0>0|5|1|0|4|0" />
+        </movingPart>
+        <movingPart index="0>0|5|1|0|4|0" referencePoint="0>0|5|1|0|0|3|0" referenceFrame="0>" >
+            <translatingPart index="0>0|5|1|0|4|0|0"/>
+        </movingPart>
+
+        <!-- arm left part -->
+        <movingPart index="0>0|5|1|0|0|0" referencePoint="3>1" referenceFrame="3>1" isActiveDirty="true" limitedAxis="1">
+            <dependentPart index="0>0|5|1|0|0|3|1" />
+        </movingPart>
+        <movingPart index="0>0|5|1|0|0|3|1" localReferencePoint="0>0|5|1|0|0|3|1|0" referencePoint="0>0|5|1|0|0|0|2" referenceFrame="0>0|5|1|0|0|0|5" >
+            <dependentPart index="0>0|5|1|0|0|3|1|0"/>
+        </movingPart>
+        <movingPart index="0>0|5|1|0|0|3|1|0" referencePoint="0>0|5|1|0|0|0|2" referenceFrame="0>0|5|1|0|0|3|1|2" >
+            <dependentPart index="0>0|5|1|0|0|3|2"/>
+        </movingPart>
+        <movingPart index="0>0|5|1|0|0|3|2" referencePoint="0>0|5|1|0|0|3|1|1" referenceFrame="0>0|5|1|0|0" >
+            <translatingPart index="0>0|5|1|0|0|3|2|0"/>
+        </movingPart>
+
+        <!-- arm right -->
+        <movingPart index="0>0|5|1|0|1" referencePoint="4>2" referenceFrame="4>2" isActiveDirty="true" limitedAxis="3">
+            <dependentPart index="0>0|5|1|0|4|1" />
+        </movingPart>
+        <movingPart index="0>0|5|1|0|4|1" referencePoint="0>0|5|1|0|1|3|0" referenceFrame="0>0|5|1|0|1|3|0" >
+            <translatingPart index="0>0|5|1|0|4|1|0"/>
+        </movingPart>
+
+        <!-- arm right part -->
+        <movingPart index="0>0|5|1|0|1|0" referencePoint="5>1" referenceFrame="5>1" isActiveDirty="true" limitedAxis="1">
+            <dependentPart index="0>0|5|1|0|1|3|1" />
+        </movingPart>
+        <movingPart index="0>0|5|1|0|1|3|1" localReferencePoint="0>0|5|1|0|1|3|1|0" referencePoint="0>0|5|1|0|1|0|2" referenceFrame="0>0|5|1|0|1|0|5" >
+            <dependentPart index="0>0|5|1|0|1|3|1|0"/>
+        </movingPart>
+        <movingPart index="0>0|5|1|0|1|3|1|0" referencePoint="0>0|5|1|0|1|0|2" referenceFrame="0>0|5|1|0|1|3|1|2" >
+            <dependentPart index="0>0|5|1|0|1|3|2"/>
+        </movingPart>
+        <movingPart index="0>0|5|1|0|1|3|2" referencePoint="0>0|5|1|0|1|3|1|1" referenceFrame="0>0|5|1|0|1" >
+            <translatingPart index="0>0|5|1|0|1|3|2|0"/>
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <!-- move support wheel down/up -->
+        <animation name="moveSupport">
+            <part node="0>0|3"     startTime="0"    endTime="0.3" startTrans="0.174 0.710 2.629" endTrans="0.174 0.318 2.629" />
+            <part node="0>0|0|0|1" startTime="0"    endTime="0.05" visibility="false" />
+            <part node="0>0|8"     startTime="0"    endTime="0.05" visibility="true" />
+            <part node="0>0|0|0|1" startTime="0.05" endTime="0.1" visibility="true" />
+            <part node="0>0|8"     startTime="0.05" endTime="0.1" visibility="false" />
+        </animation>
+
+        <animation name="folding">
+            <!-- raise/lower -->
+            <part startTime="1" endTime="1.75" node="0>0|5" startRot="0 0 0"  endRot="20 0 0" />
+            <part startTime="1.75" endTime="2" node="0>0|5" startRot="20 0 0" endRot="21 0 0" />
+            <part startTime="1" endTime="2" componentJointIndex="0" startRotLimit="20 0 0" endRotLimit="0 0 0"/>
+            <part startTime="0" endTime="0.75" componentJointIndex="1" startRotLimit="0 0 9" endRotLimit="0 0 1"/>
+            <part startTime="0" endTime="0.75" componentJointIndex="2" startRotLimit="0 0 9" endRotLimit="0 0 1"/>
+            <part startTime="0" endTime="0.75" componentJointIndex="3" startRotLimit="0 0 9" endRotLimit="0 0 1"/>
+            <part startTime="0" endTime="0.75" componentJointIndex="4" startRotLimit="0 0 9" endRotLimit="0 0 1"/>
+
+            <part startTime="0.5" endTime="1.5" node="1>1" startRot="0 0 0" endRot="0 0 3" />
+            <part startTime="0.5" endTime="1.5" node="1>2" startRot="0 0 0" endRot="0 0 -3" />
+
+            <part startTime="0" endTime="1.5" node="2>1" startRot="0 0 0" endRot="0 0 7" />
+            <part startTime="0" endTime="1.5" node="4>1" startRot="0 0 0" endRot="0 0 -7" />
+
+            <part startTime="2.5" endTime="6" node="0>0|5" startRot="20 0 0" endRot="64 0 0" />
+            <part startTime="2.5" endTime="8" node="2>1" startRot="0 0 0" endRot="0 0 174" />
+            <part startTime="3" endTime="8.5" node="4>1" startRot="0 0 0" endRot="0 0 -174" />
+            <part startTime="5.5" endTime="11" node="1>1" startRot="0 0 0" endRot="0 0 93" />
+            <part startTime="6" endTime="11.5" node="1>2" startRot="0 0 0" endRot="0 0 -93" />
+            <part startTime="8" endTime="9" componentJointIndex="1" startRotLimit="0 0 1" endRotLimit="0 0 0"/>
+            <part startTime="8" endTime="9" componentJointIndex="2" startRotLimit="0 0 1" endRotLimit="0 0 0"/>
+            <part startTime="8" endTime="9" componentJointIndex="3" startRotLimit="0 0 1" endRotLimit="0 0 0"/>
+            <part startTime="8" endTime="9" componentJointIndex="4" startRotLimit="0 0 1" endRotLimit="0 0 0"/>
+            <part startTime="11" endTime="13" node="0>0|5" startRot="64 0 0" endRot="65 0 0" />
+            <part startTime="13" endTime="14" node="0>0|5" startRot="65 0 0" endRot="75 0 0" />
+            <part startTime="13.6" endTime="14" node="0>0|6|0" startRot="0 0 0" endRot="0 0 38" />
+            <part startTime="13.6" endTime="14" node="0>0|6|1" startRot="0 0 0" endRot="0 0 -38" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <ai>
+        <needsLowering value="true" />
+        <areaMarkers leftIndex="0>0|9|0|0" rightIndex="0>0|9|0|1" backIndex="0>0|9|0|2" />
+        <sizeMarkers leftIndex="0>0|9|1|0" rightIndex="0>0|9|1|1" backIndex="0>0|9|1|2" />
+        <trafficCollisionTrigger index="0>0|9|2" />
+        <forceTurnNoBackward value="true" />
+        <toolReverserDirectionNode index="0>0|9|1|2" />
+        <turningRadiusLimiation rotationJointNode="0>0|1" wheelIndices="0 1" />
+    </ai>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="6">
+        <component1 centerOfMass="0 0.4 0" solverIterationCount="40" /> <!-- main -->
+        <component2 centerOfMass="0 -0.5 -1" solverIterationCount="10" /> <!-- arm back -->
+        <component3 centerOfMass="0 -0.5 -1" solverIterationCount="10" /> <!-- arm left -->
+        <component4 centerOfMass="0 -0.5 -1" solverIterationCount="10" /> <!-- arm left part -->
+        <component5 centerOfMass="0 -0.5 -1" solverIterationCount="10" /> <!-- arm right -->
+        <component6 centerOfMass="0 -0.5 -1" solverIterationCount="10" /> <!-- arm right part -->
+
+        <joint component1="0" component2="1" index="0>0|5|0" rotLimit="20 0 0" transLimit="0 0 0" />
+        <joint component1="1" component2="2" index="1>1"     rotLimit="0 0 9" transLimit="0 0 0" />
+        <joint component1="2" component2="3" index="2>1"     rotLimit="0 0 9" transLimit="0 0 0" />
+        <joint component1="1" component2="4" index="1>2"     rotLimit="0 0 9" transLimit="0 0 0" />
+        <joint component1="4" component2="5" index="4>1"     rotLimit="0 0 9" transLimit="0 0 0" />
+
+        <collisionPair component1="0" component2="2" enabled="false" />
+        <collisionPair component1="0" component2="3" enabled="false" />
+        <collisionPair component1="0" component2="4" enabled="false" />
+        <collisionPair component1="0" component2="5" enabled="false" />
+        <collisionPair component1="1" component2="3" enabled="false" />
+        <collisionPair component1="1" component2="5" enabled="false" />
+        <collisionPair component1="2" component2="4" enabled="false" />
+        <collisionPair component1="2" component2="5" enabled="false" />
+        <collisionPair component1="3" component2="4" enabled="false" />
+        <collisionPair component1="3" component2="5" enabled="false" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

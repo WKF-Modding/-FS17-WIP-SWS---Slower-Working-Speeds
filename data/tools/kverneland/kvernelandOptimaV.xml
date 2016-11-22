@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="sowingMachineSprayer">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Optima V</name>
+        <specs>
+            <neededPower>70</neededPower>
+            <workingWidth>4.5</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_sowingMachine</function>
+        </functions>
+        <image>$data/store/store_kvernelandOptimaV.png</image>
+        <price>29000</price>
+        <dailyUpkeep>90</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KVERNELAND</brand>
+        <category>SWS_sowingMachines</category>
+        <fieldJob sizeCategory="2" typeCategory="sowingMachine" />
+        <vertexBufferMemoryUsage>1798000</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>240432</indexBufferMemoryUsage>
+        <textureMemoryUsage>10660848</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_sowingMachine</typeDesc>
+    <filename>$data/vehicles/tools/kverneland/kvernelandOptimaV.i3d</filename>
+
+    <size width="3.2" length="3"/>
+    <powerConsumer ptoRpm="540" neededPtoPower="10" forceNode="0>" maxForce="16" />
+    <speedLimit value="13" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel restLoad="0.5" repr="0>0" linkNode="0>0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/IM110_12_00_12.xml" isLeft="false" initialCompression="20" suspTravel="0.05" spring="30" damper="50" rotationDamping="0.002" />
+                <wheel restLoad="0.5" repr="0>1" linkNode="0>1|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/IM110_12_00_12.xml" isLeft="true"  initialCompression="20" suspTravel="0.05" spring="30" damper="50" rotationDamping="0.002" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <axisColor>0.3941 0.0179 0.0104 1</axisColor>
+
+    <brakeForce>0.3</brakeForce>
+
+    <lights>
+        <low>
+            <light                     decoration="0>5|0|3|0" lightTypes="0 3"/> <!--BackLights-->
+            <light                     decoration="0>5|5|3|0" lightTypes="0 3"/> <!--BackLights-->
+            <light                     decoration="0>5|0|1|0|2|0|0" lightTypes="0 3"/> <!--BackLights-->
+            <light                     decoration="0>5|5|1|0|2|0|0" lightTypes="0 3"/> <!--BackLights-->
+            <light                     decoration="0>5|8|0|0" lightTypes="1"/> <!--Worklights Back-->
+        </low>
+        <high>
+            <light realLight="0>5|0|3|1" decoration="0>5|0|3|0" lightTypes="0 3" /> <!--BackLights-->
+            <light realLight="0>5|5|3|1" decoration="0>5|5|3|0" lightTypes="0 3" /> <!--BackLights-->
+            <light                     decoration="0>5|0|1|0|2|0|0" lightTypes="0 3" /> <!--BackLights-->
+            <light                     decoration="0>5|5|1|0|2|0|0" lightTypes="0 3" /> <!--BackLights-->
+            <light                     decoration="0>5|8|0|0" lightTypes="1"/> <!--Worklights Back-->
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>5|0|3|1" decoration="0>5|5|1|0|2|2|0" />
+        <brakeLight realLight="0>5|5|3|1" decoration="0>5|0|1|0|2|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>5|0|1|0|2|1|0|1" decoration="0>5|0|1|0|2|1|0|0" />
+        <turnLightLeft                                decoration="0>5|0|4|0|0" />
+        <turnLightRight realLight="0>5|5|1|0|2|1|0|1" decoration="0>5|5|1|0|2|1|0|0" />
+        <turnLightRight                               decoration="0>5|5|4|0|0" />
+    </turnLights>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>2" jointType="implement" lowerDistanceToGround="0.56" upperDistanceToGround="1.5" topReferenceNode="0>3" ptoInputNode="0>4" />
+    </inputAttacherJoints>
+
+    <workAreas>
+        <workArea startIndex="0>6|0" widthIndex="0>6|1" heightIndex="0>6|2" refNodeIndex="1" type="sowingMachine" />
+        <workArea startIndex="0>6|0" widthIndex="0>6|1" heightIndex="0>6|2" type="sprayer" disableBackwards="false" />
+        <workArea startIndex="0>5|0|5|0|0|0|1" widthIndex="0>5|0|5|0|0|0|2" heightIndex="0>5|0|5|0|0|0|3" startIndexTest="0>5|0|5|0|0|0|4" widthIndexTest="0>5|0|5|0|0|0|5" heightIndexTest="0>5|0|5|0|0|0|6" animName="leftRidgeMarkerAnim" type="ridgemarker" foldMinLimit="0" foldMaxLimit="0.03" needsSetIsTurnedOn="false" />
+        <workArea startIndex="0>5|5|5|0|0|0|1" widthIndex="0>5|5|5|0|0|0|2" heightIndex="0>5|5|5|0|0|0|3" startIndexTest="0>5|5|5|0|0|0|4" widthIndexTest="0>5|5|5|0|0|0|5" heightIndexTest="0>5|5|5|0|0|0|6" animName="rightRidgeMarkerAnim" type="ridgemarker" foldMinLimit="0" foldMaxLimit="0.03" needsSetIsTurnedOn="false" />
+    </workAreas>
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>" threshold="0.1" depthNode="0>5|9"/>
+        <groundReferenceNode index="0>5|11" threshold="0.1" depthNode="0>5|9"/>
+        <groundReferenceNode index="0>5|0|5|0|0|0|8" threshold="0" depthNode="0>5|0|5|0|0|0|8"/>
+        <groundReferenceNode index="0>5|5|5|0|0|0|8" threshold="0" depthNode="0>5|5|5|0|0|0|8"/>
+    </groundReferenceNodes>
+
+    <groundParticleAnimations>
+        <groundParticleAnimation>
+            <node index="0>5|10|0"          refNodeIndex="1" maxDepth="-0.01" materialType="SOIL" />
+            <node index="0>5|0|5|0|0|0|7|0" refNodeIndex="2" maxDepth="-0.05" materialType="SOIL" />
+            <node index="0>5|5|5|0|0|0|7|0" refNodeIndex="3" maxDepth="-0.05" materialType="SOIL" />
+        </groundParticleAnimation>
+
+        <groundParticle>
+            <node index="0>5|10|1" refNodeIndex="1" particleType="SOIL"  />
+            <node index="0>5|10|2" refNodeIndex="1" particleType="SOIL_SMOKE"  />
+            <node index="0>5|10|3" refNodeIndex="1" particleType="SOIL_CHUNKS" worldSpace="false" />
+        </groundParticle>
+    </groundParticleAnimations>
+
+    <sprayUsageScales workingWidth="4.5" scale="1" />
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="seeds" capacity="600" fillVolumeIndex="0"/>
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="600" fillVolumeIndex="1"/>
+    </fillUnits>
+
+    <sowingMachine fillUnitIndex="1" unloadInfoIndex="1" loadInfoIndex="1" />
+    <sprayer fillUnitIndex="2" unloadInfoIndex="2" loadInfoIndex="2" />
+
+    <needsActivation value="true" />
+    <fillLitersPerSecond>80</fillLitersPerSecond>
+    <seedFruitTypeCategories>planter</seedFruitTypeCategories>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>5|16|0" maxDelta="0.2" />
+        </volumes>
+        <unloadInfos>
+            <unloadInfo>
+                <node index="0>5|16|1" width="1.4" length="0.1" />
+            </unloadInfo>
+        </unloadInfos>
+        <loadInfos>
+            <loadInfo>
+                <node index="0>5|16|2" width="1.4" length="0.1" />
+            </loadInfo>
+        </loadInfos>
+    </fillVolumes>
+
+    <fillRootNode index="0>" />
+    <exactFillRootNode index="0>5|18" />
+    <fillMassNode index="0>" />
+
+    <sowingSound file="$data/sounds/sowingSound.wav"      pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.55" />
+    <airBlowerSound file="$data/sounds/airBlowerLoop.wav" pitchOffset="1.20" volume="1.00" indoorVolumeFactor="0.55" />
+    <fillSound file="$data/maps/sounds/siloFillSound.wav" pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.55"  volume3D="1.0" innerRadius="10" radius="40" linkNode="0>0"/>
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav" pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.75" />
+
+    <speedRotatingParts>
+        <!-- front discs -->
+        <speedRotatingPart shaderNode="0>5|0|2" radius="0.172" refNodeIndex="0" />
+        <speedRotatingPart shaderNode="0>5|1|2" radius="0.172" refNodeIndex="0" />
+        <speedRotatingPart shaderNode="0>5|2|2" radius="0.172" refNodeIndex="0" />
+        <speedRotatingPart shaderNode="0>5|3|2" radius="0.172" refNodeIndex="0" />
+        <speedRotatingPart shaderNode="0>5|4|2" radius="0.172" refNodeIndex="0" />
+        <speedRotatingPart shaderNode="0>5|5|2" radius="0.172" refNodeIndex="0" />
+        <!-- frame 1 -->
+        <speedRotatingPart index="0>5|0|1|0|1|0|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|0|1|0|1|1|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|0|1|0|1|2"   radius="0.23" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|0|1|0|1|3"   radius="0.1"  refNodeIndex="0" />
+        <speedRotatingPart index="0>5|0|1|0|1|4|0" radius="0.17" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|0|1|0|1|5|0" radius="0.17" refNodeIndex="0" />
+        <!-- frame 2 -->
+        <speedRotatingPart index="0>5|1|1|0|1|0|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|1|1|0|1|1|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|1|1|0|1|2"   radius="0.23" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|1|1|0|1|3"   radius="0.1"  refNodeIndex="0" />
+        <speedRotatingPart index="0>5|1|1|0|1|4|0" radius="0.17" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|1|1|0|1|5|0" radius="0.17" refNodeIndex="0" />
+        <!-- frame 3 -->
+        <speedRotatingPart index="0>5|2|1|0|1|0|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|2|1|0|1|1|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|2|1|0|1|2"   radius="0.23" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|2|1|0|1|3"   radius="0.1"  refNodeIndex="0" />
+        <speedRotatingPart index="0>5|2|1|0|1|4|0" radius="0.17" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|2|1|0|1|5|0" radius="0.17" refNodeIndex="0" />
+        <!-- frame 4 -->
+        <speedRotatingPart index="0>5|3|1|0|1|0|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|3|1|0|1|1|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|3|1|0|1|2"   radius="0.23" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|3|1|0|1|3"   radius="0.1"  refNodeIndex="0" />
+        <speedRotatingPart index="0>5|3|1|0|1|4|0" radius="0.17" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|3|1|0|1|5|0" radius="0.17" refNodeIndex="0" />
+        <!-- frame 5 -->
+        <speedRotatingPart index="0>5|4|1|0|1|0|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|4|1|0|1|1|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|4|1|0|1|2"   radius="0.23" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|4|1|0|1|3"   radius="0.1"  refNodeIndex="0" />
+        <speedRotatingPart index="0>5|4|1|0|1|4|0" radius="0.17" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|4|1|0|1|5|0" radius="0.17" refNodeIndex="0" />
+        <!-- frame 6 -->
+        <speedRotatingPart index="0>5|5|1|0|1|0|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|5|1|0|1|1|0" radius="0.13" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|5|1|0|1|2"   radius="0.23" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|5|1|0|1|3"   radius="0.1"  refNodeIndex="0" />
+        <speedRotatingPart index="0>5|5|1|0|1|4|0" radius="0.17" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|5|1|0|1|5|0" radius="0.17" refNodeIndex="0" />
+        <!-- left and rightMarkerDisc -->
+        <speedRotatingPart index="0>5|0|5|0|0|0|0|0" radius="0.183" foldMinLimit="0.9" foldMaxLimit="1" ridgeMarkerAnim="leftRidgeMarkerAnim" refNodeIndex="0" />
+        <speedRotatingPart index="0>5|5|5|0|0|0|0|0" radius="0.183" foldMinLimit="0.9" foldMaxLimit="1" ridgeMarkerAnim="rightRidgeMarkerAnim" refNodeIndex="0" />
+    </speedRotatingParts>
+
+    <ridgeMarkers foldMaxLimit="0.1" >
+        <ridgeMarker animName="leftRidgeMarkerAnim" />
+        <ridgeMarker animName="rightRidgeMarkerAnim" />
+    </ridgeMarkers>
+
+    <foldingParts startMoveDirection="1" turnOnFoldMaxLimit="0.02" turnOffOnFold="true" turnOnFoldDirection="-1" >
+        <foldingPart animationName="unfoldFrames" speedScale="1" />
+    </foldingParts>
+
+    <movingTools>
+        <!-- ridge markers hydraulics -->
+        <movingTool index="0>5|0|5|0" playSound="true" >
+            <dependentPart index="0>5|0|6" />
+        </movingTool>
+        <movingTool index="0>5|5|5|0" playSound="true" >
+            <dependentPart index="0>5|5|6" />
+        </movingTool>
+        <movingTool index="0>5|0" playSound="true" />
+    </movingTools>
+
+    <movingParts>
+        <!-- ridge markers hydraulics -->
+        <movingPart index="0>5|0|6" referencePoint="0>5|0|5|0|1" referenceFrame="0>5|0|5|0|1" >
+            <translatingPart index="0>5|0|6|0"/>
+        </movingPart>
+        <movingPart index="0>5|5|6" referencePoint="0>5|5|5|0|1" referenceFrame="0>5|5|5|0|1" >
+            <translatingPart index="0>5|5|6|0"/>
+        </movingPart>
+
+        <!-- sower units -->
+        <movingPart index="0>5|0|1|0" referencePoint="0>5|0|0" referenceFrame="0>5|6" localReferencePoint="0>5|0|1|0|0" >
+            <dependentPart index="0>5|0|1|0|0" />
+        </movingPart>
+        <movingPart index="0>5|0|1|0|0" referencePoint="0>5|0|0" referenceFrame="0>5|0|0" />
+
+        <movingPart index="0>5|1|1|0" referencePoint="0>5|1|0" referenceFrame="0>5|7" localReferencePoint="0>5|1|1|0|0" >
+            <dependentPart index="0>5|1|1|0|0" />
+        </movingPart>
+        <movingPart index="0>5|1|1|0|0" referencePoint="0>5|1|0" referenceFrame="0>5|1|0" />
+
+        <movingPart index="0>5|2|1|0" referencePoint="0>5|2|0" referenceFrame="0>5|6" localReferencePoint="0>5|2|1|0|0" >
+            <dependentPart index="0>5|2|1|0|0" />
+        </movingPart>
+        <movingPart index="0>5|2|1|0|0" referencePoint="0>5|2|0" referenceFrame="0>5|2|0" />
+
+        <movingPart index="0>5|3|1|0" referencePoint="0>5|3|0" referenceFrame="0>5|7" localReferencePoint="0>5|3|1|0|0" >
+            <dependentPart index="0>5|3|1|0|0" />
+        </movingPart>
+        <movingPart index="0>5|3|1|0|0" referencePoint="0>5|3|0" referenceFrame="0>5|3|0" />
+
+        <movingPart index="0>5|4|1|0" referencePoint="0>5|4|0" referenceFrame="0>5|6" localReferencePoint="0>5|4|1|0|0" >
+            <dependentPart index="0>5|4|1|0|0" />
+        </movingPart>
+        <movingPart index="0>5|4|1|0|0" referencePoint="0>5|4|0" referenceFrame="0>5|4|0" />
+
+        <movingPart index="0>5|5|1|0" referencePoint="0>5|5|0" referenceFrame="0>5|6" localReferencePoint="0>5|5|1|0|0" >
+            <dependentPart index="0>5|5|1|0|0" />
+        </movingPart>
+        <movingPart index="0>5|5|1|0|0" referencePoint="0>5|5|0" referenceFrame="0>5|5|0" />
+    </movingParts>
+
+    <randomlyMovingParts>
+        <part index="0>5|0|1" rotMin="-5" rotMax="5" rotSpeed="30" refNodeIndex="0" needsSetIsTurnedOn="false" movingPartIndex="0>5|0|1|0" />
+        <part index="0>5|1|1" rotMin="-5" rotMax="5" rotSpeed="30" refNodeIndex="0" needsSetIsTurnedOn="false" movingPartIndex="0>5|1|1|0" />
+        <part index="0>5|2|1" rotMin="-5" rotMax="5" rotSpeed="30" refNodeIndex="0" needsSetIsTurnedOn="false" movingPartIndex="0>5|2|1|0" />
+        <part index="0>5|3|1" rotMin="-5" rotMax="5" rotSpeed="30" refNodeIndex="0" needsSetIsTurnedOn="false" movingPartIndex="0>5|3|1|0" />
+        <part index="0>5|4|1" rotMin="-5" rotMax="5" rotSpeed="30" refNodeIndex="0" needsSetIsTurnedOn="false" movingPartIndex="0>5|4|1|0" />
+        <part index="0>5|5|1" rotMin="-5" rotMax="5" rotSpeed="30" refNodeIndex="0" needsSetIsTurnedOn="false" movingPartIndex="0>5|5|1|0" />
+    </randomlyMovingParts>
+
+    <animations>
+        <animation name="unfoldFrames">
+            <!-- TEST ANIM-->
+            <part node="0>5|13|0|9" direction="0" startTime="0.0" endTime="4.5" startTrans="1.82 -0.459 -0.588" endTrans="1.02 -0.459 -0.588" />
+            <part node="0>5|13|0|11" direction="0" startTime="1.783" endTime="4.5" startTrans="1.052 -0.459 -0.588" endTrans="0.57 -0.459 -0.588" />
+            <part node="0>5|13|0|8" direction="0" startTime="3.581" endTime="4.5" startTrans="0.28 -0.459 -0.588" endTrans="0.12 -0.459 -0.588" />
+
+            <part node="0>5|13|0|17" direction="0" startTime="3.581" endTime="4.5" startTrans="-0.49 -0.459 -0.588" endTrans="-0.33 -0.459 -0.588" />
+            <part node="0>5|13|0|15" direction="0" startTime="1.783" endTime="4.5" startTrans="-1.262 -0.459 -0.588" endTrans="-0.78 -0.459 -0.588" />
+            <part node="0>5|13|0|13" direction="0" startTime="0.0" endTime="4.5" startTrans="-2.03 -0.459 -0.588" endTrans="-1.23 -0.459 -0.588" />
+
+            <part node="0>5|13|0|6" direction="0" startTime="0.0" endTime="4.5" startTrans="1.905 -0.751 0.028" endTrans="1.105 -0.752 0.028" />
+            <part node="0>5|13|0|5" direction="0" startTime="1.783" endTime="4.5" startTrans="1.135 -0.752 0.028" endTrans="0.653 -0.752 0.028" />
+            <part node="0>5|13|0|4" direction="0" startTime="3.581" endTime="4.5" startTrans="0.336 -0.749 0.018" endTrans="0.172 -0.749 0.018" />
+
+            <part node="0>5|13|0|3" direction="0" startTime="3.581" endTime="4.5" startTrans="-0.406 -0.748 0.0230" endTrans="-0.246 -0.748 0.0230" />
+            <part node="0>5|13|0|2" direction="0" startTime="1.783" endTime="4.5" startTrans="-1.159 -0.757 0.041" endTrans="-0.677 -0.757 0.041" />
+            <part node="0>5|13|0|0" direction="0" startTime="0.0" endTime="4.5" startTrans="-1.947 -0.751 0.027" endTrans="-1.147 -0.751 0.027" />
+
+            <part node="0>5|13|0|7" direction="0" startTime="0.0" endTime="4.5" startTrans="1.388 -0.339 0.541" endTrans="1.099 -0.256 0.393" />
+            <part node="0>5|13|0|7" direction="0" startTime="0.0" endTime="4.5" startRot="0 0 0" endRot="-67.095 64.598 -66.945" />
+
+            <part node="0>5|13|0|1" direction="0" startTime="0.0" endTime="4.5" startTrans="-1.552 -0.313 0.454" endTrans="-1.277 -0.313 0.503" />
+            <part node="0>5|13|0|1" direction="0" startTime="0.0" endTime="4.5" startRot="0 -4.501 0" endRot="0 -71.809 0" />
+
+            <part node="0>5|13|0|10" direction="0" startTime="0.0" endTime="4.5" startTrans="1.296 -0.182 -0.331" endTrans="1.004 -0.055 -0.367" />
+            <part node="0>5|13|0|10" direction="0" startTime="0.0" endTime="4.5" startRot="0 0 0" endRot="-80.283 39.487 -103.475" />
+
+            <part node="0>5|13|0|12" direction="0" startTime="1.783" endTime="4.5" startTrans="0.707 -0.179 -0.283" endTrans="0.606 -0.179 -0.283" />
+            <part node="0>5|13|0|12" direction="0" startTime="1.783" endTime="4.5" startRot="0 0 0" endRot="0 0 -75.202" />
+
+            <part node="0>5|13|0|16" direction="0" startTime="1.783" endTime="3.142" startTrans="-0.941 -0.169 -0.233" endTrans="-0.859 -0.092 -0.291" />
+            <part node="0>5|13|0|16" direction="0" startTime="1.783" endTime="3.142" startRot="0 0 0" endRot="9.845 23.842 24.359" />
+            <part node="0>5|13|0|16" direction="0" startTime="3.142" endTime="4.5" startTrans="-0.859 -0.092 -0.291" endTrans="-0.941 -0.169 -0.293" />
+            <part node="0>5|13|0|16" direction="0" startTime="3.142" endTime="4.5" startRot="9.845 23.842 24.359" endRot="19.261 -1.176 88.703" />
+
+
+            <part node="0>5|13|0|14" direction="0" startTime="0.0" endTime="4.5" startTrans="-1.469 -0.12 -0.241" endTrans="-1.158 -0.153 -0.297" />
+            <part node="0>5|13|0|14" direction="0" startTime="0.0" endTime="4.5" startRot="0 0 0" endRot="18.358 53.32 98.28" />
+
+            <!-- TEST ANIM-->
+            <part node="0>5|0" direction="0" startTime="0.0" endTime="4.5" startTrans="1.549 0.79 0.231" endTrans="0.749 0.79 0.231" />
+            <part node="0>5|1" direction="0" startTime="1.783" endTime="4.5" startTrans="1.156 0.539 0.068" endTrans="0.674 0.539 0.068" />
+            <part node="0>5|2" direction="0" startTime="3.581" endTime="4.5" startTrans="0.384 0.542 0.068" endTrans="0.224 0.542 0.068" />
+
+            <part node="0>5|5" direction="0" startTime="0.0" endTime="4.5" startTrans="-1.549 0.79 0.231" endTrans="-0.749 0.79 0.231" />
+            <part node="0>5|4" direction="0" startTime="1.783" endTime="4.5" startTrans="-1.156 0.539 0.068" endTrans="-0.674 0.539 0.068" />
+            <part node="0>5|3" direction="0" startTime="3.581" endTime="4.5" startTrans="-0.384 0.542 0.068" endTrans="-0.224 0.542 0.068" />
+
+            <part node="0>5|0|5|0|0"     startTime="0" duration="1.5" startTrans="0.003 -0.001 1.123" endTrans="0.003 -0.001 0.476" />
+            <part node="0>5|0|5|0|0|0"   startTime="0" duration="1.5" startTrans="0 0 0.673" endTrans="0 0 0.181" />
+            <part node="0>5|5|5|0|0"     startTime="0" duration="1.5" startTrans="-0.006 -0.001 1.105" endTrans="-0.006 -0.001 0.477" />
+            <part node="0>5|5|5|0|0|0"   startTime="0" duration="1.5" startTrans="0.002 0.0 0.681" endTrans="0.002 0 0.207" />
+
+            <part node="0>5|11" startTime="0" endTime="0.1" startTrans="0 0 0" endTrans="0 1 0" />
+            <part node="0>5|9"  startTime="0" endTime="0.1" startTrans="0 0 0" endTrans="0 1 0" />
+        </animation>
+
+        <animation name="leftRidgeMarkerAnim">
+            <part node="0>5|0|5|0" startTime="0" duration="1.5" startRot="0 0 0" endRot="-105 0 0" />
+        </animation>
+        <animation name="rightRidgeMarkerAnim">
+            <part node="0>5|5|5|0" startTime="0" duration="1.5" startRot="0 0 0" endRot="-105 0 0" />
+        </animation>
+        <animation name="moveSupport">
+            <part node="0>5|0|7" startTime="0" endTime="0.05" startRot="0 0 180" endRot="0 0 0" />
+            <part node="0>5|5|7" startTime="0" endTime="0.05" startRot="0 0 180" endRot="0 0 0" />
+        </animation>
+        <!-- cover -->
+        <animation name="toggleCover">
+            <part node="0>5|17|0" startTime="0"    endTime="0.05" visibility="false" />
+            <part node="0>5|17|0" startTime="0.05" endTime="0.1"  visibility="true" />
+            <part node="0>5|17|1" startTime="0.1" endTime="0.15"  visibility="true" />
+            <part node="0>5|17|1" startTime="0.15" endTime="0.25"  visibility="false" />
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <cover animationName="toggleCover" openOnBuy="false"/>
+
+    <ai>
+        <areaMarkers leftIndex="0>7|0|0" rightIndex="0>7|0|1" backIndex="0>7|0|2" />
+    </ai>
+
+    <washable dirtDuration="60" washDuration="1" workMultiplier="20" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.6 -0.1" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

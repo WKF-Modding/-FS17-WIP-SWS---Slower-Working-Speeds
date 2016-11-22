@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="cultivator">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Qualidisc Farmer 3000</name>
+        <specs>
+            <neededPower>90</neededPower>
+            <workingWidth>3.0</workingWidth>
+        </specs>
+        <functions>
+            <function>$l10n_function_cultivator</function>
+        </functions>
+        <image>$data/store/store_kvernelandQualidisc3m.png</image>
+        <price>8800</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KVERNELAND</brand>
+        <category>SWS_cultivators</category>
+        <fieldJob sizeCategory="1" typeCategory="cultivator" />
+        <vertexBufferMemoryUsage>1050264</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>267900</indexBufferMemoryUsage>
+        <textureMemoryUsage>9087920</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_cultivator</typeDesc>
+    <filename>$data/vehicles/tools/kverneland/kvernelandQualidisc3m.i3d</filename>
+
+    <size width="3.5" length="3"/>
+    <speedLimit value="13" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel rotSpeed="0" restLoad="0.6" repr="0>0|0" forcePointRatio="0.2" radius="0.28" mass="0.1" initialCompression="50" suspTravel="0.05" spring="18" damper="50" isSynchronized="false" />
+                <wheel rotSpeed="0" restLoad="0.6" repr="0>0|1" forcePointRatio="0.2" radius="0.28" mass="0.1" initialCompression="50" suspTravel="0.05" spring="18" damper="50" isSynchronized="false" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <lights>
+        <low>
+            <light                       decoration="0>2|0|0|0" lightTypes="0 3" /> <!--BackLights-->
+        </low>
+        <high>
+            <light realLight="0>2|0|0|1" decoration="0>2|0|0|0" lightTypes="0 3" /> <!--BackLights-->
+        </high>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>2|0|0|1" decoration="0>2|0|2|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>2|0|1|0|1" decoration="0>2|0|1|0|0" />
+        <turnLightRight realLight="0>2|0|1|1|1" decoration="0>2|0|1|1|0" />
+    </turnLights>
+
+    <workAreas>
+        <workArea startIndex="0>2|2|0" widthIndex="0>2|2|1" heightIndex="0>2|2|2" refNodeIndex="0" type="cultivator" chargeValue="1" />
+    </workAreas>
+
+    <onlyActiveWhenLowered value="true" />
+
+    <groundReferenceNodes>
+        <groundReferenceNode index="0>" threshold="0.1" depthNode="0>2|4|1" />
+    </groundReferenceNodes>
+
+    <!-- recommended horsepower by manufacturer: 90 -->
+    <powerConsumer neededPtoPower="0" forceNode="0>" maxForce="11" />
+
+    <cultivatorSound file="$data/sounds/cultivatorSound.wav" pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.55" />
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>1|0" jointType="implement" topReferenceNode="0>1|1" lowerDistanceToGround="0.59" upperDistanceToGround="1.8" />
+    </inputAttacherJoints>
+
+    <groundParticleAnimations>
+        <groundParticleAnimation>
+            <node index="0>2|4|0|0" refNodeIndex="0" materialType="SOIL" />
+        </groundParticleAnimation>
+
+        <groundParticle>
+            <node index="0>2|4|0|1" refNodeIndex="0" particleType="SOIL"  />
+            <node index="0>2|4|0|2" refNodeIndex="0" particleType="SOIL_SMOKE"  />
+            <node index="0>2|4|0|3" refNodeIndex="0" particleType="SOIL_CHUNKS"     worldSpace="false" />
+        </groundParticle>
+    </groundParticleAnimations>
+
+    <speedRotatingParts>
+        <speedRotatingPart index="0>2|1|0"      radius="0.29"  refNodeIndex="0" />
+        <speedRotatingPart shaderNode="0>2|1|1" radius="-0.26" refNodeIndex="0" />
+    </speedRotatingParts>
+
+    <animations>
+        <!-- move support arm down/up -->
+        <animation name="moveSupport">
+            <part node="0>2|5" startTime="0" endTime="0.5" startTrans="0 0.3 0" endTrans="0 0 0"/>
+        </animation>
+    </animations>
+
+    <support animationName="moveSupport" />
+
+    <washable dirtDuration="30" washDuration="1" workMultiplier="20" />
+
+    <ai>
+        <areaMarkers leftIndex="0>2|3|0|0" rightIndex="0>2|3|0|1" backIndex="0>2|3|0|2" />
+        <sizeMarkers leftIndex="0>2|3|1|0" rightIndex="0>2|3|1|1" backIndex="0>2|3|1|2" />
+        <needsLowering value="true"/>
+    </ai>
+
+    <components count="1">
+        <component1 centerOfMass="0 0.2 0" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

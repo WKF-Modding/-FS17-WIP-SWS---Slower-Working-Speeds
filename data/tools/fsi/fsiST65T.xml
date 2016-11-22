@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="stumpCutter">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>ST 65 T</name>
+        <specs>
+            <neededPower>70</neededPower>
+        </specs>
+        <functions>
+            <function>$l10n_function_stumpCutter</function>
+        </functions>
+        <image>$data/store/store_fsiST65T.png</image>
+        <price>5000</price>
+        <dailyUpkeep>10</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>FSI</brand>
+        <category>SWS_wood</category>
+        <vertexBufferMemoryUsage>344416</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>54834</indexBufferMemoryUsage>
+        <textureMemoryUsage>1420168</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_stumpCutter</typeDesc>
+    <filename>$data/vehicles/tools/fsi/fsiST65T.i3d</filename>
+
+    <size width="2" length="5" />
+    <powerConsumer ptoRpm="540" neededPtoPower="45"/>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>0" jointType="implement" topReferenceNode="0>1" lowerRotLimitScale="0 0 0" upperRotationOffset="0" lowerRotationOffset="0" lowerDistanceToGround="0.6" upperDistanceToGround="0.95" ptoInputNode="0>2|1|0|0|1|1" needsLowering="false" />
+    </inputAttacherJoints>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav" pitchOffset="0.8" volume="0.4" />
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>2|1|0|0|0|1" type="stumpCutter" rotSpeed="750" rotAxis="1" turnOnFadeTime="2" turnOffFadeTime="3"/>
+    </turnedOnRotationNodes>
+
+    <movingTools>
+        <!-- arm y rot -->
+        <movingTool index="0>2|1">
+            <controls axis="AXIS_FRONTLOADER_TOOL" invertAxis="false" mouseSpeedFactor="0.7" iconFilename="$dataS2/menu/moveControls/topDoor.png" />
+            <rotation rotSpeed="15" rotAcceleration="100" rotMax="35" rotMin="-35" rotationAxis="2" />
+            <dependentPart index="0>2|2" />
+            <dependentPart index="0>2|3" />
+        </movingTool>
+        <!-- arm x rot -->
+        <movingTool index="0>2|1|0" >
+            <controls axis="AXIS_FRONTLOADER_ARM" invertAxis="false" mouseSpeedFactor="0.7" iconFilename="$dataS2/menu/moveControls/frontloader_arm.png" />
+            <rotation rotSpeed="20" rotAcceleration="170" rotMax="25" rotMin="-15" rotationAxis="1"  />
+            <dependentPart index="0>2|1|1" />
+        </movingTool>
+        <!-- cutter arm -->
+        <movingTool index="0>2|1|0|0" >
+            <controls axis="AXIS_FRONTLOADER_ARM2" invertAxis="true" mouseSpeedFactor="0.7" iconFilename="$dataS2/menu/moveControls/tool_openClose.png" />
+            <rotation rotSpeed="20" rotAcceleration="170" rotMax="5" rotMin="-30" rotationAxis="1" />
+            <dependentPart index="0>2|1|0|1" />
+            <dependentPart index="0>2|1|0|0|1" />
+        </movingTool>
+        <!-- cutter -->
+        <movingTool index="0>2|1|0|0|0" >
+            <controls axis="AXIS_FRONTLOADER_TOOL2" invertAxis="true" mouseSpeedFactor="0.3" iconFilename="$dataS2/menu/moveControls/crane_arm2_tool.png" />
+            <rotation rotSpeed="20" rotAcceleration="170" rotMax="35" rotMin="0" rotationAxis="1" />
+            <dependentPart index="0>2|1|0|0|2" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- hydraulic left -->
+        <movingPart index="0>2|2" referencePoint="0>2|1|2" referenceFrame="0>2|1|2" playSound="true" >
+            <translatingPart index="0>2|2|0" />
+        </movingPart>
+        <!-- hydraulic right -->
+        <movingPart index="0>2|3" referencePoint="0>2|1|3" referenceFrame="0>2|1|3" playSound="true" >
+            <translatingPart index="0>2|3|0" />
+        </movingPart>
+        <!-- hydraulic top -->
+        <movingPart index="0>2|1|1" referencePoint="0>2|1|0|2" referenceFrame="0>2|1|0|2" playSound="true" >
+            <translatingPart index="0>2|1|1|0" />
+        </movingPart>
+        <!-- hydraulic cutter arm -->
+        <movingPart index="0>2|1|0|1" referencePoint="0>2|1|0|0|3" referenceFrame="0>2|1|0" playSound="true" >
+            <translatingPart index="0>2|1|0|1|0" />
+        </movingPart>
+        <!-- pto arm -->
+        <movingPart index="0>2|1|0|0|1" localReferencePoint="0>2|1|0|0|1|0" referencePoint="0>2|1|0|3" referenceFrame="0>2|1|0" >
+            <dependentPart index="0>2|1|0|0|1|0" />
+        </movingPart>
+        <movingPart index="0>2|1|0|0|1|0" referencePoint="0>2|1|0|3" referenceFrame="0>2|1|0|3" scaleZ="true" />
+        <!-- hydraulic cutter  -->
+        <movingPart index="0>2|1|0|0|2" referencePoint="0>2|1|0|0|0|0" referenceFrame="0>2|1|0|0" playSound="true" >
+            <translatingPart index="0>2|1|0|0|2|0" />
+        </movingPart>
+        <movingPart index="0>2|1|0|0|0|2" referenceFrame="0>2|1|0|0|0|4" isActiveDirty="true" alignToWorldY="true" />
+    </movingParts>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="0>2|0|0|0" startTime="0" endTime="0.5" startTrans="0 0.3 0" endTrans="0 0 0" />
+            <part node="0>2|0|1|0" startTime="0" endTime="0.5" startTrans="0 0.3 0" endTrans="0 0 0" />
+            <part node="0>2|0|2"   startTime="0" endTime="0.5" startTrans="0.037 0.554 0.074" endTrans="0.037 0.254 0.074" />
+        </animation>
+        <animation name="lowerAnimation">
+            <part node="0>2|0|0|0" startTime="0" endTime="0.5" startTrans="0 0.3 0" endTrans="0 0 0" />
+            <part node="0>2|0|1|0" startTime="0" endTime="0.5" startTrans="0 0.3 0" endTrans="0 0 0" />
+            <part node="0>2|0|2"   startTime="0" endTime="0.5" startTrans="0.037 0.554 0.074" endTrans="0.037 0.254 0.074" />
+        </animation>
+    </animations>
+
+    <stumpCutter cutNode="0>2|1|0|0|0|2|0" cutSizeY="1.4" cutSizeZ="2.3">
+        <emitterShape node="0>2|1|0|0|0|3|0" particleType="CRUSHER_WOOD" emitCountScale="10"/>
+        <emitterShape node="0>2|1|0|0|0|3|1" particleType="CRUSHER_DUST" emitCountScale="2"/>
+    </stumpCutter>
+
+    <stumpCutterStartSound file="$data/vehicles/tools/fsi/fsiST65T_start.wav" volume="1.00" indoorVolumeFactor="0.55" pitchOffset="1" />
+    <stumpCutterIdleSound  file="$data/vehicles/tools/fsi/fsiST65T_idle.wav"  volume="1.00" indoorVolumeFactor="0.55" pitchOffset="1" />
+    <stumpCutterWorkSound  file="$data/vehicles/tools/fsi/fsiST65T_work.wav"  volume="1.00" indoorVolumeFactor="0.55" pitchOffset="1" />
+    <stumpCutterStopSound  file="$data/vehicles/tools/fsi/fsiST65T_stop.wav"  volume="1.00" indoorVolumeFactor="0.55" pitchOffset="1" />
+
+    <support animationName="moveSupport" />
+    <lowerAnimation name="lowerAnimation" />
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="10" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.9 -0.2" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+
+</vehicle>

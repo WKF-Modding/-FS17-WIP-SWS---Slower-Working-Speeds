@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="receivingHopper">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>RH 24-60</name>
+        <specs>
+        </specs>
+        <functions>
+            <function>$l10n_function_palletPacker</function>
+        </functions>
+        <image>$data/store/store_grimmeRH2460.png</image>
+        <price>19000</price>
+        <dailyUpkeep>30</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>GRIMME</brand>
+        <category>SWS_belts</category>
+        <vertexBufferMemoryUsage>887304</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>130272</indexBufferMemoryUsage>
+        <textureMemoryUsage>14156000</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_belt</typeDesc>
+    <filename>$data/vehicles/tools/grimme/grimmeRH2460.i3d</filename>
+
+    <size width="3.5" length="10.0" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels>
+                <wheel driveMode="0" restLoad="0.6" repr="0>0" radius="0.469" initialCompression="55" suspTravel="0.15" spring="5" damper="2" mass="0.2" width="0.35" tireTrackAtlasIndex="1" hasTireTracks="true" hasParticles="true" />
+                <wheel driveMode="0" restLoad="0.6" repr="0>1" radius="0.469" initialCompression="55" suspTravel="0.15" spring="5" damper="2" mass="0.2" width="0.35" tireTrackAtlasIndex="1" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <brakeForce>0.1</brakeForce>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint index="0>2" jointType="implement" needsToolbar="true" needsLowering="false" lowerDistanceToGround="0.632" upperDistanceToGround="1.2" lowerRotLimitScale="1 7 2" upperRotLimitScale="1 7 2" />
+    </inputAttacherJoints>
+
+    <fillRootNode index="0>" />
+    <fillMassNode updateFillLevelMass="false" />
+    <exactFillRootNode index="0>9" />
+    <allowFillFromAir value="true"/>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypes="potato sugarBeet" capacity="16000" />
+    </fillUnits>
+
+    <fillVolumes>
+        <volumes>
+            <volume index="0>5|0" maxDelta="1" />
+        </volumes>
+    </fillVolumes>
+
+    <receivingHopper unloadingDelay="3">
+        <raycastNode index="0>10" raycastLength="5" />
+        <tipTrigger index="0>3" />
+        <boxTrigger index="0>4" litersPerMinute="6000" boxSpawnPlaceIndex="0>7">
+            <box fillType="potato" filename="$data/objects/pallets/palletPotato.i3d" />
+            <box fillType="sugarBeet" filename="$data/objects/pallets/palletSugarBeet.i3d" />
+        </boxTrigger>
+        <fillScrollerNodes>
+            <fillScrollerNode index="0>6|0" shaderParameterName="offsetUV" scrollSpeed="-0.07" shaderParameterComponent="1" turnOnFadeTime="1" turnOffFadeTime="1" toggleVisibility="false" />
+        </fillScrollerNodes>
+        <fillEffect>
+            <effectNode effectClass="MorphPositionEffect" effectNode="0>11|0" materialType="belt" delay="0" fadeTime="3" speed="0.9" scrollLength="5" scrollSpeed="0.8" />
+        </fillEffect>
+    </receivingHopper>
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="10" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.6 0" solverIterationCount="4" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0"/>
+</vehicle>

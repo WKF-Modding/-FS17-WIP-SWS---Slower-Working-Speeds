@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="loadingTrailerDrivable">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>S-710</name>
+        <functions>
+            <function>$l10n_function_beltSystem</function>
+            <function>$l10n_function_beltSystemStart</function>
+        </functions>
+        <rotation>0</rotation>
+        <image>$data/store/store_lizardBeltSystem.png</image>
+        <price>5000</price>
+        <dailyUpkeep>5</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <brand>LIZARD</brand>
+        <category>SWS_belts</category>
+        <vertexBufferMemoryUsage>151720</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>30132</indexBufferMemoryUsage>
+        <textureMemoryUsage>4893512</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <showOnMap>true</showOnMap>
+
+    <typeDesc>$l10n_typeDesc_belt</typeDesc>
+    <filename>$data/vehicles/tools/lizard/lizardBeltSystem.i3d</filename>
+
+    <size width="1.5" length="8" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels autoRotateBackSpeed="1.6">
+                <wheel              restLoad="0.4" repr="0>0|0"                     forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/AW305_215_75R17_5.xml" isLeft="false" initialCompression="60" suspTravel="0.1" spring="15" damper="10" hasTireTracks="true" hasParticles="true" />
+                <wheel              restLoad="0.4" repr="0>0|1"                     forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/AW305_215_75R17_5.xml" isLeft="true"  initialCompression="60" suspTravel="0.1" spring="15" damper="10" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="1" restLoad="0.4" repr="0>0|2" driveNode="0>0|2|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/T510_3_50R6.xml"       isLeft="true"  initialCompression="34" suspTravel="0.1" spring="15" damper="10" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <brakeForce>0.2</brakeForce>
+
+    <ackermannSteeringConfigurations>
+        <ackermannSteering rotSpeed="65" rotMax="50" rotCenterWheel1="0" rotCenterWheel2="1" />
+    </ackermannSteeringConfigurations>
+
+    <differentials>
+        <differential torqueRatio="0.5" maxSpeedRatio="3.0" wheelIndex1="0" wheelIndex2="1" /> <!-- front left-right -->
+    </differentials>
+
+    <motorConfigurations>
+        <motorConfiguration name="default" hp="5" price="0">
+            <motor torqueScale="0.1" minRpm="1000" maxRpm="2200" maxForwardSpeed="5" maxBackwardSpeed="5" brakeForce="1" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.0012" minForwardGearRatio="145" maxForwardGearRatio="150" minBackwardGearRatio="145" maxBackwardGearRatio="150">
+                <torque normRpm="0.45" torque="0.9"/>
+                <torque normRpm="0.5"  torque="0.97"/>
+                <torque normRpm="0.59" torque="1"/>
+                <torque normRpm="0.72" torque="1"/>
+                <torque normRpm="0.86" torque="0.88"/>
+                <torque normRpm="1"    torque="0.72"/>
+            </motor>
+        </motorConfiguration>
+    </motorConfigurations>
+
+    <cameras count="1">
+        <camera1 index="0>2|0|0" rotatable="true" rotateNode="0>2|0" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="25" >
+            <raycastNode index="0>2|1" />
+        </camera1>
+    </cameras>
+
+    <inputAttacherJoints>
+        <inputAttacherJoint  index="0>1|0|0" jointType="trailerLow" />
+        <inputAttacherJoint index="0>6|0|0" jointType="conveyor" allowsJointTransLimitMovement="true" forceSelectionOnAttach="false"/>
+    </inputAttacherJoints>
+
+    <enterReferenceNode index="0>3" />
+    <exitPoint index="0>3" />
+
+    <steerableNeedsAttacherVehicle>false</steerableNeedsAttacherVehicle>
+    <fuelUsage>0</fuelUsage>
+
+    <fillRootNode index="0>" />
+    <fillMassNode updateFillLevelMass="false" />
+
+    <fillTypeChangeThreshold>1</fillTypeChangeThreshold>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="bulk" capacity="500" showOnHud="false" showInShop="false"/>
+    </fillUnits>
+
+    <fillSound                   file="$data/maps/sounds/siloFillSound.wav"                       pitchOffset="1.00" volume="0.70" indoorVolumeFactor="0.55" indoorLowpassGain="0.75"/>
+
+    <overloading capacity="175" stopOverloadIfEmpty="false" forceActive="true">
+        <trailerTriggers>
+            <trailerTrigger index="0>4|5" />
+        </trailerTriggers>
+    </overloading>
+
+    <shovel tipReferenceNode="0>4|0" emptyStartAngle="160" emptyFullAngle="140" emptySpeed="1400" fillLitersPerSecond="1000" pickUpNode="0>4|1" pickUpWidth="6" pickUpLength="12" pickUpYOffset="-0.5" pickUpRequiresMovement="false" pickUpNeedsToBeTurnedOn="true" pickUpNeedsActiveVehicle="false" />
+
+    <tipOcclusionAreas>
+        <tipOcclusionArea start="0>4|4|0" width="0>4|4|1" height="0>4|4|2" />
+    </tipOcclusionAreas>
+
+    <pipe numStates="1" unloadingStates="1" raycastNodeIndex="0>4|0" raycastDistance="5" foldMinState="1" foldMaxState="1" foldMinLimit="0" foldMaxLimit="0" delay="0" effectExtraDistanceOnTrailer="-0.2wewa" effectExtraDistance="0"/>
+
+    <conveyorBeltEffect>
+        <effectNode effectClass="ConveyorBeltEffect" effectNode="0>4|2|0" materialType="belt"  delay="0" fadeTime="2" speed="0.9" scrollLength="1" scrollSpeed="0.82" />
+    </conveyorBeltEffect>
+
+    <pipeEffect>
+        <effectNode effectClass="PipeEffect"          effectNode="0>4|2|2" materialType="pipe"  delay="0" maxBending="1" shapeScaleSpread="1 1 0 0" materialTypeId="1"/>
+    </pipeEffect>
+
+    <conveyorBeltScrollers>
+        <conveyorBeltScroller index="0>4|3"  scrollSpeed="-0.25"  scrollLength="1" shaderParameterName="offsetUV" shaderParameterComponent="1" turnOnFadeTime="0.1" turnOffFadeTime="0.1"/>
+    </conveyorBeltScrollers>
+
+    <foldingParts startMoveDirection="0" onlyFoldOnDetach="true">
+        <foldingPart animationName="folding" speedScale="1" />
+    </foldingParts>
+
+    <cylinderedHydraulicSound file="$data/sounds/cultivatorHydraulic.wav"  pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.75" />
+
+    <movingTools>
+        <movingTool index="0>6|0">
+            <controls axis="AXIS_FRONTLOADER_ARM" invertAxis="false" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/drawbar_rotX.png" />
+            <rotation rotSpeed="15" rotAcceleration="20" rotMax="20" rotMin="-15" rotationAxis="1" />
+            <inputAttacherJoint value="true" />
+        </movingTool>
+
+        <movingTool index="0>1|0" playSound="true">
+            <inputAttacherJoint value="true" />
+        </movingTool>
+    </movingTools>
+
+    <animations>
+        <animation name="folding">
+            <part node="0>1|0" startTime="0" endTime="1.5" startRot="0 0 0" endRot="-90 0 0"/>
+        </animation>
+    </animations>
+
+    <baseColorConfigurations useDefaultColors="true" defaultColorIndex="14" price="100" icon="$dataS2/menu/hud/configurations/config_color.png">
+        <colorNode node="0>5" />
+    </baseColorConfigurations>
+
+    <washable dirtDuration="50" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.35 -0.7" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/implementSchema.png" fileSelected="$dataS2/menu/schemas/implementSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/implementSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/implementSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0 0" />
+
+</vehicle>
