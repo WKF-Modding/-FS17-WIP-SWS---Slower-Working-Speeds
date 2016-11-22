@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="tractor">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>700 Vario</name>
+        <specs>
+            <power>165</power>
+            <maxSpeed>50</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_tractor</function>
+            <function>$l10n_function_tractorFrontloader</function>
+        </functions>
+        <image>$data/store/store_fendt700.png</image>
+        <price>164000</price>
+        <dailyUpkeep>160</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>FENDT</brand>
+        <category>SWS_tractors</category>
+        <fieldJob sizeCategory="1" typeCategory="tractor" hasFrontAndBackHydraulics="true" />
+        <vertexBufferMemoryUsage>2776968</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>450144</indexBufferMemoryUsage>
+        <textureMemoryUsage>39977728</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_tractor</typeDesc>
+    <filename>$data/vehicles/steerable/fendt/fendt700.i3d</filename>
+
+    <size width="3" length="4.5"/>
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels autoRotateBackSpeed="1.6">
+                <wheel rotSpeed="1" restLoad="2.3" repr="1>0|0|0" driveNode="1>0|0|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TM800_540_65R30.xml"                      isLeft="true"  color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="50" damper="65" hasTireTracks="true" hasParticles="true" fenderNode="1>0|0|0|1" fenderRotMax="28" steeringNode="1>1|0" steeringNodeMinTransX="-0.125" steeringNodeMaxTransX="0.125" />
+                <wheel rotSpeed="1" restLoad="2.3" repr="1>0|1|0" driveNode="1>0|1|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TM800_540_65R30.xml"                      isLeft="false" color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="50" damper="65" hasTireTracks="true" hasParticles="true" fenderNode="1>0|1|0|1" fenderRotMin="-28" />
+                <wheel rotSpeed="0" restLoad="2.1" repr="0>0|0"                           forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM800_650_65R42.xml" configIndex="n10v14" isLeft="true"  color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="43" damper="65" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="2.1" repr="0>0|1"                           forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM800_650_65R42.xml" configIndex="n10v14" isLeft="false" color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="43" damper="65" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+        <wheelConfiguration name="$l10n_configuration_valueWheelWeights" price="1200" icon="$dataS2/menu/hud/configurations/config_wheel_weight.png" >
+            <wheels autoRotateBackSpeed="1.6">
+                <wheel rotSpeed="1" restLoad="2.3" repr="1>0|0|0" driveNode="1>0|0|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TM800_540_65R30.xml"                        isLeft="true"  color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="50" damper="65" hasTireTracks="true" hasParticles="true" fenderNode="1>0|0|0|1" fenderRotMax="28" steeringNode="1>1|0" steeringNodeMinTransX="-0.125" steeringNodeMaxTransX="0.125" />
+                <wheel rotSpeed="1" restLoad="2.3" repr="1>0|1|0" driveNode="1>0|1|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TM800_540_65R30.xml"                        isLeft="false" color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="50" damper="65" hasTireTracks="true" hasParticles="true" fenderNode="1>0|1|0|1" fenderRotMin="-28" />
+                <wheel rotSpeed="0" restLoad="2.7" repr="0>0|0"                           forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM800_650_65R42.xml" configIndex="n10v14w3" isLeft="true"  color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="43" damper="65" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="2.7" repr="0>0|1"                           forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM800_650_65R42.xml" configIndex="n10v14w3" isLeft="false" color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="43" damper="65" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+        <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="1800" icon="$dataS2/menu/hud/configurations/config_wheel_broad.png" >
+            <wheels autoRotateBackSpeed="1.6" ackermannSteeringIndex="2">
+                <wheel rotSpeed="1" restLoad="2.4" repr="1>0|0|0" driveNode="1>0|0|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TM800_600_65R28.xml"                      isLeft="true"  color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="50" damper="65" hasTireTracks="true" hasParticles="true" fenderNode="1>0|0|0|1" fenderRotMax="28" steeringNode="1>1|0" steeringNodeMinTransX="-0.125" steeringNodeMaxTransX="0.125" />
+                <wheel rotSpeed="1" restLoad="2.4" repr="1>0|1|0" driveNode="1>0|1|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TM800_600_65R28.xml"                      isLeft="false" color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="50" damper="65" hasTireTracks="true" hasParticles="true" fenderNode="1>0|1|0|1" fenderRotMin="-28" />
+                <wheel rotSpeed="0" restLoad="2.2" repr="0>0|0"                           forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM800_710_70R38.xml" configIndex="n10v14" isLeft="true"  color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="43" damper="65" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="2.2" repr="0>0|1"                           forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM800_710_70R38.xml" configIndex="n10v14" isLeft="false" color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="43" damper="65" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+        <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="1600" icon="$dataS2/menu/hud/configurations/config_wheel_thin.png" >
+            <wheels autoRotateBackSpeed="1.6">
+                <wheel rotSpeed="1" restLoad="2.3" repr="1>0|0|0" driveNode="1>0|0|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TM100_270_95R38.xml"                      isLeft="true"  color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="50" damper="65" hasTireTracks="true" hasParticles="true" fenderNode="1>0|0|0|1" fenderRotMax="28" steeringNode="1>1|0" steeringNodeMinTransX="-0.125" steeringNodeMaxTransX="0.125" />
+                <wheel rotSpeed="1" restLoad="2.3" repr="1>0|1|0" driveNode="1>0|1|0|0|0" forcePointRatio="0.2" filename="$data/vehicles/wheels/trelleborg/TM100_270_95R38.xml"                      isLeft="false" color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="50" damper="65" hasTireTracks="true" hasParticles="true" fenderNode="1>0|1|0|1" fenderRotMin="-28" />
+                <wheel rotSpeed="0" restLoad="2.0" repr="0>0|0"                           forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM100_300_95R52.xml" configIndex="n10v14" isLeft="true"  color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="43" damper="65" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="2.0" repr="0>0|1"                           forcePointRatio="0.3" filename="$data/vehicles/wheels/trelleborg/TM100_300_95R52.xml" configIndex="n10v14" isLeft="false" color="0.750 0.002 0.002 1" initialCompression="20" suspTravel="0.21" spring="43" damper="65" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <axisColor>0.0152 0.0152 0.0152 1</axisColor>
+
+    <ackermannSteeringConfigurations>
+        <ackermannSteering rotSpeed="65" rotMax="45" rotCenterWheel1="2" rotCenterWheel2="3" />
+        <ackermannSteering rotSpeed="65" rotMax="41" rotCenterWheel1="2" rotCenterWheel2="3" />
+    </ackermannSteeringConfigurations>
+
+    <differentials>
+        <differential torqueRatio="0.5" maxSpeedRatio="1.8" wheelIndex1="0" wheelIndex2="1" /> <!-- front left-right -->
+        <differential torqueRatio="0.5" maxSpeedRatio="1.8" wheelIndex1="2" wheelIndex2="3" /> <!-- back left-right -->
+        <differential torqueRatio="0.5" maxSpeedRatio="1.8" differentialIndex1="0" differentialIndex2="1" /> <!-- front-back -->
+    </differentials>
+
+    <motorConfigurations>
+        <motorConfiguration name="716 Vario" hp="165" price="0">
+            <motor torqueScale="0.699" minRpm="1000" maxRpm="2200" maxForwardSpeed="53" maxBackwardSpeed="15" brakeForce="8.5" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.0015" minForwardGearRatio="12.3" maxForwardGearRatio="300" minBackwardGearRatio="40" maxBackwardGearRatio="300">
+                <torque normRpm="0.45" torque="0.9"/>
+                <torque normRpm="0.5" torque="0.97"/>
+                <torque normRpm="0.59" torque="1"/>
+                <torque normRpm="0.72" torque="1"/>
+                <torque normRpm="0.86" torque="0.88"/>
+                <torque normRpm="1" torque="0.72"/>
+            </motor>
+        </motorConfiguration>
+        <motorConfiguration name="720 Vario" hp="200" price="17500" dailyUpkeep="35" icon="$dataS2/menu/hud/configurations/config_engine.png">
+            <motor torqueScale="0.847" />
+            <objectChange node="0>12|1" visibilityActive="true"/>
+            <objectChange node="0>12|0" visibilityActive="false"/>
+        </motorConfiguration>
+        <motorConfiguration name="724 Vario" hp="240" price="37500" dailyUpkeep="75" icon="$dataS2/menu/hud/configurations/config_engine.png">
+            <motor torqueScale="1.017" />
+            <objectChange node="0>12|2" visibilityActive="true"/>
+            <objectChange node="0>12|0" visibilityActive="false"/>
+        </motorConfiguration>
+    </motorConfigurations>
+
+    <fuelCapacity>400</fuelCapacity>
+
+    <cameras count="2">
+        <camera1 index="0>1|0|0" rotatable="true" rotateNode="0>1|0" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="40" >
+            <raycastNode index="0>1|2"/>
+            <raycastNode index="0>1|3"/>
+        </camera1>
+        <camera2 index="0>1|1" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" />
+    </cameras>
+
+    <lights>
+        <low>
+            <light                       decoration="0>2|0|0"   lightTypes="0 3" />
+            <light realLight="0>2|0|1"                          lightTypes="0" excludedLightTypes="3" /> <!--FrontLights-->
+            <light                       decoration="0>2|2|0"   lightTypes="0 1"/> <!--BackLights-->
+            <light realLight="0>2|1|0|1" decoration="0>2|1|0|0" lightTypes="1"/> <!--WorklightBack-->
+            <light                       decoration="0>2|1|1|0" lightTypes="2"/> <!--WorklightFront-->
+            <light realLight="0>2|0|2"                          lightTypes="3"/> <!--HighBeam -->
+        </low>
+        <high>
+            <light                       decoration="0>2|0|0"   lightTypes="0 3" />
+            <light realLight="0>2|0|3"                          lightTypes="0" excludedLightTypes="2 3" /> <!--FrontLights-->
+            <light realLight="0>2|2|1"   decoration="0>2|2|0"   lightTypes="0 3" /> <!--BackLights-->
+            <light realLight="0>2|1|0|2" decoration="0>2|1|0|0" lightTypes="1" /> <!--WorklightBack  -->
+            <light realLight="0>2|1|1|1" decoration="0>2|1|1|0" lightTypes="2"  /> <!--WorklightFront -->
+            <light realLight="0>2|0|4"                          lightTypes="3" excludedLightTypes="2" /> <!--HighBeam-->
+        </high>
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+            <state lightTypes="0 1 2" />
+        </states>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>2|2|1" decoration="0>2|4|0" />
+    </brakeLights>
+
+    <beaconLights>
+        <beaconLight index="0>2|5|0" speed="0.015" filename="$data/shared/beaconLights/beaconLight02.i3d" />
+        <beaconLight index="0>2|5|1" speed="0.015" filename="$data/shared/beaconLights/beaconLight02.i3d" />
+    </beaconLights>
+
+    <turnLights>
+        <turnLightLeft realLight="0>2|3|0|1" decoration="0>2|3|0|0" />
+        <turnLightLeft realLight="0>2|3|0|2" />
+        <turnLightRight realLight="0>2|3|1|1" decoration="0>2|3|1|0" />
+        <turnLightRight realLight="0>2|3|1|2" />
+    </turnLights>
+
+    <reverseLights>
+        <reverseLight realLight="0>2|6|1" decoration="0>2|6|0" />
+    </reverseLights>
+
+    <mirrors>
+        <mirror index="0>11|0" prio="1" />
+        <mirror index="0>11|1" prio="1" />
+        <mirror index="0>11|2" prio="2" />
+        <mirror index="0>11|3" prio="2" />
+    </mirrors>
+
+    <indoorHud>
+        <speed numbers="0>10|0" precision="1" />
+        <rpm numbers="0>10|1" precision="0" />
+        <time numbers="0>10|2" precision="2" />
+        <operatingTime numbers="0>10|3" precision="1" />
+        <fuelUsage numbers="0>10|4" precision="1" />
+        <cruiseControl numbers="0>10|5" precision="1" />
+    </indoorHud>
+
+    <enterReferenceNode index="0>"/>
+    <exitPoint index="0>3"/>
+
+    <attacherJoints comboDuration="2">
+        <attacherJoint index="0>5|0|0|0|0" rotationNode="0>5|0|0" rotationNode2="0>5|0|0|0" upperRotation="30 0 0" lowerRotation="-21 0 0" upperDistanceToGround="1.19" lowerDistanceToGround="0.35" upperRotationOffset="0.82" moveTime="2.5" ptoOutputNode="0>5|2|0" comboTime="1">
+            <bottomArm rotationNode="0>5|0|1" translationNode="0>5|0|1|0" referenceNode="0>5|0|1|0|0" zScale="-1" startRotation="-17 0 0" />
+            <topArm baseNode="0>5|0|2" filename="$data/shared/vehicleParts/upperLink.i3d" zScale="-1" />
+            <schema position="1 0" rotation="0" invertX="false" />
+            <objectChange node="0>5|1|0" visibilityActive="false" visibilityInactive="true" />
+        </attacherJoint>
+        <attacherJoint index="0>5|0|3|0|0" rotationNode="0>5|0|3" rotationNode2="0>5|0|3|0" upperRotation="-24 0 0" lowerRotation="21 0 0" upperDistanceToGround="0.97" lowerDistanceToGround="0.36" upperRotationOffset="-0.7" moveTime="2.5" ptoOutputNode="0>5|2|1" comboTime="0">
+            <bottomArm rotationNode="0>5|0|4" translationNode="0>5|0|4|0" referenceNode="0>5|0|4|0|0" zScale="1" startRotation="-25 0 0"/>
+            <topArm baseNode="0>5|0|5" filename="$data/shared/vehicleParts/upperLink.i3d" zScale="1" toggleVisibility="true" />
+            <schema position="0 0" rotation="0" invertX="true" />
+            <objectChange node="0>5|0|4|0|2|0" rotationActive="0 0 0" />
+            <objectChange node="0>5|0|4|0|3|0" rotationActive="0 0 0" />
+        </attacherJoint>
+        <!-- trailer attacher -->
+        <attacherJoint index="0>5|1|0|0" transNode="0>5|1|0" transNodeMinY="0.555" transNodeMaxY="1.023" jointType="trailer" lowerRotLimit="10 50 50" upperRotRotationOffset="0" allowsJointLimitMovement="false" ptoOutputNode="0>5|2|0" comboTime="1">
+            <schema position="1 0" rotation="0" invertX="false" />
+            <objectChange node="0>5|1|1" visibilityActive="false"  visibilityInactive="true" />
+        </attacherJoint>
+        <attacherJoint index="0>5|1|1|0" transNode="0>5|1|1" transNodeMinY="0.4" transNodeMaxY="0.7" jointType="trailerLow" lowerRotLimit="10 50 50" lowerTransLimit="0 0 0" upperRotRotationOffset="0" allowsJointLimitMovement="false" ptoOutputNode="0>5|2|0" comboTime="1">
+            <schema position="1 0" rotation="0" invertX="false" />
+            <objectChange node="0>5|0|1" rotationActive="35 0 0"  rotationInactive="-17 0 0" />
+            <objectChange node="0>5|1|0" visibilityActive="false"  visibilityInactive="true" />
+            <steeringBars leftNode="0>5|1|1|1" rightNode="0>5|1|1|2" />
+        </attacherJoint>
+        <attacherJoint index="0>5|1|2" jointType="trailer" lowerRotLimit="10 50 50" lowerTransLimit="0 0 0" upperRotRotationOffset="0" allowsJointLimitMovement="false" ptoOutputNode="0>5|2|1" comboTime="0">
+            <schema position="0 0" rotation="0" invertX="true" />
+            <objectChange node="0>5|0|4|0|2|0" visibilityActive="false" visibilityInactive="true" />
+            <objectChange node="0>5|0|4|0|3|0" visibilityActive="false" visibilityInactive="true" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <frontloaderConfigurations>
+        <frontloaderConfiguration name="$l10n_ui_no" price="0" >
+            <objectChange node="0>5|3|0" visibilityActive="false" />
+        </frontloaderConfiguration>
+        <frontloaderConfiguration name="$l10n_ui_yes" price="800" icon="$dataS2/menu/hud/configurations/config_loader.png" >
+            <objectChange node="0>5|3|0" visibilityActive="true" visibilityInactive="false"/>
+            <!-- frontloader attacher -->
+            <attacherJoint index="0>5|3|0|0" jointType="attachableFrontloader" upperRotation="0 0 0" lowerRotation="0 0 0" lowerTransLimit="0 0 0" lowerRotLimit="0 0 0" moveTime="2" >
+                <schema position="0 0.4" rotation="0" invertX="true" />
+            </attacherJoint>
+        </frontloaderConfiguration>
+    </frontloaderConfigurations>
+
+    <movingTools>
+        <!-- attacher joint back bottom-->
+        <movingTool index="0>5|0|1">
+            <dependentPart index="0>9|1" />
+        </movingTool>
+        <!-- attacher joint front bottom-->
+        <movingTool index="0>5|0|4">
+            <!-- cylinder -->
+            <dependentPart index="0>9|0" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- front -->
+        <movingPart index="0>9|0" referencePoint="0>5|0|4|0|1" referenceFrame="0>9|5" >
+            <translatingPart index="0>9|0|0" />
+            <dependentPart index="0>9|0|1" />
+        </movingPart>
+        <movingPart index="0>9|0|1" referencePoint="0>9|0|0" referenceFrame="0>9|0" scaleZ="true" />
+
+        <!-- back -->
+        <movingPart index="0>9|1" referencePoint="0>5|0|1|0|1" localReferencePoint="0>9|1|0" referenceFrame="0>5|0|0" >
+            <dependentPart index="0>9|1|0" />
+        </movingPart>
+        <movingPart index="0>9|1|0" referencePoint="0>5|0|1|0|1" referenceFrame="0>5|0|1|0|1" >
+            <dependentPart index="0>9|2" />
+            <dependentPart index="0>9|3" />
+            <dependentPart index="0>9|4" />
+        </movingPart>
+        <movingPart index="0>9|2" referencePoint="0>9|1|1" referenceFrame="0>9|5" >
+            <translatingPart index="0>9|2|0" />
+        </movingPart>
+        <movingPart index="0>9|3" referencePoint="0>5|0|1|0|1|0" referenceFrame="0>5|0|1|0|1|0" />
+        <movingPart index="0>9|4" referencePoint="0>5|0|1|0|1|1" referenceFrame="0>5|0|1|0|1|1" />
+
+        <!-- steering -->
+        <movingPart index="1>0|0|0|2" referencePoint="1>1|0|0"        referenceFrame="1>1|0|0"    isActiveDirty="true" />
+        <movingPart index="1>0|1|0|2" referencePoint="1>1|0|1"        referenceFrame="1>1|0|1"    isActiveDirty="true" />
+    </movingParts>
+
+    <steering index="0>4|0" indoorRotation="540" outdoorRotation="50" />
+
+    <characterNode index="0>6|0" cameraMinDistance="1.5" filename="$dataS2/character/player/player.xml" spineRotation="180 0 100" >
+        <target ikChain="rightFoot" targetNode="0>6|1" />
+        <target ikChain="leftFoot"  targetNode="0>6|2" />
+        <target ikChain="rightArm"  targetNode="0>6|3" />
+        <target ikChain="leftArm"   targetNode="0>4|0|0" setDirty="true" />
+    </characterNode>
+
+    <ai>
+        <trafficCollisionTrigger index="0>7|0" />
+    </ai>
+
+    <exhaustEffects>
+        <exhaustEffect index="0>8|0" filename="$data/particleSystems/shared/exhaust.i3d" minRpmColor="0.0 0.0 0.0 1.5" maxRpmColor="0.0 0.0 0.0 3.5" minRpmScale="0.005" maxRpmScale="0.45" xzRotationsOffset="-180 0" xzRotationsForward="0 300" xzRotationsBackward="150 0" xzRotationsLeft="20 80" xzRotationsRight="40 -200" />
+    </exhaustEffects>
+
+    <motorStartDuration>2500</motorStartDuration>
+    <motorStartSound file="$data/vehicles/steerable/fendt/fendt700_start.wav" pitchOffset="0.90" volume="0.85" indoorVolumeFactor="0.55" indoorLowpassGain="0.75" />
+    <motorStopSound file="$data/vehicles/steerable/jcb/jcb435s_stop.wav"      pitchOffset="1.00" volume="0.85" indoorVolumeFactor="0.55" indoorLowpassGain="0.75" />
+    <motorSound file="$data/vehicles/steerable/fendt/fendt700_idle.wav"       pitchOffset="0.90" volume="0.85" indoorVolumeFactor="0.55" indoorLowpassGain="0.75" pitchMax="1.20" volumeMin="0.50" volumeMinSpeed="21"  />
+
+    <motorSoundRun file="$data/vehicles/steerable/fendt/tcd2013_run.wav"      pitchOffset="0.50" volume="0.78" indoorVolumeFactor="0.50" indoorLowpassGain="0.75"  pitchMax="1.00"   />
+    <motorSoundLoad file="$data/vehicles/steerable/fendt/tcd2012C_load.wav"   pitchOffset="0.65" volume="1.00" indoorVolumeFactor="0.60" indoorLowpassGain="0.95" minimalVolumeFactor="0.00"  pitchMax="1.30"/>
+
+
+    <gearboxSound file="$data/sounds/transmission/transmissionCVT_X.wav"      pitchOffset="0.68" volume="0.08" indoorVolumeFactor="0.70" indoorLowpassGain="0.80" pitchMax="1.32" volumeMax="0.57"  reverseVolumeMax="0.6"  />
+    <retarderSound file="$data/sounds/transmission/retarderET2015.wav"        pitchOffset="0.47" volume="0.16" indoorVolumeFactor="0.68" indoorLowpassGain="0.80" pitchMax="1.60" volumeMax="0.45" minSpeed="14" />
+    <hydraulicSound file="$data/sounds/hydraulicUp.wav"                       pitchOffset="0.90" volume="0.65"     />
+
+
+    <brakeCompressor capacity="10000" fillSpeed="250" />
+    <maximalAirConsumptionPerFullStop value="1000" />
+    <brakeCompressorStartSound file="$data/sounds/technicalAccessories/compressor_controller.wav" pitchOffset="1.00" volume="0.65" indoorVolumeFactor="0.50" indoorLowpassGain="0.70" />
+    <brakeCompressorRunSound file="$data/sounds/technicalAccessories/compressor_idle.wav"         pitchOffset="0.84" volume="0.17" indoorVolumeFactor="0.40" indoorLowpassGain="0.70" pitchMax="1.00" />
+    <brakeCompressorStopSound file="$data/sounds/technicalAccessories/pressure_regulator.wav"     pitchOffset="1.20" volume="0.55" indoorVolumeFactor="0.55" indoorLowpassGain="0.70" />
+    <compressedAirSound file="$data/sounds/technicalAccessories/brakeSmall.wav"                   pitchOffset="1.00" volume="0.55" indoorVolumeFactor="0.45" indoorLowpassGain="0.70" />
+    <airReleaseValveSound file="$data/sounds/technicalAccessories/regulator_valve.wav"            pitchOffset="1.04" volume="0.90" indoorVolumeFactor="0.65" indoorLowpassGain="0.75"/>
+
+    <attachSound file="$data/sounds/attach.wav"                                                   pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.35" indoorLowpassGain="0.75"/>
+    <honkSound file="$data/sounds/horn.wav"                                                       pitchOffset="1.00" volume="1.50" indoorVolumeFactor="0.30" indoorLowpassGain="0.75" radius="70" innerRadius="10" /> -->
+
+    <baseColorConfigurations>
+        <baseColorConfiguration color="0.0475 0.3204 0.0103 1" />
+        <baseColorConfiguration color="0.0781 0.2233 0.0478 1" price="2000" icon="$dataS2/menu/hud/configurations/config_color.png" />
+        <colorNode node="0>13|0" />
+        <colorNode node="0>5|3|0" />
+    </baseColorConfigurations>
+
+    <washable dirtDuration="50" washDuration="1" workMultiplier="4" />
+
+    <components count="2">
+        <component1 centerOfMass="0 1 0" solverIterationCount="10" />
+        <component2 centerOfMass="0 0 0" solverIterationCount="20" />
+        <joint component1="0" component2="1" index="0>0|2" rotLimit="0 0 5" transLimit="0 0 0" maxRotDriveForce="0 0 70" rotDriveRotation="- - 0" rotDriveSpring="0 0 25" rotDriveDamping="0 0 15" breakable="false"/>
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/vehicleSchema.png" fileSelected="$dataS2/menu/schemas/vehicleSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0.5 0" />
+
+</vehicle>

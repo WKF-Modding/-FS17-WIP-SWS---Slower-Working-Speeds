@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="woodHarvester">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>HR46X</name>
+        <specs>
+            <power>168</power>
+            <maxSpeed>15</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_forestryCutter</function>
+            <function>$l10n_function_forestryTreeLimit</function>
+        </functions>
+        <image>$data/store/store_sampoRosenlewHR46.png</image>
+        <price>188000</price>
+        <dailyUpkeep>970</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>SAMPOROSENLEW</brand>
+        <category>SWS_wood</category>
+        <vertexBufferMemoryUsage>1933176</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>331056</indexBufferMemoryUsage>
+        <textureMemoryUsage>28748928</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_woodHarvester</typeDesc>
+    <filename>$data/vehicles/steerable/sampoRosenlew/sampoRosenlewHR46.i3d</filename>
+
+    <size width="3" length="8" lengthOffset="0.7" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels autoRotateBackSpeed="1.2">
+                <wheel rotSpeed="0" restLoad="2.4" repr="0>0" driveNode="0>0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TM800_540_65R28.xml" configIndex="n8v10" isLeft="true"  showSteeringAngle="false" initialCompression="40" suspTravel="0.2" spring="28" damper="20" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="2.4" repr="0>1" driveNode="0>1" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TM800_540_65R28.xml" configIndex="n8v10" isLeft="false" showSteeringAngle="false" initialCompression="40" suspTravel="0.2" spring="28" damper="20" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="2.5" repr="1>0" driveNode="1>0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TM800_540_65R28.xml" configIndex="n8v10" isLeft="true"  showSteeringAngle="false" initialCompression="40" suspTravel="0.2" spring="28" damper="20" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="2.5" repr="1>1" driveNode="1>1" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TM800_540_65R28.xml" configIndex="n8v10" isLeft="false" showSteeringAngle="false" initialCompression="40" suspTravel="0.2" spring="28" damper="20" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <differentials>
+        <differential torqueRatio="0.5" maxSpeedRatio="1.7" wheelIndex1="0" wheelIndex2="1" />
+        <differential torqueRatio="0.5" maxSpeedRatio="1.7" wheelIndex1="2" wheelIndex2="3" />
+        <differential torqueRatio="0.5" maxSpeedRatio="1.1" differentialIndex1="0" differentialIndex2="1" /><!-- front-back -->
+    </differentials>
+
+    <articulatedAxis rotNode="0>11" componentJointIndex="0" anchorActor="0" rotSpeed="-35" rotMax="40" rotMin="-35" />
+
+    <ackermannSteering rotSpeed="35" rotMax="70" rotCenter="0 -0.002" />
+
+    <motor torqueScale="0.777" minRpm="1000" maxRpm="2200" maxForwardSpeed="15" maxBackwardSpeed="15" brakeForce="9" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.0012" minForwardGearRatio="55" maxForwardGearRatio="150" minBackwardGearRatio="55" maxBackwardGearRatio="150">
+        <torque normRpm="0.45" torque="0.9"/>
+        <torque normRpm="0.5" torque="0.97"/>
+        <torque normRpm="0.59" torque="1"/>
+        <torque normRpm="0.72" torque="1"/>
+        <torque normRpm="0.86" torque="0.88"/>
+        <torque normRpm="1" torque="0.72"/>
+    </motor>
+
+    <fuelCapacity>180</fuelCapacity>
+
+    <cameras count="3">
+        <camera1 index="0>2|0|0" rotatable="true" rotateNode="0>2|0" limit="true" rotYSteeringRotSpeed="-17.5" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="25" >
+            <raycastNode index="0>2|2"/>
+            <raycastNode index="0>2|3"/>
+            <raycastNode index="0>2|4"/>
+        </camera1>
+        <camera2 index="0>2|1" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="1.1" transMin="0" transMax="0" isInside="true" />
+        <camera3 index="0>10|2|0" rotatable="false" useWorldXZRotation="false" />
+    </cameras>
+
+    <indoorHud>
+        <cutLength numbers="0>6|0" precision="0" />
+        <diameter numbers="0>6|1" precision="0" />
+    </indoorHud>
+
+    <lights>
+        <low>
+            <light                       decoration="0>3|0|0"   lightTypes="0 1" />
+            <light realLight="0>3|0|1"                          lightTypes="0" />
+            <light                       decoration="1>9|1|0"   lightTypes="0" />
+            <light realLight="0>3|0|2"                          lightTypes="1" />
+            <light                       decoration="0>3|1|0|0" lightTypes="2" />
+        </low>
+        <high>
+            <light                       decoration="0>3|0|0"   lightTypes="0 1" />
+            <light realLight="0>3|0|3"                          lightTypes="0" />
+            <light realLight="1>9|1|1"   decoration="1>9|1|0"   lightTypes="0" />
+            <light realLight="0>3|0|4"                          lightTypes="1" />
+            <light realLight="0>3|1|0|1" decoration="0>3|1|0|0" lightTypes="2" />
+        </high>
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+            <state lightTypes="0 1 2" />
+        </states>
+    </lights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>3|2|0|1" decoration="0>3|2|0|0" />
+        <turnLightRight realLight="0>3|2|1|1" decoration="0>3|2|1|0" />
+        <turnLightLeft  realLight="1>9|0|0|1" decoration="1>9|0|0|0" />
+        <turnLightRight realLight="1>9|0|1|1" decoration="1>9|0|1|0" />
+    </turnLights>
+
+    <brakeLights>
+        <brakeLight realLight="1>9|1|1" decoration="1>9|2|0" />
+    </brakeLights>
+
+    <enterReferenceNode index="0>" />
+    <exitPoint index="0>4" />
+
+    <motorStartDuration>2500</motorStartDuration>
+    <motorStartSound file="$data/vehicles/steerable/valtra/valtraNSeries_start.wav" pitchOffset="1.00" volume="1.10" indoorVolumeFactor="0.60" indoorLowpassGain="0.75"/>
+    <motorStopSound file="$data/vehicles/steerable/fendt/sisuAwi5_stop.wav"         pitchOffset="1.00" volume="1.10" indoorVolumeFactor="0.60" indoorLowpassGain="0.75" />
+    <motorSound file="$data/vehicles/steerable/valtra/valtraNSeries_idle.wav"       pitchOffset="1.00" volume="1.10" indoorVolumeFactor="0.60" indoorLowpassGain="0.75" volumeMin="0.65" volumeMinSpeed="10" pitchMax="1.45" />
+
+    <motorSoundRun file="$data/sounds/engine/loadHP150.wav"                         pitchOffset="0.50" volume="0.85" indoorVolumeFactor="0.50" indoorLowpassGain="0.75" pitchMax="1.10" />
+    <gearboxSound file="$data/sounds/transmission/transmissionCVT_X.wav"            pitchOffset="1.00" volume="0.38" indoorVolumeFactor="0.60" indoorLowpassGain="0.75" pitchMax="1.15" reverseVolumeMax="0.50" volumeMax="0.68" />
+    <retarderSound file="$data/sounds/transmission/retarderET2015.wav"              pitchOffset="0.45" volume="0.12" indoorVolumeFactor="0.55" indoorLowpassGain="0.75" pitchMax="1.25" minSpeed="1"  volumeMax="0.30" />
+
+    <reverseDriveSound file="$data/sounds/reverseDrivingBeep_2.wav"                 pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.20" indoorLowpassGain="0.90" />
+
+    <brakeCompressor capacity="10000" fillSpeed="500" />
+    <maximalAirConsumptionPerFullStop value="4000" />
+    <brakeCompressorStartSound file="$data/vehicles/steerable/jcb/jcb_module.wav"              pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.85" indoorLowpassGain="0.90" />
+    <brakeCompressorRunSound   file="$data/sounds/technicalAccessories/compressor_idle.wav"    pitchOffset="1.15" volume="0.20" indoorVolumeFactor="0.30" indoorLowpassGain="0.90" pitchMax="1.15" />
+    <brakeCompressorStopSound  file="$data/sounds/technicalAccessories/pressure_regulator.wav" pitchOffset="1.20" volume="0.50" indoorVolumeFactor="0.85" indoorLowpassGain="0.90" />
+    <compressedAirSound file="$data/sounds/technicalAccessories/brakeSmall.wav"                pitchOffset="0.95" volume="0.10" indoorVolumeFactor="0.10" indoorLowpassGain="0.75" />
+    <airReleaseValveSound      file="$data/sounds/technicalAccessories/regulator_valve.wav"    pitchOffset="0.94" volume="0.75" indoorVolumeFactor="0.75" indoorLowpassGain="0.95" />
+
+    <attachSound file="$data/sounds/attach.wav"                                                pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.50" indoorLowpassGain="0.90"/>
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"                              pitchOffset="0.65" volume="1.00" indoorVolumeFactor="0.85" indoorLowpassGain="0.90" />
+    <honkSound file="$data/sounds/horn.wav"                                                    pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.50" indoorLowpassGain="0.90" radius="80" innerRadius="15" />
+
+    <exhaustEffects>
+        <exhaustEffect index="1>2" filename="$data/particleSystems/shared/exhaust.i3d" minRpmColor="0.0 0.0 0.0 1.5" maxRpmColor="0.0 0.0 0.0 3.5" minRpmScale="0.005" maxRpmScale="0.45" xzRotationsOffset="90 0" xzRotationsForward="-45 0" xzRotationsBackward="90 0" xzRotationsLeft="0 -100" xzRotationsRight="0 100" />
+    </exhaustEffects>
+
+    <characterNode index="0>5|0" cameraMinDistance="1.5" filename="$dataS2/character/player/player.xml" spineRotation="180 0 90" >
+        <target ikChain="rightFoot" targetNode="0>5|1" />
+        <target ikChain="leftFoot"  targetNode="0>5|2" />
+        <target ikChain="rightArm"  targetNode="0>5|3" />
+        <target ikChain="leftArm"   targetNode="0>5|4" />
+    </characterNode>
+
+    <movingTools>
+        <!-- physics -->
+        <!-- arm basis rot -->
+        <movingTool index="0>9" delayedIndex="0>10" playSound="true">
+            <controls axis="AXIS_CRANE_ARM" invertAxis="true" mouseSpeedFactor="0.7" iconFilename="$dataS2/menu/moveControls/crane_arm1_rotY.png" />
+            <rotation rotSpeed="25" rotAcceleration="80" rotMin="-115" rotMax="115" startRot="0" rotationAxis="2" />
+            <dependentPart index="0>9|0|0|0" />
+            <dependentPart index="0>10|0|0|0" />
+        </movingTool>
+        <!-- main arm rot -->
+        <movingTool index="0>9|0" delayedIndex="0>10|0" playSound="true">
+            <controls axis="AXIS_CRANE_ARM2" invertAxis="true" mouseSpeedFactor="0.5" iconFilename="$dataS2/menu/moveControls/crane_arm1_rotX.png" />
+            <rotation rotSpeed="20" rotAcceleration="80" rotMax="10" rotMin="-70" startRot="-70" rotationAxis="1" rotSendNumBits="9" />
+            <dependentPart index="0>9|0|0|0" />
+            <dependentPart index="0>10|0|0|0" />
+            <dependentMovingTool index="0>9|0|0" minRotLimits="-150 20" maxRotLimits="-130 20" />
+        </movingTool>
+        <!-- second arm rot -->
+        <movingTool index="0>9|0|0" delayedIndex="0>10|0|0" playSound="true" >
+            <controls axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="0.7" iconFilename="$dataS2/menu/moveControls/crane_arm2_rotX.png" />
+            <rotation rotSpeed="20" rotAcceleration="80" rotMax="20" rotMin="-130" startRot="20" rotationAxis="1" rotSendNumBits="10" syncMinRotLimits="true" syncMaxRotLimits="true" />
+            <dependentPart index="0>9|0|0|0" />
+            <dependentPart index="0>10|0|0|0" />
+        </movingTool>
+
+        <!-- cutter base col joint -->
+        <movingTool index="0>9|0|0|0">
+            <componentJoint index="1" anchorActor="0"/>
+        </movingTool>
+
+        <!-- delayed nodes -->
+        <movingTool index="0>10" >
+        </movingTool>
+        <movingTool index="0>10|0" >
+            <dependentPart index="0>10|0|1" />
+        </movingTool>
+        <movingTool index="0>10|0|0" >
+            <dependentPart index="0>10|0|1" />
+            <dependentPart index="0>10|0|0|3" />
+        </movingTool>
+
+        <!-- cutter x rotation -->
+        <movingTool index="2>0" playSound="true">
+            <controls axis="AXIS_CRANE_TOOL2" invertAxis="true" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/grab_rotY.png" />
+            <rotation rotSpeed="-80" rotAcceleration="160" rotMax="170" rotMin="-170" rotationAxis="2" />
+            <componentJoint index="1" anchorActor="1" />
+        </movingTool>
+
+        <!-- grabber/claw hydraulics -->
+        <movingTool index="0>10|0|0|0|0|0|0|2">
+            <dependentPart index="0>10|0|0|0|0|0|0|2|0"/>
+        </movingTool>
+        <movingTool index="0>10|0|0|0|0|0|0|4">
+            <dependentPart index="0>10|0|0|0|0|0|0|5"/>
+        </movingTool>
+        <movingTool index="0>10|0|0|0|0|0|0|6">
+            <dependentPart index="0>10|0|0|0|0|0|0|6|0"/>
+        </movingTool>
+    </movingTools>
+
+    <movingParts isActiveDirtyTimeOffset="6.5">
+        <!-- steering hydraulic -->
+        <movingPart index="1>3" referencePoint="1>4" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>7" referencePoint="1>3|0" referenceFrame="1>3|0" isActiveDirty="true" >
+            <translatingPart index="0>7|0" />
+        </movingPart>
+        <movingPart index="0>8" referencePoint="1>3|1" referenceFrame="1>3|1" isActiveDirty="true" >
+            <translatingPart index="0>8|0" />
+        </movingPart>
+
+        <!-- cutter joints and cutter frame -->
+        <movingPart index="0>10|0|0|0" referencePoint="2>2" referenceFrame="0>10|0|0|2" isActiveDirty="true" limitedAxis="1">
+            <dependentPart index="0>10|0|0|0|0" />
+            <dependentPart index="0>10|0|0|0|0|0" />
+        </movingPart>
+        <movingPart index="0>10|0|0|0|0" referencePoint="2>2" referenceFrame="0>10|0|0|0|1" limitedAxis="1"/>
+        <movingPart index="0>10|0|0|0|0|0" referencePoint="2>3" referenceFrame="2>" />
+
+        <!-- outdoorCamera2 -->
+        <movingPart index="0>10|0|0|3" referenceFrame="0>10|3" alignToWorldY="true" isActiveDirty="true" >
+            <dependentPart index="0>10|2" />
+        </movingPart>
+        <movingPart index="0>10|2" referencePoint="0>10|0|0|3|0" referenceFrame="0>" invertZ="true" />
+
+
+        <!-- cutter body -->
+        <movingPart index="0>10|0|0|0|0|0|0" referencePoint="3>3" referenceFrame="3>3" isActiveDirty="true" >
+            <dependentPart index="0>10|0|0|0|0|0|1" />
+        </movingPart>
+        <movingPart index="0>10|0|0|0|0|0|1" referencePoint="0>10|0|0|0|0|0|0|0" referenceFrame="0>10|0|0|0|0|0|2" >
+            <translatingPart index="0>10|0|0|0|0|0|1|0" />
+        </movingPart>
+
+        <!-- arm hydraulics -->
+        <movingPart index="0>10|0|1" referencePoint="0>10|0|0|1" localReferencePoint="0>10|0|1|0" referenceFrame="0>10|0|4">
+            <dependentPart index="0>10|0|1|0" />
+        </movingPart>
+        <movingPart index="0>10|0|1|0" referencePoint="0>10|0|0|1" referenceFrame="0>10|0|5">
+            <dependentPart index="0>10|0|1|0|0" />
+        </movingPart>
+        <movingPart index="0>10|0|1|0|0" referencePoint="0>10|0|2" localReferencePoint="0>10|0|1|0|0|0" referenceFrame="0>10|0|6">
+            <dependentPart index="0>10|0|1|0|0|0" />
+        </movingPart>
+        <movingPart index="0>10|0|1|0|0|0" referencePoint="0>10|0|2" referenceFrame="0>10|0|7" >
+            <dependentPart index="0>10|0|3" />
+            <dependentPart index="0>10|1" />
+        </movingPart>
+
+        <movingPart index="0>10|0|3" referencePoint="0>10|0|1|0|0|0|0" referenceFrame="0>10|0|1|0|0|0|0" >
+            <translatingPart index="0>10|0|3|0" />
+        </movingPart>
+        <movingPart index="0>10|1" referencePoint="0>10|0|1|0|0|0|1" referenceFrame="0>10|0|1|0|0|0|1" >
+            <translatingPart index="0>10|1|0" />
+        </movingPart>
+
+        <!-- grabber/claw hydraulics -->
+        <movingPart index="0>10|0|0|0|0|0|0|2|0" referencePoint="0>10|0|0|0|0|0|0|3|0" referenceFrame="0>10|0|0|0|0|0|0|3|0" >
+            <translatingPart index="0>10|0|0|0|0|0|0|2|0|0" />
+        </movingPart>
+        <movingPart index="0>10|0|0|0|0|0|0|5" referencePoint="0>10|0|0|0|0|0|0|4|0" referenceFrame="0>10|0|0|0|0|0|0|10" >
+            <translatingPart index="0>10|0|0|0|0|0|0|5|0" />
+        </movingPart>
+        <movingPart index="0>10|0|0|0|0|0|0|6|0" referencePoint="0>10|0|0|0|0|0|0|7|0" referenceFrame="0>10|0|0|0|0|0|0|7|0" >
+            <translatingPart index="0>10|0|0|0|0|0|0|6|0|0" />
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <animation name="cutAnimation">
+            <part node="0>10|0|0|0|0|0|0|1" startTime="0" duration="0.9" startRot="-90 0 0" endRot="-90 -90 0"/>
+            <part node="0>10|0|0|0|0|0|0|1" startTime="0.9" duration="0.1" startRot="-90 -90 0" endRot="-90 0 0"/>
+        </animation>
+        <animation name="grabberAnimation">
+            <part node="0>10|0|0|0|0|0|0|2" startTime="0" duration="1" startRot="-90 -77 0" endRot="-90 0 0"/>
+            <part node="0>10|0|0|0|0|0|0|3" startTime="0" duration="1" startRot="-90 77 0" endRot="-90 0 0"/>
+            <part node="0>10|0|0|0|0|0|0|4" startTime="0" duration="1" startRot="-90 -80 0" endRot="-90 0 0"/>
+
+            <part node="0>10|0|0|0|0|0|0|6"   startTime="0.0" endTime="1.0" startRot="-90 -35 0" endRot="-90 0 0"/>
+            <part node="0>10|0|0|0|0|0|0|6|1" startTime="0.0" endTime="0.5" startRot="0 0 35" endRot="0 0 5"/>
+            <part node="0>10|0|0|0|0|0|0|6|1" startTime="0.5" endTime="1.0" startRot="0 0 5" endRot="0 0 0"/>
+
+            <part node="0>10|0|0|0|0|0|0|7"   startTime="0.0" endTime="1.0" startRot="-90 35 0" endRot="-90 0 0"/>
+            <part node="0>10|0|0|0|0|0|0|7|1" startTime="0.0" endTime="0.5" startRot="90 0 -35" endRot="90 0 -5"/>
+            <part node="0>10|0|0|0|0|0|0|7|1" startTime="0.5" endTime="1.0" startRot="90 0 -5" endRot="90 0 0"/>
+        </animation>
+    </animations>
+
+    <enterAnimation name="enterAnimation" />
+
+    <washable dirtDuration="120" washDuration="1" workMultiplier="4" />
+
+    <woodHarvester>
+        <cutNode node="3>0" attachNode="3>" attachReferenceNode="3>2" attachMoveSpeed="2.0" sizeY="1.3" sizeZ="1.8" maxRadius="0.20" releasedComponentJointIndex="2" releasedComponentJoint2Index="1" />
+        <cutLengths min="1" max="6" step="1.0" />
+        <delimbNode node="3>1" sizeX="0.3" sizeY="1.3" sizeZ="1.8" delimbOnCut="true" />
+        <cutAnimation name="cutAnimation" speedScale="1" cutTime="0.5" />
+        <grabAnimation  name="grabberAnimation" speedScale="1" />
+        <treeSizeMeasure index="0>10|0|0|0|0|0|0|9" rotMaxRadius="0.2" />
+        <cutParticleSystems>
+            <emitterShape node="0>10|0|0|0|0|0|0|1|0|0" particleType="CRUSHER_WOOD" emitCountScale="100"/>
+            <emitterShape node="0>10|0|0|0|0|0|0|1|0|1" particleType="CRUSHER_DUST" emitCountScale="20"/>
+        </cutParticleSystems>
+        <delimbParticleSystems>
+            <emitterShape node="0>10|0|0|0|0|0|0|8|0" particleType="CRUSHER_WOOD" emitCountScale="20"/>
+            <emitterShape node="0>10|0|0|0|0|0|0|8|1" particleType="CRUSHER_DUST" emitCountScale="4"/>
+        </delimbParticleSystems>
+        <forwardingWheels>
+            <wheel index="0>10|0|0|0|0|0|0|6|1|0" rotSpeed="0 900 0"/>
+            <wheel index="0>10|0|0|0|0|0|0|7|1|0|0" rotSpeed="0 -900 0"/>
+        </forwardingWheels>
+        <harvesterSounds motorSoundPitchOffset="1.1" motorRunSoundPitchOffset="1.1" >
+            <delimbSound node="0>10|0|0|0|0|0|0|8" file="$data/vehicles/steerable/ponsse/ponsseScorpion_delimb.wav" pitch="1.0"  volume="1.5"  indoorVolumeFactor="0.20"  radius="35" innerRadius="15" />
+            <cutSound node="0>10|0|0|0|0|0|0|8" file="$data/vehicles/steerable/ponsse/ponsseScorpion_cutting.wav"   pitch="0.95" volume="1.1"  indoorVolumeFactor="0.10"  radius="35" innerRadius="15" />
+        </harvesterSounds>
+    </woodHarvester>
+
+    <ropes isActiveDirtyTimeOffset="6.5">
+        <rope baseNode="0>10|0|0|4" targetNode="0>10|0|0|0|0|0|0|11" baseParameters="0 0 -4 0" targetParameters="0 0 5 0" >
+            <baseParameterAdjuster   index="2>0" rotationAxis="2" rotationRange="-90 90" minTargetParameters="2 0 0 0" maxTargetParameters="-2 0 0 0" />
+            <targetParameterAdjuster index="2>0" rotationAxis="2" rotationRange="-90 90" minTargetParameters="-4 0 0 0" maxTargetParameters="4 0 0 0" />
+        </rope>
+
+        <rope baseNode="0>13" targetNode="0>10|0|8" baseParameters="0 0 -7 0" targetParameters="0 0 4 0" >
+            <baseParameterAdjuster index="0>10" rotationAxis="2" rotationRange="-90 90" minTargetParameters="0 0 0 0" maxTargetParameters="0 -2 7 0" />
+        </rope>
+        <rope baseNode="0>14" targetNode="0>10|0|9" baseParameters="0 0 -7 0" targetParameters="0 0 4 0" >
+            <baseParameterAdjuster index="0>10" rotationAxis="2" rotationRange="-90 90" minTargetParameters="0 0 0 0" maxTargetParameters="0 0 5 0" />
+        </rope>
+    </ropes>
+
+    <components count="4">
+        <component1 centerOfMass="0 0.8 0.3" solverIterationCount="40" />
+        <component2 centerOfMass="0 0.8 -0.9" solverIterationCount="40" />
+        <component3 centerOfMass="0 0 0" solverIterationCount="20" />
+        <component4 centerOfMass="0 0 0" solverIterationCount="20" />
+        <joint component1="0" component2="1" index="0>11" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 160" rotLimitDamping="0 0 6" />
+        <joint component1="0" component2="2" index="0>9|0|0|0" zRotationNode="0>9|0|0|0|0" indexActor1="2>0|0"   rotLimit="0 50 80" rotMinLimit="0 -50 -170" rotDriveVelocity="0 0 0" maxRotDriveForce="0.5 0.5 0.5"   transLimit="0 0 0" transLimitSpring="600 600 600" transLimitDamping="11 11 11"  />
+        <joint component1="2" component2="3" index="2>1" rotMinLimit="0 0 0" rotLimit="0 0 0" transLimit="0 0 0" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/vehicleSchema.png" fileSelected="$dataS2/menu/schemas/vehicleSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/vehicleSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/vehicleSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0.5 0" />
+
+</vehicle>

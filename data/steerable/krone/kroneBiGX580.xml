@@ -1,0 +1,312 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="combine_animated">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>BiG X 580</name>
+        <specs>
+            <power>580</power>
+            <maxSpeed>40</maxSpeed>
+            <combination>EasyCollect</combination>
+        </specs>
+        <functions>
+            <function>$l10n_function_combineForage</function>
+            <function>$l10n_function_combineNeedsForageCutter</function>
+        </functions>
+        <image>$data/store/store_kroneBiGX580.png</image>
+        <price>275000</price>
+        <dailyUpkeep>980</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KRONE</brand>
+        <category>SWS_forageHarvesters</category>
+        <vertexBufferMemoryUsage>2183924</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>369858</indexBufferMemoryUsage>
+        <textureMemoryUsage>21103072</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_harvester</typeDesc>
+    <filename>$data/vehicles/steerable/krone/kroneBiGX580.i3d</filename>
+
+    <size width="3.5" length="7"/>
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels autoRotateBackSpeed="1.6" differentialIndex="1" ackermannSteeringIndex="1">
+                <wheel rotSpeed="1" restLoad="5.4" repr="0>0|2|0" driveNode="0>0|2|0|0|0" filename="$data/vehicles/wheels/trelleborg/TM900_710_60R30.xml" configIndex="n18v1" isLeft="true"  initialCompression="50" suspTravel="0.3"  spring="35" damper="20" hasTireTracks="true" hasParticles="true" maxLatStiffness="150" />
+                <wheel rotSpeed="1" restLoad="5.4" repr="0>0|3|0" driveNode="0>0|3|0|0|0" filename="$data/vehicles/wheels/trelleborg/TM900_710_60R30.xml" configIndex="n18v1" isLeft="false" initialCompression="50" suspTravel="0.3"  spring="35" damper="20" hasTireTracks="true" hasParticles="true" maxLatStiffness="150" />
+                <wheel rotSpeed="0" restLoad="2.3" repr="0>0|0"                           filename="$data/vehicles/wheels/trelleborg/TM900_800_70R38.xml" configIndex="n18v1" isLeft="true"  initialCompression="20" suspTravel="0.35" spring="27" damper="20" hasTireTracks="true" hasParticles="true" />
+                <wheel rotSpeed="0" restLoad="2.3" repr="0>0|1"                           filename="$data/vehicles/wheels/trelleborg/TM900_800_70R38.xml" configIndex="n18v1" isLeft="false" initialCompression="20" suspTravel="0.35" spring="27" damper="20" hasTireTracks="true" hasParticles="true" />
+            </wheels>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <ackermannSteeringConfigurations>
+        <ackermannSteering rotSpeed="55" rotMax="42" rotCenterWheel1="2" rotCenterWheel2="3" />
+    </ackermannSteeringConfigurations>
+
+    <differentialConfigurations>
+        <differentials>
+            <differential torqueRatio="1.0" maxSpeedRatio="0.5" wheelIndex1="0" wheelIndex2="1" /> <!-- back left-right -->
+            <differential torqueRatio="1.0" maxSpeedRatio="0.5" wheelIndex1="2" wheelIndex2="3" /> <!-- front left-right -->
+            <differential torqueRatio="1.0" maxSpeedRatio="0.5" differentialIndex1="0" differentialIndex2="1" /> <!-- front-back -->
+        </differentials>
+    </differentialConfigurations>
+
+    <motorConfigurations>
+        <motorConfiguration name="l10n_configuration_valueDefault" hp="585" price="0">
+            <motor torqueScale="1.5" minRpm="1000" maxRpm="2200" maxForwardSpeed="43" maxBackwardSpeed="15" brakeForce="12" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.002" minForwardGearRatio="14.5" maxForwardGearRatio="150" minBackwardGearRatio="40" maxBackwardGearRatio="150">
+                <torque normRpm="0.45" torque="0.8"/>
+                <torque normRpm="0.5" torque="0.87"/>
+                <torque normRpm="0.59" torque="0.9"/>
+                <torque normRpm="0.72" torque="1"/>
+                <torque normRpm="0.86" torque="0.88"/>
+                <torque normRpm="1" torque="0.72"/>
+            </motor>
+        </motorConfiguration>
+    </motorConfigurations>
+
+    <fuelCapacity>1220</fuelCapacity>
+
+    <cameras count="2">
+        <camera1 index="0>1|0|0" rotatable="true" rotateNode="0>1|0" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="7" transMax="35" >
+            <raycastNode index="0>1|2"/>
+            <raycastNode index="0>1|3"/>
+            <raycastNode index="0>1|4"/>
+        </camera1>
+        <camera2 index="0>1|1" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" />
+    </cameras>
+
+    <lights>
+        <low>
+            <light                        decoration="0>2|0|0"   lightTypes="0 3" /> <!--Decoration for FrontLights and Highbeams-->
+            <light realLight="0>2|0|1"                           lightTypes="0" excludedLightTypes="3" /> <!--FrontLights-->
+            <light                        decoration="0>2|2|0"   lightTypes="0 1"/> <!--BackLights-->
+            <light realLight="0>2|1|0|1"  decoration="0>2|1|0|0" lightTypes="1"/> <!--WorklightBack-->
+            <light                        decoration="0>2|1|1|0" lightTypes="2"/> <!--WorklightFront-->
+        </low>
+        <high>
+            <light                        decoration="0>2|0|0"   lightTypes="0 3" /> <!--Decoration for FrontLights and Highbeams-->
+            <light realLight="0>2|0|3"                           lightTypes="0" excludedLightTypes="2 3" /> <!--FrontLights-->
+            <light realLight="0>2|2|1"    decoration="0>2|2|0"   lightTypes="0 3" /> <!--BackLights-->
+            <light realLight="0>2|2|2"    decoration="0>2|2|0"   lightTypes="0 3" /> <!--BackLights-->
+            <light realLight="0>2|1|0|2"  decoration="0>2|1|0|0" lightTypes="1" /> <!--WorklightBack  -->
+            <light realLight="0>2|1|1|1"  decoration="0>2|1|1|0" lightTypes="2"  /> <!--WorklightFront -->
+            <light realLight="0>2|0|4"                           lightTypes="3" excludedLightTypes="2" /> <!--HighBeam-->
+        </high>
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+            <state lightTypes="0 1 2" />
+        </states>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>2|2|1" decoration="0>2|4|0" />
+        <brakeLight realLight="0>2|2|2" decoration="0>2|4|0" />
+    </brakeLights>
+
+    <beaconLights>
+        <beaconLight index="0>2|5|0" speed="0.015" filename="$data/shared/beaconLights/beaconLight02.i3d"/>
+        <beaconLight index="0>2|5|1" speed="0.015" filename="$data/shared/beaconLights/beaconLight02.i3d"/>
+        <beaconLight index="0>2|5|2" speed="0.015" filename="$data/shared/beaconLights/beaconLight02.i3d"/>
+    </beaconLights>
+
+    <turnLights>
+        <turnLightLeft  realLight="0>2|3|0|1"  decoration="0>2|3|0|0" />
+        <turnLightRight realLight="0>2|3|1|1"  decoration="0>2|3|1|0" />
+    </turnLights>
+
+    <reverseLights>
+        <reverseLight realLight="0>2|6|1" decoration="0>2|6|0" />
+    </reverseLights>
+
+    <mirrors>
+        <mirror index="0>11|0" prio="1" />
+        <mirror index="0>11|1" prio="1" />
+        <mirror index="0>11|2" prio="1" />
+    </mirrors>
+
+    <indoorHud>
+        <speed numbers="0>10|0" precision="1" />
+        <rpm numbers="0>10|1" animName="rpmDisplay" precision="0" />
+    </indoorHud>
+
+    <attacherJoints>
+        <attacherJoint jointType="cutterHarvester" index="0>5|0|0|0" jointPositionOffset="0 0 -1.092" rotationNode="0>5|0|0" upperRotation="-30 0 0" lowerRotation="4 0 0" lowerTransLimit="0 0 0" lowerRotLimit="0 0 15" lockDownRotLimit="true" upperDistanceToGround="1.71" lowerDistanceToGround="1.11" moveTime="2.5" comboTime="0">
+            <bottomArm rotationNode="0>5|0|1" referenceNode="0>5|0|1|0" />
+            <schema position="0 0" rotation="0" invertX="true" />
+        </attacherJoint>
+        <!-- trailer attacher -->
+        <attacherJoint index="0>5|1|0" jointType="trailerLow" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="10 70 50" lowerTransLimit="0 0 0" canTurnOnImplement="false" comboTime="1" >
+            <schema position="1 0" rotation="0" invertX="false" />
+        </attacherJoint>
+        <attacherJoint index="0>5|1|0" jointType="trailer"    allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="10 70 50" lowerTransLimit="0 0 0" canTurnOnImplement="false" comboTime="1" >
+            <schema position="1 0" rotation="0" invertX="false" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <enterReferenceNode index="0>" />
+    <exitPoint index="0>3" />
+
+    <motorStartDuration>2500</motorStartDuration>
+    <motorStartSound file="$data/vehicles/steerable/krone/kroneBiGX580_start.wav"   pitchOffset="0.92" volume="1.30" indoorVolumeFactor="0.50" indoorLowpassGain="0.75"/>
+    <motorSound file="$data/vehicles/steerable/krone/kroneBiGX580_idle.wav"         pitchOffset="0.92" volume="1.30" indoorVolumeFactor="0.50" indoorLowpassGain="0.75"  volumeMin="0.60" volumeMinSpeed="15" pitchMax="1.24" />
+    <motorSoundRun file="$data/vehicles/steerable/krone/kroneBiGX580_run.wav"       pitchOffset="0.50" volume="1.30" indoorVolumeFactor="0.50" indoorLowpassGain="0.85"  pitchMax="1.00" />
+    <motorStopSound file="$data/vehicles/steerable/caseIH/caseIH230Series_stop.wav" pitchOffset="1.00" volume="1.20" indoorVolumeFactor="0.50" indoorLowpassGain="0.75"/>
+
+   <gearboxSound file="$data/sounds/transmission/transmissionCVT_X.wav"             pitchOffset="1.00" volume="0.16" indoorVolumeFactor="0.65" indoorLowpassGain="0.75" pitchMax="1.40" volumeMax="0.76" reverseVolumeMax="0.60" />
+   <retarderSound file="$data/sounds/transmission/transmissionCVT_X.wav"            pitchOffset="0.57" volume="0.06" indoorVolumeFactor="0.65" indoorLowpassGain="0.80" pitchMax="2.00" volumeMax="0.40" minSpeed="0.1" />
+
+
+    <threshingStartSound file="$data/vehicles/steerable/krone/kroneBiGX580_startwork.wav" pitchOffset="1.11" volume="1.10" indoorVolumeFactor="0.40" indoorLowpassGain="0.75" />
+    <threshingSound file="$data/vehicles/steerable/krone/kroneBiGX580_work.wav"           pitchOffset="1.11" volume="1.10" indoorVolumeFactor="0.40" indoorLowpassGain="0.75" cuttingPitchOffset="0.95"  />
+    <threshingStopSound file="$data/vehicles/steerable/krone/kroneBiGX580_stopwork.wav"   pitchOffset="1.11" volume="1.10" indoorVolumeFactor="0.40" indoorLowpassGain="0.75" />
+
+    <reverseDriveSound file="$data/sounds/reverseDrivingBeep_3.wav"                       pitchOffset="1.00" volume="0.90" indoorVolumeFactor="0.40" indoorLowpassGain="0.90" />
+
+    <brakeCompressor capacity="10000" fillSpeed="100" />
+    <maximalAirConsumptionPerFullStop value="6000" />
+    <brakeCompressorStartSound file="$data/vehicles/steerable/jcb/jcb_module.wav"           pitchOffset="1.00" volume="0.80" indoorVolumeFactor="0.85" indoorLowpassGain="0.90" />
+    <brakeCompressorRunSound   file="$data/sounds/technicalAccessories/compressor_idle.wav" pitchOffset="1.00" volume="0.26" indoorVolumeFactor="0.15" indoorLowpassGain="0.90" pitchMax="1.10" />
+    <brakeCompressorStopSound  file="$data/sounds/technicalAccessories/brakeSmall.wav"      pitchOffset="1.15" volume="1.10" indoorVolumeFactor="0.54" indoorLowpassGain="0.90" />
+    <airReleaseValveSound      file="$data/sounds/technicalAccessories/regulator_valve.wav" pitchOffset="0.96" volume="1.15" indoorVolumeFactor="0.85" indoorLowpassGain="0.95"/>
+
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"                           pitchOffset="0.95" volume="0.75" indoorVolumeFactor="0.35"  indoorLowpassGain="0.75" />
+    <hydraulicSound file="$data/sounds/hydraulicUp.wav"                                     pitchOffset="0.95" volume="0.55" indoorVolumeFactor="0.35"  indoorLowpassGain="0.75" />
+    <attachSound file="$data/sounds/header_attach.wav"                                      pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.35"  indoorLowpassGain="0.75" />
+    <honkSound file="$data/sounds/hornBig.wav"                                              pitchOffset="1.00" volume="1.50" indoorVolumeFactor="0.30"  indoorLowpassGain="0.75" />
+
+    <pipe numStates="2" unloadingStates="2" turnOnAllowedStates="2" raycastNodeIndex="0>5|2|0|0|1|1" raycastDistance="32" autoAimStates="2" unloadingEffectStopTime="0.75" effectExtraDistanceOnTrailer="-1">
+        <node index="0>5|2|0" rotationSpeeds="0 35 0" autoAimYRotation="true" autoAimInvertZ="true">
+            <state1 rotation="0 0 0" />
+            <state2 rotation="0 0 0"/>
+        </node>
+        <node index="0>5|2|0|0" rotationSpeeds="25 0 0">
+            <state1 rotation="0 0 0"/>
+            <state2 rotation="35 0 0"/>
+        </node>
+        <node index="0>5|2|0|0|1" rotationSpeeds="80 0 0" autoAimXRotation="true">
+            <state1 rotation="155 0 0"/>
+            <state2 rotation="155 0 0"/>
+        </node>
+    </pipe>
+
+    <fillUnits>
+        <fillUnit unit="$l10n_unit_literShort" fillTypeCategories="forageHarvester" capacity="0" />
+    </fillUnits>
+
+    <overloading stopOverloadIfEmpty="false" capacity="0">
+        <trailerTriggers>
+            <trailerTrigger index="0>7|1" />
+        </trailerTriggers>
+    </overloading>
+
+    <allowFillFromAir value="false" />
+    <combine allowThreshingDuringRain="true" />
+
+    <fillVolumes>
+        <dischargeInfos>
+            <dischargeInfo>
+                <node index="0>5|2|0|0|1|2" width="0.4" length="0.4" />
+            </dischargeInfo>
+        </dischargeInfos>
+    </fillVolumes>
+
+    <turnedOnRotationNodes>
+        <turnedOnRotationNode index="0>5|0|1|0|1|0" type="combine" rotSpeed="600"  rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="8" />
+        <turnedOnRotationNode index="0>5|0|1|0|1|1" type="combine" rotSpeed="-600" rotAxis="1" turnOnFadeTime="4" turnOffFadeTime="8" />
+    </turnedOnRotationNodes>
+
+    <animations>
+        <animation name="rpmDisplay">
+            <part node="0>10|2|0" startTime="0" endTime="1" startRot="0 0 170" endRot="0 0 -203" />
+        </animation>
+    </animations>
+
+    <movingTools>
+        <!-- pipe -->
+        <movingTool index="0>5|2|0|0">
+            <dependentPart index="0>5|2|0|1" />
+        </movingTool>
+        <!-- pipePart -->
+        <movingTool index="0>5|2|0|0|1">
+            <dependentPart index="0>5|2|0|0|2" />
+            <dependentPart index="0>5|2|0|0|3" />
+        </movingTool>
+
+        <movingTool index="0>5|0|1">
+            <dependentPart index="0>9|7" />
+            <dependentPart index="0>5|0|1|0|3|0" />
+            <dependentPart index="0>5|0|1|0|3|1" />
+            <dependentPart index="0>5|0|1|0|3|2" />
+            <dependentPart index="0>5|0|1|0|3|3" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="0>5|2|0|1" referencePoint="0>5|2|0|0|0" referenceFrame="0>5|2|0|0|0" playSound="true" >
+            <translatingPart index="0>5|2|0|1|0" />
+        </movingPart>
+        <movingPart index="0>5|2|0|0|2" referencePoint="0>5|2|0|0|1|0|0" referenceFrame="0>5|2|0|0|4">
+            <translatingPart index="0>5|2|0|0|2|0" />
+        </movingPart>
+        <movingPart index="0>5|2|0|0|3" referencePoint="0>5|2|0|0|1|0|1"  referenceFrame="0>5|2|0|0|4" scaleZ="true"/>
+
+        <!-- attacher -->
+        <movingPart index="0>9|7" referencePoint="0>5|0|1|0|2" referenceFrame="0>5|0|1|0|2" >
+            <translatingPart index="0>9|7|0" />
+        </movingPart>
+        <movingPart index="0>5|0|1|0|3|0" referencePoint="0>9|8"  referenceFrame="0>9|8"  scaleZ="true"/>
+        <movingPart index="0>5|0|1|0|3|1" referencePoint="0>9|9"  referenceFrame="0>9|9"  scaleZ="true"/>
+        <movingPart index="0>5|0|1|0|3|2" referencePoint="0>9|10" referenceFrame="0>9|10" scaleZ="true"/>
+        <movingPart index="0>5|0|1|0|3|3" referencePoint="0>9|11" referenceFrame="0>9|11" scaleZ="true"/>
+
+
+        <movingPart index="0>9|0|0" referencePoint="0>0|2|0|0|3" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>9|1" referencePoint="0>0|2|0|0|1" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>9|3" referencePoint="0>0|2|0|0|2" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>9|5" referencePoint="0>9|1|0" referenceFrame="0>9|1|0" isActiveDirty="true" >
+            <translatingPart index="0>9|5|0" />
+        </movingPart>
+
+        <movingPart index="0>9|0|1" referencePoint="0>0|3|0|0|3" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>9|2" referencePoint="0>0|3|0|0|1" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>9|4" referencePoint="0>0|3|0|0|2" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>9|6" referencePoint="0>9|2|0" referenceFrame="0>9|2|0" isActiveDirty="true" >
+            <translatingPart index="0>9|6|0" />
+        </movingPart>
+    </movingParts>
+
+    <pipeEffect>
+        <effectNode effectClass="PipeEffect" effectNode="0>5|2|0|0|1|3" delay="0" materialType="pipe" materialTypeId="1" maxBending="0.07" shapeScaleSpread="1.03 0.96 1 0"/>
+    </pipeEffect>
+
+    <exhaustEffects>
+        <exhaustEffect index="0>8|0" filename="$data/particleSystems/shared/exhaust.i3d" minRpmColor="0.0 0.0 0.0 1.5" maxRpmColor="0.0 0.0 0.0 3.5" minRpmScale="0.005" maxRpmScale="0.45" xzRotationsOffset="0 0" xzRotationsForward="-40 0" xzRotationsBackward="180 0" xzRotationsLeft="0 -160" xzRotationsRight="0 160" />
+    </exhaustEffects>
+
+    <steering index="0>4|0" indoorRotation="540" outdoorRotation="50" />
+
+    <characterNode index="0>6|0" cameraMinDistance="1.5" filename="$dataS2/character/player/player.xml" spineRotation="180 0 90" >
+        <target ikChain="rightFoot" targetNode="0>6|1" />
+        <target ikChain="leftFoot"  targetNode="0>6|2" />
+        <target ikChain="rightArm"  targetNode="0>6|3" />
+        <target ikChain="leftArm"   targetNode="0>4|0|0" setDirty="true" />
+    </characterNode>
+
+    <ai>
+        <trafficCollisionTrigger index="0>7|0" />
+    </ai>
+
+    <washable dirtDuration="300" washDuration="1" workMultiplier="2" />
+
+    <components count="1">
+        <component1 centerOfMass="0 1 -0.35" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/vehicleSchema.png" fileSelected="$dataS2/menu/schemas/vehicleSchemaSelected.png" fileTurnedOn="$dataS2/menu/schemas/vehicleSchemaTurnedOn.png" fileSelectedTurnedOn="$dataS2/menu/schemas/vehicleSchemaSelectedTurnedOn.png" width="0.5" height="0.5" attacherJointPosition="0.5 0" />
+
+</vehicle>

@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="skidSteer">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>325T</name>
+        <specs>
+            <power>74</power>
+            <maxSpeed>20</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_skidsteer</function>
+        </functions>
+        <image>$data/store/store_jcb325T.png</image>
+        <price>64000</price>
+        <dailyUpkeep>70</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>JCB</brand>
+        <category>SWS_skidSteers</category>
+        <vertexBufferMemoryUsage>2685912</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>449844</indexBufferMemoryUsage>
+        <textureMemoryUsage>20098072</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_tractor</typeDesc>
+    <filename>$data/vehicles/steerable/jcb/jcb325T.i3d</filename>
+
+    <size width="2" length="3" lengthOffset="-0.2" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueCrawler" price="0">
+            <wheels autoRotateBackSpeed="2.0">
+                <wheel rotSpeed="0.7" restLoad="0.6" repr="0>0|1|0|0" forcePointRatio="0.2" initialCompression="05" suspTravel="0.1" spring="70" damper="50" radius="0.2536" width="0.5" mass="0.2" frictionScale="2" tireType="crawler" />
+                <wheel rotSpeed="0.7" restLoad="0.6" repr="0>0|1|0|1" forcePointRatio="0.2" initialCompression="05" suspTravel="0.1" spring="70" damper="50" radius="0.2536" width="0.5" mass="0.2" frictionScale="2" tireType="crawler" hasTireTracks="true" hasParticles="true" tireTrackAtlasIndex="4"/>
+                <wheel rotSpeed="1.7" restLoad="1.8" repr="0>0|1|1|0" forcePointRatio="0.3" initialCompression="31" suspTravel="0.1" spring="50" damper="50" radius="0.2536" width="0.5" mass="0.2" frictionScale="2" tireType="crawler" />
+                <wheel rotSpeed="1.7" restLoad="1.8" repr="0>0|1|1|1" forcePointRatio="0.3" initialCompression="31" suspTravel="0.1" spring="50" damper="50" radius="0.2536" width="0.5" mass="0.2" frictionScale="2" tireType="crawler" hasTireTracks="true" hasParticles="true" tireTrackAtlasIndex="4"/>
+            </wheels>
+            <crawlers>
+                <crawler index="0>0|1|2" speedRefNode="0>0|1|2" scrollSpeed="1" shaderParameterName="offsetUV" shaderParameterComponent="1" scrollLength="5" >
+                    <rotatingPart index="0>0|1|2|0" radius="0.21" />
+                    <rotatingPart index="0>0|1|2|1" radius="0.176" />
+                    <rotatingPart index="0>0|1|2|2" radius="0.223" />
+                    <rotatingPart index="0>0|1|2|3" radius="0.098" />
+                    <rotatingPart index="0>0|1|2|4" radius="0.098" />
+                    <rotatingPart index="0>0|1|2|5" radius="0.098" />
+                    <rotatingPart index="0>0|1|2|6" radius="0.098" />
+                    <rotatingPart index="0>0|1|2|7" radius="0.098" />
+                </crawler>
+                <crawler index="0>0|1|3" speedRefNode="0>0|1|3" scrollSpeed="1" shaderParameterName="offsetUV" shaderParameterComponent="1" scrollLength="5" >
+                    <rotatingPart index="0>0|1|3|0" radius="0.21" />
+                    <rotatingPart index="0>0|1|3|1" radius="0.176" />
+                    <rotatingPart index="0>0|1|3|2" radius="0.223" />
+                    <rotatingPart index="0>0|1|3|3" radius="0.098" />
+                    <rotatingPart index="0>0|1|3|4" radius="0.098" />
+                    <rotatingPart index="0>0|1|3|5" radius="0.098" />
+                    <rotatingPart index="0>0|1|3|6" radius="0.098" />
+                    <rotatingPart index="0>0|1|3|7" radius="0.098" />
+                </crawler>
+            </crawlers>
+            <objectChange node="0>0|1" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="0>15|1" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="0>10|0|5|1" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="0>20" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="0>0|0" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="0>15|0" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="0>10|0|5|0" visibilityActive="false" visibilityInactive="true"/>
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <ackermannSteering rotSpeed="50" rotMax="80" rotCenterWheel1="0" rotCenterWheel2="3" />
+
+    <differentials>
+        <differential torqueRatio="0.5" maxSpeedRatio="2.6" wheelIndex1="0" wheelIndex2="1" /> <!-- front left-right -->
+        <differential torqueRatio="0.5" maxSpeedRatio="2.6" wheelIndex1="2" wheelIndex2="3" /> <!-- back left-right -->
+        <differential torqueRatio="0.5" maxSpeedRatio="1.1" differentialIndex1="0" differentialIndex2="1" /><!-- front-back -->
+    </differentials>
+
+    <motorConfigurations>
+        <motorConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <motor torqueScale="0.385" minRpm="1000" maxRpm="2200" maxForwardSpeed="22" maxBackwardSpeed="20" brakeForce="2" rotInertia="0.0005" lowBrakeForceScale="0.05" lowBrakeForceSpeedLimit="1" minForwardGearRatio="28" maxForwardGearRatio="150" minBackwardGearRatio="40" maxBackwardGearRatio="150">
+                <torque normRpm="0.1" torque="0.35"/>
+                <torque normRpm="0.2" torque="0.65"/>
+                <torque normRpm="0.3" torque="0.85"/>
+                <torque normRpm="0.4" torque="1"/>
+                <torque normRpm="0.75" torque="0.75"/>
+                <torque normRpm="1" torque="0.65"/>
+            </motor>
+        </motorConfiguration>
+    </motorConfigurations>
+
+    <fuelCapacity>103</fuelCapacity>
+
+    <cameras count="2">
+        <camera1 index="0>4|0|0" rotatable="true" rotateNode="0>4|0" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="3" transMax="25" >
+            <raycastNode index="0>4|2"/>
+            <raycastNode index="0>4|3"/>
+        </camera1>
+        <camera2 index="0>4|1" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" />
+    </cameras>
+
+    <lights>
+        <low>
+            <light                       decoration="0>6|0|0"      lightTypes="0 3" /> <!--Coronas FrontLights-->
+            <light                       decoration="0>10|0|4|0|0" lightTypes="0 3" /> <!--Coronas FrontLights Arm -->
+            <light realLight="0>6|0|1"                             lightTypes="0" excludedLightTypes="3" /> <!--FrontLights-->
+            <light                       decoration="0>6|2|0"      lightTypes="0 1"/> <!--BackLights-->
+            <light realLight="0>6|1|0|1" decoration="0>6|1|0|0"    lightTypes="1"/> <!--WorklightBack-->
+            <light realLight="0>6|0|2"                             lightTypes="3"/> <!--HighBeam -->
+        </low>
+        <high>
+            <light                       decoration="0>6|0|0"      lightTypes="0 3" /> <!--Coronas FrontLights-->
+            <light                       decoration="0>10|0|4|0|0" lightTypes="0 3" /> <!--Coronas FrontLights Arm -->
+            <light realLight="0>6|0|3"                             lightTypes="0" excludedLightTypes="2 3" /> <!--FrontLights-->
+            <light realLight="0>6|2|1"   decoration="0>6|2|0"      lightTypes="0 3" /> <!--BackLights-->
+            <light realLight="0>6|1|0|2" decoration="0>6|1|0|0"    lightTypes="1" /> <!--WorklightBack  -->
+            <light realLight="0>6|0|4"                             lightTypes="3" excludedLightTypes="2" /> <!--HighBeam-->
+        </high>
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+        </states>
+    </lights>
+
+    <brakeLights>
+        <brakeLight realLight="0>6|2|1" decoration="0>6|4|0" />
+    </brakeLights>
+
+    <turnLights>
+        <turnLightLeft realLight="0>6|3|0|1" decoration="0>6|3|0|0" />
+        <turnLightLeft realLight="0>6|3|0|2" />
+        <turnLightRight realLight="0>6|3|1|1" decoration="0>6|3|1|0" />
+        <turnLightRight realLight="0>10|0|4|1|0|1" decoration="0>10|0|4|1|0|0" />
+    </turnLights>
+
+    <mirrors>
+        <mirror index="0>14|0|0" prio="1" />
+        <mirror index="0>14|0|1" prio="1" />
+        <mirror index="0>10|0|3|0" prio="2" />
+    </mirrors>
+
+    <indoorHud>
+        <fuel animName="fuelDisplay" />
+    </indoorHud>
+
+    <enterReferenceNode index="0>" />
+    <exitPoint index="0>5" />
+
+    <motorStartDuration>2000</motorStartDuration>
+    <attachSound file="$data/sounds/attach.wav"                                          pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.40" indoorLowpassGain="0.75" />
+    <motorStartSound file="$data/vehicles/steerable/jcb/jcbTM320s_start.wav"             pitchOffset="0.88" volume="1.00" indoorVolumeFactor="0.40" indoorLowpassGain="0.75" />
+    <motorSound file="$data/vehicles/steerable/jcb/jcbTM320s_idle.wav"                   pitchOffset="0.88" volume="1.00" indoorVolumeFactor="0.40" indoorLowpassGain="0.75" pitchScale="0.02" pitchMax="1.55" radius="50" innerRadius="20" />
+    <motorStopSound file="$data/vehicles/steerable/liebherr/liebherrL538_stop.wav"       pitchOffset="0.90" volume="1.20" indoorVolumeFactor="0.40" indoorLowpassGain="0.75" />
+    <motorSoundRun file="$data/vehicles/steerable/jcb/jcbTM320s_run.wav"                 pitchOffset="1.00" volume="1.20" indoorVolumeFactor="0.40" indoorLowpassGain="0.75" pitchMax="1.50"  />
+
+    <gearboxSound filefile="$data/vehicles/steerable/jcb/jcbTM320s_transmission.wav"     pitchOffset="0.95" volume="0.25" indoorVolumeFactor="0.50" indoorLowpassGain="0.75" pitchMax="1.3" volumeMax="0.55"/>
+    <retarderSound file="$data/sounds/transmission/transmissionOld.wav"                  pitchOffset="0.65" volume="0.12" indoorVolumeFactor="0.68" indoorLowpassGain="0.95" minSpeed="4" pitchMax="1.85"   volumeMax="0.34"  />
+    <reverseDriveSound file="$data/sounds/reverseDrivingBeep.wav"                        pitchOffset="1.00" volume="0.50" indoorVolumeFactor="0.25" indoorLowpassGain="0.75" />
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"                        pitchOffset="0.85" volume="0.55" indoorVolumeFactor="0.20" indoorLowpassGain="0.65" />
+    <honkSound file="$data/sounds/horn.wav"                                              pitchOffset="1.00" volume="1.00" indoorVolumeFactor="0.30" indoorLowpassGain="0.75" radius="70" innerRadius="10" />
+
+
+    <exhaustEffects>
+        <exhaustEffect index="0>8" filename="$data/particleSystems/shared/exhaust.i3d" minRpmColor="0.0 0.0 0.0 1.5" maxRpmColor="0.0 0.0 0.0 3.5" minRpmScale="0.005" maxRpmScale="0.45" xzRotationsOffset="50 0" xzRotationsForward="-50 0" xzRotationsBackward="50 0" xzRotationsLeft="20 -50" xzRotationsRight="20 50" />
+    </exhaustEffects>
+
+    <characterNode index="0>7|0" cameraMinDistance="1.5" filename="$dataS2/character/player/player.xml" spineRotation="180 0 110" >
+        <target ikChain="rightFoot" targetNode="0>7|1" />
+        <target ikChain="leftFoot"  targetNode="0>7|2" />
+        <target ikChain="rightArm"  targetNode="0>7|3" />
+        <target ikChain="leftArm"   targetNode="0>7|4" />
+    </characterNode>
+
+    <attacherJoints>
+        <attacherJoint index="0>13|0|0|0|0" indexVisual="0>10|0|0|0|1" jointType="skidSteer"  allowsJointLimitMovement="false" allowsLowering="false" rotLimitSpring="7500 7500 7500" rotLimitDamping="5 5 5" transLimitSpring="7500 7500 7500" transLimitDamping="5 5 5" >
+            <schema position="0 0.4" rotation="0" invertX="true" />
+        </attacherJoint>
+    </attacherJoints>
+
+    <movingTools>
+        <!-- physics -->
+        <movingTool index="0>12" delayedIndex="0>9" playSound="true">
+            <controls axis="AXIS_FRONTLOADER_ARM" invertAxis="false" mouseSpeedFactor="0.6" iconFilename="$dataS2/menu/moveControls/crane_arm2_rotX.png" />
+            <attacherJoint jointIndices="0" />
+            <rotation rotSpeed="13" rotAcceleration="120" rotMax="45" rotMin="-1" />
+            <dependentMovingTool index="0>13|0|0|0" maxRotLimits="70 115" minRotLimits="-70 -10" />
+            <dependentPart index="0>13" />
+        </movingTool>
+        <movingTool index="0>13|0|0|0" delayedIndex="0>10|0|0|0" playSound="true">
+            <controls axis="AXIS_FRONTLOADER_TOOL" invertAxis="true" mouseSpeedFactor="0.5" iconFilename="$dataS2/menu/moveControls/crane_arm2_tool.png" />
+            <attacherJoint jointIndices="0" />
+            <rotation rotSpeed="50" rotAcceleration="125" rotMax="80" rotMin="-70" syncMinRotLimits="true" syncMaxRotLimits="true" />
+        </movingTool>
+
+        <!-- delayed mesh -->
+        <movingTool index="0>9" >
+            <dependentPart index="0>10" />
+            <attacherJoint jointIndices="0" />
+        </movingTool>
+        <movingTool index="0>10|0|0|0" >
+            <dependentPart index="0>10|0|1" />
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <!-- armMain2 -->
+        <movingPart index="0>10" referencePoint="0>9|0" referenceFrame="0>9|0" localReferencePoint="0>10|0" >
+            <dependentPart index="0>10|0" />
+            <dependentPart index="0>11" />
+        </movingPart>
+        <movingPart index="0>10|0" referencePoint="0>9|0" referenceFrame="0>10|1" >
+            <dependentPart index="0>10|0|0" />
+        </movingPart>
+
+        <!-- hydraulic mainArm -->
+        <movingPart index="0>11" referencePoint="0>10|0|2" referenceFrame="0>10|0|2">
+            <translatingPart index="0>11|0" />
+        </movingPart>
+
+        <!-- cylinder attacher -->
+        <movingPart index="0>10|0|1" referencePoint="0>10|0|0|0|0" referenceFrame="0>10|0|0|0|0">
+            <translatingPart index="0>10|0|1|0" />
+        </movingPart>
+
+        <!-- attacher rot -->
+        <movingPart index="0>10|0|0" referenceFrame="0>" >
+            <dependentPart index="0>10|0|1" />
+        </movingPart>
+
+        <!-- attacher rot dummy -->
+        <movingPart index="0>13" referencePoint="0>12|0" referenceFrame="0>12|0" localReferencePoint="0>13|0" >
+            <dependentPart index="0>13|0" />
+        </movingPart>
+        <movingPart index="0>13|0" referencePoint="0>12|0" referenceFrame="0>13|1" >
+            <dependentPart index="0>13|0|0" />
+        </movingPart>
+
+        <movingPart index="0>13|0|0" referenceFrame="0>">
+            <attacherJoint jointIndices="0" />
+        </movingPart>
+    </movingParts>
+
+    <animations>
+        <animation name="fuelDisplay">
+            <part node="0>14|1|0" startTime="0" endTime="1" startRot="0 0 -55" endRot="0 0 55" />
+        </animation>
+    </animations>
+
+    <aiTrafficCollisionTrigger index="0>19" />
+
+    <washable dirtDuration="90" washDuration="1" workMultiplier="4" />
+
+    <components count="1">
+        <component1 centerOfMass="0 0.45 -0.55" solverIterationCount="10" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/vehicleSchema.png" fileSelected="$dataS2/menu/schemas/vehicleSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0.5 0" />
+
+</vehicle>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="forwarder">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Buffalo</name>
+        <specs>
+            <power>286</power>
+            <maxSpeed>20</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_forestryTransport</function>
+        </functions>
+        <image>$data/store/store_ponsseBuffalo.png</image>
+        <price>221000</price>
+        <dailyUpkeep>780</dailyUpkeep>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>PONSSE</brand>
+        <category>SWS_wood</category>
+        <vertexBufferMemoryUsage>2287636</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>403548</indexBufferMemoryUsage>
+        <textureMemoryUsage>33467432</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <typeDesc>$l10n_typeDesc_forwarder</typeDesc>
+    <filename>$data/vehicles/steerable/ponsse/ponsseBuffalo.i3d</filename>
+
+    <size width="3.5" length="11.5" />
+
+    <wheelConfigurations>
+        <wheelConfiguration name="$l10n_configuration_valueDefault" price="0">
+            <wheels autoRotateBackSpeed="1.2">
+                <wheel rotSpeed="1" restLoad="3.1" repr="0>0" driveNode="0>0|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="false" color="1 0.6661 0 1" showSteeringAngle="false" initialCompression="21" suspTravel="0.45" spring="30" damper="80" hasParticles="true" hasTireTracks="true" />
+                <wheel rotSpeed="1" restLoad="3.3" repr="0>1" driveNode="0>1|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="false" color="1 0.6661 0 1" showSteeringAngle="false" initialCompression="23" suspTravel="0.45" spring="30" damper="80" hasParticles="true" />
+                <wheel rotSpeed="1" restLoad="3.1" repr="0>2" driveNode="0>2|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="true"  color="1 0.6661 0 1" showSteeringAngle="false" initialCompression="21" suspTravel="0.45" spring="30" damper="80" hasParticles="true" hasTireTracks="true" />
+                <wheel rotSpeed="1" restLoad="3.3" repr="0>3" driveNode="0>3|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="true"  color="1 0.6661 0 1" showSteeringAngle="false" initialCompression="22" suspTravel="0.45" spring="30" damper="80" hasParticles="true"  />
+                <wheel rotSpeed="1" restLoad="2.3" repr="1>0" driveNode="1>0|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="false" color="1 0.6661 0 1" showSteeringAngle="false" initialCompression="12" suspTravel="0.45" spring="30" damper="80" hasParticles="true" hasTireTracks="true" />
+                <wheel rotSpeed="1" restLoad="2.5" repr="1>1" driveNode="1>1|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="false" color="1 0.6661 0 1" showSteeringAngle="false" initialCompression="14" suspTravel="0.45" spring="30" damper="80" hasParticles="true" />
+                <wheel rotSpeed="1" restLoad="2.3" repr="1>2" driveNode="1>2|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="true"  color="1 0.6661 0 1" showSteeringAngle="false" initialCompression="11" suspTravel="0.45" spring="30" damper="80" hasParticles="true" hasTireTracks="true" />
+                <wheel rotSpeed="1" restLoad="2.5" repr="1>3" driveNode="1>3|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="true"  color="1 0.6661 0 1" showSteeringAngle="false" initialCompression="12" suspTravel="0.45" spring="30" damper="80" hasParticles="true" />
+            </wheels>
+            <objectChange node="0>0|1" visibilityActive="false" visibilityInactive="true" />
+            <objectChange node="0>2|1" visibilityActive="false" visibilityInactive="true" />
+            <objectChange node="1>0|1" visibilityActive="false" visibilityInactive="true" />
+            <objectChange node="1>2|1" visibilityActive="false" visibilityInactive="true" />
+        </wheelConfiguration>
+        <wheelConfiguration name="$l10n_configuration_valueTracks" price="8000" icon="$dataS/menu/config_wheel_bogie.png">
+            <wheels autoRotateBackSpeed="1.2">
+                <wheel rotSpeed="1" restLoad="3.1" repr="0>0" driveNode="0>0|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="false" color="1 0.6661 0 1" showSteeringAngle="false" radius="0.72" initialCompression="21" suspTravel="0.45" spring="30" damper="80" hasParticles="true" tireType="crawler" hasTireTracks="true" tireTrackAtlasIndex="5" />
+                <wheel rotSpeed="1" restLoad="3.2" repr="0>1" driveNode="0>1|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="false" color="1 0.6661 0 1" showSteeringAngle="false" radius="0.72" initialCompression="22" suspTravel="0.45" spring="30" damper="80" hasParticles="true" tireType="crawler" />
+                <wheel rotSpeed="1" restLoad="3.2" repr="0>2" driveNode="0>2|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="true"  color="1 0.6661 0 1" showSteeringAngle="false" radius="0.72" initialCompression="22" suspTravel="0.45" spring="30" damper="80" hasParticles="true" tireType="crawler" hasTireTracks="true" tireTrackAtlasIndex="5" />
+                <wheel rotSpeed="1" restLoad="3.2" repr="0>3" driveNode="0>3|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="true"  color="1 0.6661 0 1" showSteeringAngle="false" radius="0.72" initialCompression="22" suspTravel="0.45" spring="30" damper="80" hasParticles="true" tireType="crawler"  />
+                <wheel rotSpeed="1" restLoad="2.4" repr="1>0" driveNode="1>0|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="false" color="1 0.6661 0 1" showSteeringAngle="false" radius="0.72" initialCompression="16" suspTravel="0.45" spring="30" damper="80" hasParticles="true" tireType="crawler" hasTireTracks="true" tireTrackAtlasIndex="5" />
+                <wheel rotSpeed="1" restLoad="2.5" repr="1>1" driveNode="1>1|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="false" color="1 0.6661 0 1" showSteeringAngle="false" radius="0.72" initialCompression="17" suspTravel="0.45" spring="30" damper="80" hasParticles="true" tireType="crawler" />
+                <wheel rotSpeed="1" restLoad="2.4" repr="1>2" driveNode="1>2|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="true"  color="1 0.6661 0 1" showSteeringAngle="false" radius="0.72" initialCompression="16" suspTravel="0.45" spring="30" damper="80" hasParticles="true" tireType="crawler" hasTireTracks="true" tireTrackAtlasIndex="5" />
+                <wheel rotSpeed="1" restLoad="2.3" repr="1>3" driveNode="1>3|0" forcePointRatio="0.7" filename="$data/vehicles/wheels/trelleborg/TwinForestry428SB_710_45R26_5.xml" isLeft="true"  color="1 0.6661 0 1" showSteeringAngle="false" radius="0.72" initialCompression="16" suspTravel="0.45" spring="30" damper="80" hasParticles="true" tireType="crawler" />
+            </wheels>
+            <crawlers>
+                <crawler index="0>0|1" speedRefNode="0>0|1" scrollSpeed="0.445" shaderParameterName="offsetUV" shaderParameterComponent="1" scrollLength="7.204" >
+                    <rotatingPart index="0>0|3" speedScale="1.4837" />
+                    <rotatingPart index="0>1|1" speedScale="1.4837" />
+                </crawler>
+                <crawler index="0>2|1" speedRefNode="0>2|1" scrollSpeed="0.445" shaderParameterName="offsetUV" shaderParameterComponent="1" scrollLength="7.204" >
+                    <rotatingPart index="0>2|3" speedScale="1.4837" />
+                    <rotatingPart index="0>3|1" speedScale="1.4837" />
+                </crawler>
+                <crawler index="1>0|1" speedRefNode="1>0|1" scrollSpeed="0.445" shaderParameterName="offsetUV" shaderParameterComponent="1" scrollLength="7.204" >
+                    <rotatingPart index="1>0|3" speedScale="1.4837" />
+                    <rotatingPart index="1>1|1" speedScale="1.4837" />
+                </crawler>
+                <crawler index="1>2|1" speedRefNode="1>2|1" scrollSpeed="0.445" shaderParameterName="offsetUV" shaderParameterComponent="1" scrollLength="7.204" >
+                    <rotatingPart index="1>2|3" speedScale="1.4837" />
+                    <rotatingPart index="1>3|1" speedScale="1.4837" />
+                </crawler>
+            </crawlers>
+            <objectChange node="0>0|1" visibilityActive="true" visibilityInactive="false" />
+            <objectChange node="0>2|1" visibilityActive="true" visibilityInactive="false" />
+            <objectChange node="1>0|1" visibilityActive="true" visibilityInactive="false" />
+            <objectChange node="1>2|1" visibilityActive="true" visibilityInactive="false" />
+        </wheelConfiguration>
+    </wheelConfigurations>
+
+    <differentials>
+        <differential torqueRatio="0.5" maxSpeedRatio="1.1" wheelIndex1="0" wheelIndex2="1" /> <!-- front right-right -->
+        <differential torqueRatio="0.5" maxSpeedRatio="1.1" wheelIndex1="2" wheelIndex2="3" /> <!-- front left-left -->
+        <differential torqueRatio="0.5" maxSpeedRatio="1.1" wheelIndex1="4" wheelIndex2="5" /> <!-- back right-right -->
+        <differential torqueRatio="0.5" maxSpeedRatio="1.1" wheelIndex1="6" wheelIndex2="7" /> <!-- back left-left -->
+        <differential torqueRatio="0.5" maxSpeedRatio="1.5" differentialIndex1="0" differentialIndex2="1" /><!-- front-left-right -->
+        <differential torqueRatio="0.5" maxSpeedRatio="1.5" differentialIndex1="2" differentialIndex2="3" /><!-- back-left-right -->
+        <differential torqueRatio="0.5" maxSpeedRatio="1.1" differentialIndex1="4" differentialIndex2="5" /><!-- front-back -->
+    </differentials>
+
+    <ackermannSteering rotSpeed="25" rotMax="15" rotCenter="0 0.694" />
+
+    <articulatedAxis rotNode="1>5|1" componentJointIndex="0" anchorActor="1" rotSpeed="35" rotMax="35" rotMin="-35" />
+
+    <motor torqueScale="1.23" minRpm="1000" maxForwardSpeed="23" maxBackwardSpeed="20" maxRpm="2200" brakeForce="12" lowBrakeForceScale="0.22" lowBrakeForceSpeedLimit="1" rotInertia="0.002" minForwardGearRatio="28" maxForwardGearRatio="150" minBackwardGearRatio="38" maxBackwardGearRatio="150">
+        <torque normRpm="0.45" torque="0.9"/>
+        <torque normRpm="0.5" torque="0.97"/>
+        <torque normRpm="0.59" torque="1"/>
+        <torque normRpm="0.72" torque="1"/>
+        <torque normRpm="0.86" torque="0.88"/>
+        <torque normRpm="1" torque="0.72"/>
+    </motor>
+
+    <fuelCapacity>200</fuelCapacity>
+
+    <cameras count="3">
+        <camera1 index="0>4|1|0" rotatable="true" rotateNode="0>4|1" limit="true" rotYSteeringRotSpeed="-17.5" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="4" transMax="25" >
+            <raycastNode index="0>5|0"/>
+            <raycastNode index="0>5|1"/>
+            <raycastNode index="0>5|2"/>
+            <raycastNode index="1>4"/>
+        </camera1>
+        <camera2 index="0>4|2" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" isInside="true" />
+        <camera3 index="1>5|0|2|0" rotatable="false" isInside="false" useWorldXZRotation="false" />
+    </cameras>
+
+    <lights>
+        <low>
+            <light                         decoration="0>7|0|0"     lightTypes="0 3" /> <!--Decoration for FrontLights and Highbeams-->
+            <light realLight="0>7|0|1"                              lightTypes="0" excludedLightTypes="3" /> <!--FrontLights-->
+            <light                         decoration="0>7|1|0|0"   lightTypes="1" /> <!--WorklightBack-->
+            <light realLight="1>5|0|0|7|1" decoration="1>5|0|0|7|0" lightTypes="1" /> <!--WorklightArm-->
+            <light realLight="0>7|0|2"                              lightTypes="3" /> <!--HighBeam-->
+        </low>
+        <high>
+            <light                         decoration="0>7|0|0"     lightTypes="0 3" /> <!--Decoration for FrontLights and Highbeams-->
+            <light realLight="0>7|0|3"                              lightTypes="0" excludedLightTypes="3" /> <!--FrontLights-->
+            <light realLight="0>7|1|0|2"   decoration="0>7|1|0|0"   lightTypes="1" /> <!--WorklightBack-->
+            <light realLight="1>5|0|0|7|1" decoration="1>5|0|0|7|0" lightTypes="1" /> <!--WorklightArm-->
+            <light realLight="0>7|0|4"                              lightTypes="3" /> <!--HighBeam-->
+        </high>
+        <states>
+            <state lightTypes="0" />
+            <state lightTypes="0 1" />
+        </states>
+    </lights>
+
+    <enterReferenceNode index="0>" />
+    <exitPoint index="0>6" />
+
+    <motorStartDuration>1500</motorStartDuration>
+    <motorSound      file="$data/vehicles/steerable/ponsse/ponsseBuffalo_idle.wav"               pitchOffset="1.00"  volume="1.00"  indoorVolumeFactor="0.5"  indoorLowpassGain="0.95"  pitchScale="0.015" pitchMax="1.35"  radius="35" innerRadius="15" />
+    <motorSoundRun   file="$data/vehicles/steerable/ponsse/ponsseBuffalo_run.wav"                pitchOffset="0.85"  volume="1.00"  indoorVolumeFactor="0.5"  indoorLowpassGain="0.95"  pitchScale="0.015" pitchMax="1.35"  />
+    <motorStartSound file="$data/vehicles/steerable/ponsse/ponsseBuffalo_start.wav"              pitchOffset="1.00"  volume="1.00"  indoorVolumeFactor="0.5"  indoorLowpassGain="0.95" />
+    <motorStopSound  file="$data/vehicles/steerable/ponsse/ponsseBuffalo_stop.wav"               pitchOffset="1.00"  volume="1.00"  indoorVolumeFactor="0.5"  indoorLowpassGain="0.95" />
+
+    <gearboxSound file="$data/sounds/transmission/transmissionCVT.wav"                           pitchOffset="0.75"  volume="0.190" indoorVolumeFactor="0.65" indoorLowpassGain="0.7" reverseVolumeMax="0.6" volumeMax="0.625" pitchMax="1.40"  />
+    <retarderSound   file="$data/sounds/transmission/retarderET2015.wav"                         pitchOffset="0.575" volume="0.150" indoorVolumeFactor="0.70" indoorLowpassGain="0.6" pitchMax="1.6" volumeMax="0.45" minSpeed="9" />
+
+    <brakeCompressor capacity="10000" fillSpeed="100" />
+    <maximalAirConsumptionPerFullStop value="2500" />
+
+    <brakeCompressorStartSound file="$data/sounds/technicalAccessories/compressor_controller.wav" pitchOffset="1.00"   volume="0.20" indoorVolumeFactor="0.90"  indoorLowpassGain="0.95" />
+    <brakeCompressorRunSound file="$data/sounds/technicalAccessories/compressor_idle.wav"         pitchOffset="0.90"   volume="0.25" indoorVolumeFactor="0.60"  indoorLowpassGain="0.70"  pitchMax="1.1" />
+    <brakeCompressorStopSound file="$data/sounds/technicalAccessories/compressor_controller.wav"  pitchOffset="1.10"   volume="0.25" indoorVolumeFactor="0.90"  indoorLowpassGain="0.70"  />
+
+    <compressedAirSound file="$data/sounds/technicalAccessories/brakeSmall.wav"                   pitchOffset="0.00"   volume="0.00" indoorVolumeFactor="0.00"  indoorLowpassGain="0.00" />
+    <airReleaseValveSound file="$data/sounds/technicalAccessories/regulator_valve.wav"            pitchOffset="1.00"   volume="0.65" indoorVolumeFactor="0.55"  indoorLowpassGain="0.70"  />
+
+    <attachSound     file="$data/sounds/attach.wav"                                               pitchOffset="1.00"   volume="0.25" indoorVolumeFactor="0.55"  indoorLowpassGain="0.70"  />
+    <reverseDriveSound file="$data/sounds/reverseDrivingBeep.wav"                                 pitchOffset="1.00"   volume="0.25" indoorVolumeFactor="0.65"  indoorLowpassGain="0.70"  />
+    <cylinderedHydraulicSound file="$data/sounds/hydraulicUp.wav"                                 pitchOffset="0.75"   volume="0.60" indoorVolumeFactor="0.85"  indoorLowpassGain="0.70"  />
+    <honkSound file="$data/sounds/hornBig.wav"                                                    pitchOffset="0.75"   volume="0.25" indoorVolumeFactor="0.65"  indoorLowpassGain="0.70"   radius="80" innerRadius="15" />
+
+    <exhaustEffects>
+        <exhaustEffect index="0>8" filename="$data/particleSystems/shared/exhaust.i3d" minRpmColor="0.0 0.0 0.0 1.5" maxRpmColor="0.0 0.0 0.0 3.5" minRpmScale="0.005" maxRpmScale="0.45" xzRotationsOffset="100 0" xzRotationsForward="150 0" xzRotationsBackward="-100 0" xzRotationsLeft="20 -150" xzRotationsRight="20 150" />
+    </exhaustEffects>
+
+    <characterNode index="0>4|0|0" cameraMinDistance="1.5" filename="$dataS2/character/player/player.xml" spineRotation="180 0 90" >
+        <target ikChain="rightFoot" targetNode="0>4|0|1" setDirty="true"/>
+        <target ikChain="leftFoot"  targetNode="0>4|0|2" setDirty="true"/>
+        <target ikChain="rightArm"  targetNode="0>4|0|3" setDirty="true"/>
+        <target ikChain="leftArm"   targetNode="0>4|0|4" setDirty="true"/>
+    </characterNode>
+
+    <ai>
+        <trafficCollisionTrigger index="0>10" />
+    </ai>
+
+    <movingTools>
+        <!-- physics -->
+        <movingTool index="1>5|6" delayedIndex="1>5|0" playSound="true">
+            <controls axis="AXIS_CRANE_ARM" invertAxis="true" mouseSpeedFactor="1.4" iconFilename="$dataS2/menu/moveControls/crane_arm1_rotY.png"/>
+            <rotation rotSpeed="20" rotAcceleration="170" rotMax="135" rotMin="-135" rotationAxis="2" rotSendNumBits="11" />
+            <componentJoint index="1" anchorActor="0" />
+        </movingTool>
+        <movingTool index="1>5|6|0" delayedIndex="1>5|0|0" playSound="true">
+            <controls axis="AXIS_CRANE_ARM2" invertAxis="false" mouseSpeedFactor="1.1" iconFilename="$dataS2/menu/moveControls/crane_arm1_rotX.png" />
+            <rotation rotSpeed="20" rotAcceleration="170" rotMax="80" rotMin="0" rotSendNumBits="9" />
+            <componentJoint index="1" anchorActor="0" />
+        </movingTool>
+        <movingTool index="1>5|6|0|0" delayedIndex="1>5|0|0|0" playSound="true">
+            <controls axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="1.2" iconFilename="$dataS2/menu/moveControls/crane_arm2_rotX.png" />
+            <rotation rotSpeed="20" rotAcceleration="170" rotMax="150" rotMin="-14" rotSendNumBits="10" />
+            <componentJoint index="1" anchorActor="0" />
+        </movingTool>
+        <movingTool index="1>5|6|0|0|0" delayedIndex="1>5|0|0|0|0" playSound="true">
+            <controls axis="AXIS_CRANE_ARM4" invertAxis="false" mouseSpeedFactor="0.5" iconFilename="$dataS2/menu/moveControls/crane_arm2_trans.png" />
+            <translation transSpeed="1" transAcceleration="80" transMax="3.06581" transMin="0.79999" translationAxis="3" />
+            <componentJoint index="1" anchorActor="0" />
+        </movingTool>
+        <movingTool index="1>5|6|0|0|0|0" delayedIndex="1>5|0|0|0|0|0" playSound="true">
+            <controls axis="AXIS_CRANE_ARM4" invertAxis="false" mouseSpeedFactor="0.3" />
+            <translation transSpeed="1" transAcceleration="80" transMax="2.34704" transMin="0.08122" translationAxis="3" />
+            <componentJoint index="1" anchorActor="0" />
+        </movingTool>
+
+        <!-- delayed mesh -->
+        <movingTool index="1>5|0|0">
+            <dependentPart index="1>5|0|0|1" />
+            <dependentPart index="1>5|4|0|1|0|0" />
+        </movingTool>
+        <movingTool index="1>5|0|0|0">
+            <dependentPart index="1>5|0|0|3" />
+            <dependentPart index="1>5|4|0|1|0|0|0" />
+        </movingTool>
+        <movingTool index="1>5|0|0|0|0">
+            <dependentPart index="1>5|4|0|1|0|0|0|0" />
+        </movingTool>
+        <movingTool index="1>5|0|0|0|0|0">
+            <dependentPart index="1>5|4|0|1|0|0|0|0" />
+        </movingTool>
+
+        <!-- claw x rotation -->
+        <movingTool index="2>0" playSound="true">
+            <controls axis="AXIS_CRANE_TOOL2" invertAxis="true" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/grab_rotY.png" />
+            <rotation rotSpeed="-80" rotAcceleration="250" rotationAxis="2" />
+            <componentJoint index="1" anchorActor="1"/>
+        </movingTool>
+
+        <movingTool index="2>1" playSound="true">
+            <controls axis="AXIS_CRANE_TOOL" invertAxis="true" mouseSpeedFactor="1" iconFilename="$dataS2/menu/moveControls/grab_openClose.png" />
+            <rotation rotSpeed="-80" rotAcceleration="300" rotMax="120" rotMin="0" rotationAxis="3"  />
+            <componentJoint index="2" anchorActor="0"/>
+        </movingTool>
+        <movingTool index="2>2" playSound="true">
+            <controls axis="AXIS_CRANE_TOOL" invertAxis="true" mouseSpeedFactor="1" />
+            <rotation rotSpeed="80" rotAcceleration="300" rotMax="0" rotMin="-120" rotationAxis="3" />
+            <componentJoint index="3" anchorActor="0"/>
+        </movingTool>
+    </movingTools>
+
+    <movingParts>
+        <movingPart index="1>5|0|0|1" referencePoint="1>5|0|1" referenceFrame="1>5|0|1">
+            <translatingPart index="1>5|0|0|1|0" />
+        </movingPart>
+        <movingPart index="1>5|0|0|3" localReferencePoint="1>5|0|0|3|0" referencePoint="1>5|0|0|0|1" referenceFrame="1>5|0|0|0|2">
+            <dependentPart index="1>5|0|0|3|0" />
+            <dependentPart index="1>5|0|0|2" />
+        </movingPart>
+        <movingPart index="1>5|0|0|3|0" referencePoint="1>5|0|0|0|1" referenceFrame="1>5|0|0|3|1" />
+        <movingPart index="1>5|0|0|2" referencePoint="1>5|0|0|3|0" referenceFrame="1>5|0|0">
+            <translatingPart index="1>5|0|0|2|0" />
+            <dependentPart index="1>5|0|0|2|1" />
+            <dependentPart index="1>5|0|0|2|2" />
+        </movingPart>
+        <movingPart index="1>5|0|0|2|1" referencePoint="1>5|0|0|4" referenceFrame="1>5|0|0|4" scaleZ="true" />
+        <movingPart index="1>5|0|0|2|2" referencePoint="1>5|0|0|5" referenceFrame="1>5|0|0|5" scaleZ="true" />
+
+        <!-- steering H cyl. -->
+        <movingPart index="1>5|2" referencePoint="1>5|1|2" referenceFrame="1>5|1|2" isActiveDirty="true" >
+            <translatingPart index="1>5|2|0" />
+        </movingPart>
+        <movingPart index="1>5|3" referencePoint="1>5|1|3" referenceFrame="1>5|1|3" isActiveDirty="true" >
+            <translatingPart index="1>5|3|0" />
+        </movingPart>
+
+        <!-- steering V cyl. -->
+        <movingPart index="0>9|0" referencePoint="1>5|1|0" referenceFrame="1>5|1|0" isActiveDirty="true" >
+            <translatingPart index="0>9|0|0" />
+        </movingPart>
+        <movingPart index="0>9|1" referencePoint="1>5|1|1" referenceFrame="1>5|1|1" isActiveDirty="true" >
+            <translatingPart index="0>9|1|0" />
+        </movingPart>
+
+        <!-- claw-arm connection -->
+        <movingPart index="1>5|0|0|0|0|0|1" referencePoint="2>3" referenceFrame="1>5|0|0|0|0|0|2" limitedAxis="1" isActiveDirty="true" >
+            <dependentPart index="1>5|0|0|0|0|0|1|0" />
+        </movingPart>
+        <movingPart index="1>5|0|0|0|0|0|1|0" referencePoint="2>3" referenceFrame="1>5|0|0|0|0|0|1|1" limitedAxis="1" >
+            <dependentPart index="1>5|0|0|0|0|0|1|0|0|0" />
+        </movingPart>
+
+        <!-- claw rotation -->
+        <movingPart index="1>5|0|0|0|0|0|1|0|0|0" referencePoint="2>3" referenceFrame="2>4" >
+            <dependentPart index="1>5|0|0|0|0|0|1|0|0|0|1|0" />
+        </movingPart>
+
+        <!-- left/right claw -->
+        <movingPart index="1>5|0|0|0|0|0|1|0|0|0|1|0" referencePoint="3>3" referenceFrame="3>3" limitedAxis="1">
+            <dependentPart index="1>5|0|0|0|0|0|1|0|0|0|0|0" />
+        </movingPart>
+        <movingPart index="1>5|0|0|0|0|0|1|0|0|0|0|0" referencePoint="4>3" referenceFrame="4>3" limitedAxis="1">
+            <dependentPart index="1>5|0|0|0|0|0|1|0|0|0|0|0|0" />
+            <dependentPart index="1>5|0|0|0|0|0|1|0|0|0|0|0|1" />
+            <dependentPart index="1>5|0|0|0|0|0|1|0|0|0|0|0|2" />
+        </movingPart>
+
+        <movingPart index="1>5|0|0|0|0|0|1|0|0|0|0|0|0" referencePoint="1>5|0|0|0|0|0|1|0|0|0|1|0|0" referenceFrame="1>5|0|0|0|0|0|1|0|0" >
+            <translatingPart index="1>5|0|0|0|0|0|1|0|0|0|0|0|0|0" />
+        </movingPart>
+        <movingPart index="1>5|0|0|0|0|0|1|0|0|0|0|0|1" referencePoint="1>5|0|0|0|0|0|1|0|0|0|1|0|1" referenceFrame="1>5|0|0|0|0|0|1|0|0" />
+        <movingPart index="1>5|0|0|0|0|0|1|0|0|0|0|0|2" referencePoint="1>5|0|0|0|0|0|1|0|0|0|1|0|2" referenceFrame="1>5|0|0|0|0|0|1|0|0" />
+
+        <!-- joints -->
+        <movingPart index="1>5|4|0|0"               referenceFrame="0>"                          moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="1>5|4|0|1|0"             referenceFrame="1>5|0"                       moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="1>5|4|0|1|0|0"           referenceFrame="1>5|0|0"                     moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="1>5|4|0|1|0|0|0"         referenceFrame="1>5|0|0|0"                   moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="1>5|4|0|1|0|0|0|0"       referenceFrame="1>5|0|0|0|0|0"               moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="1>5|4|0|1|0|0|0|0|0"     referenceFrame="1>5|0|0|0|0|0|1|0|1"         moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="1>5|4|0|1|0|0|0|0|0|0"   referenceFrame="1>5|0|0|0|0|0|1|0|0|0"       moveToReferenceFrame="true" isActiveDirty="true" />
+        <movingPart index="1>5|4|0|1|0|0|0|0|0|0|0" referenceFrame="1>5|0|0|0|0|0|1|0|0|0|0|0|0" moveToReferenceFrame="true" isActiveDirty="true" />
+
+
+        <movingPart index="0>0|1" referencePoint="0>1" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>0|2" referencePoint="0>1" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>2|1" referencePoint="0>3" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="0>2|2" referencePoint="0>3" referenceFrame="0>" isActiveDirty="true" />
+        <movingPart index="1>0|1" referencePoint="1>1" referenceFrame="1>" isActiveDirty="true" />
+        <movingPart index="1>0|2" referencePoint="1>1" referenceFrame="1>" isActiveDirty="true" />
+        <movingPart index="1>2|1" referencePoint="1>3" referenceFrame="1>" isActiveDirty="true" />
+        <movingPart index="1>2|2" referencePoint="1>3" referenceFrame="1>" isActiveDirty="true" />
+
+        <!-- camera -->
+        <movingPart index="1>5|0|2" referencePoint="1>5|0|0|0|0|0|3" referenceFrame="1>" isActiveDirty="true" />
+
+    </movingParts>
+
+    <animations>
+        <animation name="reverseDriving">
+            <part node="0>4" startTime="0" endTime="3" startRot="0 0 0" endRot="0 180 0" />
+        </animation>
+        <animation name="enterAnimation">
+            <part node="0>11|0" startTime="0" duration="1" startRot="0 0 -160" endRot="0 0 0" />
+        </animation>
+    </animations>
+
+    <enterAnimation name="enterAnimation" />
+
+    <washable dirtDuration="120" washDuration="1" workMultiplier="4" />
+
+    <tensionBelts linkNode="1>5|7" jointNode="1>" rootNode="1>" width="0.075" maxEdgeLength="0.1" geometryBias="0.01" ratchetPosition="0.2" defaultOffset="-0.45" defaultOffsetSide="0.1" defaultHeight="3" interactionRadius="1.75" totalInteractionRadius="3.5">
+        <tensionBelt startNode="1>5|7|0" endNode="1>5|7|0|0" offsetLeft="0.85" />
+        <tensionBelt startNode="1>5|7|1" endNode="1>5|7|1|0" />
+        <tensionBelt startNode="1>5|7|2" endNode="1>5|7|2|0" offsetRight="0.85" />
+    </tensionBelts>
+
+    <components count="5">
+        <component1 centerOfMass="0 0.65 2.79" solverIterationCount="40" />
+        <component2 centerOfMass="0 0.65 -0.236" solverIterationCount="40" />
+        <component3 centerOfMass="0 -0.3 0" solverIterationCount="30" />
+        <component4 centerOfMass="0 0 0" solverIterationCount="20" />
+        <component5 centerOfMass="0 0 0" solverIterationCount="20" />
+        <joint component1="0" component2="1" index="1>5|1|4" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 600" rotLimitDamping="0 0 30" />
+        <!-- claw base -->
+        <joint component1="1" component2="2" index="1>5|6|0|0|0|0|0" indexActor1="2>0|0" rotLimit="0 50 100" transLimit="0 0 0" zRotationNode="1>5|6|0|0|0|0|0|0" enableCollision="true" rotDriveVelocity="0 0 0" maxRotDriveForce="0.5 0.5 0.5" transLimitSpring="6000 6000 6000" transLimitDamping="100 100 100"  />
+        <joint component1="2" component2="3" index="2>1" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 36" rotLimitDamping="0 0 1" />
+        <joint component1="2" component2="4" index="2>2" rotLimit="0 0 0" transLimit="0 0 0" rotLimitSpring="0 0 36" rotLimitDamping="0 0 1" />
+        <collisionPair component1="0" component2="2" enabled="false" />
+        <collisionPair component1="0" component2="3" enabled="false" />
+        <collisionPair component1="0" component2="4" enabled="false" />
+        <collisionPair component1="3" component2="4" enabled="false" />
+    </components>
+
+    <schemaOverlay file="$dataS2/menu/schemas/vehicleSchema.png" fileSelected="$dataS2/menu/schemas/vehicleSchemaSelected.png" width="0.5" height="0.5" attacherJointPosition="0.5 0" />
+
+</vehicle>
