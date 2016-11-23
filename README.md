@@ -29,6 +29,11 @@ The exhaust smoke is a bit darker on all vehicles and i lowered the fill speed o
 The Holmer Felix can now load bulk materials and not only beets.
 
 
+Contact info:
+- Rylan on fs-uk - http://fs-uk.com/forum/index.php?action=profile;u=163198
+- Randy on steam - http://steamcommunity.com/profiles/76561198015502964/
+
+
 Recommended mods:
 
 - Automatic unload for round-balers - http://www.farming-simulator.com/mod.php?lang=en&country=gb&mod_id=54504&title=fs2017
